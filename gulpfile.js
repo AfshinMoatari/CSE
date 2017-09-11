@@ -26,6 +26,6 @@ gulp.task('default', ['serve']);
 
 // Push build to gh-pages
 gulp.task('deploy', function() {
-  return gulp.src("app/**/*")
+  return gulp.src("./app/**/*")
     .pipe(deploy())
 });
