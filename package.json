@@ -1,6 +1,11 @@
 {
   "name": "CSE",
   "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AfshinMoatari/CSE"
+  },
   "description": "Website for Copenhagen School of Entrepreneurship",
   "main": "index.js",
   "scripts": {
@@ -19,6 +24,8 @@
     "gulp-sass": "^3.1.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta"
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.11.0"
   }
 }

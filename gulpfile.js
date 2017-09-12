@@ -3,14 +3,15 @@ var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var deploy = require('gulp-gh-pages');
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+// Static Server + watching scss/js/html files
+gulp.task('serve', ['sass', 'js'], function() {
 
   browserSync.init({
     server: "./app"
   });
 
   gulp.watch("app/scss/*.scss", ['sass']);
+  gulp.watch("app/js/*.js", ['js']);
   gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
@@ -22,10 +23,17 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['serve']);
+// Move the javascript files into the app/js folder
+gulp.task('js', function() {
+  return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js'])
+    .pipe(gulp.dest("app/js"))
+    .pipe(browserSync.stream());
+});
 
 // Push build to gh-pages
 gulp.task('deploy', function() {
   return gulp.src("./app/**/*")
     .pipe(deploy())
 });
+
+gulp.task('default', ['serve']);
