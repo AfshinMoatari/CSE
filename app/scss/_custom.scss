@@ -2,11 +2,18 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+@font-face {
+   font-family: CBSNEW;
+   src: url(assets/fonts/CBS-typografier/CBSNEWBOLD.tff);
+}
+
 $theme-colors: (
   primary: green
 );
+
 $nav-height: 0.5em;
-$nav-color: #bbb;
+$nav-color: #000;
 $nav-background: #2e2e2e;
 
 /*
@@ -19,21 +26,30 @@ NAVBAR
 }
 
 nav {
-  width: 100%;
+  padding-left:200px;
   color: $nav-color;
   background: $nav-background;
   font-weight: bold;
-  letter-spacing: 0.010em;
+  letter-spacing: 0.10em;
 }
+h1 {
+  font-family: CBSNEW !important;
+}
+a {
+  font-family: CBSNEW !important;
+}
+
 
 nav ul {
   text-align: center;
   margin: 0;
+  margin-left: 200px;
+
 }
 
 nav ul li {
  display: inline-block;
- padding: 0 3em;
+ padding: 0 1em;
  line-height: 0.5em;
 }
 
