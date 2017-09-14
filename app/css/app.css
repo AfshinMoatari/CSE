@@ -4,6 +4,32 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/*
+NAVBAR
+  */
+.navbar-fixed {
+  position: fixed;
+  top: -0.5em; }
+
+nav {
+  width: 100%;
+  color: #bbb;
+  background: #2e2e2e;
+  font-weight: bold;
+  letter-spacing: 0.010em; }
+
+nav ul {
+  text-align: center;
+  margin: 0; }
+
+nav ul li {
+  display: inline-block;
+  padding: 0 3em;
+  line-height: 0.5em; }
+
+nav ul li:hover {
+  color: lightblue; }
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
