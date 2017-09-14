@@ -1,3 +1,3 @@
 ## Synopsis
 
-[Theme Demo](https://afshinmoatari.github.io/CSE/app)
+[Theme Demo](https://afshinmoatari.github.io/CSE)
