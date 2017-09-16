@@ -3,7 +3,7 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 @font-face {
    font-family: CBSNEW;
    src: url(assets/fonts/CBS-typografier/CBSNEWBOLD.tff);
@@ -14,8 +14,8 @@ $theme-colors: (
 );
 
 $nav-height: 0.5em;
-$nav-color: #000;
-$nav-background: #2e2e2e;
+$nav-color: #496093;
+$nav-background: #496093;
 
 /*
 NAVBAR
@@ -27,7 +27,7 @@ NAVBAR
 }
 
 nav {
-  padding-left:200px;
+  padding-left:100px;
   color: $nav-color;
   background: $nav-background;
   font-weight: bold;
@@ -44,7 +44,7 @@ a {
 nav ul {
   text-align: center;
   margin: 0;
-  margin-left: 200px;
+  margin-left: 60px;
 }
 
 nav ul li {
@@ -56,12 +56,12 @@ nav ul li {
 nav ul li:hover {
   color: lightblue;
 }
-=======
+// =======
 //fonts
 $font-family-sans-serif: 'CBS', 'Helvetica Neue', Arial, sans-serif;
 
 //color
-$blue: #3d4b87;
+$blue: #496093;
 $red: #cd4847;
 $green: #5bad6f;
 $orange: #e1948d;
@@ -75,4 +75,4 @@ $body-bg: $white;
 $navbar-inverse-color: $white;
 $navbar-inverse-hover-color: rgba($white,.8);
 $navbar-inverse-active-color: rgba($white,.8);
->>>>>>> eb0fa7c5976b865b193f071a2a227887ba927e17
+// >>>>>>> eb0fa7c5976b865b193f071a2a227887ba927e17
