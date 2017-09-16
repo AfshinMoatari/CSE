@@ -1,0 +1,43 @@
+//fonts
+@include font-face('CBS', 'CBS_NEW_REGULAR', 'CBS-typografier');
+// @font-face
+// {
+//     font-family: CBS;
+//
+//     src: url(../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.ttf);
+// }
+
+//navbar
+.navbar
+{
+    height: 150px;
+}
+
+//hero
+.hero
+{
+    height: calc(100vh - 380px);
+}
+
+//quotations
+.quotations
+{
+    height: 380px;
+}
+//programmes
+.programmes
+{
+    height: 450px;
+}
+
+//partners
+.partners
+{
+    height: 450px;
+}
+
+//footer
+.footer
+{
+    height: 150px;
+}
