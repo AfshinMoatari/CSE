@@ -25,7 +25,9 @@ gulp.task('sass', function() {
 
 // Move the javascript files into the app/js folder
 gulp.task('js', function() {
-  return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js'])
+  return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js', 'node_modules/gsap/src/minified/TweenMax.min.js',
+      'node_modules/gsap/src/minified/easing/EasePack.min.js', 'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js', 'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+    ])
     .pipe(gulp.dest("app/js"))
     .pipe(browserSync.stream());
 });
