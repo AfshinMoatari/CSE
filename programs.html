@@ -14,66 +14,91 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="./assets/image/brand.png" alt=""></a>
+      <a class="navbar-brand" href="index.html"><img src="./assets/image/brand.png" alt=""></a>
       <div class="collapse navbar-collapse justify-content-between align-self-end">
         <ul class="nav navbar-nav mr-auto">
         </ul>
         <ul class="nav navbar-nav">
-          <li class="nav-item mx-3">
-            <a class="nav-link pb-0" href="#">ABOUT</a>
-          </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link pb-0" href="programs.html">PROGRAMS</a>
-          </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link pb-0" href="#">STARTUPS</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pb-0" href="#">EVENTS</a>
+            <a class="nav-link" href="#">PROGRAMS</a>
           </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link pb-0" href="#">COLLABORATIONS</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">STARTUPS</a>
           </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link pb-0" href="#">BLOG</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">EVENTS</a>
           </li>
-            <li class="nav-item mx-3 apply">
-              <a class="nav-link pb-0" href="#">APPLY NOW</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">COLLABORATIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">BLOG</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="apply">APPLY NOW</a>
             </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- HERO SECTION -->
-  <div class="d-flex bg-primary container-fluid hero">
-    <img src="./assets/image/cse.png" alt="CSE" class="d-block mx-auto align-self-center">
-  </div>
+
+  <!-- TEST DRAWINGS for the mountain  -->
+  <svg id="mySVG">
+  <path fill="none" stroke="blue" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z"/>
+  </svg>
+
+  <script>
+  // Get the id of the <path> element and the length of <path>
+  var triangle = document.getElementById("triangle");
+  var length = triangle.getTotalLength();
+
+  // The start position of the drawing
+  triangle.style.strokeDasharray = length;
+
+  // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+  triangle.style.strokeDashoffset = length;
+
+  // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+  window.addEventListener("scroll", myFunction);
+
+  function myFunction() {
+    var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+    var draw = length * scrollpercent;
+
+    // Reverse the drawing (when scrolling upwards)
+    triangle.style.strokeDashoffset = length - draw;
+  }
+  </script>
   <!-- STATUS SECTION -->
-  <div class="mt-6 status">
-    <div class="container-fluid">
+  <div class="my-5 status">
+    <div class="container">
       <div class="row">
         <div class="col-6">
           <p>Copenhagen School of Entrepreneurship (CSE) is the unit at CBS, focusing on practical entrepreneurship. CSE have had more than 700 student driven companies since 2007, in different programs from basic startup, to scale and growth programmes.</p>
         </div>
-        <div class="col-6 pr-0">
-          <img src="./assets/image/hero.png" alt="" class="img-fluid">
+        <div class="col-6">
+          <img src="https://dummyimage.com/600x400/b82862/0011ff.png" alt="">
         </div>
-        <div class="col-12 text-center mt-6 stats">
-          <div class="d-inline-block mx-6 stat">
-            <h1>557</h1>
-            <p>Startups</p>
+        <div class="col-12 text-center my-5 stats">
+          <div class="d-inline-block bg-success stat">
+            <h1>999</h1>
+            <p>title</p>
           </div>
-          <div class="d-inline-block mx-6 stat">
-            <h1>1003</h1>
-            <p>Jobs generated</p>
+          <div class="d-inline-block bg-success stat">
+            <h1>999</h1>
+            <p>title</p>
           </div>
-          <div class="d-inline-block mx-6 stat">
-            <h1>45</h1>
-            <p>Mentors</p>
+          <div class="d-inline-block bg-success stat">
+            <h1>999</h1>
+            <p>title</p>
           </div>
-          <div class="d-inline-block mx-6 stat">
-            <h1>222</h1>
-            <p>Startups</p>
+          <div class="d-inline-block bg-success stat">
+            <h1>999</h1>
+            <p>title</p>
           </div>
         </div>
       </div>
@@ -105,7 +130,7 @@
 
   </div>
   <!-- QUOTATIONS SECTION -->
-  <div class="my-5 bg-primary container-fluid quotations">
+  <div class="my-5 bg-primary quotations">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-items-center">
         <div class="col-4">
@@ -173,16 +198,8 @@
       </div>
     </div>
   </div>
-
-  <!-- LIBRARIES -->
   <script src="./js/jquery.min.js"></script>
-  <script src="./js/TweenMax.min.js"></script>
-  <script src="./js/EasePack.min.js"></script>
-  <script src="./js/ScrollMagic.min.js"></script>
-  <script src="./js/debug.addIndicators.min.js"></script>
-  <script src="./js/animation.gsap.min.js"></script>
-  <!-- SCRIPTS -->
-  <script src="./js/scrollEvents.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
 </body>
 
 </html>

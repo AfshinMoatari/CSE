@@ -7,7 +7,7 @@
 $font-family-sans-serif: 'CBS', 'Helvetica Neue', Arial, sans-serif;
 
 //color
-$blue: #3d4b87;
+$blue: #496093;
 $red: #cd4847;
 $green: #5bad6f;
 $orange: #e1948d;
@@ -16,6 +16,41 @@ $black: #000;
 $brand-primary: $blue;
 $link-color: $blue;
 $body-bg: $white;
+
+// spacing
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  ),
+  2: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  ),
+  6: (
+    x: ($spacer-x * 5),
+    y: ($spacer-y * 5)
+  )
+);
 
 //navbar
 $navbar-inverse-color: $white;
