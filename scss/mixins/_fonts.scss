@@ -1,5 +1,5 @@
 @mixin font-face($style-name, $file, $family, $category:"") {
-    $filepath: "../../assets/fonts/" + $family + "/" + $file;
+    $filepath: "http://afshinmoatari.me/CSE/assets/fonts/" + $family + "/" + $file;
     @font-face {
         font-family: "#{$style-name}";
         src: url($filepath + ".eot");

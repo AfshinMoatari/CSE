@@ -6164,13 +6164,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 @font-face {
   font-family: "CBS-regular";
-  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.eot");
-  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.woff") format("woff"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.ttf") format("truetype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.svg#CBS-regular") format("svg"); }
+  src: url("~/assets/fonts/CBS-typografier/CBS_NEW_REGULAR.eot");
+  src: url("~/assets/fonts/CBS-typografier/CBS_NEW_REGULAR.eot?#iefix") format("embedded-opentype"), url("~/assets/fonts/CBS-typografier/CBS_NEW_REGULAR.woff") format("woff"), url("~/assets/fonts/CBS-typografier/CBS_NEW_REGULAR.ttf") format("truetype"), url("~/assets/fonts/CBS-typografier/CBS_NEW_REGULAR.svg#CBS-regular") format("svg"); }
 
 @font-face {
   font-family: "CBS-bold";
-  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
-  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
+  src: url("~/assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
+  src: url("~/assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("~/assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("~/assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("~/assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
 
 h1,
 h2,
