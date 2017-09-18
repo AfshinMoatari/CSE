@@ -3,9 +3,6 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-//fonts
-$font-family-sans-serif: 'CBS', 'Helvetica Neue', Arial, sans-serif;
-
 //color
 $blue: #496093;
 $red: #cd4847;
@@ -13,9 +10,40 @@ $green: #5bad6f;
 $orange: #e1948d;
 $white: #fff;
 $black: #000;
+$transparent: transparent;
 $brand-primary: $blue;
+$brand-secondary: $white;
 $link-color: $blue;
-$body-bg: $white;
+$body-bg: $brand-secondary;
+
+//fonts
+$font-size-base: 1rem;
+$font-size-xlg: 1.875rem;
+$font-size-lg: 1.563rem;
+$font-size-md: 1.250rem;
+
+$font-family-cbs-bold: 'CBS-bold', 'Helvetica Neue', Arial, sans-serif;
+$font-family-cbs-regular: 'CBS-regular', 'Helvetica Neue', Arial, sans-serif;
+
+$font-family-base: $font-family-cbs-regular;
+$headings-font-family: $font-family-cbs-bold;
+
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+$headings-color: $brand-primary;
+
+$font-size-h1: 3.125rem;
+
+$display1-size: 6.063rem;
+$display2-size: 1.563rem;
+$display1-weight: $font-weight-bold;
+$display2-weight: $font-weight-normal;
+
+$lead-font-size: 1.25rem;
+
+$blockquote-small-color: $brand-secondary;
+$blockquote-font-size: $font-size-xlg;
 
 // spacing
 $spacer: 1rem;
@@ -53,6 +81,15 @@ $spacers: (
 );
 
 //navbar
-$navbar-inverse-color: $white;
-$navbar-inverse-hover-color: rgba($white,.8);
-$navbar-inverse-active-color: rgba($white,.8);
+$navbar-inverse-color: $brand-secondary;
+$navbar-inverse-hover-color: rgba($brand-secondary,.8);
+$navbar-inverse-active-color: rgba($brand-secondary,.8);
+
+// breadcrumbs
+
+$breadcrumb-padding-y: 0rem;
+$breadcrumb-padding-x: 0rem;
+$breadcrumb-item-padding: .5rem;
+
+$breadcrumb-bg: $transparent;
+$breadcrumb-divider: '|';
