@@ -1,16 +1,89 @@
 //fonts
-@include font-face('CBS', 'CBS_NEW_REGULAR', 'CBS-typografier');
+@include font-face('CBS-regular', 'CBS_NEW_REGULAR', 'CBS-typografier');
+@include font-face('CBS-bold', 'CBS_NEW_BOLD', 'CBS-typografier');
+
+//typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a
+{
+    text-transform: uppercase;
+}
+.lead
+{
+    font-family: $font-family-cbs-bold ;
+}
+
+//utilities
+.blockquote
+{
+    font-family: $font-family-cbs-bold;
+
+    quotes: '“' '”' '‘' '’';
+
+    color: $brand-secondary;
+    border: none;
+    .before
+    {
+        &::before
+        {
+            font-size: 1em;
+            line-height: .2em;
+
+            margin-right: .1em;
+
+            content: open-quote;
+        }
+    }
+    .after
+    {
+        &::after
+        {
+            font-size: 2.5em;
+            line-height: .1em;
+
+            content: close-quote;
+            vertical-align: -.35em;
+        }
+    }
+    footer
+    {
+        font-family: $font-family-cbs-regular;
+        font-size: $font-size-lg;
+        &::before
+        {
+            content: '\2011 \00A0';
+        }
+    }
+}
 
 //navbar
 .navbar
 {
     height: 150px;
+    a
+    {
+        font-size: $font-size-lg;
+    }
 }
 
 //hero
 .hero
 {
     height: calc(100vh - 380px);
+}
+
+//status
+.status
+{
+    p
+    {
+        color: $brand-primary;
+    }
 }
 
 //quotations
@@ -34,4 +107,8 @@
 .footer
 {
     height: 150px;
+    li
+    {
+        font-size: $font-size-md;
+    }
 }

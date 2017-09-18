@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -268,7 +269,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "CBS", "Helvetica Neue", Arial, sans-serif;
+  font-family: "CBS-regular", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -425,13 +426,13 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
+  font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit; }
+  color: #496093; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 3.125rem; }
 
 h2, .h2 {
   font-size: 2rem; }
@@ -453,13 +454,13 @@ h6, .h6 {
   font-weight: 300; }
 
 .display-1 {
-  font-size: 6rem;
-  font-weight: 300;
+  font-size: 6.063rem;
+  font-weight: bold;
   line-height: 1.1; }
 
 .display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
+  font-size: 1.563rem;
+  font-weight: normal;
   line-height: 1.1; }
 
 .display-3 {
@@ -508,13 +509,13 @@ mark,
 .blockquote {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   border-left: 0.25rem solid #eceeef; }
 
 .blockquote-footer {
   display: block;
   font-size: 80%;
-  color: #636c72; }
+  color: #fff; }
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
@@ -1533,7 +1534,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: calc(0.75rem - 1px * 2);
   padding-bottom: calc(0.75rem - 1px * 2);
-  font-size: 1.25rem; }
+  font-size: 1.563rem; }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem - 1px * 2);
@@ -1577,13 +1578,13 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.563rem;
   border-radius: 0.3rem; }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
-  height: 3.16667rem; }
+  height: 3.584rem; }
 
 .form-group {
   margin-bottom: 1rem; }
@@ -2029,7 +2030,7 @@ fieldset[disabled] a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.563rem;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -2354,7 +2355,7 @@ tbody.collapse.show {
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1.563rem;
     border-radius: 0.3rem; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
@@ -2630,7 +2631,7 @@ tbody.collapse.show {
   padding-top: .25rem;
   padding-bottom: .25rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.563rem;
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:focus, .navbar-brand:hover {
@@ -2654,7 +2655,7 @@ tbody.collapse.show {
 .navbar-toggler {
   align-self: flex-start;
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.563rem;
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
@@ -3091,10 +3092,10 @@ tbody.collapse.show {
       margin-bottom: 0.75rem; } }
 
 .breadcrumb {
-  padding: 0.75rem 1rem;
+  padding: 0rem 0rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #eceeef;
+  background-color: transparent;
   border-radius: 0.25rem; }
   .breadcrumb::after {
     display: block;
@@ -3108,7 +3109,7 @@ tbody.collapse.show {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     color: #636c72;
-    content: "/"; }
+    content: "|"; }
   .breadcrumb-item + .breadcrumb-item:hover::before {
     text-decoration: underline; }
   .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -3161,7 +3162,7 @@ tbody.collapse.show {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem; }
+  font-size: 1.563rem; }
 
 .pagination-lg .page-item:first-child .page-link {
   border-bottom-left-radius: 0.3rem;
@@ -3655,7 +3656,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "CBS", "Helvetica Neue", Arial, sans-serif;
+  font-family: "CBS-regular", "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3737,7 +3738,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "CBS", "Helvetica Neue", Arial, sans-serif;
+  font-family: "CBS-regular", "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6162,15 +6163,58 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 @font-face {
-  font-family: "CBS";
+  font-family: "CBS-regular";
   src: url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.eot");
-  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.woff") format("woff"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.ttf") format("truetype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.svg#CBS") format("svg"); }
+  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.woff") format("woff"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.ttf") format("truetype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_REGULAR.svg#CBS-regular") format("svg"); }
+
+@font-face {
+  font-family: "CBS-bold";
+  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
+  src: url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  text-transform: uppercase; }
+
+.lead {
+  font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif; }
+
+.blockquote {
+  font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif;
+  quotes: '“' '”' '‘' '’';
+  color: #fff;
+  border: none; }
+  .blockquote .before::before {
+    font-size: 1em;
+    line-height: .2em;
+    margin-right: .1em;
+    content: open-quote; }
+  .blockquote .after::after {
+    font-size: 2.5em;
+    line-height: .1em;
+    content: close-quote;
+    vertical-align: -.35em; }
+  .blockquote footer {
+    font-family: "CBS-regular", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.563rem; }
+    .blockquote footer::before {
+      content: '\2011 \00A0'; }
 
 .navbar {
   height: 150px; }
+  .navbar a {
+    font-size: 1.563rem; }
 
 .hero {
   height: calc(100vh - 380px); }
+
+.status p {
+  color: #496093; }
 
 .quotations {
   height: 380px; }
@@ -6183,3 +6227,5 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 .footer {
   height: 150px; }
+  .footer li {
+    font-size: 1.25rem; }
