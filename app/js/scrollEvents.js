@@ -29,7 +29,6 @@ $(function() {
     })
     .addIndicators();
 
-
 });
 var prev = 0;
 var $window = $(window);

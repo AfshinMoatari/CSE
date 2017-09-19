@@ -117,6 +117,7 @@ button
         color: $brand-primary;
         border: $border-width solid $brand-primary;
         background-color: $brand-secondary;
+
         &::before
         {
             border: $border-width solid $brand-primary;
@@ -152,11 +153,11 @@ button
 .subnavbar
 {
     z-index: 1;
-
+    margin-top: 10px;
     height: 75px;
     a
     {
-        font-size: $font-size-lg;
+        font-size: $font-size-md;
     }
 }
 

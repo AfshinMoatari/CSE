@@ -6259,9 +6259,10 @@ button {
 
 .subnavbar {
   z-index: 1;
+  margin-top: 10px;
   height: 75px; }
   .subnavbar a {
-    font-size: 1.563rem; }
+    font-size: 1.25rem; }
 
 .hero {
   height: calc(100vh - 380px); }
