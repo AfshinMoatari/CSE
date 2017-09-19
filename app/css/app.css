@@ -6470,6 +6470,13 @@ button {
   .navbar.sticky {
     background-color: #496093; }
 
+.subnavbar {
+  z-index: 1;
+  height: 75px;
+  margin-top: 10px; }
+  .subnavbar a {
+    font-size: 1.25rem; }
+
 .status p {
   color: #496093; }
 
