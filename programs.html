@@ -19,86 +19,69 @@
         <ul class="nav navbar-nav mr-auto">
         </ul>
         <ul class="nav navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">about</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="programs.html">programs</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">startups</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">PROGRAMS</a>
+            <a class="nav-link pb-0" href="#">events</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">STARTUPS</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">collabrations</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">EVENTS</a>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">blog</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">COLLABORATIONS</a>
+          <li class="nav-item mx-3 apply">
+            <a class="nav-link pb-0" href="#">APPLY NOW</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="apply">APPLY NOW</a>
-            </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- TEST DRAWINGS for the mountain  -->
-  <svg id="mySVG">
-  <path fill="none" stroke="blue" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z"/>
-  </svg>
-
-  <script>
-  // Get the id of the <path> element and the length of <path>
-  var triangle = document.getElementById("triangle");
-  var length = triangle.getTotalLength();
-
-  // The start position of the drawing
-  triangle.style.strokeDasharray = length;
-
-  // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
-  triangle.style.strokeDashoffset = length;
-
-  // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
-  window.addEventListener("scroll", myFunction);
-
-  function myFunction() {
-    var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-    var draw = length * scrollpercent;
-
-    // Reverse the drawing (when scrolling upwards)
-    triangle.style.strokeDashoffset = length - draw;
-  }
-  </script>
+  <!-- HERO SECTION -->
+  <div class="container-fluid hero">
+    <div class="row">
+      <div class="col-sm-12 col-lg-6">
+        <img src="./assets/image/programs-steps.png" class="img-fluid" alt="Programs-steps">
+      </div>
+      <div class="col-sm-12 col-lg-6 bg-primary">
+        <p class="lead mt-6 mx-2 bg-primary blockquote">(Text about the different programmes)</p>
+      </div>
+    </div>
+  </div>
   <!-- STATUS SECTION -->
-  <div class="my-5 status">
-    <div class="container">
+  <div class="text-center mt-6">
+    <div class="d-inline-block bg-success mx-3 partner">
+      <a href="#"><img src="./assets/image/proof-program.png" alt=""></a>
+    </div>
+  </div>
+
+  <div class="mt-6 status">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-6">
-          <p>Copenhagen School of Entrepreneurship (CSE) is the unit at CBS, focusing on practical entrepreneurship. CSE have had more than 700 student driven companies since 2007, in different programs from basic startup, to scale and growth programmes.</p>
-        </div>
-        <div class="col-6">
-          <img src="https://dummyimage.com/600x400/b82862/0011ff.png" alt="">
-        </div>
-        <div class="col-12 text-center my-5 stats">
-          <div class="d-inline-block bg-success stat">
-            <h1>999</h1>
-            <p>title</p>
+
+        <div class="col-12 text-center mt-6 stats">
+          <div class="d-inline-block mx-5 stat">
+            <h2 class="display-1">557</h2>
+            <p class="display-2">Startups</p>
           </div>
-          <div class="d-inline-block bg-success stat">
-            <h1>999</h1>
-            <p>title</p>
+          <div class="d-inline-block mx-5 stat">
+            <h2 class="display-1">1003</h2>
+            <p class="display-2">Jobs generated</p>
           </div>
-          <div class="d-inline-block bg-success stat">
-            <h1>999</h1>
-            <p>title</p>
+          <div class="d-inline-block mx-5 stat">
+            <h2 class="display-1">45</h2>
+            <p class="display-2">Mentors</p>
           </div>
-          <div class="d-inline-block bg-success stat">
-            <h1>999</h1>
-            <p>title</p>
+          <div class="d-inline-block mx-5 stat">
+            <h2 class="display-1">222</h2>
+            <p class="display-2">Startups</p>
           </div>
         </div>
       </div>
@@ -108,7 +91,7 @@
   <div class="d-flex my-5 programmes">
     <div class="container align-self-center">
       <div class="text-center">
-        <h2 class="mb-5">our programmes</h2>
+        <h1 class="mb-5">our programmes</h1>
         <div class="d-inline-block bg-success mx-3 partner">
           <a href="#"><img src="./assets/image/proof-program.png" alt=""></a>
         </div>
@@ -130,24 +113,24 @@
 
   </div>
   <!-- QUOTATIONS SECTION -->
-  <div class="my-5 bg-primary quotations">
+  <div class="my-5 bg-primary container-fluid quotations">
     <div class="container d-flex h-100">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-4">
+      <div class="row">
+        <div class="col-6 push-1 align-self-center">
           <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="mb-0 before after">Lorem ipsum dolor sit amet, consectetur.</p>
             <footer class="blockquote-footer">Lorem ipsum</footer>
           </blockquote>
         </div>
-        <div class="col-4">
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="col-6 push-1 align-self-end">
+          <blockquote class="blockquote before">
+            <p class="mb-0 before after">Lorem ipsum dolor sit amet, elit.</p>
             <footer class="blockquote-footer">Lorem ipsum</footer>
           </blockquote>
         </div>
-        <div class="col-10">
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="col-12 align-self-center">
+          <blockquote class="blockquote before">
+            <p class="mb-0 before after">Lorem ipsum dolor sit amet, consectetur adipisicing. lorem ipsum dolor sit amet elit.</p>
             <footer class="blockquote-footer">Lorem ipsum</footer>
           </blockquote>
         </div>
@@ -158,7 +141,7 @@
   <div class="d-flex my-5 partners">
     <div class="container align-self-center">
       <div class="text-center">
-        <h2 class="mb-5">our partners</h2>
+        <h1 class="mb-5">our partners</h1>
         <div class="d-inline-block bg-success mx-4 partner">
           <a href="#"><img src="./assets/image/aka.png" alt=""></a>
         </div>
@@ -186,7 +169,11 @@
           <a href="#"><img src="./assets/image/cse-footer.png" alt=""></a>
         </div>
         <div class="col-6 d-flex">
-          <p class="my-0 mx-auto align-self-end text-primary">Porcelænshaven 26, 2nd floor, 2000 Frederiksberg | +45 38153646 | dhn.ino@cbs.dk</p>
+          <ol class="breadcrumb m-0 mx-auto align-self-end text-primary">
+            <li class="breadcrumb-item">Porcelænshaven 26, 2nd floor, 2000 Frederiksberg</li>
+            <li class="breadcrumb-item">+45 38153646</li>
+            <li class="breadcrumb-item">dhn.ino@cbs.dk</li>
+          </ol>
         </div>
         <div class="col-3 d-flex">
           <div class="my-0 mx-auto align-self-end">
@@ -198,8 +185,16 @@
       </div>
     </div>
   </div>
+
+  <!-- LIBRARIES -->
   <script src="./js/jquery.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/TweenMax.min.js"></script>
+  <script src="./js/EasePack.min.js"></script>
+  <script src="./js/ScrollMagic.min.js"></script>
+  <script src="./js/debug.addIndicators.min.js"></script>
+  <script src="./js/animation.gsap.min.js"></script>
+  <!-- SCRIPTS -->
+  <script src="./js/scrollEvents.js"></script>
 </body>
 
 </html>
