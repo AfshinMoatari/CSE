@@ -4,7 +4,7 @@ $(function() {
   var controller = new ScrollMagic.Controller();
 
   // sticky navbar scene
-  var slideDown = TweenMax.fromTo("nav", .3, {
+  var slideDown = TweenMax.fromTo("nav", .5, {
     height: 130
   }, {
     height: 0
@@ -19,7 +19,7 @@ $(function() {
       triggerElement: ".status"
     })
     .setTween(navEvents)
-    .setClassToggle("nav", "sticky-top")
+    .setClassToggle("nav", "sticky")
     .addTo(controller)
     .on("enter", function(event) {
       slideDown.reverse();
@@ -27,7 +27,8 @@ $(function() {
     .on("leave", function(event) {
       slideDown.play();
     })
-    .addIndicators();
-
+    .addIndicators({
+      name: "stickyNavbar"
+    });
 
 });

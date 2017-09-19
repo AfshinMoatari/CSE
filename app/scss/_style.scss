@@ -139,20 +139,22 @@ button
 //navbar
 .navbar
 {
+    position: fixed;
     z-index: 1;
+    top: 0;
 
-    height: 150px;
+    height: $navbar-height;
     a
     {
         font-size: $font-size-lg;
     }
+    &.sticky
+    {
+        background-color: $brand-primary;
+    }
 }
 
-//hero
-.hero
-{
-    height: calc(100vh - 380px);
-}
+
 
 //status
 .status
@@ -166,12 +168,10 @@ button
 //quotations
 .quotations
 {
-    height: 380px;
-}
-//programmes
-.programmes
-{
-    height: 450px;
+    .container
+    {
+        height: 380px;
+    }
 }
 
 //partners
@@ -183,7 +183,10 @@ button
 //footer
 .footer
 {
-    height: 150px;
+    position: relative;
+    bottom: 120px;
+
+    height: 120px;
     li
     {
         font-size: $font-size-md;
