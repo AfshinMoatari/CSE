@@ -148,6 +148,18 @@ button
     }
 }
 
+//SUB navbar
+.subnavbar
+{
+    z-index: 1;
+
+    height: 75px;
+    a
+    {
+        font-size: $font-size-lg;
+    }
+}
+
 //hero
 .hero
 {

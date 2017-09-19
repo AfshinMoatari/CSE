@@ -6257,6 +6257,12 @@ button {
   .navbar a {
     font-size: 1.563rem; }
 
+.subnavbar {
+  z-index: 1;
+  height: 75px; }
+  .subnavbar a {
+    font-size: 1.563rem; }
+
 .hero {
   height: calc(100vh - 380px); }
 
