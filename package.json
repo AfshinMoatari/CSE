@@ -27,6 +27,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "fullpage.js": "^2.9.4",
     "gsap": "^1.20.2",
+    "gulp-sass-json": "^1.0.1",
     "jquery": "^3.2.1",
     "popper.js": "^1.11.0",
     "scrollmagic": "^2.0.5"

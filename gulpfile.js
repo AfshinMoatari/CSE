@@ -33,6 +33,7 @@ gulp.task('js', function() {
     .pipe(browserSync.stream());
 });
 
+
 // Push build to gh-pages
 gulp.task('deploy', function() {
   return gulp.src("./app/**/*")

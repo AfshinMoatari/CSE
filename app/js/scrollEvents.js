@@ -1,4 +1,8 @@
 $(function() {
+  // hero color transition
+  TweenMax.to(".hero", 1.5, {
+    backgroundColor: "#496093"
+  });
 
   // init controller
   var controller = new ScrollMagic.Controller();
