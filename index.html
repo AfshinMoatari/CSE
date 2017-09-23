@@ -53,44 +53,50 @@
       </div>
     </div>
     <!-- STATUS SECTION -->
-    <div class="section status">
+    <div class="section status animate">
       <div class="d-flex">
         <div class="container align-self-center">
-        <div class="row">
-          <div class="col-6">
-            <p class="lead">Copenhagen School of Entrepreneurship (CSE) is the unit at CBS, focusing on practical entrepreneurship. CSE have had more than 700 student driven companies since 2007, in different programs from basic startup, to scale and growth programmes.</p>
-          </div>
-          <div class="col-6 pr-0">
-            <img src="./assets/image/hero.png" alt="" class="img-fluid">
-          </div>
-          <div class="col-12 text-center mt-6 stats">
-            <div class="d-inline-block mx-5 stat">
-              <h2 class="display-1">557</h2>
-              <p class="display-2">Startups</p>
+          <div class="row">
+            <div class="col-6 fade-in-left" duration-fade="1.3" delay="0">
+              <p class="lead">Copenhagen School of Entrepreneurship (CSE) is the unit at CBS, focusing on practical entrepreneurship. CSE have had more than 700 student driven companies since 2007, in different programs from basic startup, to scale and growth programmes.</p>
             </div>
-            <div class="d-inline-block mx-5 stat">
-              <h2 class="display-1">1003</h2>
-              <p class="display-2">Jobs generated</p>
+            <div class="col-6 pr-0 fade-in-right" duration-fade="1" delay="0">
+              <img src="./assets/image/hero.png" alt="" class="img-fluid">
             </div>
-            <div class="d-inline-block mx-5 stat">
-              <h2 class="display-1">45</h2>
-              <p class="display-2">Mentors</p>
+            <div class="fade-in-left square hidden d-block" duration-fade="1" duration-square="1" delay="0">
+              <span class="side-b"></span>
+              <span class="side-l"></span>
+              <span class="side-t"></span>
+              <span class="side-r"></span>
             </div>
-            <div class="d-inline-block mx-5 stat">
-              <h2 class="display-1">222</h2>
-              <p class="display-2">Startups</p>
+            <div class="col-12 text-center mt-6 stats">
+              <div class="d-inline-block mx-5 stat">
+                <h2 class="display-1 flipping-number" duration-fade="2" min="0" max="557" delay=".4">0</h2>
+                <p class="display-2">Startups</p>
+              </div>
+              <div class="d-inline-block mx-5 stat">
+                <h2 class="display-1 flipping-number" duration-fade="2.8" min="0" max="1003" delay=".6">0</h2>
+                <p class="display-2">Jobs generated</p>
+              </div>
+              <div class="d-inline-block mx-5 stat">
+                <h2 class="display-1 flipping-number" duration-fade="2.8" min="0" max="45" delay=".8">0</h2>
+                <p class="display-2">Mentors</p>
+              </div>
+              <div class="d-inline-block mx-5 stat">
+                <h2 class="display-1 flipping-number" duration-fade="2.8" min="0" max="222" delay="1">0</h2>
+                <p class="display-2">Startups</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
     </div>
     <!-- PROGRAMMES SECTION -->
-    <div class="section programmes">
+    <div class="section programmes animate">
       <div class="d-flex">
         <div class="container align-self-center">
         <div class="text-center">
-          <h1 class="mb-5">our programmes</h1>
+          <h1 class="fade-in mb-5" duration-fade=".3" delay="0">our programmes</h1>
           <div class="d-inline-block bg-success mx-3 partner">
             <a href="#"><img src="./assets/image/proof-program.png" alt=""></a>
           </div>
@@ -145,7 +151,7 @@
       <div class="d-flex ">
         <div class="container align-self-center">
         <div class="text-center">
-          <h1 class="mb-5">our partners</h1>
+          <h1 class="fade-in mb-5" delay="0">our partners</h1>
           <div class="d-inline-block bg-success mx-4 partner">
             <a href="#"><img src="./assets/image/aka.png" alt=""></a>
           </div>
@@ -202,7 +208,7 @@
   <script src="./js/animation.gsap.min.js"></script>
   <script src="./js/jquery.fullpage.min.js"></script>
   <!-- SCRIPTS -->
-  <script src="./js/scrollEvents.js"></script>
+  <script src="./js/animation.js"></script>
   <script src="./js/fullPage.js"></script>
 </body>
 

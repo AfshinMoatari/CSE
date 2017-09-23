@@ -6468,6 +6468,7 @@ button {
   .navbar a {
     font-size: 1.563rem; }
   .navbar.sticky {
+    height: 100px !important;
     background-color: #496093; }
 
 .subnavbar {
@@ -6492,3 +6493,49 @@ button {
   height: 120px; }
   .footer li {
     font-size: 1.25rem; }
+
+.square {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  background: transparent; }
+
+.side-b,
+.side-l,
+.side-t,
+.side-r {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: transparent;
+  background-color: #cd4847; }
+
+.side-l {
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  min-height: 0;
+  max-height: 350px; }
+
+.side-t {
+  top: 0;
+  left: 0;
+  min-width: 0;
+  max-width: 350px;
+  height: 10px; }
+
+.side-r {
+  top: 0;
+  right: 0;
+  width: 10px;
+  min-height: 0;
+  max-height: 160px; }
+
+.side-b {
+  bottom: 0;
+  left: 0;
+  min-width: 160px;
+  max-width: 0;
+  height: 10px; }

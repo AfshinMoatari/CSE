@@ -151,6 +151,8 @@ button
     }
     &.sticky
     {
+        height: 100px !important;
+
         background-color: $brand-primary;
     }
 }
@@ -204,4 +206,72 @@ button
     {
         font-size: $font-size-md;
     }
+}
+
+//square
+.square
+{
+    position: absolute;
+    top: 30%;
+    left: 0;
+
+    width: $square-dimension;
+    height: $square-dimension;
+
+    background: $transparent;
+}
+
+.side-b,
+.side-l,
+.side-t,
+.side-r
+{
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    background: transparent;
+    background-color: $square-color-red;
+}
+
+.side-l
+{
+    bottom: 0;
+    left: 0;
+
+    width: $square-border;
+    min-height: 0;
+    max-height: $square-dimension;
+}
+
+.side-t
+{
+    top: 0;
+    left: 0;
+
+    min-width: 0;
+    max-width: $square-dimension;
+    height: $square-border;
+}
+
+
+.side-r
+{
+    top: 0;
+    right: 0;
+
+    width: $square-border;
+    min-height: 0;
+    max-height: $square-dimension-min-status;
+}
+
+.side-b
+{
+    bottom: 0;
+    left: 0;
+
+    min-width: $square-dimension-min-status;
+    max-width: 0;
+    height: $square-border;
 }
