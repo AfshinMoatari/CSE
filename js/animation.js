@@ -179,19 +179,19 @@ $(function() {
     var tween = new TimelineMax();
     tween.to($(this), 0, {
       backgroundColor: "#496093",
-    }).to($(this).find(".nav li"), 0.01, {
+    }).to($(this).find(".nav li"), 0.3, {
       scale: .8,
-    }).to($(this), .3, {
+    }, 0).to($(this), .6, {
       height: 100
-    }).to($(this).find(".nav li"), .3, {
+    }, 0).to($(this).find(".nav li"), .3, {
       css: {
         className: '-=mx-3'
       }
-    }).to($(this).find(".nav li"), .3, {
+    }, 0).to($(this).find(".nav li"), .3, {
       marginLeft: 10
-    }).to($(this).find(".navbar-brand img"), .4, {
+    }, 0).to($(this).find(".navbar-brand img"), .6, {
       width: '85%'
-    });
+    }, 0);
 
     // build a scene
     var scene = new ScrollMagic.Scene({
