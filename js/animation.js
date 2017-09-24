@@ -2,6 +2,7 @@ $(function() {
   // init controller
   var controller = new ScrollMagic.Controller();
 
+  // animation classes
   $('.fade-in').each(function() {
 
     var duration = $(this).attr('duration-fade');
@@ -87,6 +88,26 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
+  $('.opacity').each(function() {
+
+    var duration = $(this).attr('duration-opacity');
+    var delay = $(this).attr('delay');
+    // build a tween
+    var tween = TweenMax.fromTo($(this), duration, {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      ease: Power4.easeOut,
+      delay: delay
+    });
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0]
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
   $('.square').each(function() {
 
     var duration = $(this).attr('duration-square');
@@ -116,23 +137,31 @@ $(function() {
     // build a tween
     var tween = new TimelineMax();
     tween.fromTo(a1, duration, {
+        autoAlpha: 0,
         width: from1
       }, {
+        autoAlpha: 1,
         width: to1
       })
       .fromTo(a2, duration, {
+        autoAlpha: 0,
         height: from2
       }, {
+        autoAlpha: 1,
         height: to2
       })
       .fromTo(a3, duration, {
+        autoAlpha: 0,
         width: from3
       }, {
+        autoAlpha: 1,
         width: to3
       })
       .fromTo(a4, duration, {
+        autoAlpha: 0,
         height: from4
       }, {
+        autoAlpha: 1,
         height: to4
       });
 
@@ -144,78 +173,31 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
+  $('nav').each(function() {
 
+    // build a tween
+    var tween = new TimelineMax();
+    tween.to($(this), 0, {
+      backgroundColor: "#496093",
+    }).to($(this).find(".nav li"), 0.01, {
+      scale: .8,
+    }).to($(this), .3, {
+      height: 100
+    }).to($(this).find(".nav li"), .3, {
+      css: {
+        className: '-=mx-3'
+      }
+    }).to($(this).find(".nav li"), .3, {
+      marginLeft: 10
+    }).to($(this).find(".navbar-brand img"), .4, {
+      width: '85%'
+    });
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".status"
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
 });
-
-// hero color transition
-var heroTransition = TweenMax.to(".hero", 1.5, {
-  backgroundColor: "#496093"
-});
-
-
-
-// $(function() {
-//
-//   // init controller
-//   var controller = new ScrollMagic.Controller();
-//
-//   // sticky navbar scene
-//   var slideDown = TweenMax.to("nav", .5, {
-//     height: 330
-//   });
-//
-//   var navEvents = new TimelineMax()
-//     .add([
-//       slideDown
-//     ]);
-//
-//   var scene = new ScrollMagic.Scene({
-//       triggerElement: ".status"
-//     })
-//     .setTween(navEvents)
-//     .setClassToggle("nav", "sticky")
-//     .addTo(controller)
-//     .on("enter", function(event) {
-//       slideDown.reverse();
-//     })
-//     .on("leave", function(event) {
-//       slideDown.play();
-//     })
-//     .addIndicators({
-//       name: "stickyNavbar"
-//     });
-//
-//   // hero color transition
-//   var heroTransition = TweenMax.to(".hero", 1.5, {
-//     backgroundColor: "#496093"
-//   });
-//
-//   //square
-//   TweenMax.set(".square", {
-//     visibility: "visible"
-//   });
-//
-//   var tl = new TimelineMax();
-//   tl.fromTo(".l4", 3, {
-//       width: 110
-//     }, {
-//       width: 110
-//     })
-//     .fromTo(".l1", 3, {
-//       height: 0
-//     }, {
-//       height: 220
-//     })
-//     .fromTo(".l2", 3, {
-//       width: 0
-//     }, {
-//       width: 220
-//     })
-//     .fromTo(".l3", 3, {
-//       height: 0
-//     }, {
-//       height: 110
-//     })
-//
-//   tl.timeScale(4) //play faster
-// });

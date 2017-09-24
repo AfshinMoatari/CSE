@@ -149,12 +149,6 @@ button
     {
         font-size: $font-size-lg;
     }
-    &.sticky
-    {
-        height: 100px !important;
-
-        background-color: $brand-primary;
-    }
 }
 
 //sub navbar
@@ -169,7 +163,6 @@ button
         font-size: $font-size-md;
     }
 }
-
 
 //status
 .status
@@ -268,10 +261,10 @@ button
 
 .side-b
 {
+    right: calc( ( #{$square-dimension} - #{$square-dimension-min-status} )  );
     bottom: 0;
-    left: 0;
 
-    min-width: $square-dimension-min-status;
-    max-width: 0;
+    min-width: 0;
+    max-width: $square-dimension-min-status;
     height: $square-border;
 }

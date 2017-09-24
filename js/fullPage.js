@@ -1,5 +1,7 @@
 $(document).ready(function() {
   $('.fullpage').fullpage({
-    scrollBar: true
+    scrollBar: true,
+    verticalCentered: true,
+    paddingTop: '100px'
   });
 });
