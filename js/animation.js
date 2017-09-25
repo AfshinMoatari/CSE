@@ -108,71 +108,6 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
-  $('.square').each(function() {
-
-    var duration = $(this).attr('duration-square');
-
-    var i1 = $(this).children(':nth-child(1)');
-    var i2 = $(this).children(':nth-child(2)');
-    var i3 = $(this).children(':nth-child(3)');
-    var i4 = $(this).children(':nth-child(4)');
-
-    var a1 = $(this).children(':nth-child(1)')[0];
-    var a2 = $(this).children(':nth-child(2)')[0];
-    var a3 = $(this).children(':nth-child(3)')[0];
-    var a4 = $(this).children(':nth-child(4)')[0];
-
-    var from1 = i1.css("min-width");
-    var to1 = i1.css("max-width");
-
-    var from2 = i2.css("min-height");
-    var to2 = i2.css("max-height");
-
-    var from3 = i3.css("min-width");
-    var to3 = i3.css("max-width");
-
-    var from4 = i4.css("min-height");
-    var to4 = i4.css("max-height");
-
-    // build a tween
-    var tween = new TimelineMax();
-    tween.fromTo(a1, duration, {
-        autoAlpha: 0,
-        width: from1
-      }, {
-        autoAlpha: 1,
-        width: to1
-      })
-      .fromTo(a2, duration, {
-        autoAlpha: 0,
-        height: from2
-      }, {
-        autoAlpha: 1,
-        height: to2
-      })
-      .fromTo(a3, duration, {
-        autoAlpha: 0,
-        width: from3
-      }, {
-        autoAlpha: 1,
-        width: to3
-      })
-      .fromTo(a4, duration, {
-        autoAlpha: 0,
-        height: from4
-      }, {
-        autoAlpha: 1,
-        height: to4
-      });
-
-
-    // build a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
-      })
-      .setTween(tween)
-      .addTo(controller);
-  });
   $('nav').each(function() {
 
     // build a tween
@@ -200,4 +135,42 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
+  $('.square').each(function() {
+
+    var duration = $(this).attr('duration-square');
+
+    var tween = new TimelineMax();
+    $(this).children('span').each(function() {
+
+      var maxWidth = $(this).css("max-width");
+      var maxHeight = $(this).css("max-height");
+
+      if (maxWidth !== 'none') {
+        tween.fromTo($(this), duration, {
+          autoAlpha: 0,
+          width: $(this).css("min-width")
+        }, {
+          autoAlpha: 1,
+          width: maxWidth
+        })
+      } else if (maxHeight !== 'none') {
+        tween.fromTo($(this), duration, {
+          autoAlpha: 0,
+          height: $(this).css("min-height")
+        }, {
+          autoAlpha: 1,
+          height: maxHeight
+        })
+      }
+
+    });
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0]
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+
 });
