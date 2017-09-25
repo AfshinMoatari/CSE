@@ -6467,8 +6467,6 @@ button {
   height: 150px; }
   .navbar a {
     font-size: 1.563rem; }
-  .navbar.sticky {
-    background-color: #496093; }
 
 .subnavbar {
   z-index: 1;
@@ -6480,11 +6478,185 @@ button {
 .status p {
   color: #496093; }
 
+.status .square {
+  top: 30%;
+  left: 0; }
+  .status .square .side-b,
+  .status .square .side-l,
+  .status .square .side-t,
+  .status .square .side-r {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #cd4847; }
+  .status .square .side-l {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 350px; }
+  .status .square .side-t {
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 350px;
+    height: 10px; }
+  .status .square .side-r {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 160px; }
+  .status .square .side-rr {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 360px; }
+  .status .square .side-b {
+    right: calc( ( 350px - 160px ));
+    bottom: 0;
+    min-width: 0;
+    max-width: 160px;
+    height: 10px; }
+
 .quotations .container {
   height: 380px; }
 
+.quotations .square.left {
+  top: 45%;
+  left: -10%; }
+  .quotations .square.left .side-b,
+  .quotations .square.left .side-l,
+  .quotations .square.left .side-t,
+  .quotations .square.left .side-rt,
+  .quotations .square.left .side-rb {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #5bad6f; }
+  .quotations .square.left .side-l {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 350px; }
+  .quotations .square.left .side-t {
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 350px;
+    height: 10px; }
+  .quotations .square.left .side-rt {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 40px; }
+  .quotations .square.left .side-rb {
+    top: calc( ( 350px - 200px ));
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 200px; }
+  .quotations .square.left .side-b {
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    max-width: 350px;
+    height: 10px; }
+
+.quotations .square.right {
+  top: -30%;
+  right: -15%; }
+  .quotations .square.right .side-b,
+  .quotations .square.right .side-lb,
+  .quotations .square.right .side-lt,
+  .quotations .square.right .side-t,
+  .quotations .square.right .side-r {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #e1948d; }
+  .quotations .square.right .side-lb {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 70px; }
+  .quotations .square.right .side-lt {
+    bottom: calc( ( 350px - 170px ));
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 170px; }
+  .quotations .square.right .side-t {
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 350px;
+    height: 10px; }
+  .quotations .square.right .side-r {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 350px; }
+  .quotations .square.right .side-b {
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    max-width: 350px;
+    height: 10px; }
+
 .partners {
   height: 450px; }
+  .partners .square {
+    top: -25%;
+    right: -9%; }
+    .partners .square .side-b,
+    .partners .square .side-lt,
+    .partners .square .side-lb,
+    .partners .square .side-t,
+    .partners .square .side-r {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: transparent;
+      background-color: #496093; }
+    .partners .square .side-lt {
+      bottom: calc( ( 350px - 110px ));
+      left: 0;
+      width: 10px;
+      min-height: 0;
+      max-height: 110px; }
+    .partners .square .side-lb {
+      bottom: 0;
+      left: 0;
+      width: 10px;
+      min-height: 0;
+      max-height: 110px; }
+    .partners .square .side-t {
+      top: 0;
+      left: 0;
+      min-width: 0;
+      max-width: 350px;
+      height: 10px; }
+    .partners .square .side-r {
+      top: 0;
+      right: 0;
+      width: 10px;
+      min-height: 0;
+      max-height: 350px; }
+    .partners .square .side-b {
+      right: 0;
+      bottom: 0;
+      min-width: 0;
+      max-width: 350px;
+      height: 10px; }
 
 .footer {
   position: relative;
@@ -6492,3 +6664,9 @@ button {
   height: 120px; }
   .footer li {
     font-size: 1.25rem; }
+
+.square {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: transparent; }

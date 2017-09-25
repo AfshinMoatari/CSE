@@ -149,10 +149,6 @@ button
     {
         font-size: $font-size-lg;
     }
-    &.sticky
-    {
-        background-color: $brand-primary;
-    }
 }
 
 //sub navbar
@@ -168,13 +164,82 @@ button
     }
 }
 
-
 //status
 .status
 {
     p
     {
         color: $brand-primary;
+    }
+    .square
+    {
+        top: 30%;
+        left: 0;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-red;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+            left: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+
+
+        .side-r
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 160px;
+        }
+
+        .side-rr
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 360px;
+        }
+
+        .side-b
+        {
+            right: calc( ( #{$square-dimension} - 160px )  );
+            bottom: 0;
+
+            min-width: 0;
+            max-width: 160px;
+            height: $square-border;
+        }
     }
 }
 
@@ -185,12 +250,227 @@ button
     {
         height: 380px;
     }
+    .square
+    {
+        &.left
+        {
+            top: 45%;
+            left: -10%;
+
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-rt,
+            .side-rb
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-green;
+            }
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+
+            .side-rt
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 40px;
+            }
+
+            .side-rb
+            {
+                top: calc( ( #{$square-dimension} - 200px )  );
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 200px;;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+        &.right
+        {
+            top: -30%;
+            right: -15%;
+
+            .side-b,
+            .side-lb,
+            .side-lt,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-orange;
+            }
+
+            .side-lb
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 70px;
+            }
+
+            .side-lt
+            {
+                bottom: calc( ( #{$square-dimension} - 170px )  );
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 170px;;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+    }
 }
 
 //partners
 .partners
 {
     height: 450px;
+    .square
+    {
+        top: -25%;
+        right: -9%;
+
+        .side-b,
+        .side-lt,
+        .side-lb,
+        .side-t,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $brand-primary;
+        }
+
+        .side-lt
+        {
+            bottom: calc( ( #{$square-dimension} - 110px )  );
+            left: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 110px;;
+        }
+
+        .side-lb
+        {
+            bottom: 0;
+            left: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 110px;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+
+
+        .side-r
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
 }
 
 //footer
@@ -204,4 +484,15 @@ button
     {
         font-size: $font-size-md;
     }
+}
+
+//square
+.square
+{
+    position: absolute;
+
+    width: $square-dimension;
+    height: $square-dimension;
+
+    background: $transparent;
 }
