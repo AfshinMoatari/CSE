@@ -49,8 +49,15 @@ $lead-font-size: 1.25rem;
 $blockquote-small-color: $brand-secondary;
 $blockquote-font-size: $font-size-xlg;
 
-// components
+// grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1250px
+);
 
+// components
 $component-active-color: $white !default;
 $component-active-bg: $brand-primary !default;
 

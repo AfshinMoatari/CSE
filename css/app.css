@@ -637,7 +637,7 @@ pre {
       max-width: 100%; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1140px;
+      width: 1250px;
       max-width: 100%; } }
 
 .container-fluid {
@@ -6381,6 +6381,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
 
+.container {
+  padding-right: 100px;
+  padding-left: 100px; }
+
 h1,
 h2,
 h3,
@@ -6475,12 +6479,17 @@ button {
   .subnavbar a {
     font-size: 1.25rem; }
 
-.status p {
-  color: #496093; }
+.status .text-col {
+  z-index: 1; }
+  .status .text-col p {
+    position: relative;
+    top: 10%;
+    width: 740px;
+    color: #496093; }
 
 .status .square {
   top: 30%;
-  left: 0; }
+  left: 7%; }
   .status .square .side-b,
   .status .square .side-l,
   .status .square .side-t,
@@ -6526,7 +6535,7 @@ button {
 
 .quotations .square.left {
   top: 45%;
-  left: -10%; }
+  left: -5%; }
   .quotations .square.left .side-b,
   .quotations .square.left .side-l,
   .quotations .square.left .side-t,
@@ -6570,7 +6579,7 @@ button {
 
 .quotations .square.right {
   top: -30%;
-  right: -15%; }
+  right: -10%; }
   .quotations .square.right .side-b,
   .quotations .square.right .side-lb,
   .quotations .square.right .side-lt,

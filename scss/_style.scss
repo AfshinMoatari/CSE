@@ -2,6 +2,13 @@
 @include font-face('CBS-regular', 'CBS_NEW_REGULAR', 'CBS-typografier');
 @include font-face('CBS-bold', 'CBS_NEW_BOLD', 'CBS-typografier');
 
+//container
+.container
+{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
 //typography
 h1,
 h2,
@@ -167,14 +174,24 @@ button
 //status
 .status
 {
-    p
+    .text-col
     {
-        color: $brand-primary;
+        z-index: 1;
+        p
+        {
+            position: relative;
+            top: 10%;
+
+            width: 740px;
+
+            color: $brand-primary;
+        }
     }
+
     .square
     {
         top: 30%;
-        left: 0;
+        left: 7%;
 
         .side-b,
         .side-l,
@@ -255,7 +272,7 @@ button
         &.left
         {
             top: 45%;
-            left: -10%;
+            left: -5%;
 
             .side-b,
             .side-l,
@@ -325,7 +342,7 @@ button
         &.right
         {
             top: -30%;
-            right: -15%;
+            right: -10%;
 
             .side-b,
             .side-lb,
@@ -478,6 +495,7 @@ button
 {
     position: relative;
     bottom: 120px;
+
     height: 120px;
     li
     {
