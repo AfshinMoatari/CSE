@@ -1772,22 +1772,22 @@ fieldset[disabled] a.btn {
 .btn-primary {
   color: #496093;
   background-color: #fff;
-  border-color: #496093; }
+  border-color: transparent; }
   .btn-primary:hover {
     color: #496093;
     background-color: #e6e6e6;
-    border-color: #35456a; }
+    border-color: transparent; }
   .btn-primary:focus, .btn-primary.focus {
-    box-shadow: 0 0 0 2px rgba(73, 96, 147, 0.5); }
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {
     background-color: #fff;
-    border-color: #496093; }
+    border-color: transparent; }
   .btn-primary:active, .btn-primary.active,
   .show > .btn-primary.dropdown-toggle {
     color: #496093;
     background-color: #e6e6e6;
     background-image: none;
-    border-color: #35456a; }
+    border-color: transparent; }
 
 .btn-secondary {
   color: #292b2c;
@@ -6381,6 +6381,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
 
+.container {
+  padding-right: 75px;
+  padding-left: 75px; }
+
 h1,
 h2,
 h3,
@@ -6422,43 +6426,20 @@ button {
   display: inline-block;
   cursor: pointer;
   color: #fff;
+  border-width: 2px;
   background-color: #496093; }
-  .btn-primary.apply {
-    color: #496093 !important;
-    background-color: #fff; }
-  .btn-primary::before, .btn-primary::after {
+  .btn-primary span {
     position: absolute;
     z-index: -1;
-    width: calc(100% + 8px);
-    height: calc(100% + 8px);
+    top: -10px;
+    right: -10px;
+    width: 100%;
+    height: 100%;
     content: '';
     -webkit-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out; }
-  .btn-primary.apply::before, .btn-primary.apply::after {
-    width: 100%;
-    height: 100%; }
-  .btn-primary::before {
-    top: -12px;
-    right: -12px;
+    transition: all 0.6s ease-in-out;
     border: 3px solid #496093;
     background-color: #fff; }
-  .btn-primary.apply:before {
-    border: 3px solid #fff;
-    background-color: #496093; }
-  .btn-primary:hover {
-    color: #496093;
-    border: 3px solid #496093;
-    background-color: #fff; }
-    .btn-primary:hover::before {
-      border: 3px solid #496093;
-      background-color: #496093; }
-  .btn-primary.apply:hover {
-    color: #fff !important;
-    border: 3px solid #fff;
-    background-color: #496093; }
-    .btn-primary.apply:hover::before {
-      border: 3px solid #fff;
-      background-color: #fff; }
 
 .navbar {
   position: fixed;
@@ -6467,6 +6448,12 @@ button {
   height: 150px; }
   .navbar a {
     font-size: 1.563rem; }
+  .navbar .apply .btn-primary {
+    color: #496093;
+    background-color: #fff; }
+    .navbar .apply .btn-primary span {
+      border: 3px solid #fff;
+      background-color: #496093; }
 
 .subnavbar {
   z-index: 1;
