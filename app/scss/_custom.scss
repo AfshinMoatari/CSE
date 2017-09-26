@@ -49,8 +49,15 @@ $lead-font-size: 1.25rem;
 $blockquote-small-color: $brand-secondary;
 $blockquote-font-size: $font-size-xlg;
 
-// components
+// grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1250px
+);
 
+// components
 $component-active-color: $white !default;
 $component-active-bg: $brand-primary !default;
 
@@ -101,8 +108,10 @@ $navbar-inverse-color: $brand-secondary;
 $navbar-inverse-hover-color: rgba($brand-secondary,.8);
 $navbar-inverse-active-color: rgba($brand-secondary,.8);
 
-// breadcrumbs
+// navs
+$nav-link-padding: .3rem 1rem;
 
+// breadcrumbs
 $breadcrumb-padding-y: 0rem;
 $breadcrumb-padding-x: 0rem;
 $breadcrumb-item-padding: .5rem;
@@ -113,11 +122,11 @@ $breadcrumb-divider: '|';
 // buttons
 
 $btn-padding-x: .5rem;
-$btn-padding-y: .2rem;
+$btn-padding-y: .3rem;
 
 $btn-primary-color: $brand-primary;
 $btn-primary-bg: $brand-secondary;
-$btn-primary-border: $brand-primary;
+$btn-primary-border: $transparent;
 $btn-line-height: 1;
 
 $btn-border-radius: 0;
@@ -127,4 +136,4 @@ $btn-transition: $transition-base;
 // square
 
 $square-border: 10px;
-$square-dimension: 350px;
+$square-dimension: 335px;

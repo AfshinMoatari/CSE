@@ -637,7 +637,7 @@ pre {
       max-width: 100%; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1140px;
+      width: 1250px;
       max-width: 100%; } }
 
 .container-fluid {
@@ -1750,7 +1750,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   vertical-align: middle;
   user-select: none;
   border: 3px solid transparent;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   font-size: 1rem;
   border-radius: 0;
   transition: all 0.6s ease-in-out; }
@@ -1772,22 +1772,22 @@ fieldset[disabled] a.btn {
 .btn-primary {
   color: #496093;
   background-color: #fff;
-  border-color: #496093; }
+  border-color: transparent; }
   .btn-primary:hover {
     color: #496093;
     background-color: #e6e6e6;
-    border-color: #35456a; }
+    border-color: transparent; }
   .btn-primary:focus, .btn-primary.focus {
-    box-shadow: 0 0 0 2px rgba(73, 96, 147, 0.5); }
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {
     background-color: #fff;
-    border-color: #496093; }
+    border-color: transparent; }
   .btn-primary:active, .btn-primary.active,
   .show > .btn-primary.dropdown-toggle {
     color: #496093;
     background-color: #e6e6e6;
     background-image: none;
-    border-color: #35456a; }
+    border-color: transparent; }
 
 .btn-secondary {
   color: #292b2c;
@@ -2566,7 +2566,7 @@ tbody.collapse.show {
 
 .nav-link {
   display: block;
-  padding: 0.5em 1em; }
+  padding: 0.3rem 1rem; }
   .nav-link:focus, .nav-link:hover {
     text-decoration: none; }
   .nav-link.disabled {
@@ -6381,6 +6381,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
 
+.container {
+  padding-right: 75px;
+  padding-left: 75px; }
+
 h1,
 h2,
 h3,
@@ -6422,43 +6426,20 @@ button {
   display: inline-block;
   cursor: pointer;
   color: #fff;
+  border-width: 2px;
   background-color: #496093; }
-  .btn-primary.apply {
-    color: #496093 !important;
-    background-color: #fff; }
-  .btn-primary::before, .btn-primary::after {
+  .btn-primary span {
     position: absolute;
     z-index: -1;
-    width: calc(100% + 8px);
-    height: calc(100% + 8px);
+    top: -10px;
+    right: -10px;
+    width: 100%;
+    height: 100%;
     content: '';
     -webkit-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out; }
-  .btn-primary.apply::before, .btn-primary.apply::after {
-    width: 100%;
-    height: 100%; }
-  .btn-primary::before {
-    top: -12px;
-    right: -12px;
+    transition: all 0.6s ease-in-out;
     border: 3px solid #496093;
     background-color: #fff; }
-  .btn-primary.apply:before {
-    border: 3px solid #fff;
-    background-color: #496093; }
-  .btn-primary:hover {
-    color: #496093;
-    border: 3px solid #496093;
-    background-color: #fff; }
-    .btn-primary:hover::before {
-      border: 3px solid #496093;
-      background-color: #496093; }
-  .btn-primary.apply:hover {
-    color: #fff !important;
-    border: 3px solid #fff;
-    background-color: #496093; }
-    .btn-primary.apply:hover::before {
-      border: 3px solid #fff;
-      background-color: #fff; }
 
 .navbar {
   position: fixed;
@@ -6467,6 +6448,12 @@ button {
   height: 150px; }
   .navbar a {
     font-size: 1.563rem; }
+  .navbar .apply .btn-primary {
+    color: #496093;
+    background-color: #fff; }
+    .navbar .apply .btn-primary span {
+      border: 3px solid #fff;
+      background-color: #496093; }
 
 .subnavbar {
   z-index: 1;
@@ -6475,12 +6462,17 @@ button {
   .subnavbar a {
     font-size: 1.25rem; }
 
-.status p {
-  color: #496093; }
+.status .text-col {
+  z-index: 1; }
+  .status .text-col p {
+    position: relative;
+    top: 10%;
+    width: 740px;
+    color: #496093; }
 
 .status .square {
   top: 30%;
-  left: 0; }
+  left: 4.9%; }
   .status .square .side-b,
   .status .square .side-l,
   .status .square .side-t,
@@ -6495,12 +6487,12 @@ button {
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 350px; }
+    max-height: 335px; }
   .status .square .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
   .status .square .side-r {
     top: 0;
@@ -6515,7 +6507,7 @@ button {
     min-height: 0;
     max-height: 360px; }
   .status .square .side-b {
-    right: calc( ( 350px - 160px ));
+    right: calc( ( 335px - 160px ));
     bottom: 0;
     min-width: 0;
     max-width: 160px;
@@ -6526,7 +6518,7 @@ button {
 
 .quotations .square.left {
   top: 45%;
-  left: -10%; }
+  left: -5%; }
   .quotations .square.left .side-b,
   .quotations .square.left .side-l,
   .quotations .square.left .side-t,
@@ -6542,35 +6534,35 @@ button {
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 350px; }
+    max-height: 335px; }
   .quotations .square.left .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
   .quotations .square.left .side-rt {
     top: 0;
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 40px; }
+    max-height: 50px; }
   .quotations .square.left .side-rb {
-    top: calc( ( 350px - 200px ));
+    top: calc( ( 335px - 190px ));
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 200px; }
+    max-height: 190px; }
   .quotations .square.left .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
 
 .quotations .square.right {
   top: -30%;
-  right: -15%; }
+  right: -10%; }
   .quotations .square.right .side-b,
   .quotations .square.right .side-lb,
   .quotations .square.right .side-lt,
@@ -6586,37 +6578,37 @@ button {
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 70px; }
+    max-height: 50px; }
   .quotations .square.right .side-lt {
-    bottom: calc( ( 350px - 170px ));
+    bottom: calc( ( 335px - 180px ));
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 170px; }
+    max-height: 180px; }
   .quotations .square.right .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
   .quotations .square.right .side-r {
     top: 0;
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 350px; }
+    max-height: 335px; }
   .quotations .square.right .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
 
 .partners {
   height: 450px; }
   .partners .square {
     top: -25%;
-    right: -9%; }
+    right: -5%; }
     .partners .square .side-b,
     .partners .square .side-lt,
     .partners .square .side-lb,
@@ -6628,7 +6620,7 @@ button {
       background: transparent;
       background-color: #496093; }
     .partners .square .side-lt {
-      bottom: calc( ( 350px - 110px ));
+      bottom: calc( ( 335px - 110px ));
       left: 0;
       width: 10px;
       min-height: 0;
@@ -6638,35 +6630,35 @@ button {
       left: 0;
       width: 10px;
       min-height: 0;
-      max-height: 110px; }
+      max-height: 100px; }
     .partners .square .side-t {
       top: 0;
       left: 0;
       min-width: 0;
-      max-width: 350px;
+      max-width: 335px;
       height: 10px; }
     .partners .square .side-r {
       top: 0;
       right: 0;
       width: 10px;
       min-height: 0;
-      max-height: 350px; }
+      max-height: 335px; }
     .partners .square .side-b {
       right: 0;
       bottom: 0;
       min-width: 0;
-      max-width: 350px;
+      max-width: 335px;
       height: 10px; }
 
 .footer {
   position: relative;
-  bottom: 120px;
-  height: 120px; }
+  bottom: 90px;
+  height: 90px; }
   .footer li {
     font-size: 1.25rem; }
 
 .square {
   position: absolute;
-  width: 350px;
-  height: 350px;
+  width: 335px;
+  height: 335px;
   background: transparent; }
