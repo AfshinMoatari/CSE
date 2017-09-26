@@ -172,23 +172,21 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
-
   $('.btn-primary').each(function() {
 
     var duration = $(this).attr('duration-btn');
-    var delay = $(this).attr('delay');
     var textColor = $(this).css("background-color");
     var backgroundColor = $(this).css("color");
 
     // build a tween
     function over() {
       var tween = new TimelineMax();
-      tween.to($(this), 0.1, {
+      tween.to($(this), duration, {
         ease: Sine.easeIn,
         color: textColor,
         backgroundColor: backgroundColor,
         borderColor: textColor,
-      }).to($(this).find('span'), 0.1, {
+      }).to($(this).find('span'), duration, {
         ease: Sine.easeIn,
         backgroundColor: textColor,
         top: '-6px',
@@ -199,12 +197,12 @@ $(function() {
 
     function out() {
       var tween = new TimelineMax();
-      tween.to($(this), 0.1, {
+      tween.to($(this), duration, {
         ease: Sine.easeIn,
         color: backgroundColor,
         backgroundColor: textColor,
         borderColor: 'transparent',
-      }).to($(this).find('span'), 0.1, {
+      }).to($(this).find('span'), duration, {
         ease: Sine.easeIn,
         backgroundColor: backgroundColor,
         top: '-10px',
