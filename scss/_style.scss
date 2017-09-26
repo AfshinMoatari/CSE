@@ -5,8 +5,8 @@
 //container
 .container
 {
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 75px;
+    padding-left: 75px;
 }
 
 //typography
@@ -191,7 +191,7 @@ button
     .square
     {
         top: 30%;
-        left: 7%;
+        left: 4.9%;
 
         .side-b,
         .side-l,
@@ -316,17 +316,17 @@ button
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 40px;
+                max-height: 50px;
             }
 
             .side-rb
             {
-                top: calc( ( #{$square-dimension} - 200px )  );
+                top: calc( ( #{$square-dimension} - 190px )  );
                 right: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 200px;;
+                max-height: 190px;;
             }
 
             .side-b
@@ -366,17 +366,17 @@ button
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 70px;
+                max-height: 50px;
             }
 
             .side-lt
             {
-                bottom: calc( ( #{$square-dimension} - 170px )  );
+                bottom: calc( ( #{$square-dimension} - 180px )  );
                 left: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 170px;;
+                max-height: 180px;;
             }
 
             .side-t
@@ -420,7 +420,7 @@ button
     .square
     {
         top: -25%;
-        right: -9%;
+        right: -5%;
 
         .side-b,
         .side-lt,
@@ -454,7 +454,7 @@ button
 
             width: $square-border;
             min-height: 0;
-            max-height: 110px;
+            max-height: 100px;
         }
 
         .side-t
@@ -494,9 +494,9 @@ button
 .footer
 {
     position: relative;
-    bottom: 120px;
+    bottom: 90px;
 
-    height: 120px;
+    height: 90px;
     li
     {
         font-size: $font-size-md;

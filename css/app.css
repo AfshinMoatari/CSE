@@ -6382,8 +6382,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
 
 .container {
-  padding-right: 100px;
-  padding-left: 100px; }
+  padding-right: 75px;
+  padding-left: 75px; }
 
 h1,
 h2,
@@ -6489,7 +6489,7 @@ button {
 
 .status .square {
   top: 30%;
-  left: 7%; }
+  left: 4.9%; }
   .status .square .side-b,
   .status .square .side-l,
   .status .square .side-t,
@@ -6504,12 +6504,12 @@ button {
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 350px; }
+    max-height: 335px; }
   .status .square .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
   .status .square .side-r {
     top: 0;
@@ -6524,7 +6524,7 @@ button {
     min-height: 0;
     max-height: 360px; }
   .status .square .side-b {
-    right: calc( ( 350px - 160px ));
+    right: calc( ( 335px - 160px ));
     bottom: 0;
     min-width: 0;
     max-width: 160px;
@@ -6551,30 +6551,30 @@ button {
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 350px; }
+    max-height: 335px; }
   .quotations .square.left .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
   .quotations .square.left .side-rt {
     top: 0;
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 40px; }
+    max-height: 50px; }
   .quotations .square.left .side-rb {
-    top: calc( ( 350px - 200px ));
+    top: calc( ( 335px - 190px ));
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 200px; }
+    max-height: 190px; }
   .quotations .square.left .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
 
 .quotations .square.right {
@@ -6595,37 +6595,37 @@ button {
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 70px; }
+    max-height: 50px; }
   .quotations .square.right .side-lt {
-    bottom: calc( ( 350px - 170px ));
+    bottom: calc( ( 335px - 180px ));
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 170px; }
+    max-height: 180px; }
   .quotations .square.right .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
   .quotations .square.right .side-r {
     top: 0;
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 350px; }
+    max-height: 335px; }
   .quotations .square.right .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 350px;
+    max-width: 335px;
     height: 10px; }
 
 .partners {
   height: 450px; }
   .partners .square {
     top: -25%;
-    right: -9%; }
+    right: -5%; }
     .partners .square .side-b,
     .partners .square .side-lt,
     .partners .square .side-lb,
@@ -6637,7 +6637,7 @@ button {
       background: transparent;
       background-color: #496093; }
     .partners .square .side-lt {
-      bottom: calc( ( 350px - 110px ));
+      bottom: calc( ( 335px - 110px ));
       left: 0;
       width: 10px;
       min-height: 0;
@@ -6647,35 +6647,35 @@ button {
       left: 0;
       width: 10px;
       min-height: 0;
-      max-height: 110px; }
+      max-height: 100px; }
     .partners .square .side-t {
       top: 0;
       left: 0;
       min-width: 0;
-      max-width: 350px;
+      max-width: 335px;
       height: 10px; }
     .partners .square .side-r {
       top: 0;
       right: 0;
       width: 10px;
       min-height: 0;
-      max-height: 350px; }
+      max-height: 335px; }
     .partners .square .side-b {
       right: 0;
       bottom: 0;
       min-width: 0;
-      max-width: 350px;
+      max-width: 335px;
       height: 10px; }
 
 .footer {
   position: relative;
-  bottom: 120px;
-  height: 120px; }
+  bottom: 90px;
+  height: 90px; }
   .footer li {
     font-size: 1.25rem; }
 
 .square {
   position: absolute;
-  width: 350px;
-  height: 350px;
+  width: 335px;
+  height: 335px;
   background: transparent; }
