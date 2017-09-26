@@ -1750,7 +1750,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   vertical-align: middle;
   user-select: none;
   border: 3px solid transparent;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   font-size: 1rem;
   border-radius: 0;
   transition: all 0.6s ease-in-out; }
@@ -2566,7 +2566,7 @@ tbody.collapse.show {
 
 .nav-link {
   display: block;
-  padding: 0.5em 1em; }
+  padding: 0.3rem 1rem; }
   .nav-link:focus, .nav-link:hover {
     text-decoration: none; }
   .nav-link.disabled {
@@ -6380,10 +6380,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-family: "CBS-bold";
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
-
-.container {
-  padding-right: 75px;
-  padding-left: 75px; }
 
 h1,
 h2,

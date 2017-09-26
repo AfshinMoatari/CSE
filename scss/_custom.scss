@@ -108,8 +108,10 @@ $navbar-inverse-color: $brand-secondary;
 $navbar-inverse-hover-color: rgba($brand-secondary,.8);
 $navbar-inverse-active-color: rgba($brand-secondary,.8);
 
-// breadcrumbs
+// navs
+$nav-link-padding: .3rem 1rem;
 
+// breadcrumbs
 $breadcrumb-padding-y: 0rem;
 $breadcrumb-padding-x: 0rem;
 $breadcrumb-item-padding: .5rem;
@@ -120,7 +122,7 @@ $breadcrumb-divider: '|';
 // buttons
 
 $btn-padding-x: .5rem;
-$btn-padding-y: .2rem;
+$btn-padding-y: .3rem;
 
 $btn-primary-color: $brand-primary;
 $btn-primary-bg: $brand-secondary;
