@@ -2,6 +2,13 @@
 @include font-face('CBS-regular', 'CBS_NEW_REGULAR', 'CBS-typografier');
 @include font-face('CBS-bold', 'CBS_NEW_BOLD', 'CBS-typografier');
 
+//container
+.container
+{
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
 //typography
 h1,
 h2,
@@ -78,66 +85,25 @@ h3{
     cursor: pointer;
 
     color: $brand-secondary;
+    border-width: 2px;
     background-color: $brand-primary;
-    &.apply
-    {
-        color: $brand-primary!important;
-        background-color: $brand-secondary;
-    }
-    &::before,
-    &::after
+
+    & span
     {
         position: absolute;
         z-index: -1;
+        top: -10px;
+        right: -10px;
 
-        width: calc(100% + 8px);
-        height: calc(100% + 8px);
+        width: 100%;
+        height: 100%;
 
         content: '';
         -webkit-transition: $transition-base;
-                transition: $transition-base;;
-    }
-    &.apply::before,
-    &.apply::after
-    {
-        width: 100%;
-        height: 100%;
-    }
-    &::before
-    {
-        top: -12px;
-        right: -12px;
+                transition: $transition-base;
 
         border: $border-width solid $brand-primary;
         background-color: $brand-secondary;
-    }
-    &.apply:before
-    {
-        border: $border-width solid $brand-secondary;
-        background-color: $brand-primary;
-    }
-    &:hover
-    {
-        color: $brand-primary;
-        border: $border-width solid $brand-primary;
-        background-color: $brand-secondary;
-
-        &::before
-        {
-            border: $border-width solid $brand-primary;
-            background-color: $brand-primary;
-        }
-    }
-    &.apply:hover
-    {
-        color: $brand-secondary!important;
-        border: $border-width solid $brand-secondary;
-        background-color: $brand-primary;
-        &::before
-        {
-            border: $border-width solid $brand-secondary;
-            background-color: $brand-secondary;
-        }
     }
 }
 
@@ -152,6 +118,19 @@ h3{
     a
     {
         font-size: $font-size-lg;
+    }
+    .apply
+    {
+        .btn-primary
+        {
+            color: $brand-primary;
+            background-color: $brand-secondary;
+            span
+            {
+                border: $border-width solid $brand-secondary;
+                background-color: $brand-primary;
+            }
+        }
     }
 }
 
@@ -171,14 +150,24 @@ h3{
 //status
 .status
 {
-    p
+    .text-col
     {
-        color: $brand-primary;
+        z-index: 1;
+        p
+        {
+            position: relative;
+            top: 10%;
+
+            width: 740px;
+
+            color: $brand-primary;
+        }
     }
+
     .square
     {
         top: 30%;
-        left: 0;
+        left: 4.9%;
 
         .side-b,
         .side-l,
@@ -259,7 +248,7 @@ h3{
         &.left
         {
             top: 45%;
-            left: -10%;
+            left: -5%;
 
             .side-b,
             .side-l,
@@ -303,17 +292,17 @@ h3{
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 40px;
+                max-height: 50px;
             }
 
             .side-rb
             {
-                top: calc( ( #{$square-dimension} - 200px )  );
+                top: calc( ( #{$square-dimension} - 190px )  );
                 right: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 200px;;
+                max-height: 190px;;
             }
 
             .side-b
@@ -329,7 +318,7 @@ h3{
         &.right
         {
             top: -30%;
-            right: -15%;
+            right: -10%;
 
             .side-b,
             .side-lb,
@@ -353,17 +342,17 @@ h3{
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 70px;
+                max-height: 50px;
             }
 
             .side-lt
             {
-                bottom: calc( ( #{$square-dimension} - 170px )  );
+                bottom: calc( ( #{$square-dimension} - 180px )  );
                 left: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 170px;;
+                max-height: 180px;;
             }
 
             .side-t
@@ -407,7 +396,7 @@ h3{
     .square
     {
         top: -25%;
-        right: -9%;
+        right: -5%;
 
         .side-b,
         .side-lt,
@@ -441,7 +430,7 @@ h3{
 
             width: $square-border;
             min-height: 0;
-            max-height: 110px;
+            max-height: 100px;
         }
 
         .side-t
@@ -481,8 +470,9 @@ h3{
 .footer
 {
     position: relative;
-    bottom: 120px;
-    height: 120px;
+    bottom: 90px;
+
+    height: 90px;
     li
     {
         font-size: $font-size-md;
