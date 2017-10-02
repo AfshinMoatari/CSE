@@ -438,7 +438,7 @@ h2, .h2 {
   font-size: 2rem; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 2.5rem; }
 
 h4, .h4 {
   font-size: 1.5rem; }
@@ -6394,6 +6394,10 @@ h6,
 a,
 button {
   text-transform: uppercase; }
+
+h3 {
+  color: #cd4847;
+  font-weight: bold; }
 
 .lead {
   font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif; }

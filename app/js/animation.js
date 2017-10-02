@@ -190,7 +190,7 @@ $(function() {
         borderColor: textColor,
       }).to($(this).find('span'), 0, {
         ease: Power0.easeNone,
-        backgroundColor: textColor,
+        backgroundColor: "transparent",
         top: '-5px',
         right: '-5px',
         borderWidth: '10px'
