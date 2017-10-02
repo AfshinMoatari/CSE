@@ -21,6 +21,10 @@ button
 {
     text-transform: uppercase;
 }
+h3{
+  color:$brand-tertiary;
+  font-weight: $font-weight-bold;
+}
 .lead
 {
     font-family: $font-family-cbs-bold ;
@@ -127,6 +131,9 @@ button
                 background-color: $brand-primary;
             }
         }
+    }
+    &.sticky{
+      background-color: $brand-primary;
     }
 }
 
