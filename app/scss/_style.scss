@@ -128,6 +128,9 @@ button
             }
         }
     }
+    &.sticky{
+      background-color: $brand-primary;
+    }
 }
 
 //sub navbar

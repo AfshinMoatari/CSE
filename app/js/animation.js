@@ -3,6 +3,35 @@ $(function() {
   var controller = new ScrollMagic.Controller();
 
   // animation classes
+  $('nav').each(function() {
+
+    // build a tween
+    var tween = new TimelineMax();
+    tween.to($(this), 0, {
+      css: {
+        className: '+=sticky'
+      }
+    }, 0).to($(this).find(".nav li"), 0.3, {
+      scale: .8,
+    }, 0).to($(this), .6, {
+      height: 100
+    }, 0).to($(this).find(".nav li"), .3, {
+      css: {
+        className: '-=mx-3'
+      }
+    }, 0).to($(this).find(".nav li"), .3, {
+      marginLeft: 10
+    }, 0).to($(this).find(".navbar-brand img"), .6, {
+      width: '85%'
+    }, 0);
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".status"
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
   $('.fade-in').each(function() {
 
     var duration = $(this).attr('duration-fade');
@@ -61,6 +90,26 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
+  $('.opacity').each(function() {
+
+    var duration = $(this).attr('duration-opacity');
+    var delay = $(this).attr('delay');
+    // build a tween
+    var tween = TweenMax.fromTo($(this), duration, {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      ease: Power4.easeOut,
+      delay: delay
+    });
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0]
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
   $('.flipping-number').each(function() {
 
     var delay = $(this).attr('delay');
@@ -84,53 +133,6 @@ $(function() {
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: $(this).parents('.animate').first()[0]
-      })
-      .setTween(tween)
-      .addTo(controller);
-  });
-  $('.opacity').each(function() {
-
-    var duration = $(this).attr('duration-opacity');
-    var delay = $(this).attr('delay');
-    // build a tween
-    var tween = TweenMax.fromTo($(this), duration, {
-      opacity: 0,
-    }, {
-      opacity: 1,
-      ease: Power4.easeOut,
-      delay: delay
-    });
-
-    // build a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
-      })
-      .setTween(tween)
-      .addTo(controller);
-  });
-  $('nav').each(function() {
-
-    // build a tween
-    var tween = new TimelineMax();
-    tween.to($(this), 0, {
-      backgroundColor: "#496093",
-    }).to($(this).find(".nav li"), 0.3, {
-      scale: .8,
-    }, 0).to($(this), .6, {
-      height: 100
-    }, 0).to($(this).find(".nav li"), .3, {
-      css: {
-        className: '-=mx-3'
-      }
-    }, 0).to($(this).find(".nav li"), .3, {
-      marginLeft: 10
-    }, 0).to($(this).find(".navbar-brand img"), .6, {
-      width: '85%'
-    }, 0);
-
-    // build a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: ".status"
       })
       .setTween(tween)
       .addTo(controller);
@@ -175,36 +177,35 @@ $(function() {
   $('.btn-primary').each(function() {
 
     var duration = $(this).attr('duration-btn');
-    var delay = $(this).attr('delay');
     var textColor = $(this).css("background-color");
     var backgroundColor = $(this).css("color");
 
     // build a tween
     function over() {
       var tween = new TimelineMax();
-      tween.to($(this), 0.1, {
-        ease: Sine.easeIn,
+      tween.to($(this), 0, {
+        ease: Power0.easeNone,
         color: textColor,
         backgroundColor: backgroundColor,
         borderColor: textColor,
-      }).to($(this).find('span'), 0.1, {
-        ease: Sine.easeIn,
+      }).to($(this).find('span'), 0, {
+        ease: Power0.easeNone,
         backgroundColor: textColor,
-        top: '-6px',
-        right: '-6px',
-        borderWidth: '1px'
+        top: '-5px',
+        right: '-5px',
+        borderWidth: '10px'
       })
     }
 
     function out() {
       var tween = new TimelineMax();
-      tween.to($(this), 0.1, {
-        ease: Sine.easeIn,
+      tween.to($(this), duration, {
+        ease: Power4.easeOut,
         color: backgroundColor,
         backgroundColor: textColor,
-        borderColor: 'transparent',
-      }).to($(this).find('span'), 0.1, {
-        ease: Sine.easeIn,
+        borderColor: textColor,
+      }).to($(this).find('span'), duration, {
+        ease: Power4.easeOut,
         backgroundColor: backgroundColor,
         top: '-10px',
         right: '-10px',

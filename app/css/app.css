@@ -6454,6 +6454,8 @@ button {
     .navbar .apply .btn-primary span {
       border: 3px solid #fff;
       background-color: #496093; }
+  .navbar.sticky {
+    background-color: #496093; }
 
 .subnavbar {
   z-index: 1;
