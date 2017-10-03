@@ -4,7 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>CSE | Copenhagen School of Entrepreneurship</title>
+  <!-- STYLE -->
   <link rel="stylesheet" href="./css/app.css">
+  <!-- LIBRARIES -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/TweenMax.min.js"></script>
+  <script src="./js/EasePack.min.js"></script>
+  <script src="./js/ScrollMagic.min.js"></script>
+  <script src="./js/debug.addIndicators.min.js"></script>
+  <script src="./js/animation.gsap.min.js"></script>
+  <script src="./js/jquery.fullpage.min.js"></script>
+  <!-- SCRIPTS -->
+  <script src="./js/animation.js"></script>
+  <script src="./js/fullPage.js"></script>
 </head>
 
 <body>
@@ -37,9 +49,11 @@
           <li class="nav-item mx-3">
             <a class="nav-link pb-0" href="#">blog</a>
           </li>
-          <li class="nav-item mx-3">
-            <button class="nav-link btn btn-primary apply" href="#">apply now</button>
-            <!-- <a class="nav-link pb-0" href="#">APPLY NOW</a> -->
+          <li class="nav-item mx-3 fade-in-right apply">
+            <button class="nav-link btn btn-primary" href="#" duration-btn=".1">
+            apply now
+            <span></span>
+            </button>
           </li>
         </ul>
       </div>
@@ -73,7 +87,6 @@
     </div>
   </div>
   -->
-
   <div class="fullpage">
     <div class="container-fluid align-self-center section">
       <div class="d-flex">
@@ -99,28 +112,28 @@
                 </div>
               </div>
               <div class="col-6 align-self-start">
-                <p class="blockquote fade-in-left" duration-fade=".6" delay="0">
-                  <h3 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Proof of Ideas</h3>
-                  <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
-                  <p class="blockquote-footer opacity" duration-opacity="2.2" delay=".4">Lorem ipsum</p>
+                <!-- <p class="blockquote fade-in-left" duration-fade=".6" delay="0"> -->
+                <h3 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Proof of Ideas</h3>
+                <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
               </div>
               <div class="col-4 push-2 fade-in-right" duration-fade="3.0" delay=".6">
                 <div class="col-12 fade-in-left">
-                  <h4 class="opacity" duration-opacity="2.2" delay=".12">Get Started</h4>
-                  <p class="opacity" duration-opacity="2.2" delay=".8">Drop by CSE for Open Wednesday, every Wednesday between 14-17h. to get feedback on your idea and plan your next steps.</p>
-                  <button type="button" class="d-block btn btn-primary">
-                     Apply now
-                     <span></span>
-                   </button>
+                  <div class="mt-5">
+                    <h4 class="opacity mb-0" duration-opacity="2.2" delay=".12">Get Started</h4>
+                    <p class="opacity" duration-opacity="2.2" delay=".8">Drop by CSE for Open Wednesday, every Wednesday between 14-17h. to get feedback on your idea and plan your next steps.</p>
+                    <button type="button" class="d-block btn btn-primary">
+                       Apply now
+                       <span></span>
+                     </button>
+                  </div>
                 </div>
               </div>
 
-              <div class="col-12 push-3 align-self-center">
-                <div class="col-3">
-                  <h3 class="fade-in-left" duration-fade="2.8" delay=".12">Proof of Concept</h3>
-                  <p class="opacity" duration-opacity="2.2" delay="3.0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
-                </div>
+              <div class="col-4 push-3 align-self-center">
+                <h3 class="fade-in-left" duration-fade="2.8" delay=".12">Proof of Concept</h3>
+                <p class="opacity" duration-opacity="2.2" delay="3.0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
               </div>
+              <div class="col-5"></div>
               <div class="col-6">
                 <h3 class="fade-in-left" duration-fade="2.5" delay=".22">Proof of Business</h3>
                 <p class="opacity" duration-fade="3.0" delay="3.8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
@@ -131,7 +144,7 @@
       </div>
     </div>
     <!-- ACCELERATOR PROGRAM -->
-    <div class="container section animate align-self-center">
+    <div class="container section animate">
       <div class="d-flex">
         <div class="col-sm-12 col-md-12 push-3 col-lg-6">
           <div class="d-inline-block bg-success mx-2 partner fade-in-left" duration-fade="1" delay=".2">
@@ -157,45 +170,44 @@
         </div>
       </div>
     </div>
-
-    <!-- FOOTER SECTION -->
-    <div class="mt-5 text-center d-flex footer">
-      <div class="container align-self-center">
-        <div class="row">
-          <div class="col-3">
-            <a href="#"><img src="./assets/image/cbs.png" alt=""></a>
-            <a href="#"><img src="./assets/image/cse-footer.png" alt=""></a>
-          </div>
-          <div class="col-6 d-flex">
-            <ol class="breadcrumb m-0 mx-auto align-self-end text-primary">
-              <li class="breadcrumb-item">Porcelænshaven 26, 2nd floor, 2000 Frederiksberg</li>
-              <li class="breadcrumb-item">+45 38153646</li>
-              <li class="breadcrumb-item">dhn.ino@cbs.dk</li>
-            </ol>
-          </div>
-          <div class="col-3 d-flex">
-            <div class="my-0 mx-auto align-self-end">
-              <a class="mx-1" href="#"><img src="./assets/image/facebook.png" alt=""></a>
-              <a class="mx-1" href="#"><img src="./assets/image/instagram.png" alt=""></a>
-              <a class="mx-1" href="#"><img src="./assets/image/twitter.png" alt=""></a>
+    <!-- Internship with ETCS -->
+    <div class="container section animate align-self-center">
+      <div class="d-flex">
+        <div class="col-12">
+          <div class="text-center">
+            <div class="d-inline-block bg-success mx-3 partner fade-in-left">
+              <a href="#" class="fade-in" duration-fade=".6" delay="0"><img src="./assets/image/internship-with-ects.png" alt=""></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- LIBRARIES -->
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/TweenMax.min.js"></script>
-  <script src="./js/EasePack.min.js"></script>
-  <script src="./js/ScrollMagic.min.js"></script>
-  <script src="./js/debug.addIndicators.min.js"></script>
-  <script src="./js/animation.gsap.min.js"></script>
-  <script src="./js/jquery.fullpage.min.js"></script>
-  <!-- SCRIPTS -->
-  <script src="./js/animation.js"></script>
-  <script src="./js/fullPage.js"></script>
+    <!-- FOOTER SECTION -->
+    <div class="footer">
+      <div class="d-flex justify-content-between text-center">
+        <div class="container align-self-center">
+          <div class="row">
+            <div class="col-2 d-flex justify-content-start pl-0">
+              <a href="#"><img src="./assets/image/cse-footer.png" alt="" width="100px"></a>
+            </div>
+            <div class="col-8 d-flex">
+              <ol class="breadcrumb m-0 mx-auto align-self-end text-primary">
+                <li class="breadcrumb-item">Porcelænshaven 26, 2nd floor, 2000 Frederiksberg</li>
+                <li class="breadcrumb-item">+45 38153646</li>
+                <li class="breadcrumb-item">dhn.ino@cbs.dk</li>
+              </ol>
+            </div>
+            <div class="col-2 d-flex justify-content-end pr-0">
+              <div class="my-0 align-self-end">
+                <a class="mx-1" href="#"><img src="./assets/image/facebook.png" alt=""></a>
+                <a class="mx-1" href="#"><img src="./assets/image/instagram.png" alt=""></a>
+                <a class="mx-1" href="#"><img src="./assets/image/twitter.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
