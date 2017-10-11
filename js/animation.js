@@ -233,5 +233,56 @@ $(function() {
     // call a hover scene
     $(this).hover(over, out);
   });
+  $('.checkbox > a').each(function() {
+
+    // build a tween
+    function over() {
+      var tween = new TimelineMax();
+      $('.checkbox > a').not(this).each(function() {
+        tween.to($(this).parent(), .6, {
+          opacity: 0.5
+        }, 0)
+      });
+      tween.to($(this).parent(), .3, {
+        css: {
+          className: '+=active'
+        }
+      }, 0)
+    }
+
+    function out() {
+      var tween = new TimelineMax();
+      $('.checkbox > a').not(this).each(function() {
+        tween.to($(this).parent(), .6, {
+          opacity: 1
+        }, 0)
+      });
+      tween.to($(this).parent(), 0, {
+        css: {
+          className: '-=active'
+        }
+      }, 0)
+    }
+
+    function active() {
+      var tween = new TimelineMax();
+      $('.checkbox > a').not(this).each(function() {
+        tween.to($(this).parent(), 0, {
+          css: {
+            className: '-=checked'
+          }
+        }, 0)
+      });
+      tween.to($(this).parent(), .3, {
+        css: {
+          className: '+=checked'
+        }
+      }, 0)
+    }
+
+    // call a hover scene
+    $(this).hover(over, out);
+    $(this).click(active);
+  });
 
 });

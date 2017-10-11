@@ -867,16 +867,7 @@ nav
 {
     &.secondary
     {
-        [type='checkbox']:checked,
-        [type='checkbox']:not(:checked)
-        {
-            position: absolute;
-            z-index: 1;
-
-            opacity: 0;
-        }
-        [type='checkbox']:checked + label,
-        [type='checkbox']:not(:checked) + label
+        .checkbox p
         {
             line-height: 20px;
 
@@ -889,8 +880,7 @@ nav
 
             cursor: pointer;
         }
-        [type='checkbox']:checked + label:before,
-        [type='checkbox']:not(:checked) + label:before
+        .checkbox p:before
         {
             position: absolute;
             top: 0;
@@ -902,10 +892,11 @@ nav
             content: '';
 
             border: 2px solid $brand-primary;
-            background: #fff;
+            background: $transparent;
         }
-        [type='checkbox']:checked + label:after,
-        [type='checkbox']:not(:checked) + label:after
+        .checkbox.active p:after,
+        .checkbox.checked p:after,
+        .checkbox p:after
         {
             position: absolute;
             top: 3px;
@@ -922,7 +913,8 @@ nav
 
             background: $brand-primary;
         }
-        [type='checkbox']:not(:checked) + label:after
+
+        .checkbox p:after
         {
             -webkit-transform: scale(0);
                -moz-transform: scale(0);
@@ -932,7 +924,8 @@ nav
 
             opacity: 0;
         }
-        [type='checkbox']:checked + label:after
+        .checkbox.active p:after,
+        .checkbox.checked p:after
         {
             -webkit-transform: scale(1);
                -moz-transform: scale(1);
