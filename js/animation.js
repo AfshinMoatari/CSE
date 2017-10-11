@@ -3,7 +3,7 @@ $(function() {
   var controller = new ScrollMagic.Controller();
 
   // animation classes
-  $('nav').each(function() {
+  $('nav.main').each(function() {
 
     // build a tween
     var tween = new TimelineMax();
@@ -27,7 +27,24 @@ $(function() {
 
     // build a scene
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".status"
+        triggerElement: ".stick"
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('nav.secondary').each(function() {
+
+    // build a tween
+    var tween = new TimelineMax();
+    tween.to($(this).find(".nav li"), 0.3, {
+      scale: .8,
+    }, 0).to($(this), .6, {
+      top: 100
+    }, 0);
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".stick"
       })
       .setTween(tween)
       .addTo(controller);
@@ -190,7 +207,7 @@ $(function() {
         borderColor: textColor,
       }).to($(this).find('span'), 0, {
         ease: Power0.easeNone,
-        backgroundColor: textColor,
+        backgroundColor: "transparent",
         top: '-5px',
         right: '-5px',
         borderWidth: '10px'
