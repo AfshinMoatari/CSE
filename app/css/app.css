@@ -6385,6 +6385,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   padding-right: 75px;
   padding-left: 75px; }
 
+.section:last-of-type {
+  padding-bottom: 200px; }
+
 h1,
 h2,
 h3,
@@ -6396,8 +6399,8 @@ button {
   text-transform: uppercase; }
 
 h3 {
-  color: #cd4847;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #cd4847; }
 
 .lead {
   font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif; }
@@ -6446,9 +6449,7 @@ h3 {
     background-color: #fff; }
 
 .navbar {
-  position: fixed;
   z-index: 1;
-  top: 0;
   height: 150px; }
   .navbar a {
     font-size: 1.563rem; }
@@ -6460,13 +6461,6 @@ h3 {
       background-color: #496093; }
   .navbar.sticky {
     background-color: #496093; }
-
-.subnavbar {
-  z-index: 1;
-  height: 75px;
-  margin-top: 10px; }
-  .subnavbar a {
-    font-size: 1.25rem; }
 
 .status .text-col {
   z-index: 1; }
@@ -6668,3 +6662,271 @@ h3 {
   width: 335px;
   height: 335px;
   background: transparent; }
+
+.switcher-container.fp-section {
+  padding-top: 150px !important; }
+
+.switcher-container .fp-tableCell {
+  vertical-align: bottom; }
+
+.switcher-container .switcher {
+  height: calc(100vh - 150px); }
+
+.switcher-container .diagram {
+  height: 100%; }
+
+.proof-program .square {
+  top: -25%;
+  right: -40%; }
+  .proof-program .square .side-b,
+  .proof-program .square .side-lt,
+  .proof-program .square .side-lb,
+  .proof-program .square .side-t,
+  .proof-program .square .side-r {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #e1948d; }
+  .proof-program .square .side-lt {
+    bottom: calc( ( 335px - 100px ));
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 100px; }
+  .proof-program .square .side-lb {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 50px; }
+  .proof-program .square .side-t {
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+  .proof-program .square .side-r {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 335px; }
+  .proof-program .square .side-b {
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+
+.accelerator-program .square.left {
+  top: 0;
+  left: -30%; }
+  .accelerator-program .square.left .side-b,
+  .accelerator-program .square.left .side-l,
+  .accelerator-program .square.left .side-t,
+  .accelerator-program .square.left .side-rt,
+  .accelerator-program .square.left .side-rb {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #5bad6f; }
+  .accelerator-program .square.left .side-l {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 335px; }
+  .accelerator-program .square.left .side-t {
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+  .accelerator-program .square.left .side-rt {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 100px; }
+  .accelerator-program .square.left .side-rb {
+    top: calc( ( 335px - 100px ));
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 100px; }
+  .accelerator-program .square.left .side-b {
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+
+.accelerator-program .square.right {
+  top: 0;
+  right: -30%; }
+  .accelerator-program .square.right .side-b,
+  .accelerator-program .square.right .side-lb,
+  .accelerator-program .square.right .side-lt,
+  .accelerator-program .square.right .side-t,
+  .accelerator-program .square.right .side-r {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #496093; }
+  .accelerator-program .square.right .side-lb {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 100px; }
+  .accelerator-program .square.right .side-lt {
+    bottom: calc( ( 335px - 100px ));
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 100px; }
+  .accelerator-program .square.right .side-t {
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+  .accelerator-program .square.right .side-r {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 335px; }
+  .accelerator-program .square.right .side-b {
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+
+.match-up .square {
+  top: 0;
+  right: 70%; }
+  .match-up .square .side-b,
+  .match-up .square .side-l,
+  .match-up .square .side-t,
+  .match-up .square .side-r {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #e1948d; }
+  .match-up .square .side-l {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 150px; }
+  .match-up .square .side-t {
+    top: 0;
+    right: 0;
+    min-width: 0;
+    max-width: 150px;
+    height: 10px; }
+  .match-up .square .side-r {
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 335px; }
+  .match-up .square .side-b {
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+
+.inteernship-with-ects .square {
+  top: 0;
+  right: 70%; }
+  .inteernship-with-ects .square .side-b,
+  .inteernship-with-ects .square .side-l,
+  .inteernship-with-ects .square .side-t,
+  .inteernship-with-ects .square .side-r {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    background-color: #e1948d; }
+  .inteernship-with-ects .square .side-l {
+    bottom: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 335px;
+    righ: 0; }
+  .inteernship-with-ects .square .side-t {
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 150px;
+    height: 10px; }
+  .inteernship-with-ects .square .side-r {
+    top: calc( ( 335px - 150px ));
+    right: 0;
+    width: 10px;
+    min-height: 0;
+    max-height: 150px; }
+  .inteernship-with-ects .square .side-b {
+    right: 0;
+    bottom: 0;
+    min-width: 0;
+    max-width: 335px;
+    height: 10px; }
+
+nav.secondary .checkbox p {
+  line-height: 20px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 30px;
+  cursor: pointer; }
+
+nav.secondary .checkbox p:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  content: '';
+  border: 2px solid #496093;
+  background: transparent; }
+
+nav.secondary .checkbox.active p:after,
+nav.secondary .checkbox.active-h p:after,
+nav.secondary .checkbox p:after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  content: '';
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  background: #496093; }
+
+nav.secondary .checkbox p:after {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  opacity: 0; }
+
+nav.secondary .checkbox.active p:after,
+nav.secondary .checkbox.active-h p:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1; }

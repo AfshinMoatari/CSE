@@ -9,6 +9,12 @@
     padding-left: 75px;
 }
 
+//section
+.section:last-of-type
+{
+    padding-bottom: 200px;
+}
+
 //typography
 h1,
 h2,
@@ -21,9 +27,11 @@ button
 {
     text-transform: uppercase;
 }
-h3{
-  color:$brand-tertiary;
-  font-weight: $font-weight-bold;
+h3
+{
+    font-weight: $font-weight-bold;
+
+    color: $brand-tertiary;
 }
 .lead
 {
@@ -110,9 +118,7 @@ h3{
 //navbar
 .navbar
 {
-    position: fixed;
     z-index: 1;
-    top: 0;
 
     height: $navbar-height;
     a
@@ -132,21 +138,9 @@ h3{
             }
         }
     }
-    &.sticky{
-      background-color: $brand-primary;
-    }
-}
-
-//sub navbar
-.subnavbar
-{
-    z-index: 1;
-
-    height: 75px;
-    margin-top: 10px;
-    a
+    &.sticky
     {
-        font-size: $font-size-md;
+        background-color: $brand-primary;
     }
 }
 
@@ -491,4 +485,455 @@ h3{
     height: $square-dimension;
 
     background: $transparent;
+}
+
+//Switcher Container
+.switcher-container
+{
+    &.fp-section
+    {
+        padding-top: 150px!important;
+    }
+    .fp-tableCell
+    {
+        vertical-align: bottom;
+    }
+    .switcher
+    {
+        height: calc(100vh - 150px);
+    }
+    .diagram
+    {
+        height: 100%;
+    }
+}
+
+//Proof Program
+.proof-program
+{
+    .square
+    {
+        top: -25%;
+        right: -40%;
+
+        .side-b,
+        .side-lt,
+        .side-lb,
+        .side-t,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-orange;
+        }
+
+        .side-lt
+        {
+            bottom: calc( ( #{$square-dimension} - 100px )  );
+            left: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 100px;;
+        }
+
+        .side-lb
+        {
+            bottom: 0;
+            left: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+
+
+        .side-r
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
+
+//Accelerator Program
+.accelerator-program
+{
+    .square
+    {
+        &.left
+        {
+            top: 0;
+            left: -30%;
+
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-rt,
+            .side-rb
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-green;
+            }
+
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+            .side-rt
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 100px;
+            }
+
+            .side-rb
+            {
+                top: calc( ( #{$square-dimension} - 100px )  );
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 100px;;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+        &.right
+        {
+            top: 0;
+            right: -30%;
+
+            .side-b,
+            .side-lb,
+            .side-lt,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $brand-primary;
+            }
+
+            .side-lb
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 100px;
+            }
+
+            .side-lt
+            {
+                bottom: calc( ( #{$square-dimension} - 100px )  );
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 100px;;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+    }
+}
+
+//Match up
+.match-up
+{
+    .square
+    {
+        top: 0;
+        right: 70%;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-orange;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+            left: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 150px;
+        }
+
+        .side-t
+        {
+            top: 0;
+            right: 0;
+
+            min-width: 0;
+            max-width: 150px;
+            height: $square-border;
+        }
+
+
+        .side-r
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
+
+//Inteernship With Ects
+.inteernship-with-ects
+{
+    .square
+    {
+        top: 0;
+        right: 70%;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-orange;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+
+            righ: 0;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: 150px;
+            height: $square-border;
+        }
+
+
+        .side-r
+        {
+            top: calc( ( #{$square-dimension} - 150px )  );
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 150px;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
+
+nav
+{
+    &.secondary
+    {
+        .checkbox p
+        {
+            line-height: 20px;
+
+            position: relative;
+
+            display: inline-block;
+
+            margin-bottom: 0;
+            padding-left: 30px;
+
+            cursor: pointer;
+        }
+        .checkbox p:before
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 18px;
+            height: 18px;
+
+            content: '';
+
+            border: 2px solid $brand-primary;
+            background: $transparent;
+        }
+        .checkbox.active p:after,
+        .checkbox.active-h p:after,
+        .checkbox p:after
+        {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+
+            width: 12px;
+            height: 12px;
+
+            content: '';
+            -webkit-transition: all .2s ease;
+               -moz-transition: all .2s ease;
+                 -o-transition: all .2s ease;
+                    transition: all .2s ease;
+
+            background: $brand-primary;
+        }
+
+        .checkbox p:after
+        {
+            -webkit-transform: scale(0);
+               -moz-transform: scale(0);
+                -ms-transform: scale(0);
+                 -o-transform: scale(0);
+                    transform: scale(0);
+
+            opacity: 0;
+        }
+        .checkbox.active p:after,
+        .checkbox.active-h p:after
+        {
+            -webkit-transform: scale(1);
+               -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                 -o-transform: scale(1);
+                    transform: scale(1);
+
+            opacity: 1;
+        }
+    }
 }

@@ -3,7 +3,7 @@ $(function() {
   var controller = new ScrollMagic.Controller();
 
   // animation classes
-  $('nav').each(function() {
+  $('nav.main').each(function() {
 
     // build a tween
     var tween = new TimelineMax();
@@ -27,7 +27,24 @@ $(function() {
 
     // build a scene
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".status"
+        triggerElement: ".stick"
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('nav.secondary').each(function() {
+
+    // build a tween
+    var tween = new TimelineMax();
+    tween.to($(this).find(".nav li"), 0.3, {
+      scale: .8,
+    }, 0).to($(this), .6, {
+      top: 100
+    }, 0);
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".stick"
       })
       .setTween(tween)
       .addTo(controller);
@@ -211,6 +228,40 @@ $(function() {
         right: '-10px',
         borderWidth: '3px'
       })
+    }
+
+    // call a hover scene
+    $(this).hover(over, out);
+  });
+  $('.checkbox > a').each(function() {
+
+    // build a tween
+    function over() {
+      var tween = new TimelineMax();
+      $('.checkbox > a').not(this).each(function() {
+        tween.to($(this).parent(), .6, {
+          opacity: 0.5
+        }, 0)
+      });
+      tween.to($(this).parent(), .3, {
+        css: {
+          className: '+=active-h'
+        }
+      }, 0)
+    }
+
+    function out() {
+      var tween = new TimelineMax();
+      $('.checkbox > a').not(this).each(function() {
+        tween.to($(this).parent(), .6, {
+          opacity: 1
+        }, 0)
+      });
+      tween.to($(this).parent(), 0, {
+        css: {
+          className: '-=active-h'
+        }
+      }, 0)
     }
 
     // call a hover scene
