@@ -245,7 +245,7 @@ $(function() {
       });
       tween.to($(this).parent(), .3, {
         css: {
-          className: '+=active'
+          className: '+=active-h'
         }
       }, 0)
     }
@@ -259,30 +259,13 @@ $(function() {
       });
       tween.to($(this).parent(), 0, {
         css: {
-          className: '-=active'
-        }
-      }, 0)
-    }
-
-    function active() {
-      var tween = new TimelineMax();
-      $('.checkbox > a').not(this).each(function() {
-        tween.to($(this).parent(), 0, {
-          css: {
-            className: '-=checked'
-          }
-        }, 0)
-      });
-      tween.to($(this).parent(), .3, {
-        css: {
-          className: '+=checked'
+          className: '-=active-h'
         }
       }, 0)
     }
 
     // call a hover scene
     $(this).hover(over, out);
-    $(this).click(active);
   });
 
 });

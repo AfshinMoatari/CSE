@@ -895,7 +895,7 @@ nav
             background: $transparent;
         }
         .checkbox.active p:after,
-        .checkbox.checked p:after,
+        .checkbox.active-h p:after,
         .checkbox p:after
         {
             position: absolute;
@@ -925,7 +925,7 @@ nav
             opacity: 0;
         }
         .checkbox.active p:after,
-        .checkbox.checked p:after
+        .checkbox.active-h p:after
         {
             -webkit-transform: scale(1);
                -moz-transform: scale(1);
