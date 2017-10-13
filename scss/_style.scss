@@ -33,11 +33,20 @@ h3
 
     color: $brand-tertiary;
 }
+h5
+{
+    font-weight: $font-weight-bold;
+
+    color: $brand-tertiary;
+}
 .lead
 {
     font-family: $font-family-cbs-bold ;
 }
-
+.pre
+{
+    white-space: pre-line;
+}
 //utilities
 .blockquote
 {
@@ -235,7 +244,7 @@ h3
 //text beside the mountain
 .mountain-subtext
 {
-  color: $brand-secondary;
+    color: $brand-secondary;
 }
 //quotations
 .quotations
@@ -489,6 +498,67 @@ h3
     height: $square-dimension;
 
     background: $transparent;
+}
+.square-heading
+{
+    position: relative;
+    top: 20%;
+    left: -20%;
+
+    width: $square-heading-dimension;
+    height: $square-heading-dimension;
+
+    background: $transparent;
+
+    .side-b,
+    .side-t,
+    .side-l,
+    .side-r
+    {
+        position: absolute;
+
+        width: 0;
+        height: 0;
+
+        background: transparent;
+        background-color: $brand-primary;
+    }
+
+    .side-l
+    {
+        bottom: 0;
+        left: 0;
+
+        width: $square-heading-border;
+        height: $square-heading-dimension;
+    }
+
+    .side-t
+    {
+        top: 0;
+        left: 0;
+
+        width: $square-heading-dimension;
+        height: $square-heading-border;
+    }
+
+    .side-r
+    {
+        top: 0;
+        right: 0;
+
+        width: $square-heading-border;
+        height: 80px;
+    }
+
+    .side-b
+    {
+        bottom: 0;
+        left: 0;
+
+        width: 50px;
+        height: $square-heading-border;
+    }
 }
 
 //Switcher Container
