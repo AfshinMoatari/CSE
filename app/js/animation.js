@@ -238,30 +238,30 @@ $(function() {
     // build a tween
     function over() {
       var tween = new TimelineMax();
-      $('.checkbox > a').not(this).each(function() {
-        tween.to($(this).parent(), .6, {
-          opacity: 0.5
-        }, 0)
-      });
-      tween.to($(this).parent(), .3, {
+      tween.to($(this).parent(), .01, {
         css: {
           className: '+=active-h'
         }
       }, 0)
+      $('.checkbox > a').not(this).each(function() {
+        tween.to($(this).parent(), .4, {
+          opacity: 0.5
+        }, 0)
+      });
     }
 
     function out() {
       var tween = new TimelineMax();
+      tween.to($(this).parent(), .01, {
+        css: {
+          className: '-=active-h'
+        }
+      }, 0)
       $('.checkbox > a').not(this).each(function() {
         tween.to($(this).parent(), .6, {
           opacity: 1
         }, 0)
       });
-      tween.to($(this).parent(), 0, {
-        css: {
-          className: '-=active-h'
-        }
-      }, 0)
     }
 
     // call a hover scene
