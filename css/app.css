@@ -6469,6 +6469,14 @@ h5 {
   .navbar.sticky {
     background-color: #496093; }
 
+.hero .items {
+  position: relative;
+  left: 95px; }
+
+.hero .cse {
+  position: relative;
+  left: -95px; }
+
 .status .text-col {
   z-index: 1; }
   .status .text-col p {
@@ -6662,16 +6670,57 @@ h5 {
 
 .footer {
   position: relative;
-  bottom: 90px;
-  height: 90px; }
+  bottom: 80px;
+  height: 80px; }
   .footer li {
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    line-height: 90%; }
 
 .square {
   position: absolute;
   width: 335px;
   height: 335px;
   background: transparent; }
+  .square.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 168px;
+    height: 168px;
+    background: transparent; }
+    .square.logo .side-b,
+    .square.logo .side-t,
+    .square.logo .side-l,
+    .square.logo .side-r {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: transparent;
+      background-color: #fff; }
+    .square.logo .side-b {
+      right: calc( ( 168px - 60px ));
+      bottom: 0;
+      min-width: 0;
+      max-width: 50px;
+      height: 10px; }
+    .square.logo .side-l {
+      bottom: 0;
+      left: 0;
+      width: 10px;
+      min-height: 0;
+      max-height: 168px; }
+    .square.logo .side-t {
+      top: 0;
+      left: 0;
+      max-width: 168px;
+      height: 10px;
+      mix-width: 0; }
+    .square.logo .side-r {
+      top: 0;
+      right: 0;
+      width: 10px;
+      min-height: 0;
+      max-height: 90px; }
 
 .square-heading {
   position: relative;

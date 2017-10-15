@@ -153,6 +153,24 @@ h5
     }
 }
 
+//hero
+.hero
+{
+    .items
+    {
+        position: relative;
+        left: 95px;
+    }
+    .cse
+    {
+        position: relative;
+        left: -95px;
+
+
+        // width: calc( ( 100% - 19% )  );
+    }
+}
+
 //status
 .status
 {
@@ -480,12 +498,13 @@ h5
 .footer
 {
     position: relative;
-    bottom: 90px;
+    bottom: 80px;
 
-    height: 90px;
+    height: 80px;
     li
     {
         font-size: $font-size-md;
+        line-height: 90%;
     }
 }
 
@@ -498,6 +517,72 @@ h5
     height: $square-dimension;
 
     background: $transparent;
+    &.logo
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        width: $square-logo-dimension;
+        height: $square-logo-dimension;
+
+        background: $transparent;
+
+        .side-b,
+        .side-t,
+        .side-l,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $brand-secondary;
+        }
+
+        .side-b
+        {
+            right: calc( ( #{$square-logo-dimension} - 60px )  );
+            bottom: 0;
+
+            min-width: 0;
+            max-width: 50px;
+            height: $square-logo-border;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+            left: 0;
+
+            width: $square-logo-border;
+            min-height: 0;
+            max-height: $square-logo-dimension;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            max-width: $square-logo-dimension;
+            height: $square-logo-border;
+
+            mix-width: 0;
+        }
+
+        .side-r
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-logo-border;
+            min-height: 0;
+            max-height: 90px;
+        }
+    }
 }
 .square-heading
 {
