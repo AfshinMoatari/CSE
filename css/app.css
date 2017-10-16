@@ -6456,7 +6456,7 @@ h5 {
     background-color: #fff; }
 
 .navbar {
-  z-index: 1;
+  z-index: 2;
   height: 150px; }
   .navbar a {
     font-size: 1.563rem; }
@@ -6465,7 +6465,7 @@ h5 {
     background-color: #fff; }
     .navbar .apply .btn-primary span {
       border: 3px solid #fff;
-      background-color: #496093; }
+      background-color: transparent; }
   .navbar.sticky {
     background-color: #496093; }
 
@@ -6769,7 +6769,7 @@ h5 {
   height: calc(100vh - 150px); }
 
 .switcher-container .diagram {
-  height: 100%; }
+  z-index: 1; }
 
 .proof-program .square {
   top: -25%;
@@ -6816,8 +6816,8 @@ h5 {
     height: 10px; }
 
 .accelerator-program .square.left {
-  top: 0;
-  left: -30%; }
+  top: 34%;
+  left: -35%; }
   .accelerator-program .square.left .side-b,
   .accelerator-program .square.left .side-l,
   .accelerator-program .square.left .side-t,
@@ -6845,13 +6845,13 @@ h5 {
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 100px; }
+    max-height: 40px; }
   .accelerator-program .square.left .side-rb {
-    top: calc( ( 335px - 100px ));
+    top: calc( ( 335px - 140px ));
     right: 0;
     width: 10px;
     min-height: 0;
-    max-height: 100px; }
+    max-height: 140px; }
   .accelerator-program .square.left .side-b {
     right: 0;
     bottom: 0;
@@ -6860,8 +6860,8 @@ h5 {
     height: 10px; }
 
 .accelerator-program .square.right {
-  top: 0;
-  right: -30%; }
+  top: 50%;
+  right: -40%; }
   .accelerator-program .square.right .side-b,
   .accelerator-program .square.right .side-lb,
   .accelerator-program .square.right .side-lt,
@@ -6877,13 +6877,13 @@ h5 {
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 100px; }
+    max-height: 140px; }
   .accelerator-program .square.right .side-lt {
-    bottom: calc( ( 335px - 100px ));
+    bottom: calc( ( 335px - 40px ));
     left: 0;
     width: 10px;
     min-height: 0;
-    max-height: 100px; }
+    max-height: 40px; }
   .accelerator-program .square.right .side-t {
     top: 0;
     left: 0;

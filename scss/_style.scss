@@ -127,7 +127,7 @@ h5
 //navbar
 .navbar
 {
-    z-index: 1;
+    z-index: 2;
 
     height: $navbar-height;
     a
@@ -143,7 +143,7 @@ h5
             span
             {
                 border: $border-width solid $brand-secondary;
-                background-color: $brand-primary;
+                background-color: $transparent;
             }
         }
     }
@@ -663,7 +663,8 @@ h5
     }
     .diagram
     {
-        height: 100%;
+        // height: 100%;
+        z-index: 1;
     }
 }
 
@@ -750,8 +751,8 @@ h5
     {
         &.left
         {
-            top: 0;
-            left: -30%;
+            top: 34%;
+            left: -35%;
 
             .side-b,
             .side-l,
@@ -795,17 +796,17 @@ h5
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;
+                max-height: 40px;
             }
 
             .side-rb
             {
-                top: calc( ( #{$square-dimension} - 100px )  );
+                top: calc( ( #{$square-dimension} - 140px )  );
                 right: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;;
+                max-height: 140px;;
             }
 
             .side-b
@@ -820,8 +821,8 @@ h5
         }
         &.right
         {
-            top: 0;
-            right: -30%;
+            top: 50%;
+            right: -40%;
 
             .side-b,
             .side-lb,
@@ -845,17 +846,17 @@ h5
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;
+                max-height: 140px;
             }
 
             .side-lt
             {
-                bottom: calc( ( #{$square-dimension} - 100px )  );
+                bottom: calc( ( #{$square-dimension} - 40px )  );
                 left: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;;
+                max-height: 40px;;
             }
 
             .side-t
