@@ -6940,37 +6940,37 @@ h5 {
     max-width: 335px;
     height: 10px; }
 
-.inteernship-with-ects .square {
+.internship-with-ects .square {
   top: 0;
   right: 70%; }
-  .inteernship-with-ects .square .side-b,
-  .inteernship-with-ects .square .side-l,
-  .inteernship-with-ects .square .side-t,
-  .inteernship-with-ects .square .side-r {
+  .internship-with-ects .square .side-b,
+  .internship-with-ects .square .side-l,
+  .internship-with-ects .square .side-t,
+  .internship-with-ects .square .side-r {
     position: absolute;
     width: 0;
     height: 0;
     background: transparent;
     background-color: #e1948d; }
-  .inteernship-with-ects .square .side-l {
+  .internship-with-ects .square .side-l {
     bottom: 0;
     width: 10px;
     min-height: 0;
     max-height: 335px;
     righ: 0; }
-  .inteernship-with-ects .square .side-t {
+  .internship-with-ects .square .side-t {
     top: 0;
     left: 0;
     min-width: 0;
     max-width: 150px;
     height: 10px; }
-  .inteernship-with-ects .square .side-r {
+  .internship-with-ects .square .side-r {
     top: calc( ( 335px - 150px ));
     right: 0;
     width: 10px;
     min-height: 0;
     max-height: 150px; }
-  .inteernship-with-ects .square .side-b {
+  .internship-with-ects .square .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
