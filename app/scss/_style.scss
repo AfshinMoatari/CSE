@@ -127,7 +127,7 @@ h5
 //navbar
 .navbar
 {
-    z-index: 1;
+    z-index: 2;
 
     height: $navbar-height;
     a
@@ -143,13 +143,31 @@ h5
             span
             {
                 border: $border-width solid $brand-secondary;
-                background-color: $brand-primary;
+                background-color: $transparent;
             }
         }
     }
     &.sticky
     {
         background-color: $brand-primary;
+    }
+}
+
+//hero
+.hero
+{
+    .items
+    {
+        position: relative;
+        left: 95px;
+    }
+    .cse
+    {
+        position: relative;
+        left: -95px;
+
+
+        // width: calc( ( 100% - 19% )  );
     }
 }
 
@@ -480,12 +498,13 @@ h5
 .footer
 {
     position: relative;
-    bottom: 90px;
+    bottom: 80px;
 
-    height: 90px;
+    height: 80px;
     li
     {
         font-size: $font-size-md;
+        line-height: 90%;
     }
 }
 
@@ -498,6 +517,72 @@ h5
     height: $square-dimension;
 
     background: $transparent;
+    &.logo
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        width: $square-logo-dimension;
+        height: $square-logo-dimension;
+
+        background: $transparent;
+
+        .side-b,
+        .side-t,
+        .side-l,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $brand-secondary;
+        }
+
+        .side-b
+        {
+            right: calc( ( #{$square-logo-dimension} - 60px )  );
+            bottom: 0;
+
+            min-width: 0;
+            max-width: 50px;
+            height: $square-logo-border;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+            left: 0;
+
+            width: $square-logo-border;
+            min-height: 0;
+            max-height: $square-logo-dimension;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            max-width: $square-logo-dimension;
+            height: $square-logo-border;
+
+            mix-width: 0;
+        }
+
+        .side-r
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-logo-border;
+            min-height: 0;
+            max-height: 90px;
+        }
+    }
 }
 .square-heading
 {
@@ -560,6 +645,67 @@ h5
         height: $square-heading-border;
     }
 }
+.square-portrait
+{
+    position: relative;
+    top: 150px;
+    left: -15%;
+
+    width: $square-portrait-dimension;
+    height: $square-portrait-dimension;
+
+    background: $transparent;
+
+    .side-b,
+    .side-t,
+    .side-l,
+    .side-r
+    {
+        position: absolute;
+
+        width: 0;
+        height: 0;
+
+        background: transparent;
+        background-color: $brand-primary;
+    }
+
+    .side-l
+    {
+        bottom: 0;
+        left: 0;
+
+        width: $square-portrait-border;
+        height: $square-portrait-dimension;
+    }
+
+    .side-t
+    {
+        top: 0;
+        left: 0;
+
+        width: $square-portrait-dimension;
+        height: $square-portrait-border;
+    }
+
+    .side-r
+    {
+        top: 0;
+        right: 0;
+
+        width: $square-portrait-border;
+        height: 40px;
+    }
+
+    .side-b
+    {
+        bottom: 0;
+        left: 0;
+
+        width: 40px;
+        height: $square-portrait-border;
+    }
+}
 
 //Switcher Container
 .switcher-container
@@ -578,7 +724,8 @@ h5
     }
     .diagram
     {
-        height: 100%;
+        // height: 100%;
+        z-index: 1;
     }
 }
 
@@ -665,8 +812,8 @@ h5
     {
         &.left
         {
-            top: 0;
-            left: -30%;
+            top: 34%;
+            left: -35%;
 
             .side-b,
             .side-l,
@@ -710,17 +857,17 @@ h5
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;
+                max-height: 40px;
             }
 
             .side-rb
             {
-                top: calc( ( #{$square-dimension} - 100px )  );
+                top: calc( ( #{$square-dimension} - 140px )  );
                 right: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;;
+                max-height: 140px;;
             }
 
             .side-b
@@ -735,8 +882,8 @@ h5
         }
         &.right
         {
-            top: 0;
-            right: -30%;
+            top: 50%;
+            right: -40%;
 
             .side-b,
             .side-lb,
@@ -760,17 +907,17 @@ h5
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;
+                max-height: 140px;
             }
 
             .side-lt
             {
-                bottom: calc( ( #{$square-dimension} - 100px )  );
+                bottom: calc( ( #{$square-dimension} - 40px )  );
                 left: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;;
+                max-height: 40px;;
             }
 
             .side-t
@@ -872,7 +1019,7 @@ h5
 }
 
 //Inteernship With Ects
-.inteernship-with-ects
+.internship-with-ects
 {
     .square
     {
@@ -933,6 +1080,220 @@ h5
             min-width: 0;
             max-width: $square-dimension;
             height: $square-border;
+        }
+    }
+}
+
+//Job Openings
+.job-openings
+{
+    .square
+    {
+        top: 0;
+        right: 70%;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-r
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-orange;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+
+            righ: 0;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: 150px;
+            height: $square-border;
+        }
+
+
+        .side-r
+        {
+            top: calc( ( #{$square-dimension} - 150px )  );
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 150px;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
+
+//Resources & Research
+.resources-research
+{
+    .square
+    {
+        &.left
+        {
+            top: 34%;
+            left: -35%;
+
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-rt,
+            .side-rb
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-green;
+            }
+
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+            .side-rt
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 40px;
+            }
+
+            .side-rb
+            {
+                top: calc( ( #{$square-dimension} - 140px )  );
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 140px;;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+        &.right
+        {
+            top: 50%;
+            right: -40%;
+
+            .side-b,
+            .side-lb,
+            .side-lt,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $brand-primary;
+            }
+
+            .side-lb
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 140px;
+            }
+
+            .side-lt
+            {
+                bottom: calc( ( #{$square-dimension} - 40px )  );
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 40px;;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
         }
     }
 }

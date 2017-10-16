@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSE | Copenhagen School of Entrepreneurship</title>
+  <!-- STYLE -->
+  <link rel="stylesheet" href="./css/app.css">
+  <!-- LIBRARIES -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/TweenMax.min.js"></script>
+  <script src="./js/EasePack.min.js"></script>
+  <script src="./js/ScrollMagic.min.js"></script>
+  <script src="./js/debug.addIndicators.min.js"></script>
+  <script src="./js/animation.gsap.min.js"></script>
+  <script src="./js/jquery.fullpage.min.js"></script>
+  <!-- SCRIPTS -->
+  <script src="./js/animation.js"></script>
+  <script src="./js/fullPage.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="main navbar navbar-toggleable-sm navbar-inverse w-100 bg-primary fixed-top">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="./assets/image/cse.svg" alt=""></a>
+      <div class="collapse navbar-collapse justify-content-between align-self-end">
+        <ul class="nav navbar-nav mr-auto">
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">about</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="programs.html">programs</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">startups</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">events</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">collabrations</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">blog</a>
+          </li>
+          <li class="nav-item mx-3 fade-in-right apply">
+            <button class="nav-link btn btn-primary" href="#" duration-btn=".1">
+            apply now
+            <span></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav class="fixed-top secondary" style="top:150px;background-color:white">
+    <ul class="nav container" id="subnav">
+      <li class="nav-item checkbox" data-menuanchor="about-cse">
+        <a class="nav-link" href="#about-cse">
+          <p>About CSE</p>
+        </a>
+      </li>
+      <li class="nav-item checkbox" data-menuanchor="the-team">
+        <a class="nav-link" href="#the-team">
+          <p>Contact</p>
+        </a>
+      </li>
+      <li class="nav-item checkbox" data-menuanchor="job-openings">
+        <a class="nav-link" href="#job-openings">
+          <p>Careers</p>
+        </a>
+      </li>
+      <li class="nav-item checkbox" data-menuanchor="resources-research">
+        <a class="nav-link" href="#resources-research">
+          <p>Resources & research</p>
+        </a>
+      </li>
+      <li class="nav-item checkbox" data-menuanchor="press">
+        <a class="nav-link" href="#press">
+          <p>Presskit</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="fullpage">
+    <!-- HERO SECTION -->
+    <div class="section mx-auto switcher-container" data-anchor="about-cse">
+      <div class="d-flex switcher">
+        <div class="col-6 d-flex justify-content-center align-self-end diagram px-0">
+          <img src="./assets/image/about-cse.png" alt="About-CSE" class="img-fluid">
+        </div>
+        <div class="col-6 bg-primary d-flex justify-content-center">
+          <p class="lead align-self-center pre">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+        </div>
+      </div>
+    </div>
+    <!-- THE TEAM SECTION -->
+    <div class="section the-team animate" data-anchor="the-team">
+      <div class="container">
+        <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">The team</h1>
+        <div class="row">
+          <div class="col-4">
+            <div class="ceo">
+              <div class="portrait" style="width:300px;">
+                <div class="square-portrait d-block" duration-square=".8" delay="0">
+                  <span class="side-b"></span>
+                  <span class="side-l"></span>
+                  <span class="side-t"></span>
+                  <span class="side-r"></span>
+                </div>
+                <img src="./assets/image/staff/karina_rothoff_brix.png" class="img-fluid" alt="Karina Rothoff Brix">
+              </div>
+              <div class="py-3 info">
+                <h4>Karina Rothoff Brix</h4>
+                <span>CEO</span>
+                <p>kr.edu@cbs.dk</p>
+                <p>+45 6177 2147</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="item">
+              <div class="portrait" style="width:300px;">
+                <div class="square-portrait d-block" duration-square=".8" delay="0">
+                  <span class="side-b"></span>
+                  <span class="side-l"></span>
+                  <span class="side-t"></span>
+                  <span class="side-r"></span>
+                </div>
+                <img src="./assets/image/staff/karina_rothoff_brix.png" class="img-fluid" alt="Karina Rothoff Brix">
+              </div>
+              <div class="py-3 info">
+                <h4>Karina Rothoff Brix</h4>
+                <span>CEO</span>
+                <p>kr.edu@cbs.dk</p>
+                <p>+45 6177 2147</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="item">
+              <div class="portrait" style="width:300px;">
+                <div class="square-portrait d-block" duration-square=".8" delay="0">
+                  <span class="side-b"></span>
+                  <span class="side-l"></span>
+                  <span class="side-t"></span>
+                  <span class="side-r"></span>
+                </div>
+                <img src="./assets/image/staff/karina_rothoff_brix.png" class="img-fluid" alt="Karina Rothoff Brix">
+              </div>
+              <div class="py-3 info">
+                <h4>Karina Rothoff Brix</h4>
+                <span>CEO</span>
+                <p>kr.edu@cbs.dk</p>
+                <p>+45 6177 2147</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="item">
+              <div class="portrait" style="width:300px;">
+                <div class="square-portrait d-block" duration-square=".8" delay="0">
+                  <span class="side-b"></span>
+                  <span class="side-l"></span>
+                  <span class="side-t"></span>
+                  <span class="side-r"></span>
+                </div>
+                <img src="./assets/image/staff/karina_rothoff_brix.png" class="img-fluid" alt="Karina Rothoff Brix">
+              </div>
+              <div class="py-3 info">
+                <h4>Karina Rothoff Brix</h4>
+                <span>CEO</span>
+                <p>kr.edu@cbs.dk</p>
+                <p>+45 6177 2147</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JOB OPENNGS -->
+    <div class="section job-openings animate" data-anchor="job-openings">
+      <div class="d-flex">
+        <div class="container align-self-center">
+          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Job Openings</h1>
+          <div class="row">
+            <div class="col-6">
+              <h4 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Want to become part of CSE?</h4>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
+              <div class="square d-block" duration-square=".8" delay="0">
+                <span class="side-r"></span>
+                <span class="side-b"></span>
+                <span class="side-l"></span>
+                <span class="side-t"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIND US HERE -->
+    <div class="section find-us-here animate" data-anchor="find-us-here">
+      <div class="d-flex">
+        <div class="container align-self-center">
+          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Find Us Here!</h1>
+          <div class="row">
+            <div class="col-6">
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RESOURCES & RESEARCH -->
+    <div class="section resources-research animate" data-anchor="resources-research">
+      <div class="container">
+        <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Resources & Research</h1>
+        <div class="row">
+          <div class="col-6">
+            <div style="width:400px" class="mx-auto">
+              <h4 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Recommended resources</h4>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
+            </div>
+            <div class="square left d-block" duration-square=".8" delay="0">
+              <span class="side-t"></span>
+              <span class="side-rt"></span>
+              <span class="side-rb"></span>
+              <span class="side-b"></span>
+              <span class="side-l"></span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="width:400px" class="mx-auto text-right mt-5">
+              <h4 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Research at CBS</h4>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
+            </div>
+            <div class="square right d-block" duration-square=".8" delay="0">
+              <span class="side-b"></span>
+              <span class="side-lb"></span>
+              <span class="side-lt"></span>
+              <span class="side-t"></span>
+              <span class="side-r"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PRESS -->
+    <div class="section press animate" data-anchor="press">
+      <div class="container">
+        <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Press</h1>
+        <div class="row">
+          <div class="col-6">
+            <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER SECTION -->
+  <div class="footer">
+    <div class="d-flex justify-content-between text-center">
+      <div class="container align-self-center">
+        <div class="row">
+          <div class="col-2 d-flex justify-content-start pl-0">
+            <a href="#"><img src="./assets/image/cbs-cse.svg" alt="" width="100px"></a>
+          </div>
+          <div class="col-8 d-flex">
+            <ol class="breadcrumb m-0 mx-auto align-self-end text-primary">
+              <li class="breadcrumb-item">Porcelænshaven 26, 2nd floor, 2000 Frederiksberg</li>
+              <li class="breadcrumb-item">+45 38153646</li>
+              <li class="breadcrumb-item">dhn.ino@cbs.dk</li>
+            </ol>
+          </div>
+          <div class="col-2 d-flex justify-content-end pr-0">
+            <div class="my-0 align-self-end">
+              <a class="mx-2" href="#"><img src="./assets/image/facebook.svg" alt=""></a>
+              <a class="mx-2" href="#"><img src="./assets/image/instagram.svg" alt=""></a>
+              <a class="mx-2" href="#"><img src="./assets/image/twitter.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
