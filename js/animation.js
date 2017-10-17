@@ -37,7 +37,10 @@ $(function() {
     // build a tween
     var tween = new TimelineMax();
     tween.to($(this).find(".nav li"), 0.3, {
-      scale: .8,
+      scale: .8
+    }, 0).to($(this).find(".nav li .nav-link"), 0.3, {
+      paddingRight: 0,
+      paddingLeft: 0
     }, 0).to($(this), .6, {
       top: 100
     }, 0);

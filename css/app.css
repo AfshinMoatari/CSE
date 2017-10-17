@@ -6977,6 +6977,9 @@ h5 {
     max-width: 335px;
     height: 10px; }
 
+.internship-with-ects .fp-tableCell {
+  vertical-align: top; }
+
 .internship-with-ects .square {
   top: 0;
   right: 70%; }
@@ -7051,8 +7054,11 @@ h5 {
     max-width: 335px;
     height: 10px; }
 
+.resources-research .fp-tableCell {
+  vertical-align: top; }
+
 .resources-research .square.left {
-  top: 34%;
+  top: -80%;
   left: -35%; }
   .resources-research .square.left .side-b,
   .resources-research .square.left .side-l,
@@ -7096,7 +7102,7 @@ h5 {
     height: 10px; }
 
 .resources-research .square.right {
-  top: 50%;
+  top: -15%;
   right: -40%; }
   .resources-research .square.right .side-b,
   .resources-research .square.right .side-lb,
@@ -7138,6 +7144,9 @@ h5 {
     min-width: 0;
     max-width: 335px;
     height: 10px; }
+
+nav.secondary .nav-link:first-child {
+  padding-left: 0 !important; }
 
 nav.secondary .checkbox p {
   line-height: 20px;

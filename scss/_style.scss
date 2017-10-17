@@ -1021,6 +1021,10 @@ h5
 //Inteernship With Ects
 .internship-with-ects
 {
+    .fp-tableCell
+    {
+        vertical-align: top;
+    }
     .square
     {
         top: 0;
@@ -1153,11 +1157,15 @@ h5
 //Resources & Research
 .resources-research
 {
+    .fp-tableCell
+    {
+        vertical-align: top;
+    }
     .square
     {
         &.left
         {
-            top: 34%;
+            top: -80%;
             left: -35%;
 
             .side-b,
@@ -1227,7 +1235,7 @@ h5
         }
         &.right
         {
-            top: 50%;
+            top: -15%;
             right: -40%;
 
             .side-b,
@@ -1302,6 +1310,10 @@ nav
 {
     &.secondary
     {
+        .nav-link:first-child
+        {
+            padding-left: 0!important;
+        }
         .checkbox p
         {
             line-height: 20px;
