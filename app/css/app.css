@@ -6439,9 +6439,7 @@ h5 {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  color: #fff;
-  border-width: 2px;
-  background-color: #496093; }
+  border-width: 2px; }
   .btn-primary span {
     position: absolute;
     z-index: -1;
@@ -6451,9 +6449,36 @@ h5 {
     height: 100%;
     content: '';
     -webkit-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
-    border: 3px solid #496093;
+    transition: all 0.6s ease-in-out; }
+  .btn-primary.dark {
+    color: #fff;
+    background-color: #496093; }
+    .btn-primary.dark span {
+      border: 3px solid #496093;
+      background-color: #fff; }
+  .btn-primary.light {
+    color: #496093;
+    border-color: #496093;
     background-color: #fff; }
+    .btn-primary.light span {
+      border: 3px solid #496093;
+      background-color: #fff; }
+
+.btn-secondary {
+  font-family: "CBS-regular", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.563rem;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  color: #496093;
+  border-width: 2px;
+  border-color: #496093;
+  background-color: #fff; }
+  .btn-secondary.active {
+    color: #fff;
+    border-color: #496093;
+    background-color: #496093; }
 
 .navbar {
   z-index: 2;
@@ -6977,6 +7002,9 @@ h5 {
     max-width: 335px;
     height: 10px; }
 
+.internship-with-ects .fp-tableCell {
+  vertical-align: top; }
+
 .internship-with-ects .square {
   top: 0;
   right: 70%; }
@@ -7051,8 +7079,11 @@ h5 {
     max-width: 335px;
     height: 10px; }
 
+.resources-research .fp-tableCell {
+  vertical-align: top; }
+
 .resources-research .square.left {
-  top: 34%;
+  top: -80%;
   left: -35%; }
   .resources-research .square.left .side-b,
   .resources-research .square.left .side-l,
@@ -7096,7 +7127,7 @@ h5 {
     height: 10px; }
 
 .resources-research .square.right {
-  top: 50%;
+  top: -15%;
   right: -40%; }
   .resources-research .square.right .side-b,
   .resources-research .square.right .side-lb,
@@ -7138,6 +7169,12 @@ h5 {
     min-width: 0;
     max-width: 335px;
     height: 10px; }
+
+.portfolio .fp-tableCell {
+  vertical-align: top; }
+
+nav.secondary .nav-link:first-child {
+  padding-left: 0 !important; }
 
 nav.secondary .checkbox p {
   line-height: 20px;

@@ -2,8 +2,8 @@ $(document).ready(function() {
   $('.fullpage').fullpage({
     scrollBar: true,
     verticalCentered: true,
-    paddingTop: '100px',
-    anchors: ['about-programs', 'proof-program', 'accelerator-program', 'match-up', 'internship-with-ects'],
+    paddingTop: '135px',
+    anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'],
     menu: '#subnav'
   });
 });

@@ -37,7 +37,10 @@ $(function() {
     // build a tween
     var tween = new TimelineMax();
     tween.to($(this).find(".nav li"), 0.3, {
-      scale: .8,
+      scale: .8
+    }, 0).to($(this).find(".nav li .nav-link"), 0.3, {
+      paddingRight: 0,
+      paddingLeft: 0
     }, 0).to($(this), .6, {
       top: 100
     }, 0);
@@ -191,7 +194,7 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
-  $('.btn-primary').each(function() {
+  $('.btn-primary.dark').each(function() {
 
     var duration = $(this).attr('duration-btn');
     var textColor = $(this).css("background-color");
@@ -227,6 +230,78 @@ $(function() {
         top: '-10px',
         right: '-10px',
         borderWidth: '3px'
+      })
+    }
+
+    // call a hover scene
+    $(this).hover(over, out);
+  });
+  $('.btn-primary.light').each(function() {
+
+    var duration = $(this).attr('duration-btn');
+    var textColor = $(this).css("background-color");
+    var backgroundColor = $(this).css("color");
+
+    // build a tween
+    function over() {
+      var tween = new TimelineMax();
+      tween.to($(this), 0, {
+        ease: Power0.easeNone,
+        color: textColor,
+        backgroundColor: backgroundColor,
+        borderColor: textColor
+      }).to($(this).find('span'), 0, {
+        ease: Power0.easeNone,
+        backgroundColor: "transparent",
+        borderColor: backgroundColor,
+        top: '-5px',
+        right: '-5px',
+      })
+    }
+
+    function out() {
+      var tween = new TimelineMax();
+      tween.to($(this), duration, {
+        ease: Power4.easeOut,
+        color: backgroundColor,
+        backgroundColor: textColor,
+        borderColor: backgroundColor
+      }).to($(this).find('span'), duration, {
+        ease: Power4.easeOut,
+        backgroundColor: textColor,
+        borderColor: backgroundColor,
+        top: '-10px',
+        right: '-10px',
+      })
+    }
+
+    // call a hover scene
+    $(this).hover(over, out);
+  });
+  $('.btn-secondary:not(.active)').each(function() {
+
+    var duration = $(this).attr('duration-btn');
+    var textColor = $(this).css("background-color");
+    var backgroundColor = $(this).css("color");
+
+    // build a tween
+    function over() {
+      var tween = new TimelineMax();
+      tween.to($(this), 0, {
+        ease: Power0.easeNone,
+        color: textColor,
+        backgroundColor: backgroundColor,
+        borderColor: backgroundColor,
+      })
+    }
+
+    function out() {
+      var tween = new TimelineMax();
+      tween.to($(this), duration, {
+        ease: Power4.easeOut,
+        color: backgroundColor,
+        backgroundColor: textColor,
+        borderColor: backgroundColor,
       })
     }
 

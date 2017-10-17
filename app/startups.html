@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSE | Copenhagen School of Entrepreneurship</title>
+  <!-- STYLE -->
+  <link rel="stylesheet" href="./css/app.css">
+  <!-- LIBRARIES -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/TweenMax.min.js"></script>
+  <script src="./js/EasePack.min.js"></script>
+  <script src="./js/ScrollMagic.min.js"></script>
+  <script src="./js/debug.addIndicators.min.js"></script>
+  <script src="./js/animation.gsap.min.js"></script>
+  <script src="./js/jquery.fullpage.min.js"></script>
+  <!-- SCRIPTS -->
+  <script src="./js/animation.js"></script>
+  <script src="./js/fullPage.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="main navbar navbar-toggleable-sm navbar-inverse w-100 bg-primary fixed-top">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="./assets/image/cse.svg" alt=""></a>
+      <div class="collapse navbar-collapse justify-content-between align-self-end">
+        <ul class="nav navbar-nav mr-auto">
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">about</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="programs.html">programs</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="startups.html">startups</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">events</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">collabrations</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link pb-0" href="#">blog</a>
+          </li>
+          <li class="nav-item mx-3 fade-in-right apply">
+            <button class="nav-link btn btn-primary dark" href="#" duration-btn=".1">
+            apply now
+            <span></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav class="fixed-top secondary" style="top:150px;background-color:white">
+    <ul class="nav container" id="subnav">
+      <li class="nav-item checkbox" data-menuanchor="first">
+        <a class="nav-link" href="#first">
+          <p>About startups</p>
+        </a>
+      </li>
+      <li class="nav-item checkbox" data-menuanchor="second">
+        <a class="nav-link" href="#second">
+          <p>Portfolio</p>
+        </a>
+      </li>
+      <li class="nav-item checkbox" data-menuanchor="third">
+        <a class="nav-link" href="#third">
+          <p>Testimonials</p>
+        </a>
+      </li>
+      <li class="nav-item checkbox" data-menuanchor="fourth">
+        <a class="nav-link" href="#fourth">
+          <p>Video archive</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="fullpage">
+    <!-- HERO SECTION -->
+    <div class="section mx-auto switcher-container" data-anchor="first">
+      <div class="d-flex switcher">
+        <div class="col-6 d-flex justify-content-center align-self-end diagram px-0">
+          <img src="./assets/image/about-startups.png" alt="About-CSE" class="img-fluid">
+        </div>
+        <div class="col-6 bg-primary d-flex justify-content-center">
+          <p class="lead align-self-center pre">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.¢</p>
+        </div>
+      </div>
+    </div>
+    <!-- PORTFOLIO -->
+    <div class="section portfolio animate" data-anchor="second">
+      <div class="container">
+        <div class="switcher mt-6">
+          <div class="switcher-nav">
+            <div class="main">
+              <div class="row justify-content-md-center">
+                <div class="col-1 mx-6">
+                  <button class="nav-link btn btn-primary dark" href="#" duration-btn=".1">
+                  current startups
+                  <span></span>
+                  </button>
+                </div>
+                <div class="col-1 mx-6">
+                  <button class="nav-link btn btn-primary light" href="#" duration-btn=".1">
+                  alumni
+                  <span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="sub my-4">
+              <div class="row justify-content-md-center">
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary active" href="#" duration-btn=".1">
+                  ALL
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  BIO Enterprise
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Education platform
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Event & Services
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Fashion & Jewelry
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Food & Beverage
+                  </button>
+                </div>
+              </div>
+              <div class="row justify-content-md-center">
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Games & Entertainment
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Hardware
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Match-making Platf.
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Product Design
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Fashion & Jewelry
+                  </button>
+                </div>
+                <div class="col-auto m-1">
+                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
+                  Food
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="switcher-content">
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- TESTIMONIALS -->
+    <div class="section testimonials animate" data-anchor="third">
+      <div class="d-flex">
+        <div class="container align-self-center">
+          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Job Openings</h1>
+          <div class="row">
+            <div class="col-6">
+              <h4 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Want to become part of CSE?</h4>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
+              <div class="square d-block" duration-square=".8" delay="0">
+                <span class="side-r"></span>
+                <span class="side-b"></span>
+                <span class="side-l"></span>
+                <span class="side-t"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- VIDEO ARCHIVE -->
+    <div class="section video-archive animate" data-anchor="fourth">
+      <div class="d-flex">
+        <div class="container align-self-center">
+          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Find Us Here!</h1>
+          <div class="row">
+            <div class="col-6">
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
+              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER SECTION -->
+  <div class="footer">
+    <div class="d-flex justify-content-between text-center">
+      <div class="container align-self-center">
+        <div class="row">
+          <div class="col-2 d-flex justify-content-start pl-0">
+            <a href="#"><img src="./assets/image/cbs-cse.svg" alt="" width="100px"></a>
+          </div>
+          <div class="col-8 d-flex">
+            <ol class="breadcrumb m-0 mx-auto align-self-end text-primary">
+              <li class="breadcrumb-item">Porcelænshaven 26, 2nd floor, 2000 Frederiksberg</li>
+              <li class="breadcrumb-item">+45 38153646</li>
+              <li class="breadcrumb-item">dhn.ino@cbs.dk</li>
+            </ol>
+          </div>
+          <div class="col-2 d-flex justify-content-end pr-0">
+            <div class="my-0 align-self-end">
+              <a class="mx-2" href="#"><img src="./assets/image/facebook.svg" alt=""></a>
+              <a class="mx-2" href="#"><img src="./assets/image/instagram.svg" alt=""></a>
+              <a class="mx-2" href="#"><img src="./assets/image/twitter.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
