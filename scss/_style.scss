@@ -101,10 +101,7 @@ h5
 
     cursor: pointer;
 
-    color: $brand-secondary;
     border-width: 2px;
-    background-color: $brand-primary;
-
     & span
     {
         position: absolute;
@@ -118,9 +115,53 @@ h5
         content: '';
         -webkit-transition: $transition-base;
                 transition: $transition-base;
+    }
 
-        border: $border-width solid $brand-primary;
+    &.dark
+    {
+        color: $brand-secondary;
+        background-color: $brand-primary;
+        & span
+        {
+            border: $border-width solid $brand-primary;
+            background-color: $brand-secondary;
+        }
+    }
+    &.light
+    {
+        color: $brand-primary ;
+        border-color: $brand-primary;
         background-color: $brand-secondary;
+        & span
+        {
+            border: $border-width solid $brand-primary;
+            background-color: $brand-secondary;
+        }
+    }
+}
+
+.btn-secondary
+{
+    font-family: $buttons-font-family;
+    font-size: $font-size-lg;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: auto;
+
+    cursor: pointer;
+
+    color: $brand-primary;
+    border-width: 2px;
+    border-color: $brand-primary;
+    background-color: $brand-secondary;
+    &.active
+    {
+        color: $brand-secondary;
+        border-color: $brand-primary;
+        background-color: $brand-primary;
     }
 }
 
@@ -1303,6 +1344,15 @@ h5
                 height: $square-border;
             }
         }
+    }
+}
+
+//Portfolio
+.portfolio
+{
+    .fp-tableCell
+    {
+        vertical-align: top;
     }
 }
 
