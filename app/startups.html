@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/app.css">
   <!-- LIBRARIES -->
   <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
   <script src="./js/TweenMax.min.js"></script>
   <script src="./js/EasePack.min.js"></script>
   <script src="./js/ScrollMagic.min.js"></script>
@@ -17,6 +18,7 @@
   <!-- SCRIPTS -->
   <script src="./js/animation.js"></script>
   <script src="./js/fullPage.js"></script>
+  <script src="./js/scrolloverflow.min.js"></script>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
         </ul>
         <ul class="nav navbar-nav">
           <li class="nav-item mx-3">
-            <a class="nav-link pb-0" href="#">about</a>
+            <a class="nav-link pb-0" href="about.html">about</a>
           </li>
           <li class="nav-item mx-3">
             <a class="nav-link pb-0" href="programs.html">programs</a>
@@ -85,8 +87,8 @@
   </nav>
   <div class="fullpage">
     <!-- HERO SECTION -->
-    <div class="section mx-auto switcher-container" data-anchor="first">
-      <div class="d-flex switcher">
+    <div class="section hero-pages" data-anchor="first">
+      <div class="d-flex hero-pages-container">
         <div class="col-6 d-flex justify-content-center align-self-end diagram px-0">
           <img src="./assets/image/about-startups.png" alt="About-CSE" class="img-fluid">
         </div>
@@ -96,95 +98,153 @@
       </div>
     </div>
     <!-- PORTFOLIO -->
-    <div class="section portfolio animate" data-anchor="second">
+    <div class="section animate portfolio">
       <div class="container">
-        <div class="switcher mt-6">
-          <div class="switcher-nav">
-            <div class="main">
-              <div class="row justify-content-md-center">
-                <div class="col-1 mx-6">
-                  <button class="nav-link btn btn-primary dark" href="#" duration-btn=".1">
-                  current startups
-                  <span></span>
-                  </button>
+        <div class="switcher mt-5">
+          <div class="switcher-header">
+            <ul class="row justify-content-md-center nav nav-tabs switcher-header-tabs" id="outerTab" role="tablist">
+              <li class="col-1 mx-6 nav-item active">
+                <button class="nav-link btn btn-primary dark" data-toggle="tab" href="#current-startups" aria-controls="current-startups" role="tab" aria-expanded="true" duration-btn=".1">current startups
+                <span></span></button>
+              </li>
+              <li class="col-1 mx-6 nav-item">
+                <button class="nav-link btn btn-primary light" data-toggle="tab" href="#alumni" aria-controls="alumni" role="tab" aria-expanded="true" duration-btn=".1">alumni
+                <span></span></button>
+              </li>
+            </ul>
+          </div>
+          <div class="switcher-content tab-content my-5">
+            <div class="tab-pane active" id="current-startups" role="tabpanel">
+              <div class="switch">
+                <div class="switcher-header">
+                  <ul class="row nav nav-tabs switcher-header-tabs" id="innerTab" role="tablist">
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link active" data-toggle="tab" href="#all" aria-controls="all" role="tab" aria-expanded="true" duration-btn=".1">ALL</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#bio-enterprise" aria-controls="bio-enterprise" role="tab" duration-btn=".1">BIO Enterprise</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#education-platform" aria-controls="education-platform" role="tab" duration-btn=".1">Education platform</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#event-services" aria-controls="event-services" role="tab" duration-btn=".1">Event & Services</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#fsashion-jewelry" aria-controls="fsashion-jewelry" role="tab" duration-btn=".1">Fashion & Jewelry</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#food-beverage" aria-controls="food-beverage" role="tab" duration-btn=".1">Food & Beverage</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#games-entertainment" aria-controls="games-entertainment" role="tab" duration-btn=".1">Games & Entertainment</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#hardware" aria-controls="hardware" role="tab" duration-btn=".1">Hardware</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#match-making-platf" aria-controls="match-making-platf" role="tab" duration-btn=".1">Match-making Platf.</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#product-design" aria-controls="product-design" role="tab" duration-btn=".1">Product Design</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#fashion-jewelry" aria-controls="fashion-jewelry" role="tab" duration-btn=".1">Fashion & Jewelry</button>
+                    </li>
+                    <li class="col-auto m-1 nav-item">
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#food" aria-controls="food" role="tab" duration-btn=".1">Food</button>
+                    </li>
+                  </ul>
                 </div>
-                <div class="col-1 mx-6">
-                  <button class="nav-link btn btn-primary light" href="#" duration-btn=".1">
-                  alumni
-                  <span></span>
-                  </button>
+                <div class="switcher-body tab-content my-5">
+                  <div class="tab-pane active" id="all" role="tabpanel">
+                    <div class="row d-flex justify-content-between align-items-center">
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/yes.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/uru.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/billetfix.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/rithos.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/yes.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/uru.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/billetfix.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/uru.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/yes.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/uru.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/rithos.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/billetfix.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/yes.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/uru.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/yes.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/yes.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/rithos.png" alt="yes">
+                      </div>
+                      <div class="col-2 my-4 item">
+                        <img src="./assets/image/uru.png" alt="yes">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="bio-enterprise" role="tabpanel">
+                    Content for Nested Bio Enterprise
+                  </div>
+                  <div class="tab-pane" id="education-platform" role="tabpanel">
+                    Content for Nested Education platform
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="sub my-4">
-              <div class="row justify-content-md-center">
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary active" href="#" duration-btn=".1">
-                  ALL
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  BIO Enterprise
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Education platform
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Event & Services
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Fashion & Jewelry
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Food & Beverage
-                  </button>
-                </div>
+            <div class="tab-pane" id="alumni" role="tabpanel">
+              <div class="switcher-header">
+                <ul class="nav nav-tabs switcher-header-tabs" id="innerTab" role="tablist">
+                  <li class="m-1 nav-item">
+                    <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#alumni-item-1" aria-controls="alumni-item-1" role="tab" aria-expanded="true" duration-btn=".1">alumni-item-1</button>
+                  </li>
+                  <li class="m-1 nav-item">
+                    <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#alumni-item-2" aria-controls="alumni-item-2" role="tab" aria-expanded="true" duration-btn=".1">alumni-item-2</button>
+                  </li>
+                </ul>
               </div>
-              <div class="row justify-content-md-center">
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Games & Entertainment
-                  </button>
+              <div class="switcher-body tab-content">
+                <div class="tab-pane active" id="alumni-item-1" role="tabpanel">
+                  Content for Nested alumni-item-1
                 </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Hardware
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Match-making Platf.
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Product Design
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Fashion & Jewelry
-                  </button>
-                </div>
-                <div class="col-auto m-1">
-                  <button class="nav-link btn btn-secondary" href="#" duration-btn=".1">
-                  Food
-                  </button>
+                <div class="tab-pane" id="alumni-item-2" role="tabpanel">
+                  Content for Nested alumni-item-2
                 </div>
               </div>
             </div>
           </div>
-          <div class="switcher-content">
-        </div>
         </div>
       </div>
     </div>
@@ -192,16 +252,50 @@
     <div class="section testimonials animate" data-anchor="third">
       <div class="d-flex">
         <div class="container align-self-center">
-          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Job Openings</h1>
-          <div class="row">
-            <div class="col-6">
-              <h4 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Want to become part of CSE?</h4>
-              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore accumsan et iusto odio.</p>
-              <div class="square d-block" duration-square=".8" delay="0">
-                <span class="side-r"></span>
-                <span class="side-b"></span>
-                <span class="side-l"></span>
-                <span class="side-t"></span>
+          <h1 class="fade-in text-center" duration-fade=".6" delay="0">Testimonials</h1>
+          <div class="row justify-content-around">
+            <div class="col-8 mr-auto" style="bottom:-100px">
+              <div class="individual">
+                <div class="media portrait">
+                  <div class="align-self-end mr-3 d-inline-block position-relative image">
+                    <div class="square-portrait d-block left" duration-square=".8" delay="0">
+                      <span class="side-b"></span>
+                      <span class="side-l"></span>
+                      <span class="side-t"></span>
+                      <span class="side-r"></span>
+                    </div>
+                    <img src="./assets/image/staff/kelvina.png" alt="">
+                  </div>
+                  <div class="media-body align-self-end quotation">
+                    <p class="mb-0 text-left">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                  </div>
+                </div>
+                <div class="py-3 position float-left">
+                  <h4>Whoever</h4>
+                  <span>CEO of Whatever</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 ml-auto" style="top:-100px">
+              <div class="individual">
+                <div class="media portrait">
+                  <div class="media-body align-self-end quotation">
+                    <p class="mb-0 text-right">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                  </div>
+                  <div class="align-self-end ml-3 d-inline-block position-relative image">
+                    <div class="square-portrait d-block right" duration-square=".8" delay="0">
+                      <span class="side-b"></span>
+                      <span class="side-l"></span>
+                      <span class="side-t"></span>
+                      <span class="side-r"></span>
+                    </div>
+                    <img src="./assets/image/staff/kelvina.png" alt="">
+                  </div>
+                </div>
+                <div class="py-3 position float-right">
+                  <h4>Whoever</h4>
+                  <span>CEO of Whatever</span>
+                </div>
               </div>
             </div>
           </div>
@@ -212,14 +306,11 @@
     <div class="section video-archive animate" data-anchor="fourth">
       <div class="d-flex">
         <div class="container align-self-center">
-          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Find Us Here!</h1>
-          <div class="row">
-            <div class="col-6">
-              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
-              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
-              <p class="opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
+          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">VIDEO ARCHIVE</h1>
+          <button type="button" class="d-block mx-auto btn btn-primary dark mt-5" duration-btn=".1">
+           go to video archive
+           <span></span>
+         </button>
         </div>
       </div>
     </div>
