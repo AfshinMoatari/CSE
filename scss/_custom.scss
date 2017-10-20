@@ -11,6 +11,7 @@ $orange: #e1948d;
 $white: #fff;
 $black: #000;
 $transparent: transparent;
+$inherit: inherit;
 $brand-primary: $blue;
 $brand-secondary: $white;
 $brand-tertiary: $red;
@@ -110,6 +111,15 @@ $navbar-height: 150px;
 $navbar-inverse-color: $brand-secondary;
 $navbar-inverse-hover-color: rgba($brand-secondary,.8);
 $navbar-inverse-active-color: rgba($brand-secondary,.8);
+$nav-tabs-border-color: $inherit;
+$nav-tabs-border-width: $inherit;
+$nav-tabs-border-radius: $inherit;
+$nav-tabs-link-hover-border-color: $inherit;
+$nav-tabs-active-link-hover-color: none;
+$nav-tabs-active-link-hover-bg: $brand-primary;
+$nav-tabs-active-link-hover-border-color: $inherit;
+$nav-tabs-justified-link-border-color: $inherit;
+$nav-tabs-justified-active-link-border-color: $inherit;
 
 // navs
 $nav-link-padding: .3rem 1rem;

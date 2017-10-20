@@ -4,6 +4,7 @@ $(document).ready(function() {
     verticalCentered: true,
     paddingTop: '135px',
     anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'],
-    menu: '#subnav'
+    menu: '#subnav',
+    // scrollOverflow: true
   });
 });

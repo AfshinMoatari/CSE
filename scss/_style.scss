@@ -159,9 +159,9 @@ h5
     background-color: $brand-secondary;
     &.active
     {
-        color: $brand-secondary;
-        border-color: $brand-primary;
-        background-color: $brand-primary;
+        color: $brand-secondary!important;
+        border-color: $brand-primary!important;
+        background-color: $brand-primary!important;
     }
 }
 
@@ -688,9 +688,7 @@ h5
 }
 .square-portrait
 {
-    position: relative;
-    top: 150px;
-    left: -15%;
+    position: absolute;
 
     width: $square-portrait-dimension;
     height: $square-portrait-dimension;
@@ -710,46 +708,10 @@ h5
         background: transparent;
         background-color: $brand-primary;
     }
-
-    .side-l
-    {
-        bottom: 0;
-        left: 0;
-
-        width: $square-portrait-border;
-        height: $square-portrait-dimension;
-    }
-
-    .side-t
-    {
-        top: 0;
-        left: 0;
-
-        width: $square-portrait-dimension;
-        height: $square-portrait-border;
-    }
-
-    .side-r
-    {
-        top: 0;
-        right: 0;
-
-        width: $square-portrait-border;
-        height: 40px;
-    }
-
-    .side-b
-    {
-        bottom: 0;
-        left: 0;
-
-        width: 40px;
-        height: $square-portrait-border;
-    }
 }
 
-//Switcher Container
-.switcher-container
+//Hero Pagees Container
+.hero-pages
 {
     &.fp-section
     {
@@ -759,7 +721,7 @@ h5
     {
         vertical-align: bottom;
     }
-    .switcher
+    .hero-pages-container
     {
         height: calc(100vh - 150px);
     }
@@ -1353,6 +1315,105 @@ h5
     .fp-tableCell
     {
         vertical-align: top;
+    }
+    .item
+    {
+        img
+        {
+            width: 70%;
+        }
+    }
+}
+
+//Testimonials
+.testimonials
+{
+    .fp-tableCell
+    {
+        vertical-align: top;
+    }
+    .square-portrait
+    {
+        &.right
+        {
+            top: -11%;
+            right: -3%;
+            .side-l
+            {
+                top: 0;
+                left: 0;
+
+                width: $square-portrait-border;
+                height: 40px;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                width: $square-portrait-dimension;
+                height: $square-portrait-border;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-portrait-border;
+                height: $square-portrait-dimension;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                width: 40px;
+                height: $square-portrait-border;
+            }
+        }
+        &.left
+        {
+            top: -11%;
+            left: -3%;
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-portrait-border;
+                height: $square-portrait-dimension;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                width: $square-portrait-dimension;
+                height: $square-portrait-border;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-portrait-border;
+                height: 40px;
+            }
+
+            .side-b
+            {
+                bottom: 0;
+                left: 0;
+
+                width: 40px;
+                height: $square-portrait-border;
+            }
+        }
     }
 }
 
