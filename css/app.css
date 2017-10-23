@@ -6494,14 +6494,6 @@ h5 {
   .navbar.sticky {
     background-color: #496093; }
 
-.hero .items {
-  position: relative;
-  left: 95px; }
-
-.hero .cse {
-  position: relative;
-  left: -95px; }
-
 .status .text-col {
   z-index: 1; }
   .status .text-col p {

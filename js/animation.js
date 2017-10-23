@@ -342,5 +342,24 @@ $(function() {
     // call a hover scene
     $(this).hover(over, out);
   });
+  $('.typewriter').each(function() {
 
+    var duration = $(this).attr('duration');
+    var mySplitText = new SplitText($(this), {
+      type: "words,chars"
+    });
+    var chars = mySplitText.chars;
+    // build a tween
+    var tween = TweenMax.staggerFrom(chars, duration, {
+      opacity: 0,
+      ease: Power1.easeIn
+    }, 0.08, "+=0.1");
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0]
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
 });
