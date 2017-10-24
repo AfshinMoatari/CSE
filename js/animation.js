@@ -385,11 +385,10 @@ $(function() {
         delay: baseDelay += .1
       });
     }
-    var tween = TweenMax.fromTo(mask, .2, {
+    var tween = TweenMax.fromTo(mask, .6, {
       fillOpacity: 1,
     }, {
       fillOpacity: 0,
-      ease: Power0.easeOut,
       delay: 2
     });
 
