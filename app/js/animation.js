@@ -342,5 +342,63 @@ $(function() {
     // call a hover scene
     $(this).hover(over, out);
   });
+  $('.typewriter').each(function() {
+
+    var duration = $(this).attr('duration');
+    var mySplitText = new SplitText($(this), {
+      type: "words,chars"
+    });
+    var chars = mySplitText.chars;
+    // build a tween
+    var tween = TweenMax.staggerFrom(chars, duration, {
+      opacity: 0,
+      ease: Power1.easeIn
+    }, 0.08, "+=0.1");
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0]
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  document.getElementById("cse-hero").addEventListener("load", function() {
+    var doc = this.getSVGDocument();
+    var mask = doc.getElementById("mask");
+    var text = doc.getElementById("text").childNodes;
+
+    // build a tween
+    tween = new TimelineMax();
+
+    var tween = TweenMax.from($(this), .4, {
+      autoAlpha: 0,
+      delay: 2
+    }, {
+      autoAlpha: 1
+    });
+    var baseDuration = 1.4;
+    var baseDelay = 2;
+    for (var i = 0; i < text.length; i++) {
+      var tween = TweenMax.from(text[i], baseDuration, {
+        autoAlpha: 0,
+        ease: Circ.easeOut,
+        delay: baseDelay += .1
+      });
+    }
+    var tween = TweenMax.fromTo(mask, .6, {
+      fillOpacity: 1,
+    }, {
+      fillOpacity: 0,
+      delay: 2
+    });
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0]
+      })
+      .setTween(tween)
+      .addTo(controller);
+
+  });
 
 });
