@@ -538,10 +538,12 @@ h5
 //footer
 .footer
 {
-    position: relative;
-    bottom: 80px;
+    position: sticky;
+    bottom: 0;
 
-    height: 80px;
+    padding: 5px 0;
+
+    opacity: 0;
     li
     {
         font-size: $font-size-md;

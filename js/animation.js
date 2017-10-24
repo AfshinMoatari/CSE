@@ -32,6 +32,21 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
+  $('.footer').each(function() {
+
+    // build a tween
+    var tween = new TimelineMax();
+    tween.to($(this), .9, {
+      opacity: '1'
+    }, 0);
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".section:last-child"
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
   $('nav.secondary').each(function() {
 
     // build a tween
