@@ -173,12 +173,14 @@ h5
     height: $navbar-height;
     a
     {
-        font-size: $font-size-lg;
+        font-size: $font-size-base;
     }
     .apply
     {
         .btn-primary
         {
+            font-size: $font-size-md;
+
             color: $brand-primary;
             background-color: $brand-secondary;
             span

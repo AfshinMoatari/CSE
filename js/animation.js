@@ -14,15 +14,16 @@ $(function() {
     }, 0).to($(this).find(".nav li"), 0.3, {
       scale: .8,
     }, 0).to($(this), .6, {
-      height: 100
+      height: 58
     }, 0).to($(this).find(".nav li"), .3, {
       css: {
-        className: '-=mx-3'
+        className: '-=align-self-end mx-2',
+        classname: 'mx-2'
       }
     }, 0).to($(this).find(".nav li"), .3, {
       marginLeft: 10
     }, 0).to($(this).find(".navbar-brand img"), .6, {
-      width: '85%'
+      width: '65%'
     }, 0);
 
     // build a scene
@@ -36,7 +37,7 @@ $(function() {
 
     // build a tween
     var tween = new TimelineMax();
-    tween.to($(this), .9, {
+    tween.to($(this), .6, {
       opacity: '1'
     }, 0);
 
