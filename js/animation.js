@@ -12,7 +12,7 @@ $(function() {
         className: '+=sticky'
       }
     }, 0).to($(this).find(".nav li"), 0.3, {
-      scale: .8,
+      scale: .85,
     }, 0).to($(this), .6, {
       height: 60
     }, 0).to($(this).find(".nav li"), .3, {
@@ -21,8 +21,7 @@ $(function() {
       }
     }, 0).to($(this).find(".collapse"), .3, {
       css: {
-        className: '-=align-self-end',
-        className: '+=align-self-center'
+        marginBottom: '6px'
       }
     }, 0).to($(this).find(".nav li"), .3, {
       marginLeft: 10
@@ -62,7 +61,7 @@ $(function() {
       paddingRight: 0,
       paddingLeft: 0
     }, 0).to($(this), .6, {
-      top: 100
+      top: 60
     }, 0);
 
     // build a scene

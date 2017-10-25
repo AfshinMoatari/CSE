@@ -6794,13 +6794,13 @@ h5 {
     background-color: #496093; }
 
 .hero-pages.fp-section {
-  padding-top: 150px !important; }
+  padding-top: 100px !important; }
 
 .hero-pages .fp-tableCell {
   vertical-align: bottom; }
 
 .hero-pages .hero-pages-container {
-  height: calc(100vh - 150px); }
+  height: calc(100vh - 100px); }
 
 .hero-pages .diagram {
   z-index: 1; }
