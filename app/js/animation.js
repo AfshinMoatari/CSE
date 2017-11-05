@@ -1,7 +1,6 @@
 $(function() {
   // init controller
   var controller = new ScrollMagic.Controller();
-
   // animation classes
   $('nav.main').each(function() {
 
@@ -12,22 +11,41 @@ $(function() {
         className: '+=sticky'
       }
     }, 0).to($(this).find(".nav li"), 0.3, {
-      scale: .8,
+      scale: .85,
     }, 0).to($(this), .6, {
-      height: 100
+      height: 60
     }, 0).to($(this).find(".nav li"), .3, {
       css: {
-        className: '-=mx-3'
+        className: '-=align-self-end mx-2'
+      }
+    }, 0).to($(this).find(".collapse"), .3, {
+      css: {
+        marginBottom: '6px'
       }
     }, 0).to($(this).find(".nav li"), .3, {
       marginLeft: 10
     }, 0).to($(this).find(".navbar-brand img"), .6, {
-      width: '85%'
+      width: '65%'
     }, 0);
 
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: ".stick"
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('.footer').each(function() {
+
+    // build a tween
+    var tween = new TimelineMax();
+    tween.to($(this), .6, {
+      opacity: '1'
+    }, 0);
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".section:last-child"
       })
       .setTween(tween)
       .addTo(controller);
@@ -42,7 +60,7 @@ $(function() {
       paddingRight: 0,
       paddingLeft: 0
     }, 0).to($(this), .6, {
-      top: 100
+      top: 60
     }, 0);
 
     // build a scene
@@ -353,7 +371,7 @@ $(function() {
     var tween = TweenMax.staggerFrom(chars, duration, {
       opacity: 0,
       ease: Power1.easeIn
-    }, 0.08, "+=0.1");
+    }, 0.08);
 
     // build a scene
     var scene = new ScrollMagic.Scene({
@@ -361,44 +379,6 @@ $(function() {
       })
       .setTween(tween)
       .addTo(controller);
-  });
-  document.getElementById("cse-hero").addEventListener("load", function() {
-    var doc = this.getSVGDocument();
-    var mask = doc.getElementById("mask");
-    var text = doc.getElementById("text").childNodes;
-
-    // build a tween
-    tween = new TimelineMax();
-
-    var tween = TweenMax.from($(this), .4, {
-      autoAlpha: 0,
-      delay: 2
-    }, {
-      autoAlpha: 1
-    });
-    var baseDuration = 1.4;
-    var baseDelay = 2;
-    for (var i = 0; i < text.length; i++) {
-      var tween = TweenMax.from(text[i], baseDuration, {
-        autoAlpha: 0,
-        ease: Circ.easeOut,
-        delay: baseDelay += .1
-      });
-    }
-    var tween = TweenMax.fromTo(mask, .6, {
-      fillOpacity: 1,
-    }, {
-      fillOpacity: 0,
-      delay: 2
-    });
-
-    // build a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
-      })
-      .setTween(tween)
-      .addTo(controller);
-
   });
 
 });

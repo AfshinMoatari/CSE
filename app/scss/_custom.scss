@@ -23,6 +23,7 @@ $body-bg: $brand-secondary;
 
 //fonts
 $font-size-base: 1rem;
+$font-size-sm: .95rem;
 $font-size-xlg: 1.875rem;
 $font-size-lg: 1.563rem;
 $font-size-md: 1.250rem;
@@ -106,7 +107,7 @@ $spacers: (
 );
 
 //navbar
-$navbar-height: 150px;
+$navbar-height: 100px;
 
 $navbar-inverse-color: $brand-secondary;
 $navbar-inverse-hover-color: rgba($brand-secondary,.8);

@@ -173,12 +173,14 @@ h5
     height: $navbar-height;
     a
     {
-        font-size: $font-size-lg;
+        font-size: $font-size-base;
     }
     .apply
     {
         .btn-primary
         {
+            font-size: $font-size-md;
+
             color: $brand-primary;
             background-color: $brand-secondary;
             span
@@ -538,10 +540,12 @@ h5
 //footer
 .footer
 {
-    position: relative;
-    bottom: 80px;
+    position: sticky;
+    bottom: 0;
 
-    height: 80px;
+    padding: 5px 0;
+
+    opacity: 0;
     li
     {
         font-size: $font-size-md;
@@ -715,7 +719,7 @@ h5
 {
     &.fp-section
     {
-        padding-top: 150px!important;
+        padding-top: 100px!important;
     }
     .fp-tableCell
     {
@@ -723,7 +727,7 @@ h5
     }
     .hero-pages-container
     {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 100px);
     }
     .diagram
     {
