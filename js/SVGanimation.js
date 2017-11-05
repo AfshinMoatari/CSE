@@ -41,7 +41,6 @@ $(function() {
       var bubbles = doc.getElementsByClassName("bubble");
       var texts = doc.getElementsByClassName("text");
 
-
       // build a tween
       tween = new TimelineMax();
       var tween = tween.to(lines[4], .1, {
