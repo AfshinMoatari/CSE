@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/app.css">
   <!-- LIBRARIES -->
   <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
   <script src="./js/TweenMax.min.js"></script>
   <script src="./js/EasePack.min.js"></script>
   <script src="https://s3.eu-west-2.amazonaws.com/afshin-bucket/libraries/SplitText.min.js"></script>
@@ -18,16 +19,21 @@
   <!-- SCRIPTS -->
   <script src="./js/animation.js"></script>
   <script src="./js/fullPage.js"></script>
+  <script src="./js/script.js"></script>
 </head>
 
 <body>
   <!-- NAVBAR -->
-  <nav class="main navbar navbar-toggleable-sm navbar-inverse w-100 animate px-0 fixed-top">
+  <nav class="main navbar navbar-toggleable-sm navbar-inverse w-100 animate px-0 fixed-top opacity animate" duration-opacity="10" delay="0" style="opacity:0">
     <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="./assets/image/cse.svg" alt=""></a>
+      <div class="navbar-toggler navbar-toggler-right border-0 p-0 my-4" title="Menu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" href="#" data-toggle="collapse" data-target="#overlay-nav">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="navbar-brand">
+        <a href="index.html"><img src="./assets/image/cse.svg" alt=""></a>
+      </div>
       <div class="collapse navbar-collapse justify-content-between align-self-end">
         <ul class="nav navbar-nav mr-auto"></ul>
         <ul class="d-flex nav navbar-nav">
@@ -50,13 +56,44 @@
             <a class="nav-link pb-0" href="#">blog</a>
           </li>
           <li class="nav-item align-self-end mx-2 apply">
-            <button class="nav-link btn btn-primary dark" href="#">
+            <button class="nav-link btn btn-primary dark" href="#" data-toggle="collapse" data-target="#overlay-nav">
             apply now
             <span></span>
             </button>
           </li>
         </ul>
       </div>
+    </div>
+  </nav>
+  <!-- Menu -->
+  <nav id="overlay-nav" class="overlay-nav panel panel-default panel-collapse collapse">
+    <div class="container">
+      <ul class="nav flex-column">
+        <li class="nav-item d-flex justify-content-center my-3">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center my-3">
+          <a class="nav-link" href="programs.html">programs</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center my-3">
+          <a class="nav-link" href="startups.html">startups</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center my-3">
+          <a class="nav-link" href="#">events</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center my-3">
+          <a class="nav-link" href="#">collabrations</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center my-3">
+          <a class="nav-link" href="#">blog</a>
+        </li>
+        <li class="nav-item apply  d-flex justify-content-center my-3">
+          <button class="nav-link btn btn-primary dark" href="#" data-toggle="collapse" data-target="#menu">
+          apply now
+          <span></span>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
   <div class="fullpage">
