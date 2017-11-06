@@ -165,36 +165,7 @@ h5
     }
 }
 
-//navbar
-.navbar
-{
-    z-index: 2;
 
-    height: $navbar-height;
-    a
-    {
-        font-size: $font-size-base;
-    }
-    .apply
-    {
-        .btn-primary
-        {
-            font-size: $font-size-md;
-
-            color: $brand-primary;
-            background-color: $brand-secondary;
-            span
-            {
-                border: $border-width solid $brand-secondary;
-                background-color: $transparent;
-            }
-        }
-    }
-    &.sticky
-    {
-        background-color: $brand-primary;
-    }
-}
 
 //hero
 .hero
@@ -1423,6 +1394,33 @@ h5
 
 nav
 {
+    &.main
+    {
+        z-index: 2;
+
+        height: $navbar-height;
+
+        background-color: $brand-primary;
+        a
+        {
+            font-size: $font-size-base;
+        }
+        .apply
+        {
+            .btn-primary
+            {
+                font-size: $font-size-md;
+
+                color: $brand-primary;
+                background-color: $brand-secondary;
+                span
+                {
+                    border: $border-width solid $brand-secondary;
+                    background-color: $transparent;
+                }
+            }
+        }
+    }
     &.secondary
     {
         .nav-link:first-child
@@ -1497,5 +1495,65 @@ nav
 
             opacity: 1;
         }
+    }
+    &.overlay-nav
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        min-height: 100%;
+        padding-top: 200px;
+
+        background: hsla(1,0%,100%,.9);
+    }
+}
+.navbar-toggler
+{
+    width: 45px;
+    height: 45px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+     -khtml-user-select: none;
+    .bar1,
+    .bar2,
+    .bar3
+    {
+        width: 100%;
+        height: 8px;
+        margin-bottom: 5px;
+
+        -webkit-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+
+        background-color: $brand-secondary;
+    }
+    &.navbar-on .bar1
+    {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transform-origin: 10% 40%;
+                transform-origin: 10% 50%;
+    }
+
+    &.navbar-on .bar3
+    {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 10% 40%;
+                transform-origin: 10% 50%;
+    }
+
+    &.navbar-on .bar2
+    {
+        background-color: transparent;
     }
 }

@@ -25,7 +25,13 @@ $(function() {
     }, 0).to($(this).find(".nav li"), .3, {
       marginLeft: 10
     }, 0).to($(this).find(".navbar-brand img"), .6, {
-      width: '65%'
+      width: '43px'
+    }, 0).to($(this).find(".navbar-toggler"), .6, {
+      scale: .75
+    }, 0).to($(this).find(".navbar-toggler"), .6, {
+      css: {
+        className: '-=my-4'
+      }
     }, 0);
 
     // build a scene
