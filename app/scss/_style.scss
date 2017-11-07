@@ -165,23 +165,35 @@ h5
     }
 }
 
-
-
 //hero
 .hero
 {
+    font-size: .7em;
     .items
     {
-        // position: relative;
-        // left: 95px;
-    }
-    .cse
-    {
-        // position: relative;
-        // left: -95px;
+        .cse-hero
+        {
+            padding-right: 1.250em;
+            padding-left: 1.250em;
+            .cse
+            {
+                width: 6em;
+            }
+        }
+        .typewriter
+        {
+            font-size: 2.250em;
+            line-height: 1;
 
+            position: relative;
+            bottom: -5px;
 
-        // width: calc( ( 100% - 19% )  );
+            color: $brand-secondary;
+        }
+        .cbs-hero
+        {
+            width: 5.813em;
+        }
     }
 }
 
@@ -560,11 +572,11 @@ h5
 
         .side-b
         {
-            right: calc( ( #{$square-logo-dimension} - 60px )  );
+            right: calc( ( #{$square-logo-dimension} - 3.750em )  );
             bottom: 0;
 
             min-width: 0;
-            max-width: 50px;
+            max-width: 3.125em;
             height: $square-logo-border;
         }
 
@@ -596,7 +608,7 @@ h5
 
             width: $square-logo-border;
             min-height: 0;
-            max-height: 90px;
+            max-height: 5.625em;
         }
     }
 }
@@ -1403,8 +1415,17 @@ nav
         background-color: $brand-primary;
         a
         {
-            font-size: $font-size-base;
+            font-size: $font-size-md;
         }
+        .nav-link
+        {
+            color: $brand-secondary;
+            &.active-h
+            {
+                font-weight: bold;
+            }
+        }
+
         .apply
         {
             .btn-primary
@@ -1419,6 +1440,13 @@ nav
                     background-color: $transparent;
                 }
             }
+        }
+        .container
+        {
+            margin-right: inherit;
+            margin-left: inherit;
+            padding-right: 15px  !important;
+            padding-left: 15px  !important;
         }
     }
     &.secondary
@@ -1495,65 +1523,5 @@ nav
 
             opacity: 1;
         }
-    }
-    &.overlay-nav
-    {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        left: 0;
-
-        min-height: 100%;
-        padding-top: 200px;
-
-        background: hsla(1,0%,100%,.9);
-    }
-}
-.navbar-toggler
-{
-    width: 45px;
-    height: 45px;
-
-    cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-
-    -webkit-touch-callout: none;
-     -khtml-user-select: none;
-    .bar1,
-    .bar2,
-    .bar3
-    {
-        width: 100%;
-        height: 8px;
-        margin-bottom: 5px;
-
-        -webkit-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
-
-        background-color: $brand-secondary;
-    }
-    &.navbar-on .bar1
-    {
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-        -webkit-transform-origin: 10% 40%;
-                transform-origin: 10% 50%;
-    }
-
-    &.navbar-on .bar3
-    {
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-        -webkit-transform-origin: 10% 40%;
-                transform-origin: 10% 50%;
-    }
-
-    &.navbar-on .bar2
-    {
-        background-color: transparent;
     }
 }

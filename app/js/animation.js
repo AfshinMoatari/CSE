@@ -366,6 +366,40 @@ $(function() {
     // call a hover scene
     $(this).hover(over, out);
   });
+  $('.main .nav-link:not(button)').each(function() {
+
+    // build a tween
+    function over() {
+      var tween = new TimelineMax();
+      tween.to($(this), .01, {
+        css: {
+          className: '+=active-h'
+        }
+      }, 0)
+      $('.main .nav-link:not(button)').not(this).each(function() {
+        tween.to($(this), .4, {
+          opacity: 0.6
+        }, 0)
+      });
+    }
+
+    function out() {
+      var tween = new TimelineMax();
+      tween.to($(this), .01, {
+        css: {
+          className: '-=active-h'
+        }
+      }, 0)
+      $('.main .nav-link:not(button)').not(this).each(function() {
+        tween.to($(this), .6, {
+          opacity: 1
+        }, 0)
+      });
+    }
+
+    // call a hover scene
+    $(this).hover(over, out);
+  });
   $('.typewriter').each(function() {
 
     var duration = $(this).attr('duration');
