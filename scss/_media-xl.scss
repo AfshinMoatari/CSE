@@ -1,0 +1,19 @@
+@media all and (min-width: map-get($grid-breakpoints, lg))
+{
+    nav
+    {
+        &.main
+        {
+            .container
+            {
+                padding-right: 45px !important;
+                padding-left: 45px !important;
+            }
+        }
+    }
+    //hero
+    .hero
+    {
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,19 @@
+@media all and (min-width: map-get($grid-breakpoints, sm))
+{
+    nav
+    {
+        &.main
+        {
+            .container
+            {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    //hero
+    .hero
+    {
+        font-size: 1em;
+    }
+}
