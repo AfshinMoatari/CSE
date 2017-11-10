@@ -7321,17 +7321,17 @@ nav.secondary .checkbox.active-h p:after {
       -webkit-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
       background-color: #fff; }
-    nav.main .navbar-toggler.navbar-on .bar1 {
+    nav.main .navbar-toggler.active .bar1 {
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
       -webkit-transform-origin: 10% 40%;
       transform-origin: 10% 50%; }
-    nav.main .navbar-toggler.navbar-on .bar3 {
+    nav.main .navbar-toggler.active .bar3 {
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       -webkit-transform-origin: 10% 40%;
       transform-origin: 10% 50%; }
-    nav.main .navbar-toggler.navbar-on .bar2 {
+    nav.main .navbar-toggler.active .bar2 {
       background-color: transparent; }
   nav.overlay-nav {
     position: absolute;

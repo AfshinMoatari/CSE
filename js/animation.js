@@ -41,6 +41,22 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
+  $('.navbar-toggler').each(function() {
+
+    // build a tween
+    var tween = new TimelineMax({
+      reversed: true
+    });
+    tween.fromTo($('.overlay-nav'), 1, {
+      opacity: 0
+    }, {
+      opacity: 1
+    });
+    $(this).click(function() {
+      tween.reversed() ? tween.play() : tween.reverse();
+      $('.navbar-toggler').toggleClass('active');
+    });
+  });
   $('.footer').each(function() {
 
     // build a tween

@@ -30,7 +30,7 @@
 
                     background-color: $brand-secondary;
                 }
-                &.navbar-on .bar1
+                &.active .bar1
                 {
                     -webkit-transform: rotate(45deg);
                             transform: rotate(45deg);
@@ -38,7 +38,7 @@
                             transform-origin: 10% 50%;
                 }
 
-                &.navbar-on .bar3
+                &.active .bar3
                 {
                     -webkit-transform: rotate(-45deg);
                             transform: rotate(-45deg);
@@ -46,7 +46,7 @@
                             transform-origin: 10% 50%;
                 }
 
-                &.navbar-on .bar2
+                &.active .bar2
                 {
                     background-color: transparent;
                 }
@@ -64,6 +64,7 @@
             padding-top: 150px;
 
             background: $brand-secondary;
+
             .nav-link:not(button)
             {
                 font-size: $font-size-lg;
