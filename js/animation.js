@@ -6,13 +6,13 @@ $(function() {
 
     // build a tween
     var tween = new TimelineMax();
-    tween.to($(this), 0, {
+    tween.set($(this), {
       css: {
         className: '+=sticky'
       }
-    }, 0).to($(this).find(".nav li"), 0.3, {
-      scale: .85,
-    }, 0).to($(this), .6, {
+    }, 0).set($(this).find(".nav li"), {
+      scale: .70,
+    }, 0).to($(this), .3, {
       height: 60
     }, 0).to($(this).find(".nav li"), .3, {
       css: {
@@ -20,15 +20,15 @@ $(function() {
       }
     }, 0).to($(this).find(".collapse"), .3, {
       css: {
-        marginBottom: '6px'
+        marginBottom: '5px'
       }
-    }, 0).to($(this).find(".nav li"), .3, {
-      marginLeft: 10
-    }, 0).to($(this).find(".navbar-brand img"), .6, {
-      width: '43px'
-    }, 0).to($(this).find(".navbar-toggler"), .6, {
+    }, 0).to($(this).find(".nav li"), .36, {
+      marginLeft: 5
+    }, 0).to($(this).find(".navbar-brand img"), .3, {
+      width: '36px'
+    }, 0).to($(this).find(".navbar-toggler"), .3, {
       scale: .75
-    }, 0).to($(this).find(".navbar-toggler"), .6, {
+    }, 0).to($(this).find(".navbar-toggler"), .3, {
       css: {
         className: '-=my-4'
       }
@@ -387,13 +387,8 @@ $(function() {
     // build a tween
     function over() {
       var tween = new TimelineMax();
-      tween.to($(this), .01, {
-        css: {
-          className: '+=active-h'
-        }
-      }, 0)
       $('.main .nav-link:not(button)').not(this).each(function() {
-        tween.to($(this), .4, {
+        tween.to($(this), .2, {
           opacity: 0.6
         }, 0)
       });
@@ -401,13 +396,8 @@ $(function() {
 
     function out() {
       var tween = new TimelineMax();
-      tween.to($(this), .01, {
-        css: {
-          className: '-=active-h'
-        }
-      }, 0)
       $('.main .nav-link:not(button)').not(this).each(function() {
-        tween.to($(this), .6, {
+        tween.to($(this), .4, {
           opacity: 1
         }, 0)
       });

@@ -6519,33 +6519,33 @@ h5 {
   .status .square .side-l {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .status .square .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .status .square .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 160px; }
   .status .square .side-rr {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 360px; }
   .status .square .side-b {
-    right: calc( ( 335px - 160px ));
+    right: calc( ( 20.938em - 160px ));
     bottom: 0;
     min-width: 0;
     max-width: 160px;
-    height: 10px; }
+    height: 0.625em; }
 
 .mountain-subtext {
   color: #fff; }
@@ -6569,33 +6569,33 @@ h5 {
   .quotations .square.left .side-l {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .quotations .square.left .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .quotations .square.left .side-rt {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 50px; }
   .quotations .square.left .side-rb {
-    top: calc( ( 335px - 190px ));
+    top: calc( ( 20.938em - 190px ));
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 190px; }
   .quotations .square.left .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .quotations .square.right {
   top: -30%;
@@ -6613,33 +6613,33 @@ h5 {
   .quotations .square.right .side-lb {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 50px; }
   .quotations .square.right .side-lt {
-    bottom: calc( ( 335px - 180px ));
+    bottom: calc( ( 20.938em - 180px ));
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 180px; }
   .quotations .square.right .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .quotations .square.right .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .quotations .square.right .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .partners {
   height: 450px; }
@@ -6657,35 +6657,35 @@ h5 {
       background: transparent;
       background-color: #496093; }
     .partners .square .side-lt {
-      bottom: calc( ( 335px - 110px ));
+      bottom: calc( ( 20.938em - 110px ));
       left: 0;
-      width: 10px;
+      width: 0.625em;
       min-height: 0;
       max-height: 110px; }
     .partners .square .side-lb {
       bottom: 0;
       left: 0;
-      width: 10px;
+      width: 0.625em;
       min-height: 0;
       max-height: 100px; }
     .partners .square .side-t {
       top: 0;
       left: 0;
       min-width: 0;
-      max-width: 335px;
-      height: 10px; }
+      max-width: 20.938em;
+      height: 0.625em; }
     .partners .square .side-r {
       top: 0;
       right: 0;
-      width: 10px;
+      width: 0.625em;
       min-height: 0;
-      max-height: 335px; }
+      max-height: 20.938em; }
     .partners .square .side-b {
       right: 0;
       bottom: 0;
       min-width: 0;
-      max-width: 335px;
-      height: 10px; }
+      max-width: 20.938em;
+      height: 0.625em; }
 
 .footer {
   position: sticky;
@@ -6698,8 +6698,8 @@ h5 {
 
 .square {
   position: absolute;
-  width: 335px;
-  height: 335px;
+  width: 20.938em;
+  height: 20.938em;
   background: transparent; }
   .square.logo {
     position: relative;
@@ -6746,8 +6746,8 @@ h5 {
   position: relative;
   top: 20%;
   left: -20%;
-  width: 140px;
-  height: 140px;
+  width: 8.75em;
+  height: 8.75em;
   background: transparent; }
   .square-heading .side-b,
   .square-heading .side-t,
@@ -6761,28 +6761,28 @@ h5 {
   .square-heading .side-l {
     bottom: 0;
     left: 0;
-    width: 10px;
-    height: 140px; }
+    width: 0.625em;
+    height: 8.75em; }
   .square-heading .side-t {
     top: 0;
     left: 0;
-    width: 140px;
-    height: 10px; }
+    width: 8.75em;
+    height: 0.625em; }
   .square-heading .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     height: 80px; }
   .square-heading .side-b {
     bottom: 0;
     left: 0;
     width: 50px;
-    height: 10px; }
+    height: 0.625em; }
 
 .square-portrait {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 12.5em;
+  height: 12.5em;
   background: transparent; }
   .square-portrait .side-b,
   .square-portrait .side-t,
@@ -6820,35 +6820,35 @@ h5 {
     background: transparent;
     background-color: #e1948d; }
   .proof-program .square .side-lt {
-    bottom: calc( ( 335px - 100px ));
+    bottom: calc( ( 20.938em - 100px ));
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 100px; }
   .proof-program .square .side-lb {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 50px; }
   .proof-program .square .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .proof-program .square .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .proof-program .square .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .accelerator-program .square.left {
   top: 34%;
@@ -6866,33 +6866,33 @@ h5 {
   .accelerator-program .square.left .side-l {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .accelerator-program .square.left .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .accelerator-program .square.left .side-rt {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 40px; }
   .accelerator-program .square.left .side-rb {
-    top: calc( ( 335px - 140px ));
+    top: calc( ( 20.938em - 140px ));
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 140px; }
   .accelerator-program .square.left .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .accelerator-program .square.right {
   top: 50%;
@@ -6910,33 +6910,33 @@ h5 {
   .accelerator-program .square.right .side-lb {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 140px; }
   .accelerator-program .square.right .side-lt {
-    bottom: calc( ( 335px - 40px ));
+    bottom: calc( ( 20.938em - 40px ));
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 40px; }
   .accelerator-program .square.right .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .accelerator-program .square.right .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .accelerator-program .square.right .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .match-up .square {
   top: 0;
@@ -6953,7 +6953,7 @@ h5 {
   .match-up .square .side-l {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 150px; }
   .match-up .square .side-t {
@@ -6961,19 +6961,19 @@ h5 {
     right: 0;
     min-width: 0;
     max-width: 150px;
-    height: 10px; }
+    height: 0.625em; }
   .match-up .square .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .match-up .square .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .internship-with-ects .fp-tableCell {
   vertical-align: top; }
@@ -6992,28 +6992,28 @@ h5 {
     background-color: #e1948d; }
   .internship-with-ects .square .side-l {
     bottom: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px;
+    max-height: 20.938em;
     righ: 0; }
   .internship-with-ects .square .side-t {
     top: 0;
     left: 0;
     min-width: 0;
     max-width: 150px;
-    height: 10px; }
+    height: 0.625em; }
   .internship-with-ects .square .side-r {
-    top: calc( ( 335px - 150px ));
+    top: calc( ( 20.938em - 150px ));
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 150px; }
   .internship-with-ects .square .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .job-openings .square {
   top: 0;
@@ -7029,28 +7029,28 @@ h5 {
     background-color: #e1948d; }
   .job-openings .square .side-l {
     bottom: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px;
+    max-height: 20.938em;
     righ: 0; }
   .job-openings .square .side-t {
     top: 0;
     left: 0;
     min-width: 0;
     max-width: 150px;
-    height: 10px; }
+    height: 0.625em; }
   .job-openings .square .side-r {
-    top: calc( ( 335px - 150px ));
+    top: calc( ( 20.938em - 150px ));
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 150px; }
   .job-openings .square .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .resources-research .fp-tableCell {
   vertical-align: top; }
@@ -7071,33 +7071,33 @@ h5 {
   .resources-research .square.left .side-l {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .resources-research .square.left .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .resources-research .square.left .side-rt {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 40px; }
   .resources-research .square.left .side-rb {
-    top: calc( ( 335px - 140px ));
+    top: calc( ( 20.938em - 140px ));
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 140px; }
   .resources-research .square.left .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .resources-research .square.right {
   top: -15%;
@@ -7115,33 +7115,33 @@ h5 {
   .resources-research .square.right .side-lb {
     bottom: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 140px; }
   .resources-research .square.right .side-lt {
-    bottom: calc( ( 335px - 40px ));
+    bottom: calc( ( 20.938em - 40px ));
     left: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
     max-height: 40px; }
   .resources-research .square.right .side-t {
     top: 0;
     left: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
   .resources-research .square.right .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     min-height: 0;
-    max-height: 335px; }
+    max-height: 20.938em; }
   .resources-research .square.right .side-b {
     right: 0;
     bottom: 0;
     min-width: 0;
-    max-width: 335px;
-    height: 10px; }
+    max-width: 20.938em;
+    height: 0.625em; }
 
 .portfolio .fp-tableCell {
   vertical-align: top; }
@@ -7158,23 +7158,23 @@ h5 {
   .testimonials .square-portrait.right .side-l {
     top: 0;
     left: 0;
-    width: 10px;
+    width: 0.625em;
     height: 40px; }
   .testimonials .square-portrait.right .side-t {
     top: 0;
     left: 0;
-    width: 200px;
-    height: 10px; }
+    width: 12.5em;
+    height: 0.625em; }
   .testimonials .square-portrait.right .side-r {
     top: 0;
     right: 0;
-    width: 10px;
-    height: 200px; }
+    width: 0.625em;
+    height: 12.5em; }
   .testimonials .square-portrait.right .side-b {
     right: 0;
     bottom: 0;
     width: 40px;
-    height: 10px; }
+    height: 0.625em; }
 
 .testimonials .square-portrait.left {
   top: -11%;
@@ -7182,23 +7182,23 @@ h5 {
   .testimonials .square-portrait.left .side-l {
     bottom: 0;
     left: 0;
-    width: 10px;
-    height: 200px; }
+    width: 0.625em;
+    height: 12.5em; }
   .testimonials .square-portrait.left .side-t {
     top: 0;
     left: 0;
-    width: 200px;
-    height: 10px; }
+    width: 12.5em;
+    height: 0.625em; }
   .testimonials .square-portrait.left .side-r {
     top: 0;
     right: 0;
-    width: 10px;
+    width: 0.625em;
     height: 40px; }
   .testimonials .square-portrait.left .side-b {
     bottom: 0;
     left: 0;
     width: 40px;
-    height: 10px; }
+    height: 0.625em; }
 
 nav.main {
   z-index: 2;
@@ -7208,8 +7208,6 @@ nav.main {
     font-size: 1.25rem; }
   nav.main .nav-link {
     color: #fff; }
-    nav.main .nav-link.active-h {
-      font-weight: bold; }
   nav.main .apply .btn-primary {
     font-size: 1.25rem;
     color: #496093;
