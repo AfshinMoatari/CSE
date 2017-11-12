@@ -7301,7 +7301,11 @@ nav.secondary .checkbox.active-h p:after {
   .stats {
     margin-top: 2%; }
     .stats .stat {
-      margin: 5px 0 !important; } }
+      margin: 2px 0 !important; }
+      .stats .stat h2 {
+        font-size: 4.4em !important; }
+      .stats .stat p {
+        font-size: 1.4em !important; } }
 
 @media all and (min-width: 576px) {
   .container {
