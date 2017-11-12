@@ -6519,14 +6519,16 @@ img {
       font-family: 'CBS-regular', 'Helvetica Neue', Arial, sans-serif;
       font-size: 1.8em;
       color: #fff; }
-  .status .stats .stat {
-    margin: 30px 0; }
-    .status .stats .stat h2 {
-      font-size: 6.5em;
-      font-weight: bold; }
-    .status .stats .stat p {
-      font-size: 1.8em;
-      color: #496093; }
+  .status .stats {
+    margin-top: 5%; }
+    .status .stats .stat {
+      margin: 5px 0; }
+      .status .stats .stat h2 {
+        font-size: 6.5em;
+        font-weight: bold; }
+      .status .stats .stat p {
+        font-size: 1.8em;
+        color: #496093; }
   .status .square {
     top: 42%; }
     .status .square .side-b,
