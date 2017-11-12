@@ -1,4 +1,4 @@
-@media all and (min-width: map-get($grid-breakpoints, lg))
+@media all and (min-width: map-get($grid-breakpoints, xl))
 {
     nav
     {
@@ -6,14 +6,117 @@
         {
             .container
             {
-                padding-right: 45px !important;
-                padding-left: 45px !important;
+                width: 1250px;
+                margin-right: auto;
+                margin-left: auto;
             }
         }
     }
-    //hero
-    .hero
+    //status
+    .status
     {
-        font-size: 1.2em;
+        .text-col
+        {
+            padding: 0;
+            p
+            {
+                font-size: 1.6em;
+
+                top: 10%;
+
+                width: 26.250em;
+                padding: 40px 15px;
+            }
+        }
+        .container:nth-child(1)
+        {
+            width: 1250px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 75px;
+            padding-left: 75px;
+        }
+        .container:nth-child(2)
+        {
+            width: 1250px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 175px;
+            padding-left: 175px;
+        }
+        p
+        {
+            letter-spacing: .5px;
+        }
+
+        .square
+        {
+            top: -200px;
+            left: 70px;
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-red;
+            }
+
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 9.120em;
+            }
+
+            .side-rr
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 22.500em;
+            }
+
+            .side-b
+            {
+                right: calc( ( #{$square-dimension} - 9.000em )  );
+                bottom: 0;
+
+                min-width: 0;
+                max-width: 9.000em;
+                height: $square-border;
+            }
+        }
     }
 }

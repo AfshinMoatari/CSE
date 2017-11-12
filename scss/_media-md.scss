@@ -1,8 +1,59 @@
 @media all and (min-width: map-get($grid-breakpoints, md))
 {
+    //container
+    .container
+    {
+        padding-right: 55px;
+        padding-left: 55px;
+    }
+    nav
+    {
+        &.main
+        {
+            .container
+            {
+                padding-right: 55px;
+                padding-left: 55px;
+            }
+        }
+    }
     //hero
     .hero
     {
         font-size: 1.1em;
+    }
+    //status
+    .status
+    {
+        font-size: .9rem;
+        .fp-tableCell
+        {
+            vertical-align: middle;
+        }
+
+        .text-col
+        {
+            padding: 4em 3.8em;
+            p
+            {
+                font-size: 2.8em;
+            }
+        }
+        .stats
+        {
+            margin-top: 6%;
+            .stat
+            {
+                margin: 0;
+                h2
+                {
+                    font-size: 6em;
+                }
+                p
+                {
+                    font-size: 1.4em;
+                }
+            }
+        }
     }
 }

@@ -44,12 +44,13 @@ $font-size-h1: 3.125rem;
 $font-size-h3: 2.5rem;
 $font-size-h5: 4.25rem;
 
-$display1-size: 6.063rem;
-$display2-size: 1.563rem;
-$display1-weight: $font-weight-bold;
-$display2-weight: $font-weight-normal;
+// $display1-size: 6.063em;
+// $display2-size: 1.563em;
+// $display1-weight: $font-weight-bold;
+// $display2-weight: $font-weight-normal;
 
-$lead-font-size: 1.25rem;
+$lead-font-size: 1.25em;
+$lead-font-weight: 300;
 
 $blockquote-small-color: $brand-secondary;
 $blockquote-font-size: $font-size-xlg;
