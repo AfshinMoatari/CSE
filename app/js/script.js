@@ -6,7 +6,4 @@ $(function() {
   //     $('.tab-pane').addClass('active in');
   //   $('[data-toggle="tab"]').parent().removeClass('active');
   // });
-  $('.navbar-toggler').click(function() {
-    $('.navbar-toggler').toggleClass('navbar-on');
-  });
 });

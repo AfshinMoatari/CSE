@@ -1,19 +1,66 @@
-@media all and (min-width: map-get($grid-breakpoints, xl))
+@media all and (min-width: map-get($grid-breakpoints, lg))
 {
+    //container
+    .container
+    {
+        padding-right: 75px;
+        padding-left: 75px;
+    }
     nav
     {
         &.main
         {
             .container
             {
-                padding-right: 75px !important;
-                padding-left: 75px !important;
+                padding-right: 75px;
+                padding-left: 75px;
             }
         }
     }
     //hero
     .hero
     {
-        font-size: 1.3em;
+        font-size: 1.2em;
+    }
+    //status
+    .status
+    {
+        font-size: 1rem;
+
+        .text-col
+        {
+            position: inherit;
+
+            padding: 2em 2em 2em 6em;
+
+            background: none;
+            p
+            {
+                font-family: 'CBS-bold', 'Helvetica Neue', Arial, sans-serif;
+                font-size: 1.3em;
+
+                color: $brand-primary;
+            }
+        }
+        .container:nth-child(2)
+        {
+            width: 960px;
+            margin: 0 75px;
+        }
+        .stats
+        {
+            margin-top: 6%;
+            .stat
+            {
+                h2
+                {
+                    font-size: 6em;
+                }
+                p
+                {
+                    font-size: 1.4em;
+                }
+            }
+        }
     }
 }
