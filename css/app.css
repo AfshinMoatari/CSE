@@ -7299,13 +7299,13 @@ nav.secondary .checkbox.active-h p:after {
   .status {
     font-size: .6rem; }
   .stats {
-    margin-top: 2%; }
+    margin-top: 4% !important; }
     .stats .stat {
       margin: 2px 0 !important; }
       .stats .stat h2 {
         font-size: 4.4em !important; }
       .stats .stat p {
-        font-size: 1.4em !important; } }
+        font-size: 1.6em !important; } }
 
 @media all and (min-width: 576px) {
   .container {
