@@ -6520,14 +6520,14 @@ img {
       font-size: 1.8em;
       color: #fff; }
   .status .stats {
-    margin-top: 5%; }
+    margin-top: 2%; }
     .status .stats .stat {
-      margin: 5px 0; }
+      margin: 4px 0; }
       .status .stats .stat h2 {
-        font-size: 6.5em;
+        font-size: 5.5em;
         font-weight: bold; }
       .status .stats .stat p {
-        font-size: 1.8em;
+        font-size: 1.6em;
         color: #496093; }
   .status .square {
     top: 42%; }
@@ -7494,7 +7494,7 @@ nav.secondary .checkbox.active-h p:after {
     right: 0;
     left: 0;
     min-height: 100%;
-    padding-top: 100px;
+    padding-top: 105px;
     background: #fff; }
     nav.overlay-nav .nav-link:not(button) {
       font-size: 1.563rem;
