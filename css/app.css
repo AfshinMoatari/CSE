@@ -7296,8 +7296,10 @@ nav.secondary .checkbox.active-h p:after {
 @media all and (max-width: 353px) {
   .status {
     font-size: .6rem; }
-  .stats .stat {
-    margin: 25px 0 !important; } }
+  .stats {
+    margin-top: 2%; }
+    .stats .stat {
+      margin: 5px 0 !important; } }
 
 @media all and (min-width: 576px) {
   .container {
@@ -7319,12 +7321,14 @@ nav.secondary .checkbox.active-h p:after {
       padding: 2.6em 2.4em; }
       .status .text-col p {
         font-size: 2.5em; }
-    .status .stats .stat {
-      margin: 30px 0; }
-      .status .stats .stat h2 {
-        font-size: 5.2em; }
-      .status .stats .stat p {
-        font-size: 1.4em; } }
+    .status .stats {
+      margin-top: 10%; }
+      .status .stats .stat {
+        margin: 10px 0; }
+        .status .stats .stat h2 {
+          font-size: 5.2em; }
+        .status .stats .stat p {
+          font-size: 1.4em; } }
 
 @media all and (min-width: 768px) {
   .container {
@@ -7452,7 +7456,7 @@ nav.secondary .checkbox.active-h p:after {
 
 @media all and (max-width: 768px) {
   nav.main .navbar-toggler {
-    width: 50px;
+    width: 45px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -7488,7 +7492,7 @@ nav.secondary .checkbox.active-h p:after {
     right: 0;
     left: 0;
     min-height: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
     background: #fff; }
     nav.overlay-nav .nav-link:not(button) {
       font-size: 1.563rem;
