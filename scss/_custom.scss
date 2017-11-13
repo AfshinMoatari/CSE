@@ -24,9 +24,9 @@ $body-bg: $brand-secondary;
 //fonts
 $font-size-base: 1rem;
 $font-size-sm: .95rem;
-$font-size-xlg: 1.875rem;
-$font-size-lg: 1.563rem;
 $font-size-md: 1.250rem;
+$font-size-lg: 1.563rem;
+$font-size-xl: 1.875rem;
 
 $font-family-cbs-bold: 'CBS-bold', 'Helvetica Neue', Arial, sans-serif;
 $font-family-cbs-regular: 'CBS-regular', 'Helvetica Neue', Arial, sans-serif;
@@ -40,7 +40,7 @@ $font-weight-bold: bold;
 
 $headings-color: $brand-primary;
 
-$font-size-h1: 3.125rem;
+$font-size-h1: 3.125em;
 $font-size-h3: 2.5rem;
 $font-size-h5: 4.25rem;
 
@@ -53,7 +53,7 @@ $lead-font-size: 1.25em;
 $lead-font-weight: 300;
 
 $blockquote-small-color: $brand-secondary;
-$blockquote-font-size: $font-size-xlg;
+// $blockquote-font-size: $font-size-xlg;
 
 // grid containers
 $container-max-widths: (

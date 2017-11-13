@@ -432,7 +432,7 @@ h1, h2, h3, h4, h5, h6,
   color: #496093; }
 
 h1, .h1 {
-  font-size: 3.125rem; }
+  font-size: 3.125em; }
 
 h2, .h2 {
   font-size: 2rem; }
@@ -509,7 +509,7 @@ mark,
 .blockquote {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   border-left: 0.25rem solid #eceeef; }
 
 .blockquote-footer {
@@ -6520,7 +6520,7 @@ img {
       font-size: 1.8em;
       color: #fff; }
   .status .stats {
-    margin-top: 8%; }
+    margin-top: 9%; }
     .status .stats .stat {
       margin: 4px 0; }
       .status .stats .stat h2 {
@@ -6571,142 +6571,28 @@ img {
       max-width: 10.000em;
       height: 0.625em; }
 
-.quotations .container {
-  height: 380px; }
+.programmes {
+  font-size: .7rem; }
+  .programmes .partner {
+    padding-right: 1%;
+    padding-left: 1%; }
 
-.quotations .square.left {
-  top: 45%;
-  left: -5%; }
-  .quotations .square.left .side-b,
-  .quotations .square.left .side-l,
-  .quotations .square.left .side-t,
-  .quotations .square.left .side-rt,
-  .quotations .square.left .side-rb {
-    position: absolute;
-    width: 0;
-    height: 0;
-    background: transparent;
-    background-color: #5bad6f; }
-  .quotations .square.left .side-l {
-    bottom: 0;
-    left: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 20.938em; }
-  .quotations .square.left .side-t {
-    top: 0;
-    left: 0;
-    min-width: 0;
-    max-width: 20.938em;
-    height: 0.625em; }
-  .quotations .square.left .side-rt {
-    top: 0;
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 50px; }
-  .quotations .square.left .side-rb {
-    top: calc( ( 20.938em - 190px ));
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 190px; }
-  .quotations .square.left .side-b {
-    right: 0;
-    bottom: 0;
-    min-width: 0;
-    max-width: 20.938em;
-    height: 0.625em; }
-
-.quotations .square.right {
-  top: -30%;
-  right: -10%; }
-  .quotations .square.right .side-b,
-  .quotations .square.right .side-lb,
-  .quotations .square.right .side-lt,
-  .quotations .square.right .side-t,
-  .quotations .square.right .side-r {
-    position: absolute;
-    width: 0;
-    height: 0;
-    background: transparent;
-    background-color: #e1948d; }
-  .quotations .square.right .side-lb {
-    bottom: 0;
-    left: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 50px; }
-  .quotations .square.right .side-lt {
-    bottom: calc( ( 20.938em - 180px ));
-    left: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 180px; }
-  .quotations .square.right .side-t {
-    top: 0;
-    left: 0;
-    min-width: 0;
-    max-width: 20.938em;
-    height: 0.625em; }
-  .quotations .square.right .side-r {
-    top: 0;
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 20.938em; }
-  .quotations .square.right .side-b {
-    right: 0;
-    bottom: 0;
-    min-width: 0;
-    max-width: 20.938em;
-    height: 0.625em; }
+.quotations {
+  font-size: .7rem;
+  background-color: #496093; }
+  .quotations .container {
+    height: 100%; }
+  .quotations .blockquote {
+    font-size: 2em;
+    padding: 1.2em 0; }
+    .quotations .blockquote .blockquote-footer {
+      font-size: .7em; }
 
 .partners {
-  height: 450px; }
-  .partners .square {
-    top: -25%;
-    right: -5%; }
-    .partners .square .side-b,
-    .partners .square .side-lt,
-    .partners .square .side-lb,
-    .partners .square .side-t,
-    .partners .square .side-r {
-      position: absolute;
-      width: 0;
-      height: 0;
-      background: transparent;
-      background-color: #496093; }
-    .partners .square .side-lt {
-      bottom: calc( ( 20.938em - 110px ));
-      left: 0;
-      width: 0.625em;
-      min-height: 0;
-      max-height: 110px; }
-    .partners .square .side-lb {
-      bottom: 0;
-      left: 0;
-      width: 0.625em;
-      min-height: 0;
-      max-height: 100px; }
-    .partners .square .side-t {
-      top: 0;
-      left: 0;
-      min-width: 0;
-      max-width: 20.938em;
-      height: 0.625em; }
-    .partners .square .side-r {
-      top: 0;
-      right: 0;
-      width: 0.625em;
-      min-height: 0;
-      max-height: 20.938em; }
-    .partners .square .side-b {
-      right: 0;
-      bottom: 0;
-      min-width: 0;
-      max-width: 20.938em;
-      height: 0.625em; }
+  font-size: .7rem; }
+  .partners .partner {
+    padding-right: 1%;
+    padding-left: 1%; }
 
 .footer {
   position: sticky;
@@ -7305,7 +7191,9 @@ nav.secondary .checkbox.active-h p:after {
       .stats .stat h2 {
         font-size: 4.4em !important; }
       .stats .stat p {
-        font-size: 1.6em !important; } }
+        font-size: 1.6em !important; }
+  .quotations .blockquote {
+    padding: .7em 0; } }
 
 @media all and (min-width: 576px) {
   .container {
@@ -7334,7 +7222,25 @@ nav.secondary .checkbox.active-h p:after {
         .status .stats .stat h2 {
           font-size: 5.2em; }
         .status .stats .stat p {
-          font-size: 1.4em; } }
+          font-size: 1.4em; }
+  .programmes {
+    font-size: .8rem; }
+    .programmes .partner {
+      padding-right: 2%;
+      padding-left: 2%; }
+  .quotations {
+    font-size: .8rem; }
+    .quotations .container {
+      width: 100%; }
+    .quotations .blockquote {
+      font-size: 2.2em; }
+      .quotations .blockquote .blockquote-footer {
+        font-size: .8em; }
+  .partners {
+    font-size: .8rem; }
+    .partners .partner {
+      padding-right: 2%;
+      padding-left: 2%; } }
 
 @media all and (min-width: 768px) {
   .container {
@@ -7360,7 +7266,19 @@ nav.secondary .checkbox.active-h p:after {
         .status .stats .stat h2 {
           font-size: 6em; }
         .status .stats .stat p {
-          font-size: 1.4em; } }
+          font-size: 1.4em; }
+  .programmes {
+    font-size: .9rem; }
+    .programmes .partner {
+      padding-right: 8px;
+      padding-left: 8px; }
+  .quotations {
+    font-size: .9rem; }
+  .partners {
+    font-size: .9rem; }
+    .partners .partner {
+      padding-right: 8px;
+      padding-left: 8px; } }
 
 @media all and (min-width: 992px) {
   .container {
@@ -7389,7 +7307,22 @@ nav.secondary .checkbox.active-h p:after {
       .status .stats .stat h2 {
         font-size: 6em; }
       .status .stats .stat p {
-        font-size: 1.4em; } }
+        font-size: 1.4em; }
+  .programmes {
+    font-size: 1rem; }
+    .programmes .partner {
+      padding-right: 10px;
+      padding-left: 10px; }
+  .quotations {
+    font-size: .8rem;
+    background-color: transparent; }
+    .quotations .container {
+      height: 30em; }
+  .partners {
+    font-size: 1rem; }
+    .partners .partner {
+      padding-right: 10px;
+      padding-left: 10px; } }
 
 @media all and (min-width: 1200px) {
   nav.main .container {
@@ -7458,6 +7391,137 @@ nav.secondary .checkbox.active-h p:after {
       bottom: 0;
       min-width: 0;
       max-width: 9.000em;
+      height: 0.625em; }
+  .quotations {
+    font-size: .8rem; }
+    .quotations .square.left {
+      top: 47%;
+      left: -5%; }
+      .quotations .square.left .side-b,
+      .quotations .square.left .side-l,
+      .quotations .square.left .side-t,
+      .quotations .square.left .side-rt,
+      .quotations .square.left .side-rb {
+        position: absolute;
+        width: 0;
+        height: 0;
+        background: transparent;
+        background-color: #5bad6f; }
+      .quotations .square.left .side-l {
+        bottom: 0;
+        left: 0;
+        width: 0.625em;
+        min-height: 0;
+        max-height: 20.938em; }
+      .quotations .square.left .side-t {
+        top: 0;
+        left: 0;
+        min-width: 0;
+        max-width: 20.938em;
+        height: 0.625em; }
+      .quotations .square.left .side-rt {
+        top: 0;
+        right: 0;
+        width: 0.625em;
+        min-height: 0;
+        max-height: 3em; }
+      .quotations .square.left .side-rb {
+        top: calc( ( 20.938em - 8.5em ));
+        right: 0;
+        width: 0.625em;
+        min-height: 0;
+        max-height: 8.5em; }
+      .quotations .square.left .side-b {
+        right: 0;
+        bottom: 0;
+        min-width: 0;
+        max-width: 20.938em;
+        height: 0.625em; }
+    .quotations .square.right {
+      top: -20%;
+      right: -5%; }
+      .quotations .square.right .side-b,
+      .quotations .square.right .side-lb,
+      .quotations .square.right .side-lt,
+      .quotations .square.right .side-t,
+      .quotations .square.right .side-r {
+        position: absolute;
+        width: 0;
+        height: 0;
+        background: transparent;
+        background-color: #e1948d; }
+      .quotations .square.right .side-lb {
+        bottom: 0;
+        left: 0;
+        width: 0.625em;
+        min-height: 0;
+        max-height: 3em; }
+      .quotations .square.right .side-lt {
+        bottom: calc( ( 20.938em - 8.5em ));
+        left: 0;
+        width: 0.625em;
+        min-height: 0;
+        max-height: 8.5em; }
+      .quotations .square.right .side-t {
+        top: 0;
+        left: 0;
+        min-width: 0;
+        max-width: 20.938em;
+        height: 0.625em; }
+      .quotations .square.right .side-r {
+        top: 0;
+        right: 0;
+        width: 0.625em;
+        min-height: 0;
+        max-height: 20.938em; }
+      .quotations .square.right .side-b {
+        right: 0;
+        bottom: 0;
+        min-width: 0;
+        max-width: 20.938em;
+        height: 0.625em; }
+  .partners .square {
+    top: -25%;
+    right: -5%; }
+    .partners .square .side-b,
+    .partners .square .side-lt,
+    .partners .square .side-lb,
+    .partners .square .side-t,
+    .partners .square .side-r {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: transparent;
+      background-color: #496093; }
+    .partners .square .side-lt {
+      bottom: calc( ( 20.938em - 110px ));
+      left: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 110px; }
+    .partners .square .side-lb {
+      bottom: 0;
+      left: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 100px; }
+    .partners .square .side-t {
+      top: 0;
+      left: 0;
+      min-width: 0;
+      max-width: 20.938em;
+      height: 0.625em; }
+    .partners .square .side-r {
+      top: 0;
+      right: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 20.938em; }
+    .partners .square .side-b {
+      right: 0;
+      bottom: 0;
+      min-width: 0;
+      max-width: 20.938em;
       height: 0.625em; } }
 
 @media all and (max-width: 768px) {
