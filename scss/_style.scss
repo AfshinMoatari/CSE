@@ -1263,7 +1263,11 @@ nav
 
         height: $navbar-height;
 
-        background-color: $brand-primary;
+        background-color: transparent;
+        &.sticky
+        {
+            background-color: $brand-primary;
+        }
         a
         {
             font-size: $font-size-md;
