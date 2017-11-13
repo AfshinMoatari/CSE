@@ -41,8 +41,8 @@
             width: 1250px;
             margin-right: auto;
             margin-left: auto;
-            padding-right: 175px;
-            padding-left: 175px;
+            padding-right: 210px;
+            padding-left: 210px;
         }
         p
         {
@@ -115,6 +115,230 @@
 
                 min-width: 0;
                 max-width: 9.000em;
+                height: $square-border;
+            }
+        }
+    }
+    //quotations
+    .quotations
+    {
+        font-size: .8rem;
+        .square
+        {
+            &.left
+            {
+                top: 47%;
+                left: -5%;
+
+                .side-b,
+                .side-l,
+                .side-t,
+                .side-rt,
+                .side-rb
+                {
+                    position: absolute;
+
+                    width: 0;
+                    height: 0;
+
+                    background: transparent;
+                    background-color: $square-color-green;
+                }
+                .side-l
+                {
+                    bottom: 0;
+                    left: 0;
+
+                    width: $square-border;
+                    min-height: 0;
+                    max-height: $square-dimension;
+                }
+
+                .side-t
+                {
+                    top: 0;
+                    left: 0;
+
+                    min-width: 0;
+                    max-width: $square-dimension;
+                    height: $square-border;
+                }
+
+
+                .side-rt
+                {
+                    top: 0;
+                    right: 0;
+
+                    width: $square-border;
+                    min-height: 0;
+                    max-height: 3em;
+                }
+
+                .side-rb
+                {
+                    top: calc( ( #{$square-dimension} - 8.5em )  );
+                    right: 0;
+
+                    width: $square-border;
+                    min-height: 0;
+                    max-height: 8.5em;
+                }
+
+                .side-b
+                {
+                    right: 0;
+                    bottom: 0;
+
+                    min-width: 0;
+                    max-width: $square-dimension;
+                    height: $square-border;
+                }
+            }
+            &.right
+            {
+                top: -20%;
+                right: -5%;
+
+                .side-b,
+                .side-lb,
+                .side-lt,
+                .side-t,
+                .side-r
+                {
+                    position: absolute;
+
+                    width: 0;
+                    height: 0;
+
+                    background: transparent;
+                    background-color: $square-color-orange;
+                }
+
+                .side-lb
+                {
+                    bottom: 0;
+                    left: 0;
+
+                    width: $square-border;
+                    min-height: 0;
+                    max-height: 3em;
+                }
+
+                .side-lt
+                {
+                    bottom: calc( ( #{$square-dimension} - 8.5em )  );
+                    left: 0;
+
+                    width: $square-border;
+                    min-height: 0;
+                    max-height: 8.5em;;
+                }
+
+                .side-t
+                {
+                    top: 0;
+                    left: 0;
+
+                    min-width: 0;
+                    max-width: $square-dimension;
+                    height: $square-border;
+                }
+
+
+                .side-r
+                {
+                    top: 0;
+                    right: 0;
+
+                    width: $square-border;
+                    min-height: 0;
+                    max-height: $square-dimension;
+                }
+
+                .side-b
+                {
+                    right: 0;
+                    bottom: 0;
+
+                    min-width: 0;
+                    max-width: $square-dimension;
+                    height: $square-border;
+                }
+            }
+        }
+    }
+    //partners
+    .partners
+    {
+        .square
+        {
+            top: -25%;
+            right: -5%;
+
+            .side-b,
+            .side-lt,
+            .side-lb,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $brand-primary;
+            }
+
+            .side-lt
+            {
+                bottom: calc( ( #{$square-dimension} - 110px )  );
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 110px;;
+            }
+
+            .side-lb
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 100px;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
                 height: $square-border;
             }
         }

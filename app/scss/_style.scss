@@ -237,17 +237,18 @@ img
     }
     .stats
     {
+        margin-top: 9%;
         .stat
         {
-            margin: 30px 0;
+            margin: 4px 0;
             h2
             {
-                font-size: 6.5em;
+                font-size: 5.5em;
                 font-weight: bold;
             }
             p
             {
-                font-size: 1.8em;
+                font-size: 1.6em;
 
                 color: $brand-primary;;
             }
@@ -325,155 +326,35 @@ img
     }
 }
 
+//programmes
+.programmes
+{
+    font-size: .7rem;
+
+    .partner
+    {
+        padding-right: 1%;
+        padding-left: 1%;
+    }
+}
 //quotations
 .quotations
 {
+    font-size: .7rem;
+
+    background-color: $brand-primary;
     .container
     {
-        height: 380px;
+        height: 100%;
     }
-    .square
+    .blockquote
     {
-        &.left
+        font-size: 2em;
+
+        padding: 1.2em 0;
+        .blockquote-footer
         {
-            top: 45%;
-            left: -5%;
-
-            .side-b,
-            .side-l,
-            .side-t,
-            .side-rt,
-            .side-rb
-            {
-                position: absolute;
-
-                width: 0;
-                height: 0;
-
-                background: transparent;
-                background-color: $square-color-green;
-            }
-            .side-l
-            {
-                bottom: 0;
-                left: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: $square-dimension;
-            }
-
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
-            }
-
-
-            .side-rt
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 50px;
-            }
-
-            .side-rb
-            {
-                top: calc( ( #{$square-dimension} - 190px )  );
-                right: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 190px;;
-            }
-
-            .side-b
-            {
-                right: 0;
-                bottom: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
-            }
-        }
-        &.right
-        {
-            top: -30%;
-            right: -10%;
-
-            .side-b,
-            .side-lb,
-            .side-lt,
-            .side-t,
-            .side-r
-            {
-                position: absolute;
-
-                width: 0;
-                height: 0;
-
-                background: transparent;
-                background-color: $square-color-orange;
-            }
-
-            .side-lb
-            {
-                bottom: 0;
-                left: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 50px;
-            }
-
-            .side-lt
-            {
-                bottom: calc( ( #{$square-dimension} - 180px )  );
-                left: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 180px;;
-            }
-
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
-            }
-
-
-            .side-r
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: $square-dimension;
-            }
-
-            .side-b
-            {
-                right: 0;
-                bottom: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
-            }
+            font-size: .7em;
         }
     }
 }
@@ -481,77 +362,12 @@ img
 //partners
 .partners
 {
-    height: 450px;
-    .square
+    font-size: .7rem;
+
+    .partner
     {
-        top: -25%;
-        right: -5%;
-
-        .side-b,
-        .side-lt,
-        .side-lb,
-        .side-t,
-        .side-r
-        {
-            position: absolute;
-
-            width: 0;
-            height: 0;
-
-            background: transparent;
-            background-color: $brand-primary;
-        }
-
-        .side-lt
-        {
-            bottom: calc( ( #{$square-dimension} - 110px )  );
-            left: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 110px;;
-        }
-
-        .side-lb
-        {
-            bottom: 0;
-            left: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 100px;
-        }
-
-        .side-t
-        {
-            top: 0;
-            left: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
-        }
-
-
-        .side-r
-        {
-            top: 0;
-            right: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: $square-dimension;
-        }
-
-        .side-b
-        {
-            right: 0;
-            bottom: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
-        }
+        padding-right: 1%;
+        padding-left: 1%;
     }
 }
 

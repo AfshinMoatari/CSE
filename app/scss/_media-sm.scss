@@ -45,9 +45,10 @@
         }
         .stats
         {
+            margin-top: 10%;
             .stat
             {
-                margin: 30px 0;
+                margin: 10px 0;
                 h2
                 {
                     font-size: 5.2em;
@@ -57,6 +58,47 @@
                     font-size: 1.4em;
                 }
             }
+        }
+    }
+    //programmes
+    .programmes
+    {
+        font-size: .8rem;
+
+        .partner
+        {
+            padding-right: 2%;
+            padding-left: 2%;
+        }
+    }
+    //quotations
+    .quotations
+    {
+        font-size: .8rem;
+        .container
+        {
+            width: 100%;
+        }
+        .blockquote
+        {
+            font-size: 2.2em;
+
+
+            .blockquote-footer
+            {
+                font-size: .8em;
+            }
+        }
+    }
+    //partners
+    .partners
+    {
+        font-size: .8rem;
+
+        .partner
+        {
+            padding-right: 2%;
+            padding-left: 2%;
         }
     }
 }

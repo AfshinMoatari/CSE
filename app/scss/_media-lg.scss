@@ -63,4 +63,37 @@
             }
         }
     }
+    //programmes
+    .programmes
+    {
+        font-size: 1rem;
+
+        .partner
+        {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+    //quotations
+    .quotations
+    {
+        font-size: .8rem;
+
+        background-color: transparent;
+        .container
+        {
+            height: 30em;
+        }
+    }
+    //partners
+    .partners
+    {
+        font-size: 1rem;
+
+        .partner
+        {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
 }

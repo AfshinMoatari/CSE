@@ -8,9 +8,27 @@
     //status
     .stats
     {
+        margin-top: 8%!important;
+
         .stat
         {
-            margin: 25px 0 !important;
+            margin: 2px 0 !important;
+            h2
+            {
+                font-size: 4.4em!important;
+            }
+            p
+            {
+                font-size: 1.6em!important;
+            }
+        }
+    }
+    //quotations
+    .quotations
+    {
+        .blockquote
+        {
+            padding: .7em 0;
         }
     }
 }
