@@ -7110,7 +7110,9 @@ img {
 nav.main {
   z-index: 2;
   height: 100px;
-  background-color: #496093; }
+  background-color: transparent; }
+  nav.main.sticky {
+    background-color: #496093; }
   nav.main a {
     font-size: 1.25rem; }
   nav.main .nav-link {
