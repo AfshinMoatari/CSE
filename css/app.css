@@ -7265,9 +7265,11 @@ nav.secondary .checkbox.active-h p:after {
       flex-direction: row; }
     .footer li {
       font-size: 1.1em; }
-    .footer .social img {
-      width: 20px;
-      height: 20px; } }
+    .footer .social {
+      padding: 0; }
+      .footer .social img {
+        width: 20px;
+        height: 20px; } }
 
 @media all and (min-width: 768px) {
   .container {
