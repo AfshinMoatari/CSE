@@ -101,4 +101,30 @@
             padding-left: 2%;
         }
     }
+    //footer
+    .footer
+    {
+        font-size: .8rem;
+        .row
+        {
+            flex-direction: row;
+        }
+        li
+        {
+            font-size: 1.1em;
+        }
+        .social
+        {
+            padding: 0;
+            img
+            {
+                width: 20px;
+                height: 20px;
+            }
+            .items
+            {
+                margin: inherit;
+            }
+        }
+    }
 }

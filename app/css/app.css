@@ -6595,13 +6595,29 @@ img {
     padding-left: 1%; }
 
 .footer {
+  font-size: .7rem;
   position: sticky;
   bottom: 0;
   padding: 5px 0;
   opacity: 0; }
+  .footer .row {
+    flex-direction: column-reverse; }
+  .footer .container {
+    margin: 0; }
+  .footer ol {
+    margin: 0 auto; }
   .footer li {
-    font-size: 1.25rem;
+    font-size: 1em;
     line-height: 90%; }
+  .footer .social {
+    padding: 15px 0; }
+    .footer .social img {
+      width: 20px;
+      height: 20px; }
+    .footer .social .item {
+      padding: 0 4px; }
+    .footer .social .items {
+      margin: 0 auto; }
 
 .square {
   position: absolute;
@@ -7242,7 +7258,20 @@ nav.secondary .checkbox.active-h p:after {
     font-size: .8rem; }
     .partners .partner {
       padding-right: 2%;
-      padding-left: 2%; } }
+      padding-left: 2%; }
+  .footer {
+    font-size: .8rem; }
+    .footer .row {
+      flex-direction: row; }
+    .footer li {
+      font-size: 1.1em; }
+    .footer .social {
+      padding: 0; }
+      .footer .social img {
+        width: 20px;
+        height: 20px; }
+      .footer .social .items {
+        margin: inherit; } }
 
 @media all and (min-width: 768px) {
   .container {
@@ -7280,7 +7309,14 @@ nav.secondary .checkbox.active-h p:after {
     font-size: .9rem; }
     .partners .partner {
       padding-right: 8px;
-      padding-left: 8px; } }
+      padding-left: 8px; }
+  .footer {
+    font-size: .9rem; }
+    .footer li {
+      font-size: 1.1em; }
+    .footer .social img {
+      width: 30px;
+      height: 30px; } }
 
 @media all and (min-width: 992px) {
   .container {
@@ -7324,7 +7360,25 @@ nav.secondary .checkbox.active-h p:after {
     font-size: 1rem; }
     .partners .partner {
       padding-right: 10px;
-      padding-left: 10px; } }
+      padding-left: 10px; }
+  .footer {
+    fot-size: 1rem; }
+    .footer ol {
+      margin: 0 auto; }
+    .footer li {
+      font-size: 1.4em; }
+    .footer .social img {
+      width: 30px;
+      height: 30px; }
+    .footer .social .item {
+      padding: 0 5px; }
+    .footer .footer {
+      font-size: 1rem; }
+      .footer .footer li {
+        font-size: 1.4em; }
+      .footer .footer .social img {
+        width: 35px;
+        height: 35px; } }
 
 @media all and (min-width: 1200px) {
   nav.main .container {

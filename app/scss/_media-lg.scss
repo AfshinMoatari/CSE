@@ -96,4 +96,46 @@
             padding-left: 10px;
         }
     }
+    //footer
+    .footer
+    {
+        fot-size: 1rem;
+        ol
+        {
+            margin: 0 auto;
+        }
+        li
+        {
+            font-size: 1.4em;
+        }
+        .social
+        {
+            img
+            {
+                width: 30px;
+                height: 30px;
+            }
+            .item
+            {
+                padding: 0 5px;
+            }
+        }
+        //footer
+        .footer
+        {
+            font-size: 1rem;
+            li
+            {
+                font-size: 1.4em;
+            }
+            .social
+            {
+                img
+                {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
 }
