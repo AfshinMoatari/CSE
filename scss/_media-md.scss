@@ -83,4 +83,21 @@
             padding-left: 8px;
         }
     }
+    //footer
+    .footer
+    {
+        font-size: .9rem;
+        li
+        {
+            font-size: 1.1em;
+        }
+        .social
+        {
+            img
+            {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
 }

@@ -374,16 +374,48 @@ img
 //footer
 .footer
 {
+    font-size: .7rem;
+
     position: sticky;
     bottom: 0;
 
     padding: 5px 0;
 
     opacity: 0;
+    .row
+    {
+        flex-direction: column-reverse;
+    }
+    .container
+    {
+        margin: 0;
+    }
+    ol
+    {
+        margin: 0 auto;
+    }
     li
     {
-        font-size: $font-size-md;
+        font-size: 1em;
         line-height: 90%;
+    }
+    .social
+    {
+        padding: 10px 0;
+        img
+        {
+            width: 25px;
+            height: 25px;
+        }
+
+        .item
+        {
+            padding: 0 4px;
+        }
+        .items
+        {
+            margin: 0 auto;
+        }
     }
 }
 
