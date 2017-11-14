@@ -6610,10 +6610,10 @@ img {
     font-size: 1em;
     line-height: 90%; }
   .footer .social {
-    padding: 10px 0; }
+    padding: 15px 0; }
     .footer .social img {
-      width: 25px;
-      height: 25px; }
+      width: 20px;
+      height: 20px; }
     .footer .social .item {
       padding: 0 4px; }
     .footer .social .items {
@@ -7269,7 +7269,9 @@ nav.secondary .checkbox.active-h p:after {
       padding: 0; }
       .footer .social img {
         width: 20px;
-        height: 20px; } }
+        height: 20px; }
+      .footer .social .items {
+        margin: inherit; } }
 
 @media all and (min-width: 768px) {
   .container {
