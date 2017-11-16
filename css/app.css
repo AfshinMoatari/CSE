@@ -6599,11 +6599,11 @@ img {
 
 .footer {
   font-size: .7rem;
-  height: 13em;
+  height: 13.5em;
   background-color: #496093; }
   .footer .row {
     flex-direction: column-reverse;
-    padding: 3px 0; }
+    padding: 10px 0; }
   .footer ol {
     margin-top: 0;
     margin-right: auto;
@@ -7369,7 +7369,7 @@ nav.secondary .checkbox.active-h p:after {
       padding-left: 8px; }
   .footer {
     font-size: .9rem;
-    height: 8.5em; }
+    height: 8em; }
     .footer li {
       font-size: 1em; }
     .footer .social .item svg {
