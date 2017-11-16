@@ -1,7 +1,10 @@
 //fonts
 @include font-face('CBS-regular', 'CBS_NEW_REGULAR', 'CBS-typografier');
 @include font-face('CBS-bold', 'CBS_NEW_BOLD', 'CBS-typografier');
-
+.fixed-top
+{
+    position: sticky;
+}
 //container
 .container
 {
@@ -9,12 +12,10 @@
     padding-left: 15px;
 }
 
-//section
-.section:last-of-type
+body
 {
-    padding-bottom: 200px;
+    overflow-x: hidden!important;
 }
-
 //typography
 h1,
 h2,
@@ -376,45 +377,121 @@ img
 {
     font-size: .7rem;
 
-    position: sticky;
-    bottom: 0;
+    height: 13em;
 
-    padding: 5px 0;
-
-    opacity: 0;
+    background-color: $brand-primary;
     .row
     {
         flex-direction: column-reverse;
-    }
-    .container
-    {
-        margin: 0;
+
+        padding: 3px 0;
     }
     ol
     {
-        margin: 0 auto;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        .breadcrumb-item::before
+        {
+            color: $brand-secondary;
+        }
     }
     li
     {
-        font-size: 1em;
-        line-height: 90%;
+        font-size: .98em;
+        line-height: 170%;
+
+        color: $brand-secondary;
     }
     .social
     {
-        padding: 15px 0;
-        img
-        {
-            width: 20px;
-            height: 20px;
-        }
+        padding: 10px 0;
 
         .item
         {
-            padding: 0 4px;
+            padding: 0 10px;
+
+            cursor: pointer;
+            svg
+            {
+                width: 40px;
+                height: 40px;
+            }
+            &.in
+            {
+                .rectangle
+                {
+                    animation: .8s draw ease-in-out forwards;
+                }
+            }
+            &.out
+            {
+                .rectangle
+                {
+                    animation: .7s drawBack ease-in-out forwards;
+                }
+            }
+            .facebook,
+            .twitter,
+            .instagram
+            {
+                stroke: $brand-secondary;
+            }
+            .rectangle
+            {
+                color: $brand-secondary;
+
+                fill: transparent;
+                stroke-dasharray: 140 540;
+                stroke-dashoffset: -474;
+                stroke-width: 2px;
+            }
+            @keyframes draw
+            {
+                0%
+                {
+                    stroke-dasharray: 140 540;
+                    stroke-dashoffset: -474;
+                }
+                100%
+                {
+                    stroke-dasharray: 760;
+                    stroke-dashoffset: 0;
+                }
+            }
+            @keyframes drawBack
+            {
+                0%
+                {
+                    stroke-dasharray: 760;
+                    stroke-dashoffset: 0;
+                }
+                100%
+                {
+                    stroke-dasharray: 140 540;
+                    stroke-dashoffset: -474;
+                }
+            }
         }
         .items
         {
             margin: 0 auto;
+        }
+    }
+    .logo
+    {
+        path
+        {
+            fill: $brand-secondary;
+        }
+        polygon
+        {
+            fill: $brand-secondary;
+            &.backdrop
+            {
+                fill: $brand-primary;
+            }
         }
     }
 }
@@ -1291,11 +1368,11 @@ nav
 {
     &.main
     {
-        z-index: 2;
+        z-index: 3;
 
         height: $navbar-height;
 
-        background-color: transparent;
+        background-color: $brand-primary;
         &.sticky
         {
             background-color: $brand-primary;

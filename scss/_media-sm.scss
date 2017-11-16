@@ -105,25 +105,44 @@
     .footer
     {
         font-size: .8rem;
+
+        height: 8.5em;
+        .container
+        {
+            width: 100%;
+        }
+
         .row
         {
             flex-direction: row;
         }
+        ol
+        {
+            margin-top: 0;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
         li
         {
-            font-size: 1.1em;
+            font-size: 1em;
         }
         .social
         {
             padding: 0;
-            img
-            {
-                width: 20px;
-                height: 20px;
-            }
+
             .items
             {
                 margin: inherit;
+            }
+            .item
+            {
+                padding: 0 2px;
+                svg
+                {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
     }

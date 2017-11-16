@@ -53,26 +53,38 @@
         }
         &.overlay-nav
         {
-            position: absolute;
-            z-index: 1;
+            position: sticky;
+            z-index: 2;
             top: 0;
             right: 0;
             left: 0;
+            // min-height: 100%;
 
-            min-height: 100%;
-            padding-top: 105px;
+            height: 100vh;
+            padding-top: 15px;
 
-            background: $brand-secondary;
+            background: $brand-primary;
 
             .nav-link:not(button)
             {
                 font-size: $font-size-lg;
                 font-weight: bold;
 
-                color: $brand-primary;
+                color: $brand-secondary;
                 &.active-h
                 {
                     font-weight: bold;
+                }
+            }
+            button
+            {
+                color: $brand-primary !important;
+                border-color: $brand-secondary !important;
+                background-color: $brand-secondary !important;
+                span
+                {
+                    border-color: $brand-secondary!important;
+                    background-color: $transparent!important;
                 }
             }
         }

@@ -117,7 +117,17 @@ $(function() {
       tween.play()
     });
   }
+  $('.social .item').each(function() {
 
+    function over() {
+      $(this).removeClass('out').addClass('in');
+    }
 
+    function out() {
+      $(this).removeClass('in').addClass('out');
+    }
+    // call a hover scene
+    $(this).hover(over, out);
+  });
 
 });
