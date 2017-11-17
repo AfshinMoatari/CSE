@@ -34,10 +34,24 @@
     //footer
     .footer
     {
-        height: 11em;
+        height: 7em;
         li
         {
             font-size: .7em;
+        }
+        .social
+        {
+            padding: 10px 0;
+
+            .item
+            {
+                padding: 0 3px;
+                svg
+                {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
         }
     }
 }

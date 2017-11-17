@@ -6381,15 +6381,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot");
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
 
-.fixed-top {
-  position: sticky; }
-
 .container {
   padding-right: 15px;
   padding-left: 15px; }
 
-body {
-  overflow-x: hidden !important; }
+.fullpage {
+  position: relative;
+  overflow: hidden; }
 
 h1,
 h2,
@@ -6599,11 +6597,10 @@ img {
 
 .footer {
   font-size: .7rem;
-  height: 13.5em;
+  height: 10em;
   background-color: #496093; }
   .footer .row {
-    flex-direction: column-reverse;
-    padding: 10px 0; }
+    flex-direction: column-reverse; }
   .footer ol {
     margin-top: 0;
     margin-right: auto;
@@ -6612,17 +6609,17 @@ img {
     .footer ol .breadcrumb-item::before {
       color: #fff; }
   .footer li {
-    font-size: .98em;
+    font-size: 1em;
     line-height: 170%;
     color: #fff; }
   .footer .social {
-    padding: 10px 0; }
+    padding: 16px 0; }
     .footer .social .item {
-      padding: 0 10px;
+      padding: 0 5px;
       cursor: pointer; }
       .footer .social .item svg {
-        width: 40px;
-        height: 40px; }
+        width: 50px;
+        height: 50px; }
       .footer .social .item.in .rectangle {
         animation: .8s draw ease-in-out forwards; }
       .footer .social .item.out .rectangle {
@@ -7242,6 +7239,9 @@ nav.secondary .checkbox.active-h p:after {
   transform: scale(1);
   opacity: 1; }
 
+nav.fixed-top {
+  position: fixed; }
+
 @media all and (max-width: 353px) {
   .status {
     font-size: .6rem; }
@@ -7256,9 +7256,16 @@ nav.secondary .checkbox.active-h p:after {
   .quotations .blockquote {
     padding: .7em 0; }
   .footer {
-    height: 11em; }
+    height: 7em; }
     .footer li {
-      font-size: .7em; } }
+      font-size: .7em; }
+    .footer .social {
+      padding: 10px 0; }
+      .footer .social .item {
+        padding: 0 3px; }
+        .footer .social .item svg {
+          width: 40px;
+          height: 40px; } }
 
 @media all and (min-width: 576px) {
   .container {
@@ -7308,7 +7315,7 @@ nav.secondary .checkbox.active-h p:after {
       padding-left: 2%; }
   .footer {
     font-size: .8rem;
-    height: 8.5em; }
+    height: 4em; }
     .footer .container {
       width: 100%; }
     .footer .row {
@@ -7319,16 +7326,16 @@ nav.secondary .checkbox.active-h p:after {
       margin-bottom: 0;
       margin-left: 0; }
     .footer li {
-      font-size: 1em; }
+      font-size: 1.1em; }
     .footer .social {
       padding: 0; }
       .footer .social .items {
         margin: inherit; }
       .footer .social .item {
-        padding: 0 2px; }
+        padding: 0; }
         .footer .social .item svg {
-          width: 30px;
-          height: 30px; } }
+          width: 40px;
+          height: 40px; } }
 
 @media all and (min-width: 768px) {
   .container {
@@ -7369,12 +7376,12 @@ nav.secondary .checkbox.active-h p:after {
       padding-left: 8px; }
   .footer {
     font-size: .9rem;
-    height: 8em; }
+    height: 5em; }
     .footer li {
-      font-size: 1em; }
+      font-size: 1.1em; }
     .footer .social .item svg {
-      width: 40px;
-      height: 40px; } }
+      width: 50px;
+      height: 50px; } }
 
 @media all and (min-width: 992px) {
   .container {
@@ -7413,6 +7420,7 @@ nav.secondary .checkbox.active-h p:after {
     font-size: .8rem;
     background-color: transparent; }
     .quotations .container {
+      width: 1250px;
       height: 30em; }
   .partners {
     font-size: 1rem; }
@@ -7421,14 +7429,14 @@ nav.secondary .checkbox.active-h p:after {
       padding-left: 10px; }
   .footer {
     font-size: 1rem;
-    height: 9em; }
+    height: 5.5em; }
     .footer ol {
       margin: 0 auto; }
     .footer li {
       font-size: 1.2em; }
     .footer .social .item svg {
-      width: 50px;
-      height: 50px; } }
+      width: 60px;
+      height: 60px; } }
 
 @media all and (min-width: 1200px) {
   nav.main .container {
@@ -7443,7 +7451,7 @@ nav.secondary .checkbox.active-h p:after {
       width: 26.250em;
       padding: 40px 15px; }
   .status .container:nth-child(1) {
-    width: px;
+    width: 1250px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 75px;
@@ -7637,17 +7645,12 @@ nav.secondary .checkbox.active-h p:after {
       color: #496093; }
     .footer li {
       color: #496093; }
-    .footer .social {
-      padding: 10px 0; }
-      .footer .social .item svg {
-        width: 50px;
-        height: 50px; }
-      .footer .social .item .facebook,
-      .footer .social .item .twitter,
-      .footer .social .item .instagram {
-        stroke: #496093; }
-      .footer .social .item .rectangle {
-        color: #496093; }
+    .footer .social .item .facebook,
+    .footer .social .item .twitter,
+    .footer .social .item .instagram {
+      stroke: #496093; }
+    .footer .social .item .rectangle {
+      color: #496093; }
     .footer .logo path {
       fill: #496093; }
     .footer .logo polygon {

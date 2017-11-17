@@ -21,12 +21,16 @@
 
 <body>
   <!-- NAVBAR -->
-  <nav class="main navbar navbar-toggleable-sm navbar-inverse w-100 animate px-0 fixed-top bg-primary">
-    <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="./assets/image/cse.svg" alt=""></a>
+  <nav class="main navbar navbar-toggleable-sm w-100 animate px-0 fixed-top opacity" duration-opacity="5" delay="0" style="opacity:0">
+    <div class="container d-flex">
+      <div class="navbar-toggler navbar-toggler-right border-0 p-0 align-self-center" title="Menu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" href="#" data-toggle="collapse" data-target="#overlay-nav">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="navbar-brand">
+        <a href="index.html"><img src="./assets/image/cse.svg" alt=""></a>
+      </div>
       <div class="collapse navbar-collapse justify-content-between align-self-end">
         <ul class="nav navbar-nav mr-auto"></ul>
         <ul class="d-flex nav navbar-nav">
@@ -49,7 +53,7 @@
             <a class="nav-link pb-0" href="#">blog</a>
           </li>
           <li class="nav-item align-self-end mx-2 apply">
-            <button class="nav-link btn btn-primary dark" href="#">
+            <button class="nav-link btn btn-primary dark" href="#" data-toggle="collapse" data-target="#overlay-nav">
             apply now
             <span></span>
             </button>
@@ -261,23 +265,54 @@
   <!-- FOOTER SECTION -->
   <div class="footer">
     <div class="d-flex justify-content-between text-center">
-      <div class="container align-self-center">
-        <div class="row">
-          <div class="col-2 d-flex justify-content-start pl-0">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-2 d-flex justify-content-start hidden-md-down">
             <a href="#"><img src="./assets/image/cbs-cse.svg" alt="" width="100px"></a>
           </div>
-          <div class="col-8 d-flex">
-            <ol class="breadcrumb m-0 mx-auto align-self-end text-primary">
+          <div class="col-12 col-sm-10 col-sm-10 col-md-8 d-flex">
+            <ol class="breadcrumb align-self-end text-primary">
               <li class="breadcrumb-item">Porcelænshaven 26, 2nd floor, 2000 Frederiksberg</li>
               <li class="breadcrumb-item">+45 38153646</li>
               <li class="breadcrumb-item">dhn.ino@cbs.dk</li>
             </ol>
           </div>
-          <div class="col-2 d-flex justify-content-end pr-0">
-            <div class="my-0 align-self-end">
-              <a class="mx-2" href="#"><img src="./assets/image/facebook.svg" alt=""></a>
-              <a class="mx-2" href="#"><img src="./assets/image/instagram.svg" alt=""></a>
-              <a class="mx-2" href="#"><img src="./assets/image/twitter.svg" alt=""></a>
+          <div class="col-12 col-sm-auto col-md-2 d-flex align-self-end ml-auto social">
+            <div class="items ml-auto d-flex align-items-end">
+              <div class="item d-flex justify-content-center">
+                  <svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g class="facebook" transform="translate(1.000000, 1.000000)" stroke="#4C62A7">
+                              <rect class="rectangle" stroke-width="2" x="0" y="0" width="36" height="36"></rect>
+                              <path d="M19.9148532,13.0940089 L19.9148532,10.9242234 C19.9148532,9.88376479 20.5814671,9.63413462 21.0543642,9.63413462 L23.9354277,9.63413462 L23.9354277,5 L19.9566353,5 C15.548627,5 14.5591517,8.43690828 14.5591517,10.6536243 L14.5591517,13.0940089 L12,13.0940089 L12,16.3491864 L12,18.498003 L14.5819419,18.498003 L14.5819419,32 L19.7211363,32 L19.7211363,18.498003 L23.5280525,18.498003 L23.6989792,16.3731509 L24,13.0940089 L19.9148532,13.0940089 Z" id="Shape" stroke-width="1.2"></path>
+                          </g>
+                      </g>
+                  </svg>
+              </div>
+              <div class="item d-flex justify-content-center">
+                <svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g class="instagram" transform="translate(1.000000, 1.000000)" stroke="#4C62A7">
+                            <rect class="rectangle" stroke-width="2" x="0" y="0" width="36" height="36"></rect>
+                            <g id="Group" transform="translate(6.000000, 6.000000)" stroke-width="1.2">
+                                <path d="M6.1911,0.5997 C3.1081,0.5997 0.6001,3.1087 0.6001,6.1907 L0.6001,18.3027 C0.6001,21.3867 3.1081,23.8937 6.1911,23.8937 L18.3021,23.8937 C21.3841,23.8937 23.8941,21.3867 23.8941,18.3027 L23.8941,6.1907 C23.8941,3.1087 21.3841,0.5997 18.3021,0.5997 L6.1911,0.5997 Z" id="Stroke-1"></path>
+                                <path d="M12.2461,6.6525 C9.1611,6.6525 6.6511,9.1645 6.6511,12.2465 C6.6511,15.3345 9.1611,17.8405 12.2461,17.8405 C15.3331,17.8405 17.8431,15.3345 17.8431,12.2465 C17.8431,9.1645 15.3331,6.6525 12.2461,6.6525 Z" id="Stroke-3"></path>
+                                <path d="M20.6731,5.4298 C20.6731,6.2948 19.9701,6.9978 19.1041,6.9978 C18.2381,6.9978 17.5341,6.2948 17.5341,5.4298 C17.5341,4.5638 18.2381,3.8598 19.1041,3.8598 C19.9701,3.8598 20.6731,4.5638 20.6731,5.4298 Z" id="Stroke-5"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+              </div>
+              <div class="item d-flex justify-content-center">
+                <svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g class="twitter" stroke="#4C62A7">
+                            <rect class="rectangle" stroke-width="2" x="1" y="1" width="34" height="34"></rect>
+                            <path d="M6,25.207 C8.168,26.598 10.744,27.411 13.512,27.411 C22.608,27.411 27.748,19.724 27.439,12.833 C28.396,12.143 29.227,11.279 29.884,10.297 C29.006,10.684 28.059,10.945 27.071,11.068 C28.081,10.46 28.858,9.503 29.224,8.358 C28.277,8.915 27.229,9.327 26.113,9.545 C25.218,8.592 23.945,8 22.536,8 C19.374,8 17.048,10.949 17.761,14.017 C13.691,13.809 10.08,11.858 7.663,8.892 C6.38,11.097 6.998,13.978 9.179,15.438 C8.376,15.412 7.619,15.191 6.959,14.823 C6.908,17.098 8.533,19.214 10.89,19.688 C10.201,19.877 9.446,19.922 8.678,19.774 C9.3,21.72 11.11,23.141 13.254,23.178 C11.195,24.791 8.6,25.514 6,25.207 Z" stroke-width="1.2"></path>
+                        </g>
+                    </g>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

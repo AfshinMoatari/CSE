@@ -1,10 +1,7 @@
 //fonts
 @include font-face('CBS-regular', 'CBS_NEW_REGULAR', 'CBS-typografier');
 @include font-face('CBS-bold', 'CBS_NEW_BOLD', 'CBS-typografier');
-.fixed-top
-{
-    position: sticky;
-}
+
 //container
 .container
 {
@@ -12,9 +9,11 @@
     padding-left: 15px;
 }
 
-body
+.fullpage
 {
-    overflow-x: hidden!important;
+    position: relative;
+
+    overflow: hidden;
 }
 //typography
 h1,
@@ -377,14 +376,12 @@ img
 {
     font-size: .7rem;
 
-    height: 13.5em;
+    height: 10em;
 
     background-color: $brand-primary;
     .row
     {
         flex-direction: column-reverse;
-
-        padding: 10px 0;
     }
     ol
     {
@@ -399,24 +396,24 @@ img
     }
     li
     {
-        font-size: .98em;
+        font-size: 1em;
         line-height: 170%;
 
         color: $brand-secondary;
     }
     .social
     {
-        padding: 10px 0;
+        padding: 16px 0;
 
         .item
         {
-            padding: 0 10px;
+            padding: 0 5px;
 
             cursor: pointer;
             svg
             {
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
             }
             &.in
             {
@@ -1373,6 +1370,7 @@ nav
         height: $navbar-height;
 
         background-color: $brand-primary;
+
         &.sticky
         {
             background-color: $brand-primary;
@@ -1482,5 +1480,9 @@ nav
 
             opacity: 1;
         }
+    }
+    &.fixed-top
+    {
+        position: fixed;
     }
 }
