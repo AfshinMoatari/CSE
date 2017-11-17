@@ -7242,6 +7242,70 @@ nav.secondary .checkbox.active-h p:after {
 nav.fixed-top {
   position: fixed; }
 
+.cse-proof-plan .text {
+  font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif; }
+
+.cse-proof-plan .line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000; }
+  .cse-proof-plan .line.active {
+    -webkit-animation: dash linear alternate forwards;
+    -moz-animation: dash linear alternate forwards;
+    -o-animation: dash linear alternate forwards;
+    animation: dash linear alternate forwards; }
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000; }
+  to {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000; }
+  to {
+    stroke-dashoffset: 0; } }
+
+.cse-proof-plan .cloud.c1 {
+  z-index: 100;
+  top: 80px;
+  -webkit-animation: move 380s linear infinite;
+  -moz-animation: move 380s linear infinite;
+  -o-animation: move 380s linear infinite;
+  animation: move 380s linear infinite; }
+
+.cse-proof-plan .cloud.c2 {
+  z-index: 200;
+  top: 240px;
+  -webkit-animation: move 140s linear infinite backwards;
+  -moz-animation: move 140s linear infinite backwards;
+  -o-animation: move 140s linear infinite backwards;
+  animation: move 140s linear infinite backwards; }
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateX(0); }
+  to {
+    -webkit-transform: translateX(1150px); } }
+
+.cse-proof-plan .bubble {
+  opacity: 0; }
+  .cse-proof-plan .bubble.active {
+    -webkit-animation: bubble-light ease forwards;
+    -moz-animation: bubble-light ease forwards;
+    -o-animation: bubble-light ease forwards;
+    animation: bubble-light ease forwards; }
+
+@keyframes bubble-light {
+  0% {
+    transform: 'scale(0.5)';
+    fill: transparent; }
+  20% {
+    transform: 'scale(0.5)';
+    fill: #f26c65; }
+  100% {
+    fill: #595e7c; } }
+
 @media all and (max-width: 353px) {
   .status {
     font-size: .6rem; }
@@ -7696,7 +7760,7 @@ nav.fixed-top {
     right: 0;
     left: 0;
     height: 100vh;
-    padding-top: 15px;
+    padding-top: 25%;
     background: #496093; }
     nav.overlay-nav .nav-link:not(button) {
       font-size: 1.563rem;

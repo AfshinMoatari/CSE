@@ -1361,6 +1361,7 @@ img
     }
 }
 
+//Navs
 nav
 {
     &.main
@@ -1484,5 +1485,112 @@ nav
     &.fixed-top
     {
         position: fixed;
+    }
+}
+
+//CSE Proof Plan
+.cse-proof-plan
+{
+    .text
+    {
+        font-family: $font-family-cbs-bold;
+    }
+    .line
+    {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        &.active
+        {
+            -webkit-animation: dash linear alternate forwards;
+               -moz-animation: dash linear alternate forwards;
+                 -o-animation: dash linear alternate forwards;
+                    animation: dash linear alternate forwards;
+        }
+        @keyframes dash
+        {
+            from
+            {
+                stroke-dashoffset: 1000;
+            }
+            to
+            {
+                stroke-dashoffset: 0;
+            }
+        }
+        @-webkit-keyframes dash
+        {
+            from
+            {
+                stroke-dashoffset: 1000;
+            }
+            to
+            {
+                stroke-dashoffset: 0;
+            }
+        }
+    }
+    .cloud
+    {
+        &.c1
+        {
+            z-index: 100;
+            top: 80px;
+
+            -webkit-animation: move 380s linear infinite;
+               -moz-animation: move 380s linear infinite;
+                 -o-animation: move 380s linear infinite;
+                    animation: move 380s linear infinite;
+        }
+        &.c2
+        {
+            z-index: 200;
+            top: 240px;
+
+            -webkit-animation: move 140s linear infinite backwards;
+               -moz-animation: move 140s linear infinite backwards;
+                 -o-animation: move 140s linear infinite backwards;
+                    animation: move 140s linear infinite backwards;
+        }
+        @-webkit-keyframes move
+        {
+            from
+            {
+                -webkit-transform: translateX(0);
+            }
+            to
+            {
+                -webkit-transform: translateX(1150px);
+            }
+        }
+    }
+    .bubble
+    {
+        opacity: 0;
+        &.active
+        {
+            -webkit-animation: bubble-light ease forwards;
+               -moz-animation: bubble-light ease forwards;
+                 -o-animation: bubble-light ease forwards;
+                    animation: bubble-light ease forwards;
+        }
+        @keyframes bubble-light
+        {
+            0%
+            {
+                transform: 'scale(0.5)';
+
+                fill: transparent;
+            }
+            20%
+            {
+                transform: 'scale(0.5)';
+
+                fill: #f26c65;
+            }
+            100%
+            {
+                fill: #595e7c;
+            }
+        }
     }
 }
