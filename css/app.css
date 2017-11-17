@@ -7696,7 +7696,7 @@ nav.fixed-top {
     right: 0;
     left: 0;
     height: 100vh;
-    padding-top: 15px;
+    padding-top: 25%;
     background: #496093; }
     nav.overlay-nav .nav-link:not(button) {
       font-size: 1.563rem;
