@@ -105,9 +105,23 @@
     .footer
     {
         font-size: .8rem;
+
+        height: 4em;
+        .container
+        {
+            width: 100%;
+        }
+
         .row
         {
             flex-direction: row;
+        }
+        ol
+        {
+            margin-top: 0;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-left: 0;
         }
         li
         {
@@ -116,14 +130,19 @@
         .social
         {
             padding: 0;
-            img
-            {
-                width: 20px;
-                height: 20px;
-            }
+
             .items
             {
                 margin: inherit;
+            }
+            .item
+            {
+                padding: 0;
+                svg
+                {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
     }

@@ -82,6 +82,7 @@
         background-color: transparent;
         .container
         {
+            width: 1250px;
             height: 30em;
         }
     }
@@ -99,41 +100,25 @@
     //footer
     .footer
     {
-        fot-size: 1rem;
+        font-size: 1rem;
+
+        height: 5.5em;
         ol
         {
             margin: 0 auto;
         }
         li
         {
-            font-size: 1.4em;
+            font-size: 1.2em;
         }
         .social
         {
-            img
-            {
-                width: 30px;
-                height: 30px;
-            }
             .item
             {
-                padding: 0 5px;
-            }
-        }
-        //footer
-        .footer
-        {
-            font-size: 1rem;
-            li
-            {
-                font-size: 1.4em;
-            }
-            .social
-            {
-                img
+                svg
                 {
-                    width: 35px;
-                    height: 35px;
+                    width: 60px;
+                    height: 60px;
                 }
             }
         }

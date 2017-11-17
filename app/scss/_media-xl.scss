@@ -343,4 +343,55 @@
             }
         }
     }
+    //footer
+    .footer
+    {
+        background-color: $brand-secondary;
+        .container
+        {
+            width: 1250px;
+        }
+        ol
+        {
+            .breadcrumb-item::before
+            {
+                color: $brand-primary;
+            }
+        }
+        li
+        {
+            color: $brand-primary;
+        }
+        .social
+        {
+            .item
+            {
+                .facebook,
+                .twitter,
+                .instagram
+                {
+                    stroke: $brand-primary;
+                }
+                .rectangle
+                {
+                    color: $brand-primary;
+                }
+            }
+        }
+        .logo
+        {
+            path
+            {
+                fill: $brand-primary;
+            }
+            polygon
+            {
+                fill: $brand-primary;
+                &.backdrop
+                {
+                    fill: $brand-secondary;
+                }
+            }
+        }
+    }
 }
