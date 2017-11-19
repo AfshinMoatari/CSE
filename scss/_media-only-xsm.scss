@@ -1,5 +1,63 @@
 @media all and (max-width:353px)
 {
+    //Navs
+    nav
+    {
+        &.secondary
+        {
+            font-size: .6rem;
+            .checkbox
+            {
+                p
+                {
+                    font-size: .53em;
+
+                    padding-left: 2.2em;
+                    &::before
+                    {
+                        top: 0;
+                        left: 0;
+
+                        width: 1.8em;
+                        height: 1.8em;
+                    }
+                }
+                &.active p:after,
+                &.active-h p:after,
+                p:after
+                {
+                    top: 0;
+                    left: 0;
+
+                    width: 1.8em;
+                    height: 1.8em;
+                }
+            }
+            &.sticky
+            {
+                .checkbox
+                {
+                    p
+                    {
+                        font-size: .53em;
+                        &::after
+                        {
+                            top: 0;
+                            left: 0;
+
+                            width: 1.8em;
+                            height: 1.8em;
+                        }
+                        &::before
+                        {
+                            width: 1.8em;
+                            height: 1.8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
     //status
     .status
     {
@@ -29,6 +87,17 @@
         .blockquote
         {
             padding: .7em 0;
+        }
+    }
+    //about programs
+    .about-programs
+    {
+        .text
+        {
+            p
+            {
+                font-size: 1.5em;
+            }
         }
     }
     //footer

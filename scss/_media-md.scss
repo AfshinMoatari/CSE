@@ -16,6 +16,10 @@
                 padding-left: 55px;
             }
         }
+        &.secondary
+        {
+            font-size: .9rem;
+        }
     }
     //hero
     .hero
@@ -81,6 +85,25 @@
         {
             padding-right: 8px;
             padding-left: 8px;
+        }
+    }
+    //about programs
+    .about-programs
+    {
+        font-size: .9rem;
+
+        margin-top: 133px;
+        .graphic
+        {
+            height: calc(60vh - 133px);
+        }
+        .text
+        {
+            height: 40vh;
+            p
+            {
+                font-size: 1.2em;
+            }
         }
     }
     //footer
