@@ -57,32 +57,15 @@ $(function() {
       $('.navbar-toggler').toggleClass('active');
     });
   });
-
-  // $('.footer').each(function() {
-  //
-  //   // build a tween
-  //   var tween = new TimelineMax();
-  //   tween.to($(this), .6, {
-  //     opacity: '1'
-  //   }, 0);
-  //
-  //   // build a scene
-  //   var scene = new ScrollMagic.Scene({
-  //       triggerElement: ".section:last-child"
-  //     })
-  //     .setTween(tween)
-  //     .addTo(controller);
-  // });
   $('nav.secondary').each(function() {
 
     // build a tween
     var tween = new TimelineMax();
-    tween.to($(this).find(".nav li"), 0.3, {
-      scale: .8
-    }, 0).to($(this).find(".nav li .nav-link"), 0.3, {
-      paddingRight: 0,
-      paddingLeft: 0
-    }, 0).to($(this), .6, {
+    tween.set($(this), {
+      css: {
+        className: '+=sticky'
+      }
+    }, 0).to($(this), .4, {
       top: 60
     }, 0);
 
@@ -354,13 +337,13 @@ $(function() {
     // build a tween
     function over() {
       var tween = new TimelineMax();
-      tween.to($(this).parent(), .01, {
+      tween.set($(this).parent(), {
         css: {
           className: '+=active-h'
         }
       }, 0)
       $('.checkbox > a').not(this).each(function() {
-        tween.to($(this).parent(), .4, {
+        tween.set($(this).parent(), {
           opacity: 0.5
         }, 0)
       });
@@ -368,13 +351,13 @@ $(function() {
 
     function out() {
       var tween = new TimelineMax();
-      tween.to($(this).parent(), .01, {
+      tween.set($(this).parent(), {
         css: {
           className: '-=active-h'
         }
       }, 0)
       $('.checkbox > a').not(this).each(function() {
-        tween.to($(this).parent(), .6, {
+        tween.set($(this).parent(), {
           opacity: 1
         }, 0)
       });
@@ -426,6 +409,26 @@ $(function() {
       })
       .setTween(tween)
       .addTo(controller);
+  });
+  $('.smooth-scroll').each(function() {
+    $(this).click(function() {
+      $('.smooth-scroll').removeClass("active");
+      $(this).addClass("active");
+      var menuanchor = $(this).data("menuanchor");
+      var anchor = $("[data-anchor=" + menuanchor + "]");
+      if (menuanchor === 'top') {
+        $('html,body').animate({
+            scrollTop: 0
+          },
+          'slow');
+      } else {
+        $('html,body').animate({
+            scrollTop: anchor.offset().top
+          },
+          'slow');
+      }
+
+    });
   });
 
 });

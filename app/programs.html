@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>CSE | Copenhagen School of Entrepreneurship</title>
   <!-- STYLE -->
   <link rel="stylesheet" href="./css/app.css">
@@ -14,12 +15,14 @@
   <script src="./js/debug.addIndicators.min.js"></script>
   <script src="./js/animation.gsap.min.js"></script>
   <script src="./js/jquery.fullpage.min.js"></script>
+  <script src="./js/modernizr.js"></script>
   <!-- SCRIPTS -->
   <script src="./js/animation.js"></script>
-  <script src="./js/fullPage.js"></script>
+  <script src="./js/media.js"></script>
+
 </head>
 
-<body>
+<body id="programs">
   <!-- NAVBAR -->
   <nav class="main navbar navbar-toggleable-sm animate px-0 fixed-top opacity" duration-opacity="5" delay="0" style="opacity:0">
     <div class="container d-flex">
@@ -62,29 +65,29 @@
       </div>
     </div>
   </nav>
-  <nav class="fixed-top secondary" style="top:100px;background-color:white">
-    <ul class="nav container" id="subnav">
-      <li class="nav-item checkbox" data-menuanchor="first">
+  <nav class="fixed-top secondary">
+    <ul class="nav container d-flex justify-content-center justify-content-xl-start">
+      <li class="nav-item checkbox smooth-scroll active" data-menuanchor="top">
         <a class="nav-link" href="#first">
           <p>About programs</p>
         </a>
       </li>
-      <li class="nav-item checkbox" data-menuanchor="second">
+      <li class="nav-item checkbox smooth-scroll" data-menuanchor="second">
         <a class="nav-link" href="#second">
           <p>Proof Program</p>
         </a>
       </li>
-      <li class="nav-item checkbox" data-menuanchor="third">
+      <li class="nav-item checkbox smooth-scroll" data-menuanchor="third">
         <a class="nav-link" href="#third">
           <p>Accelerators</p>
         </a>
       </li>
-      <li class="nav-item checkbox" data-menuanchor="fourth">
+      <li class="nav-item checkbox smooth-scroll" data-menuanchor="fourth">
         <a class="nav-link" href="#fourth">
           <p>Match up</p>
         </a>
       </li>
-      <li class="nav-item checkbox" data-menuanchor="fifth">
+      <li class="nav-item checkbox smooth-scroll" data-menuanchor="fifth">
         <a class="nav-link" href="#fifth">
           <p>Internship with ECTS</p>
         </a>
@@ -93,12 +96,11 @@
   </nav>
   <div class="fullpage">
     <!-- HERO SECTION -->
-    <div class="section mx-auto hero-pages animate" data-anchor="first">
-      <div class="row no-gutters d-flex hero-pages-container">
-        <div class="col-6 d-flex justify-content-center align-self-end diagram px-0">
-          <!-- <object type="image/svg+xml" data="./assets/image/cse-proof-plan.svg" id="cse-proof-plan"></object> -->
+    <div class="section row no-gutters about-programs animate" data-anchor="first">
+      <div class="col-12 col-lg-6 d-flex flex-column align-items-end graphic">
+        <div class="svg-container">
           <?xml version="1.0" encoding="UTF-8"?>
-          <svg class="cse-proof-plan" width="705px" height="536px" viewBox="0 0 705 473" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg id="cse-proof-plan" preserveAspectRatio="none" viewBox="0 0 655 535" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>cse proof plan</title>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="cse-proof-plan">
@@ -217,9 +219,9 @@
             </g>
           </svg>
         </div>
-        <div class="col-6 bg-primary d-flex justify-content-center px-0">
-          <p class="lead align-self-center">(Text about the different programmes)</p>
-        </div>
+      </div>
+      <div class="col-12 col-lg-6 bg-primary d-flex align-items-center text">
+        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat magna, tempus ac commodo quis, maximus a diam. Maecenas luctus efficitur nibh vitae malesuada. Aenean egestas nunc ligula, quis condimentum mi finibus a. Sed semper hendrerit efficitur. Quisque lobortis turpis quis lectus iaculis, eget volutpat ipsum pulvinar. Morbi vestibulum sollicitudin purus. Fusce eget nisl laoreet, dapibus mauris sit amet, auctor leo. Praesent accumsan ut lacus vitae tempor. Pellentesque vitae ex orci. Vivamus efficitur justo et mi imperdiet egestas. Nam malesuada lacus non sapien dictum suscipit. Aliquam ultricies consequat quam vel maximus. Praesent suscipit convallis lacus, eget luctus libero interdum vitae. Pellentesque egestas in metus sed tincidunt. Vestibulum et erat justo. Aliquam facilisis blandit interdum. Nulla in risus facilisis, commodo velit et, elementum velit. Mauris mi arcu, dignissim non rutrum vitae. </p>
       </div>
     </div>
     <!-- PROOF PROGRAM SECTION-->

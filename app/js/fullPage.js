@@ -3,8 +3,8 @@ $(document).ready(function() {
     scrollBar: true,
     verticalCentered: true,
     paddingTop: '60px',
-    anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'],
-    menu: '#subnav',
+    // anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'],
+    // menu: '#subnav',
     // scrollOverflow: true
   });
 

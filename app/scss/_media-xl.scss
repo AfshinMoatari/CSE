@@ -11,6 +11,17 @@
                 margin-left: auto;
             }
         }
+        &.secondary
+        {
+            font-size: 1.2rem;
+            .checkbox
+            {
+                p
+                {
+                    line-height: 19px;
+                }
+            }
+        }
     }
     //status
     .status
@@ -340,6 +351,19 @@
                 min-width: 0;
                 max-width: $square-dimension;
                 height: $square-border;
+            }
+        }
+    }
+    //about programs
+    .about-programs
+    {
+        font-size: 1.2rem;
+
+        .text
+        {
+            p
+            {
+                font-size: 1.1em;
             }
         }
     }

@@ -9,12 +9,17 @@
     padding-left: 15px;
 }
 
-.fullpage
+#main,
+#programs
 {
-    position: relative;
+    .fullpage
+    {
+        position: relative;
 
-    overflow: hidden;
+        overflow: hidden;
+    }
 }
+
 //typography
 h1,
 h2,
@@ -166,6 +171,166 @@ img
         color: $brand-secondary!important;
         border-color: $brand-primary!important;
         background-color: $brand-primary!important;
+    }
+}
+
+//Navs
+nav
+{
+    &.main
+    {
+        z-index: 3;
+
+        height: $navbar-height;
+
+        background-color: $brand-primary;
+
+        &.sticky
+        {
+            background-color: $brand-primary;
+        }
+        a
+        {
+            font-size: $font-size-md;
+        }
+        .nav-link
+        {
+            color: $brand-secondary;
+        }
+        .apply
+        {
+            .btn-primary
+            {
+                font-size: $font-size-md;
+
+                color: $brand-primary;
+                background-color: $brand-secondary;
+                span
+                {
+                    border: $border-width solid $brand-secondary;
+                    background-color: $transparent;
+                }
+            }
+        }
+        .container
+        {
+            margin-right: inherit;
+            margin-left: inherit;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    &.secondary
+    {
+        font-size: .7rem;
+
+        top: 100px;
+
+        background-color: $brand-secondary;
+        .nav-link:first-child
+        {
+            padding-left: 0!important;
+        }
+        .checkbox
+        {
+            p
+            {
+                font-size: .62em;
+                line-height: 12px;
+
+                position: relative;
+
+                display: inline-block;
+
+                margin-bottom: 0;
+                padding-left: 2em;
+
+                cursor: pointer;
+                &::before
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 1.3em;
+                    height: 1.3em;
+
+                    content: '';
+
+                    border: 1px solid $brand-primary;
+                    background: $transparent;
+                }
+                &::after
+                {
+                    -webkit-transform: scale(0);
+                       -moz-transform: scale(0);
+                        -ms-transform: scale(0);
+                         -o-transform: scale(0);
+                            transform: scale(0);
+
+                    opacity: 0;
+                }
+            }
+            &.active p:after,
+            &.active-h p:after,
+            p:after
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 1.3em;
+                height: 1.3em;
+
+                content: '';
+                -webkit-transition: all .2s ease;
+                   -moz-transition: all .2s ease;
+                     -o-transition: all .2s ease;
+                        transition: all .2s ease;
+
+                background: $brand-primary;
+            }
+            &.active p:after,
+            &.active-h p:after
+            {
+                -webkit-transform: scale(1);
+                   -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                     -o-transform: scale(1);
+                        transform: scale(1);
+
+                opacity: 1;
+            }
+        }
+        &.sticky
+        {
+            .checkbox
+            {
+                p
+                {
+                    font-size: .62em;
+
+                    padding-left: 2em;
+                    &::after
+                    {
+                        top: 0;
+                        left: 0;
+
+                        width: 1.3em;
+                        height: 1.3em;
+                    }
+                    &::before
+                    {
+                        width: 1.3em;
+                        height: 1.3em;
+                    }
+                }
+            }
+        }
+    }
+    &.fixed-top
+    {
+        position: fixed;
     }
 }
 
@@ -654,25 +819,139 @@ img
     }
 }
 
-//Hero Pagees Container
-.hero-pages
+//about programs
+.about-programs
 {
-    &.fp-section
+    font-size: .7rem;
+
+    margin-top: 133px;
+    .graphic
     {
-        padding-top: 100px!important;
+        height: calc(100vh - 133px);
+        //CSE Proof Plan
+        #cse-proof-plan
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            .text
+            {
+                font-family: $font-family-cbs-bold;
+            }
+            .line
+            {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                &.active
+                {
+                    -webkit-animation: dash linear alternate forwards;
+                       -moz-animation: dash linear alternate forwards;
+                         -o-animation: dash linear alternate forwards;
+                            animation: dash linear alternate forwards;
+                }
+                @keyframes dash
+                {
+                    from
+                    {
+                        stroke-dashoffset: 1000;
+                    }
+                    to
+                    {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                @-webkit-keyframes dash
+                {
+                    from
+                    {
+                        stroke-dashoffset: 1000;
+                    }
+                    to
+                    {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+            .cloud
+            {
+                &.c1
+                {
+                    z-index: 100;
+                    top: 80px;
+
+                    -webkit-animation: move 380s linear infinite;
+                       -moz-animation: move 380s linear infinite;
+                         -o-animation: move 380s linear infinite;
+                            animation: move 380s linear infinite;
+                }
+                &.c2
+                {
+                    z-index: 200;
+                    top: 240px;
+
+                    -webkit-animation: move 140s linear infinite backwards;
+                       -moz-animation: move 140s linear infinite backwards;
+                         -o-animation: move 140s linear infinite backwards;
+                            animation: move 140s linear infinite backwards;
+                }
+                @-webkit-keyframes move
+                {
+                    from
+                    {
+                        -webkit-transform: translateX(0);
+                    }
+                    to
+                    {
+                        -webkit-transform: translateX(1150px);
+                    }
+                }
+            }
+            .bubble
+            {
+                opacity: 0;
+                &.active
+                {
+                    -webkit-animation: bubble-light ease forwards;
+                       -moz-animation: bubble-light ease forwards;
+                         -o-animation: bubble-light ease forwards;
+                            animation: bubble-light ease forwards;
+                }
+                @keyframes bubble-light
+                {
+                    0%
+                    {
+                        transform: 'scale(0.5)';
+
+                        fill: transparent;
+                    }
+                    20%
+                    {
+                        transform: 'scale(0.5)';
+
+                        fill: #f26c65;
+                    }
+                    100%
+                    {
+                        fill: #595e7c;
+                    }
+                }
+            }
+        }
     }
-    .fp-tableCell
+    .text
     {
-        vertical-align: bottom;
-    }
-    .hero-pages-container
-    {
-        height: calc(100vh - 100px);
-    }
-    .diagram
-    {
-        // height: 100%;
-        z-index: 1;
+        height: calc(100vh - 133px);
+        padding: 0 20px;
+        p
+        {
+            font-size: 1.6em;
+
+            color: $brand-secondary;
+        }
     }
 }
 
@@ -1356,240 +1635,6 @@ img
 
                 width: 40px;
                 height: $square-portrait-border;
-            }
-        }
-    }
-}
-
-//Navs
-nav
-{
-    &.main
-    {
-        z-index: 3;
-
-        height: $navbar-height;
-
-        background-color: $brand-primary;
-
-        &.sticky
-        {
-            background-color: $brand-primary;
-        }
-        a
-        {
-            font-size: $font-size-md;
-        }
-        .nav-link
-        {
-            color: $brand-secondary;
-        }
-        .apply
-        {
-            .btn-primary
-            {
-                font-size: $font-size-md;
-
-                color: $brand-primary;
-                background-color: $brand-secondary;
-                span
-                {
-                    border: $border-width solid $brand-secondary;
-                    background-color: $transparent;
-                }
-            }
-        }
-        .container
-        {
-            margin-right: inherit;
-            margin-left: inherit;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-    }
-    &.secondary
-    {
-        .nav-link:first-child
-        {
-            padding-left: 0!important;
-        }
-        .checkbox p
-        {
-            line-height: 20px;
-
-            position: relative;
-
-            display: inline-block;
-
-            margin-bottom: 0;
-            padding-left: 30px;
-
-            cursor: pointer;
-        }
-        .checkbox p:before
-        {
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            width: 18px;
-            height: 18px;
-
-            content: '';
-
-            border: 2px solid $brand-primary;
-            background: $transparent;
-        }
-        .checkbox.active p:after,
-        .checkbox.active-h p:after,
-        .checkbox p:after
-        {
-            position: absolute;
-            top: 3px;
-            left: 3px;
-
-            width: 12px;
-            height: 12px;
-
-            content: '';
-            -webkit-transition: all .2s ease;
-               -moz-transition: all .2s ease;
-                 -o-transition: all .2s ease;
-                    transition: all .2s ease;
-
-            background: $brand-primary;
-        }
-
-        .checkbox p:after
-        {
-            -webkit-transform: scale(0);
-               -moz-transform: scale(0);
-                -ms-transform: scale(0);
-                 -o-transform: scale(0);
-                    transform: scale(0);
-
-            opacity: 0;
-        }
-        .checkbox.active p:after,
-        .checkbox.active-h p:after
-        {
-            -webkit-transform: scale(1);
-               -moz-transform: scale(1);
-                -ms-transform: scale(1);
-                 -o-transform: scale(1);
-                    transform: scale(1);
-
-            opacity: 1;
-        }
-    }
-    &.fixed-top
-    {
-        position: fixed;
-    }
-}
-
-//CSE Proof Plan
-.cse-proof-plan
-{
-    .text
-    {
-        font-family: $font-family-cbs-bold;
-    }
-    .line
-    {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        &.active
-        {
-            -webkit-animation: dash linear alternate forwards;
-               -moz-animation: dash linear alternate forwards;
-                 -o-animation: dash linear alternate forwards;
-                    animation: dash linear alternate forwards;
-        }
-        @keyframes dash
-        {
-            from
-            {
-                stroke-dashoffset: 1000;
-            }
-            to
-            {
-                stroke-dashoffset: 0;
-            }
-        }
-        @-webkit-keyframes dash
-        {
-            from
-            {
-                stroke-dashoffset: 1000;
-            }
-            to
-            {
-                stroke-dashoffset: 0;
-            }
-        }
-    }
-    .cloud
-    {
-        &.c1
-        {
-            z-index: 100;
-            top: 80px;
-
-            -webkit-animation: move 380s linear infinite;
-               -moz-animation: move 380s linear infinite;
-                 -o-animation: move 380s linear infinite;
-                    animation: move 380s linear infinite;
-        }
-        &.c2
-        {
-            z-index: 200;
-            top: 240px;
-
-            -webkit-animation: move 140s linear infinite backwards;
-               -moz-animation: move 140s linear infinite backwards;
-                 -o-animation: move 140s linear infinite backwards;
-                    animation: move 140s linear infinite backwards;
-        }
-        @-webkit-keyframes move
-        {
-            from
-            {
-                -webkit-transform: translateX(0);
-            }
-            to
-            {
-                -webkit-transform: translateX(1150px);
-            }
-        }
-    }
-    .bubble
-    {
-        opacity: 0;
-        &.active
-        {
-            -webkit-animation: bubble-light ease forwards;
-               -moz-animation: bubble-light ease forwards;
-                 -o-animation: bubble-light ease forwards;
-                    animation: bubble-light ease forwards;
-        }
-        @keyframes bubble-light
-        {
-            0%
-            {
-                transform: 'scale(0.5)';
-
-                fill: transparent;
-            }
-            20%
-            {
-                transform: 'scale(0.5)';
-
-                fill: #f26c65;
-            }
-            100%
-            {
-                fill: #595e7c;
             }
         }
     }
