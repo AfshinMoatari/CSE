@@ -1,16 +1,19 @@
 @media all and (min-width: map-get($grid-breakpoints, xl))
 {
+    .container
+    {
+        width: 1250px;
+        margin-right: auto;
+        margin-left: auto;
+        &.container-100
+        {
+            width: 1250px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
     nav
     {
-        &.main
-        {
-            .container
-            {
-                width: 1250px;
-                margin-right: auto;
-                margin-left: auto;
-            }
-        }
         &.secondary
         {
             font-size: 1.2rem;
@@ -41,9 +44,6 @@
         }
         .container:nth-child(1)
         {
-            width: 1250px;
-            margin-right: auto;
-            margin-left: auto;
             padding-right: 75px;
             padding-left: 75px;
         }
@@ -367,14 +367,85 @@
             }
         }
     }
+    //proof program
+    .proof-program
+    {
+        .square
+        {
+            top: -25%;
+            right: -40%;
+
+            .side-b,
+            .side-lt,
+            .side-lb,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-orange;
+            }
+
+            .side-lt
+            {
+                bottom: calc( ( #{$square-dimension} - 100px )  );
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 100px;;
+            }
+
+            .side-lb
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 50px;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+    }
     //footer
     .footer
     {
         background-color: $brand-secondary;
-        .container
-        {
-            width: 1250px;
-        }
         ol
         {
             .breadcrumb-item::before

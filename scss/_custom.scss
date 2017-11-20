@@ -41,8 +41,8 @@ $font-weight-bold: bold;
 $headings-color: $brand-primary;
 
 $font-size-h1: 3.125em;
-$font-size-h3: 2.5rem;
-$font-size-h5: 4.25rem;
+$font-size-h3: 2.5em;
+$font-size-h5: 2.25em;
 
 // $display1-size: 6.063em;
 // $display2-size: 1.563em;
@@ -62,6 +62,11 @@ $container-max-widths: (
   lg: 960px,
   xl: 1250px
 );
+
+$cp-default: 15px;
+$cp-sm: 35px;
+$cp-md: 55px;
+$cp-lg: 75px;
 
 // components
 $component-active-color: $white !default;

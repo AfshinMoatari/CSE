@@ -3,22 +3,26 @@
     //container
     .container
     {
-        padding-right: 35px;
-        padding-left: 35px;
+        padding-right: $cp-sm;
+        padding-left: $cp-sm;
+        &.container-100
+        {
+            width: 100%;
+        }
     }
+
     nav
     {
         &.main
         {
-            .container
-            {
-                width: 100%;
-                padding-right: 35px;
-                padding-left: 35px;
-            }
             .navbar-toggler
             {
                 right: 1em;
+            }
+            &.navbar-toggleable-sm > .container
+            {
+                padding-right: $cp-sm;
+                padding-left: $cp-sm;
             }
         }
         &.secondary
@@ -35,10 +39,7 @@
     .status
     {
         font-size: .8rem;
-        .container
-        {
-            width: 100%;
-        }
+
         .text-col
         {
             padding: 2.6em 2.4em;
@@ -79,10 +80,7 @@
     .quotations
     {
         font-size: .8rem;
-        .container
-        {
-            width: 100%;
-        }
+
         .blockquote
         {
             font-size: 2.2em;
@@ -111,12 +109,64 @@
         font-size: .8rem;
         .text
         {
-            height: calc(100vh - 133px);
-            padding: 0 40px;
+            padding: 40px;
             p
             {
-                font-size: 1.7em;
+                font-size: 2em;
             }
+        }
+    }
+    //proof program
+    .proof-program
+    {
+        font-size: .7rem;
+        .description
+        {
+            font-size: 1.8em;
+        }
+        .square-title
+        {
+            width: 300px;
+        }
+        .proofs
+        {
+            .item
+            {
+                font-size: 1.8em;
+
+                padding: 8px 15px;
+                .title
+                {
+                    h5
+                    {
+                        position: relative;
+                        right: 1.1em;
+                    }
+
+                    span
+                    {
+                        position: relative;
+                        right: 0;
+
+                        display: block;
+
+                        padding-left: 0;
+                    }
+                    .svg-container
+                    {
+                        position: relative;
+                        right: 0;
+
+                        width: 5.5em;
+                    }
+                }
+            }
+        }
+        .get-started
+        {
+            padding: 15px 0;
+
+            background-color: $brand-primary;
         }
     }
     //footer
@@ -125,10 +175,6 @@
         font-size: .8rem;
 
         height: 4em;
-        .container
-        {
-            width: 100%;
-        }
 
         .row
         {

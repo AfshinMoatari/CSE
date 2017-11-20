@@ -438,13 +438,13 @@ h2, .h2 {
   font-size: 2rem; }
 
 h3, .h3 {
-  font-size: 2.5rem; }
+  font-size: 2.5em; }
 
 h4, .h4 {
   font-size: 1.5rem; }
 
 h5, .h5 {
-  font-size: 4.25rem; }
+  font-size: 2.25em; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -6382,6 +6382,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   src: url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.woff") format("woff"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.ttf") format("truetype"), url("../assets/fonts/CBS-typografier/CBS_NEW_BOLD.svg#CBS-bold") format("svg"); }
 
 .container {
+  margin-right: inherit;
+  margin-left: inherit;
   padding-right: 15px;
   padding-left: 15px; }
 
@@ -6393,7 +6395,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 a,
@@ -6410,6 +6411,17 @@ h5 {
 
 img {
   width: 100%; }
+
+.text-link {
+  font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.1em;
+  text-decoration: underline;
+  text-transform: none; }
+
+.inline-span {
+  font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.3em;
+  color: #496093; }
 
 .lead {
   font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif; }
@@ -6489,6 +6501,9 @@ nav.main {
   z-index: 3;
   height: 100px;
   background-color: #496093; }
+  nav.main.navbar-toggleable-sm > .container {
+    padding-right: 15px;
+    padding-left: 15px; }
   nav.main.sticky {
     background-color: #496093; }
   nav.main a {
@@ -6502,11 +6517,6 @@ nav.main {
     nav.main .apply .btn-primary span {
       border: 3px solid #fff;
       background-color: transparent; }
-  nav.main .container {
-    margin-right: inherit;
-    margin-left: inherit;
-    padding-right: 15px;
-    padding-left: 15px; }
 
 nav.secondary {
   font-size: .7rem;
@@ -6672,8 +6682,6 @@ nav.fixed-top {
 .quotations {
   font-size: .7rem;
   background-color: #496093; }
-  .quotations .container {
-    height: 100%; }
   .quotations .blockquote {
     font-size: 2em;
     padding: 1.2em 0; }
@@ -6919,55 +6927,42 @@ nav.fixed-top {
   100% {
     fill: #595e7c; } }
   .about-programs .text {
-    height: calc(100vh - 133px);
-    padding: 0 20px; }
+    height: auto;
+    padding: 20px;
+    color: #496093; }
     .about-programs .text p {
-      font-size: 1.6em;
-      color: #fff; }
+      font-size: 2em;
+      font-style: italic;
+      color: #496093; }
 
-.proof-program .square {
-  top: -25%;
-  right: -40%; }
-  .proof-program .square .side-b,
-  .proof-program .square .side-lt,
-  .proof-program .square .side-lb,
-  .proof-program .square .side-t,
-  .proof-program .square .side-r {
-    position: absolute;
-    width: 0;
-    height: 0;
-    background: transparent;
-    background-color: #e1948d; }
-  .proof-program .square .side-lt {
-    bottom: calc( ( 20.938em - 100px ));
-    left: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 100px; }
-  .proof-program .square .side-lb {
-    bottom: 0;
-    left: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 50px; }
-  .proof-program .square .side-t {
-    top: 0;
-    left: 0;
-    min-width: 0;
-    max-width: 20.938em;
-    height: 0.625em; }
-  .proof-program .square .side-r {
-    top: 0;
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 20.938em; }
-  .proof-program .square .side-b {
-    right: 0;
-    bottom: 0;
-    min-width: 0;
-    max-width: 20.938em;
-    height: 0.625em; }
+.proof-program {
+  font-size: .7rem; }
+  .proof-program .description {
+    font-size: 1.8em; }
+  .proof-program .square-title {
+    width: 250px; }
+  .proof-program .proofs .arrow {
+    display: none; }
+  .proof-program .proofs .emphty {
+    display: none; }
+  .proof-program .proofs .item {
+    font-size: 1.4em;
+    padding: 8px 15px; }
+    .proof-program .proofs .item .title h5 {
+      position: relative;
+      right: 1.1em; }
+    .proof-program .proofs .item .title span {
+      position: relative;
+      right: 0;
+      display: block;
+      padding-left: 0; }
+    .proof-program .proofs .item .title .svg-container {
+      position: relative;
+      right: 0;
+      width: 5.5em; }
+  .proof-program .get-started {
+    padding: 15px 0;
+    background-color: #496093; }
 
 .accelerator-program .square.left {
   top: 34%;
@@ -7360,7 +7355,9 @@ nav.fixed-top {
   .quotations .blockquote {
     padding: .7em 0; }
   .about-programs .text p {
-    font-size: 1.5em; }
+    font-size: 1.4em; }
+  .proof-program {
+    font-size: .6rem; }
   .footer {
     height: 7em; }
     .footer li {
@@ -7377,20 +7374,19 @@ nav.fixed-top {
   .container {
     padding-right: 35px;
     padding-left: 35px; }
-  nav.main .container {
-    width: 100%;
-    padding-right: 35px;
-    padding-left: 35px; }
+    .container.container-100 {
+      width: 100%; }
   nav.main .navbar-toggler {
     right: 1em; }
+  nav.main.navbar-toggleable-sm > .container {
+    padding-right: 35px;
+    padding-left: 35px; }
   nav.secondary {
     font-size: .8rem; }
   .hero {
     font-size: 1em; }
   .status {
     font-size: .8rem; }
-    .status .container {
-      width: 100%; }
     .status .text-col {
       padding: 2.6em 2.4em; }
       .status .text-col p {
@@ -7410,8 +7406,6 @@ nav.fixed-top {
       padding-left: 2%; }
   .quotations {
     font-size: .8rem; }
-    .quotations .container {
-      width: 100%; }
     .quotations .blockquote {
       font-size: 2.2em; }
       .quotations .blockquote .blockquote-footer {
@@ -7424,15 +7418,36 @@ nav.fixed-top {
   .about-programs {
     font-size: .8rem; }
     .about-programs .text {
-      height: calc(100vh - 133px);
-      padding: 0 40px; }
+      padding: 40px; }
       .about-programs .text p {
-        font-size: 1.7em; }
+        font-size: 2em; }
+  .proof-program {
+    font-size: .7rem; }
+    .proof-program .description {
+      font-size: 1.8em; }
+    .proof-program .square-title {
+      width: 300px; }
+    .proof-program .proofs .item {
+      font-size: 1.8em;
+      padding: 8px 15px; }
+      .proof-program .proofs .item .title h5 {
+        position: relative;
+        right: 1.1em; }
+      .proof-program .proofs .item .title span {
+        position: relative;
+        right: 0;
+        display: block;
+        padding-left: 0; }
+      .proof-program .proofs .item .title .svg-container {
+        position: relative;
+        right: 0;
+        width: 5.5em; }
+    .proof-program .get-started {
+      padding: 15px 0;
+      background-color: #496093; }
   .footer {
     font-size: .8rem;
     height: 4em; }
-    .footer .container {
-      width: 100%; }
     .footer .row {
       flex-direction: row; }
     .footer ol {
@@ -7456,7 +7471,7 @@ nav.fixed-top {
   .container {
     padding-right: 55px;
     padding-left: 55px; }
-  nav.main .container {
+  nav.main.navbar-toggleable-sm > .container {
     padding-right: 55px;
     padding-left: 55px; }
   nav.secondary {
@@ -7497,9 +7512,23 @@ nav.fixed-top {
     .about-programs .graphic {
       height: calc(60vh - 133px); }
     .about-programs .text {
-      height: 40vh; }
+      height: 40vh;
+      padding: 0 60px;
+      background-color: #496093; }
       .about-programs .text p {
-        font-size: 1.2em; }
+        font-size: 1.3em;
+        font-style: normal;
+        color: #fff; }
+  .proof-program {
+    font-size: .8rem; }
+    .proof-program .square-title {
+      width: 300px; }
+    .proof-program .proofs .item {
+      font-size: 1.4em;
+      padding: 8px 15px; }
+      .proof-program .proofs .item .title h5 {
+        position: relative;
+        right: 1.1em; }
   .footer {
     font-size: .9rem;
     height: 5em; }
@@ -7513,7 +7542,7 @@ nav.fixed-top {
   .container {
     padding-right: 75px;
     padding-left: 75px; }
-  nav.main .container {
+  nav.main.navbar-toggleable-sm > .container {
     padding-right: 75px;
     padding-left: 75px; }
   nav.secondary {
@@ -7551,9 +7580,6 @@ nav.fixed-top {
   .quotations {
     font-size: .8rem;
     background-color: transparent; }
-    .quotations .container {
-      width: 1250px;
-      height: 30em; }
   .partners {
     font-size: 1rem; }
     .partners .partner {
@@ -7579,10 +7605,14 @@ nav.fixed-top {
       height: 60px; } }
 
 @media all and (min-width: 1200px) {
-  nav.main .container {
+  .container {
     width: 1250px;
     margin-right: auto;
     margin-left: auto; }
+    .container.container-100 {
+      width: 1250px;
+      margin-right: auto;
+      margin-left: auto; }
   nav.secondary {
     font-size: 1.2rem; }
     nav.secondary .checkbox p {
@@ -7595,9 +7625,6 @@ nav.fixed-top {
       width: 26.250em;
       padding: 40px 15px; }
   .status .container:nth-child(1) {
-    width: 1250px;
-    margin-right: auto;
-    margin-left: auto;
     padding-right: 75px;
     padding-left: 75px; }
   .status .container:nth-child(2) {
@@ -7785,10 +7812,51 @@ nav.fixed-top {
     font-size: 1.2rem; }
     .about-programs .text p {
       font-size: 1.1em; }
+  .proof-program .square {
+    top: -25%;
+    right: -40%; }
+    .proof-program .square .side-b,
+    .proof-program .square .side-lt,
+    .proof-program .square .side-lb,
+    .proof-program .square .side-t,
+    .proof-program .square .side-r {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: transparent;
+      background-color: #e1948d; }
+    .proof-program .square .side-lt {
+      bottom: calc( ( 20.938em - 100px ));
+      left: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 100px; }
+    .proof-program .square .side-lb {
+      bottom: 0;
+      left: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 50px; }
+    .proof-program .square .side-t {
+      top: 0;
+      left: 0;
+      min-width: 0;
+      max-width: 20.938em;
+      height: 0.625em; }
+    .proof-program .square .side-r {
+      top: 0;
+      right: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 20.938em; }
+    .proof-program .square .side-b {
+      right: 0;
+      bottom: 0;
+      min-width: 0;
+      max-width: 20.938em;
+      height: 0.625em; }
   .footer {
     background-color: #fff; }
-    .footer .container {
-      width: 1250px; }
     .footer ol .breadcrumb-item::before {
       color: #496093; }
     .footer li {

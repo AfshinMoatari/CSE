@@ -5,8 +5,10 @@
 //container
 .container
 {
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-right: inherit;
+    margin-left: inherit;
+    padding-right: $cp-default;
+    padding-left: $cp-default;
 }
 
 #main,
@@ -24,7 +26,6 @@
 h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 a,
@@ -47,6 +48,21 @@ h5
 img
 {
     width: 100%;
+}
+.text-link
+{
+    font-family: $font-family-cbs-bold;
+    font-size: 1.1em;
+
+    text-decoration: underline;
+    text-transform: none;
+}
+.inline-span
+{
+    font-family: $font-family-cbs-bold;
+    font-size: 1.3em;
+
+    color: $brand-primary;
 }
 .lead
 {
@@ -184,7 +200,11 @@ nav
         height: $navbar-height;
 
         background-color: $brand-primary;
-
+        &.navbar-toggleable-sm > .container
+        {
+            padding-right: $cp-default;
+            padding-left: $cp-default;
+        }
         &.sticky
         {
             background-color: $brand-primary;
@@ -211,13 +231,6 @@ nav
                     background-color: $transparent;
                 }
             }
-        }
-        .container
-        {
-            margin-right: inherit;
-            margin-left: inherit;
-            padding-right: 15px;
-            padding-left: 15px;
         }
     }
     &.secondary
@@ -508,10 +521,7 @@ nav
     font-size: .7rem;
 
     background-color: $brand-primary;
-    .container
-    {
-        height: 100%;
-    }
+
     .blockquote
     {
         font-size: 2em;
@@ -944,90 +954,80 @@ nav
     }
     .text
     {
-        height: calc(100vh - 133px);
-        padding: 0 20px;
+        height: auto;
+        padding: 20px;
+
+        color: $brand-primary;
+
         p
         {
-            font-size: 1.6em;
+            font-size: 2em;
+            font-style: italic;
 
-            color: $brand-secondary;
+            color: $brand-primary;
         }
     }
 }
 
-//Proof Program
+//proof program
 .proof-program
 {
-    .square
+    font-size: .7rem;
+    .description
     {
-        top: -25%;
-        right: -40%;
-
-        .side-b,
-        .side-lt,
-        .side-lb,
-        .side-t,
-        .side-r
+        font-size: 1.8em;
+    }
+    .square-title
+    {
+        width: 250px;
+    }
+    .proofs
+    {
+        .arrow
         {
-            position: absolute;
-
-            width: 0;
-            height: 0;
-
-            background: transparent;
-            background-color: $square-color-orange;
+            display: none;
         }
-
-        .side-lt
+        .emphty
         {
-            bottom: calc( ( #{$square-dimension} - 100px )  );
-            left: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 100px;;
+            display: none;
         }
-
-        .side-lb
+        .item
         {
-            bottom: 0;
-            left: 0;
+            font-size: 1.4em;
 
-            width: $square-border;
-            min-height: 0;
-            max-height: 50px;
+            padding: 8px 15px;
+            .title
+            {
+                h5
+                {
+                    position: relative;
+                    right: 1.1em;
+                }
+
+                span
+                {
+                    position: relative;
+                    right: 0;
+
+                    display: block;
+
+                    padding-left: 0;
+                }
+                .svg-container
+                {
+                    position: relative;
+                    right: 0;
+
+                    width: 5.5em;
+                }
+            }
         }
+    }
+    .get-started
+    {
+        padding: 15px 0;
 
-        .side-t
-        {
-            top: 0;
-            left: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
-        }
-
-
-        .side-r
-        {
-            top: 0;
-            right: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: $square-dimension;
-        }
-
-        .side-b
-        {
-            right: 0;
-            bottom: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
-        }
+        background-color: $brand-primary;
     }
 }
 

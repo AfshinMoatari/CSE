@@ -3,17 +3,17 @@
     //container
     .container
     {
-        padding-right: 55px;
-        padding-left: 55px;
+        padding-right: $cp-md;
+        padding-left: $cp-md;
     }
     nav
     {
         &.main
         {
-            .container
+            &.navbar-toggleable-sm > .container
             {
-                padding-right: 55px;
-                padding-left: 55px;
+                padding-right: $cp-md;
+                padding-left: $cp-md;
             }
         }
         &.secondary
@@ -100,9 +100,42 @@
         .text
         {
             height: 40vh;
+            padding: 0 60px;
+
+            background-color: $brand-primary;
             p
             {
-                font-size: 1.2em;
+                font-size: 1.3em;
+                font-style: normal;
+
+                color: $brand-secondary;
+            }
+        }
+    }
+    //proof program
+    .proof-program
+    {
+        font-size: .8rem;
+
+        .square-title
+        {
+            width: 300px;
+        }
+        .proofs
+        {
+            .item
+            {
+                font-size: 1.4em;
+
+                padding: 8px 15px;
+                .title
+                {
+                    h5
+                    {
+                        position: relative;
+                        right: 1.1em;
+                    }
+                }
             }
         }
     }
