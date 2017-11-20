@@ -1022,9 +1022,30 @@ nav
     }
     .get-started
     {
-        padding: 15px 0;
+        font-size: 1.5em;
+
+        padding: 1.8em 2em 0 2em;
+
+        color: $brand-secondary;
+        background-color: $brand-primary;
+
+        h4
+        {
+            color: $brand-secondary;
+        }
+    }
+    .button
+    {
+        padding: .5em 0 2.2em 0;
 
         background-color: $brand-primary;
+
+        .btn
+        {
+            color: $brand-primary;
+            border-color: $brand-secondary;
+            background-color: $brand-secondary;
+        }
     }
 }
 

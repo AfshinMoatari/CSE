@@ -129,6 +129,16 @@
     .proof-program
     {
         font-size: 1rem;
+        .description
+        {
+            padding-right: calc( ( #{$cp-lg} + 15px )  );
+            padding-left: calc( ( #{$cp-lg} + 15px )  );
+        }
+        .container
+        {
+            padding-right: 0;
+            padding-left: 0;
+        }
 
         .square-title
         {
@@ -136,9 +146,11 @@
         }
         .proofs
         {
+            padding-right: calc( ( #{$cp-lg} + 15px )  );
+            padding-left: calc( ( #{$cp-lg} + 15px )  );
             .item
             {
-                font-size: 1.2em;
+                font-size: 1.13em;
             }
         }
     }

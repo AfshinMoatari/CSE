@@ -441,7 +441,7 @@ h3, .h3 {
   font-size: 2.5em; }
 
 h4, .h4 {
-  font-size: 1.5rem; }
+  font-size: 1.75em; }
 
 h5, .h5 {
   font-size: 2.25em; }
@@ -6959,8 +6959,19 @@ nav.fixed-top {
       right: 0;
       width: 5.5em; }
   .proof-program .get-started {
-    padding: 15px 0;
+    font-size: 1.5em;
+    padding: 1.8em 2em 0 2em;
+    color: #fff;
     background-color: #496093; }
+    .proof-program .get-started h4 {
+      color: #fff; }
+  .proof-program .button {
+    padding: .5em 0 2.2em 0;
+    background-color: #496093; }
+    .proof-program .button .btn {
+      color: #496093;
+      border-color: #fff;
+      background-color: #fff; }
 
 .accelerator-program .square.left {
   top: 34%;
@@ -7441,8 +7452,9 @@ nav.fixed-top {
         right: 0;
         width: 5.5em; }
     .proof-program .get-started {
-      padding: 15px 0;
-      background-color: #496093; }
+      font-size: 2em; }
+    .proof-program .button {
+      padding: .5em 0 2.2em 0; }
   .footer {
     font-size: .8rem;
     height: 4em; }
@@ -7519,14 +7531,23 @@ nav.fixed-top {
         color: #fff; }
   .proof-program {
     font-size: .9rem; }
+    .proof-program .description {
+      padding-right: calc( ( 55px + 15px ));
+      padding-left: calc( ( 55px + 15px )); }
+    .proof-program .container {
+      padding-right: 0;
+      padding-left: 0; }
     .proof-program .square-title {
       width: 290px; }
-    .proof-program .proofs .item {
-      font-size: 1.05em;
-      padding: 8px 25px; }
-      .proof-program .proofs .item .title h5 {
-        position: relative;
-        right: 1.1em; }
+    .proof-program .proofs {
+      padding-right: calc( ( 55px + 15px ));
+      padding-left: calc( ( 55px + 15px )); }
+      .proof-program .proofs .item {
+        font-size: 1.05em;
+        padding: 8px 25px; }
+        .proof-program .proofs .item .title h5 {
+          position: relative;
+          right: 1.1em; }
   .footer {
     font-size: .9rem;
     height: 5em; }
@@ -7593,10 +7614,19 @@ nav.fixed-top {
         font-size: 1.2em; }
   .proof-program {
     font-size: 1rem; }
+    .proof-program .description {
+      padding-right: calc( ( 75px + 15px ));
+      padding-left: calc( ( 75px + 15px )); }
+    .proof-program .container {
+      padding-right: 0;
+      padding-left: 0; }
     .proof-program .square-title {
       width: 320px; }
-    .proof-program .proofs .item {
-      font-size: 1.2em; }
+    .proof-program .proofs {
+      padding-right: calc( ( 75px + 15px ));
+      padding-left: calc( ( 75px + 15px )); }
+      .proof-program .proofs .item {
+        font-size: 1.13em; }
   .footer {
     font-size: 1rem;
     height: 5.5em; }
@@ -7860,20 +7890,38 @@ nav.fixed-top {
       max-width: 20.938em;
       height: 0.625em; }
   .proof-program .description {
-    font-size: 1.4em; }
-  .proof-program .proofs .item {
-    padding: 3px 100px 3px 15px; }
-    .proof-program .proofs .item .title {
-      font-size: .8em;
-      position: relative;
-      right: 50px; }
-      .proof-program .proofs .item .title span {
-        left: -20px;
-        display: inline-block; }
+    font-size: 1.4em;
+    padding-right: 15px;
+    padding-left: 15px; }
+  .proof-program .container {
+    padding-right: 75px;
+    padding-left: 75px; }
+  .proof-program .proofs {
+    padding-right: 15px;
+    padding-left: 15px; }
+    .proof-program .proofs .item {
+      padding: 3px 100px 3px 15px; }
+      .proof-program .proofs .item .title {
+        font-size: .8em;
+        position: relative;
+        right: 50px; }
+        .proof-program .proofs .item .title span {
+          left: -20px;
+          display: inline-block; }
   .proof-program .get-started {
-    padding: 80px 0;
-    padding: 80px 0 80px 120px;
+    font-size: 1.1em;
+    padding: 3em 0 0 7em;
+    color: inherit;
     background-color: #fff; }
+    .proof-program .get-started h4 {
+      color: #496093; }
+  .proof-program .button {
+    padding: 2.2em 0;
+    background-color: inherit; }
+    .proof-program .button .btn {
+      color: #fff;
+      border-color: #496093;
+      background-color: #496093; }
   .footer {
     background-color: #fff; }
     .footer ol .breadcrumb-item::before {

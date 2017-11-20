@@ -444,9 +444,19 @@
         .description
         {
             font-size: 1.4em;
+
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .container
+        {
+            padding-right: $cp-lg;
+            padding-left: $cp-lg;
         }
         .proofs
         {
+            padding-right: 15px;
+            padding-left: 15px;
             .item
             {
                 padding: 3px 100px 3px 15px;
@@ -468,10 +478,29 @@
         }
         .get-started
         {
-            padding: 80px 0;
-            padding: 80px 0 80px 120px;
+            font-size: 1.1em;
 
+            padding: 3em 0 0 7em;
+
+            color: inherit;
             background-color: $brand-secondary;
+            h4
+            {
+                color: $brand-primary;
+            }
+        }
+        .button
+        {
+            padding: 2.2em 0;
+
+            background-color: inherit;
+
+            .btn
+            {
+                color: $brand-secondary;
+                border-color: $brand-primary;
+                background-color: $brand-primary;
+            }
         }
     }
     //footer

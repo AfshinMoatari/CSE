@@ -116,13 +116,25 @@
     .proof-program
     {
         font-size: .9rem;
-
+        .description
+        {
+            padding-right: calc( ( #{$cp-md} + 15px )  );
+            padding-left: calc( ( #{$cp-md} + 15px )  );
+        }
+        .container
+        {
+            padding-right: 0;
+            padding-left: 0;
+        }
         .square-title
         {
             width: 290px;
         }
         .proofs
         {
+            padding-right: calc( ( #{$cp-md} + 15px )  );
+            padding-left: calc( ( #{$cp-md} + 15px )  );
+
             .item
             {
                 font-size: 1.05em;
