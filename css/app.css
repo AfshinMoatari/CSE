@@ -6953,9 +6953,7 @@ nav.fixed-top {
       right: 1.1em; }
     .proof-program .proofs .item .title span {
       position: relative;
-      right: 0;
-      display: block;
-      padding-left: 0; }
+      display: block; }
     .proof-program .proofs .item .title .svg-container {
       position: relative;
       right: 0;
@@ -7422,11 +7420,11 @@ nav.fixed-top {
       .about-programs .text p {
         font-size: 2em; }
   .proof-program {
-    font-size: .7rem; }
+    font-size: .8rem; }
     .proof-program .description {
       font-size: 1.8em; }
     .proof-program .square-title {
-      width: 300px; }
+      width: 270px; }
     .proof-program .proofs .item {
       font-size: 1.8em;
       padding: 8px 15px; }
@@ -7520,12 +7518,12 @@ nav.fixed-top {
         font-style: normal;
         color: #fff; }
   .proof-program {
-    font-size: .8rem; }
+    font-size: .9rem; }
     .proof-program .square-title {
-      width: 300px; }
+      width: 290px; }
     .proof-program .proofs .item {
-      font-size: 1.4em;
-      padding: 8px 15px; }
+      font-size: 1.05em;
+      padding: 8px 25px; }
       .proof-program .proofs .item .title h5 {
         position: relative;
         right: 1.1em; }
@@ -7593,6 +7591,12 @@ nav.fixed-top {
       height: calc(100vh - 133px); }
       .about-programs .text p {
         font-size: 1.2em; }
+  .proof-program {
+    font-size: 1rem; }
+    .proof-program .square-title {
+      width: 320px; }
+    .proof-program .proofs .item {
+      font-size: 1.2em; }
   .footer {
     font-size: 1rem;
     height: 5.5em; }
@@ -7813,8 +7817,8 @@ nav.fixed-top {
     .about-programs .text p {
       font-size: 1.1em; }
   .proof-program .square {
-    top: -25%;
-    right: -40%; }
+    top: 0;
+    right: -10%; }
     .proof-program .square .side-b,
     .proof-program .square .side-lt,
     .proof-program .square .side-lb,
@@ -7824,19 +7828,19 @@ nav.fixed-top {
       width: 0;
       height: 0;
       background: transparent;
-      background-color: #e1948d; }
+      background-color: #cd4847; }
     .proof-program .square .side-lt {
-      bottom: calc( ( 20.938em - 100px ));
+      bottom: calc( ( 20.938em - 3em ));
       left: 0;
       width: 0.625em;
       min-height: 0;
-      max-height: 100px; }
+      max-height: 3em; }
     .proof-program .square .side-lb {
       bottom: 0;
       left: 0;
       width: 0.625em;
       min-height: 0;
-      max-height: 50px; }
+      max-height: 3em; }
     .proof-program .square .side-t {
       top: 0;
       left: 0;
@@ -7855,6 +7859,21 @@ nav.fixed-top {
       min-width: 0;
       max-width: 20.938em;
       height: 0.625em; }
+  .proof-program .description {
+    font-size: 1.4em; }
+  .proof-program .proofs .item {
+    padding: 3px 100px 3px 15px; }
+    .proof-program .proofs .item .title {
+      font-size: .8em;
+      position: relative;
+      right: 50px; }
+      .proof-program .proofs .item .title span {
+        left: -20px;
+        display: inline-block; }
+  .proof-program .get-started {
+    padding: 80px 0;
+    padding: 80px 0 80px 120px;
+    background-color: #fff; }
   .footer {
     background-color: #fff; }
     .footer ol .breadcrumb-item::before {

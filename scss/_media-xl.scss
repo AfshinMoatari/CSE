@@ -372,8 +372,8 @@
     {
         .square
         {
-            top: -25%;
-            right: -40%;
+            top: 0;
+            right: -10%;
 
             .side-b,
             .side-lt,
@@ -387,17 +387,17 @@
                 height: 0;
 
                 background: transparent;
-                background-color: $square-color-orange;
+                background-color: $square-color-red;
             }
 
             .side-lt
             {
-                bottom: calc( ( #{$square-dimension} - 100px )  );
+                bottom: calc( ( #{$square-dimension} - 3em )  );
                 left: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 100px;;
+                max-height: 3em;
             }
 
             .side-lb
@@ -407,7 +407,7 @@
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 50px;
+                max-height: 3em;
             }
 
             .side-t
@@ -440,6 +440,38 @@
                 max-width: $square-dimension;
                 height: $square-border;
             }
+        }
+        .description
+        {
+            font-size: 1.4em;
+        }
+        .proofs
+        {
+            .item
+            {
+                padding: 3px 100px 3px 15px;
+                .title
+                {
+                    font-size: .8em;
+
+                    position: relative;
+                    right: 50px;
+
+                    span
+                    {
+                        left: -20px;
+
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .get-started
+        {
+            padding: 80px 0;
+            padding: 80px 0 80px 120px;
+
+            background-color: $brand-secondary;
         }
     }
     //footer
