@@ -120,9 +120,17 @@
     .proof-program
     {
         font-size: .8rem;
+        .container
+        {
+            padding-right: 0;
+            padding-left: 0;
+        }
         .description
         {
             font-size: 1.8em;
+
+            padding-right: calc( ( #{$cp-sm} + 15px )  );
+            padding-left: calc( ( #{$cp-sm} + 15px )  );
         }
         .square-title
         {
@@ -130,6 +138,8 @@
         }
         .proofs
         {
+            padding-right: calc( ( #{$cp-sm} + 15px )  );
+            padding-left: calc( ( #{$cp-sm} + 15px )  );
             .item
             {
                 font-size: 1.8em;
@@ -169,6 +179,26 @@
         .button
         {
             padding: .5em 0 2.2em 0;
+        }
+    }
+    //accelerator program
+    .accelerator-program
+    {
+        font-size: .8rem;
+        .item
+        {
+            padding: 0 40px 40px 40px;
+            .logo
+            {
+                .svg-container
+                {
+                    width: 65%;
+                }
+            }
+            .info
+            {
+                font-size: 1.6em;
+            }
         }
     }
     //footer

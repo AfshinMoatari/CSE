@@ -134,12 +134,6 @@
             padding-right: calc( ( #{$cp-lg} + 15px )  );
             padding-left: calc( ( #{$cp-lg} + 15px )  );
         }
-        .container
-        {
-            padding-right: 0;
-            padding-left: 0;
-        }
-
         .square-title
         {
             width: 320px;
@@ -151,6 +145,26 @@
             .item
             {
                 font-size: 1.13em;
+            }
+        }
+    }
+    //accelerator program
+    .accelerator-program
+    {
+        font-size: 1rem;
+        .item
+        {
+            padding: 10px 20px;
+            .logo
+            {
+                .svg-container
+                {
+                    width: 50%;
+                }
+            }
+            .info
+            {
+                font-size: 1em;
             }
         }
     }

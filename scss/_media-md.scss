@@ -116,15 +116,11 @@
     .proof-program
     {
         font-size: .9rem;
+
         .description
         {
             padding-right: calc( ( #{$cp-md} + 15px )  );
             padding-left: calc( ( #{$cp-md} + 15px )  );
-        }
-        .container
-        {
-            padding-right: 0;
-            padding-left: 0;
         }
         .square-title
         {
@@ -148,6 +144,26 @@
                         right: 1.1em;
                     }
                 }
+            }
+        }
+    }
+    //accelerator program
+    .accelerator-program
+    {
+        font-size: .9rem;
+        .item
+        {
+            padding: 10px 30px;
+            .logo
+            {
+                .svg-container
+                {
+                    width: 85%;
+                }
+            }
+            .info
+            {
+                font-size: 1.1em;
             }
         }
     }
