@@ -6,6 +6,10 @@
         padding-right: $cp-md;
         padding-left: $cp-md;
     }
+    .square-title
+    {
+        width: 290px;
+    }
     nav
     {
         &.main
@@ -122,10 +126,7 @@
             padding-right: calc( ( #{$cp-md} + 15px )  );
             padding-left: calc( ( #{$cp-md} + 15px )  );
         }
-        .square-title
-        {
-            width: 290px;
-        }
+
         .proofs
         {
             padding-right: calc( ( #{$cp-md} + 15px )  );

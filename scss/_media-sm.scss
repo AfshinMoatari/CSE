@@ -10,7 +10,10 @@
             width: 100%;
         }
     }
-
+    .square-title
+    {
+        width: 270px;
+    }
     nav
     {
         &.main
@@ -131,10 +134,6 @@
 
             padding-right: calc( ( #{$cp-sm} + 15px )  );
             padding-left: calc( ( #{$cp-sm} + 15px )  );
-        }
-        .square-title
-        {
-            width: 270px;
         }
         .proofs
         {

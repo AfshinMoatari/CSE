@@ -6429,6 +6429,9 @@ img {
 .pre {
   white-space: pre-line; }
 
+.square-title {
+  width: 250px; }
+
 .blockquote {
   font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif;
   quotes: '“' '”' '‘' '’';
@@ -6939,8 +6942,6 @@ nav.fixed-top {
   font-size: .7rem; }
   .proof-program .description {
     font-size: 1.8em; }
-  .proof-program .square-title {
-    width: 250px; }
   .proof-program .proofs .arrow {
     display: none; }
   .proof-program .proofs .emphty {
@@ -7312,6 +7313,8 @@ nav.fixed-top {
     padding-left: 35px; }
     .container.container-100 {
       width: 100%; }
+  .square-title {
+    width: 270px; }
   nav.main .navbar-toggler {
     right: 1em; }
   nav.main.navbar-toggleable-sm > .container {
@@ -7366,8 +7369,6 @@ nav.fixed-top {
       font-size: 1.8em;
       padding-right: calc( ( 35px + 15px ));
       padding-left: calc( ( 35px + 15px )); }
-    .proof-program .square-title {
-      width: 270px; }
     .proof-program .proofs {
       padding-right: calc( ( 35px + 15px ));
       padding-left: calc( ( 35px + 15px )); }
@@ -7424,6 +7425,8 @@ nav.fixed-top {
   .container {
     padding-right: 55px;
     padding-left: 55px; }
+  .square-title {
+    width: 290px; }
   nav.main.navbar-toggleable-sm > .container {
     padding-right: 55px;
     padding-left: 55px; }
@@ -7477,8 +7480,6 @@ nav.fixed-top {
     .proof-program .description {
       padding-right: calc( ( 55px + 15px ));
       padding-left: calc( ( 55px + 15px )); }
-    .proof-program .square-title {
-      width: 290px; }
     .proof-program .proofs {
       padding-right: calc( ( 55px + 15px ));
       padding-left: calc( ( 55px + 15px )); }
@@ -7509,6 +7510,8 @@ nav.fixed-top {
   .container {
     padding-right: 75px;
     padding-left: 75px; }
+  .square-title {
+    width: 320px; }
   nav.main.navbar-toggleable-sm > .container {
     padding-right: 75px;
     padding-left: 75px; }
@@ -7565,8 +7568,6 @@ nav.fixed-top {
     .proof-program .description {
       padding-right: calc( ( 75px + 15px ));
       padding-left: calc( ( 75px + 15px )); }
-    .proof-program .square-title {
-      width: 320px; }
     .proof-program .proofs {
       padding-right: calc( ( 75px + 15px ));
       padding-left: calc( ( 75px + 15px )); }
@@ -7667,7 +7668,7 @@ nav.fixed-top {
   .quotations {
     font-size: .8rem; }
     .quotations .square.left {
-      top: 47%;
+      top: 40%;
       left: -5%; }
       .quotations .square.left .side-b,
       .quotations .square.left .side-l,
@@ -7710,7 +7711,7 @@ nav.fixed-top {
         max-width: 20.938em;
         height: 0.625em; }
     .quotations .square.right {
-      top: -20%;
+      top: -30%;
       right: -5%; }
       .quotations .square.right .side-b,
       .quotations .square.right .side-lb,
