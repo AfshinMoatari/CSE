@@ -6690,7 +6690,7 @@ img {
   background-color: #313c5d; }
 
 nav.main {
-  z-index: 3;
+  z-index: 4;
   height: 100px; }
   nav.main.navbar-toggleable-sm > .container {
     padding-right: 15px;
@@ -6709,6 +6709,7 @@ nav.main {
 
 nav.secondary {
   font-size: .7rem;
+  z-index: 2;
   top: 100px;
   background-color: #fff; }
   nav.secondary .nav-link:first-child {
@@ -8315,7 +8316,7 @@ nav.fixed-top {
       background-color: transparent; }
   nav.overlay-nav {
     position: sticky;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     right: 0;
     left: 0;
