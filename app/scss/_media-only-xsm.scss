@@ -1,5 +1,13 @@
 @media all and (max-width:353px)
 {
+    .square-title
+    {
+        padding-bottom: 15px;
+        &.small
+        {
+            width: 80px;
+        }
+    }
     //Navs
     nav
     {
@@ -89,16 +97,36 @@
             padding: .7em 0;
         }
     }
-    //about programs
-    .about-programs
+    //about programmes
+    .about-programmes
     {
         .text
         {
             p
             {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
         }
+    }
+    //proof program
+    .proof-program
+    {
+        font-size: .6rem;
+    }
+    //accelerator program
+    .accelerator-program
+    {
+        font-size: .6rem;
+    }
+    //Match up
+    .match-up
+    {
+        font-size: .6rem;
+    }
+    //Inteernship With Ects
+    .internship-with-ects
+    {
+        font-size: .6rem;
     }
     //footer
     .footer

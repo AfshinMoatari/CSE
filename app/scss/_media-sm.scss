@@ -3,22 +3,38 @@
     //container
     .container
     {
-        padding-right: 35px;
-        padding-left: 35px;
+        padding-right: $cp-sm;
+        padding-left: $cp-sm;
+        &.container-100
+        {
+            width: 100%;
+        }
+    }
+    .square-title
+    {
+        &.large
+        {
+            width: 270px;
+            margin-right: calc( ( #{$cp-sm} + 15px )  );
+            margin-left: calc( ( #{$cp-sm} + 15px )  );
+        }
+        &.small
+        {
+            width: 150px;
+        }
     }
     nav
     {
         &.main
         {
-            .container
-            {
-                width: 100%;
-                padding-right: 35px;
-                padding-left: 35px;
-            }
             .navbar-toggler
             {
                 right: 1em;
+            }
+            &.navbar-toggleable-sm > .container
+            {
+                padding-right: $cp-sm;
+                padding-left: $cp-sm;
             }
         }
         &.secondary
@@ -35,10 +51,7 @@
     .status
     {
         font-size: .8rem;
-        .container
-        {
-            width: 100%;
-        }
+
         .text-col
         {
             padding: 2.6em 2.4em;
@@ -79,10 +92,7 @@
     .quotations
     {
         font-size: .8rem;
-        .container
-        {
-            width: 100%;
-        }
+
         .blockquote
         {
             font-size: 2.2em;
@@ -105,18 +115,149 @@
             padding-left: 2%;
         }
     }
-    //about programs
-    .about-programs
+    //about programmes
+    .about-programmes
     {
         font-size: .8rem;
         .text
         {
-            height: calc(100vh - 133px);
-            padding: 0 40px;
+            padding: 40px;
             p
             {
-                font-size: 1.7em;
+                font-size: 2em;
             }
+        }
+    }
+    //proof program
+    .proof-program
+    {
+        font-size: .8rem;
+        .container
+        {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .top
+        {
+            .description
+            {
+                font-size: 1.8em;
+
+                padding-right: calc( ( #{$cp-sm} + 15px )  );
+                padding-left: calc( ( #{$cp-sm} + 15px )  );
+            }
+        }
+        .bottom
+        {
+            .proofs
+            {
+                padding-right: calc( ( #{$cp-sm} + 15px )  );
+                padding-left: calc( ( #{$cp-sm} + 15px )  );
+                .item
+                {
+                    font-size: 1.8em;
+
+                    padding: 8px 15px;
+                    .title
+                    {
+                        h5
+                        {
+                            position: relative;
+                            right: 1.1em;
+                        }
+
+                        span
+                        {
+                            position: relative;
+                            right: 0;
+
+                            display: block;
+
+                            padding-left: 0;
+                        }
+                        .svg-container
+                        {
+                            position: relative;
+                            right: 0;
+
+                            width: 5.5em;
+                        }
+                    }
+                }
+            }
+            .get-started
+            {
+                font-size: 2em;
+            }
+            .button
+            {
+                padding: .5em 0 2.2em 0;
+            }
+        }
+    }
+    //accelerator program
+    .accelerator-program
+    {
+        font-size: .8rem;
+        .item
+        {
+            padding: 0 40px 40px 40px;
+            .logo
+            {
+                .svg-container
+                {
+                    width: 65%;
+                }
+            }
+            .info
+            {
+                font-size: 1.6em;
+            }
+        }
+    }
+    //Match up
+    .match-up
+    {
+        font-size: .8rem;
+        .media
+        {
+                    clip-path: polygon(
+            50% 0,
+            100% 0,
+            100% 100%,
+            20% 100%
+            );
+            -webkit-clip-path: polygon(60% 0,
+            50% 0,
+            100% 0,
+            100% 100%,
+            20% 100%);
+                -ms-clip-path: polygon(60% 0,
+            50% 0,
+            100% 0,
+            100% 100%,
+            20% 100%);
+        }
+        .info
+        {
+            font-size: 1.1em;
+
+            padding-right: $cp-sm;
+            padding-left: $cp-sm;
+        }
+    }
+    //Inteernship With Ects
+    .internship-with-ects
+    {
+        font-size: .8rem;
+
+        .container
+        {
+            height: 350px;
+        }
+        .info
+        {
+            font-size: 1.1em;
         }
     }
     //footer
@@ -125,10 +266,6 @@
         font-size: .8rem;
 
         height: 4em;
-        .container
-        {
-            width: 100%;
-        }
 
         .row
         {

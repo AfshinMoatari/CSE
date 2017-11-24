@@ -3,17 +3,28 @@
     //container
     .container
     {
-        padding-right: 55px;
-        padding-left: 55px;
+        padding-right: $cp-md;
+        padding-left: $cp-md;
+    }
+    .square-title
+    {
+        &.large
+        {
+            width: 270px;
+        }
+        &.small
+        {
+            width: 220px;
+        }
     }
     nav
     {
         &.main
         {
-            .container
+            &.navbar-toggleable-sm > .container
             {
-                padding-right: 55px;
-                padding-left: 55px;
+                padding-right: $cp-md;
+                padding-left: $cp-md;
             }
         }
         &.secondary
@@ -87,8 +98,8 @@
             padding-left: 8px;
         }
     }
-    //about programs
-    .about-programs
+    //about programmes
+    .about-programmes
     {
         font-size: .9rem;
 
@@ -100,10 +111,136 @@
         .text
         {
             height: 40vh;
+            padding: 0 60px;
+
+            background-color: $brand-primary;
             p
             {
-                font-size: 1.2em;
+                font-size: 1.3em;
+                font-style: normal;
+
+                color: $brand-secondary;
             }
+        }
+    }
+    //proof program
+    .proof-program
+    {
+        font-size: .9rem;
+        .top
+        {
+            padding: 15px 0;
+
+            background-color: $brand-secondary;
+            p,
+            a
+            {
+                color: $brand-primary;
+            }
+            .square-title
+            {
+                #square
+                {
+                    fill: $brand-primary;
+                }
+            }
+
+            .description
+            {
+                padding-right: calc( ( #{$cp-md} + 15px )  );
+                padding-left: calc( ( #{$cp-md} + 15px )  );
+            }
+        }
+        .bottom
+        {
+            .proofs
+            {
+                padding-right: calc( ( #{$cp-md} + 15px )  );
+                padding-left: calc( ( #{$cp-md} + 15px )  );
+
+                .item
+                {
+                    font-size: 1.05em;
+
+                    padding: 8px 25px;
+                    .title
+                    {
+                        h5
+                        {
+                            position: relative;
+                            right: 1.1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //accelerator program
+    .accelerator-program
+    {
+        font-size: .9rem;
+        .item
+        {
+            padding: 10px 30px;
+            .logo
+            {
+                .svg-container
+                {
+                    width: 85%;
+                }
+            }
+            .info
+            {
+                font-size: 1.1em;
+            }
+        }
+    }
+    //match up
+    .match-up
+    {
+        font-size: .9rem;
+
+        .media
+        {
+                    clip-path: polygon(
+            40% 0,
+            100% 0,
+            100% 100%,
+            3% 100%
+            );
+            -webkit-clip-path: polygon(
+            40% 0,
+            100% 0,
+            100% 100%,
+            3% 100%
+            );
+                -ms-clip-path: polygon(
+            40% 0,
+            100% 0,
+            100% 100%,
+            3% 100%
+            );
+        }
+        .info
+        {
+            font-size: 1.3em;
+
+            padding-right: $cp-md;
+            padding-left: $cp-md;
+        }
+    }
+    //Inteernship With Ects
+    .internship-with-ects
+    {
+        font-size: .9rem;
+
+        .container
+        {
+            height: 450px;
+        }
+        .info
+        {
+            font-size: 1.3em;
         }
     }
     //footer

@@ -5,12 +5,14 @@
 //container
 .container
 {
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-right: inherit;
+    margin-left: inherit;
+    padding-right: $cp-default;
+    padding-left: $cp-default;
 }
 
 #main,
-#programs
+#programmes
 {
     .fullpage
     {
@@ -24,7 +26,6 @@
 h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 a,
@@ -48,6 +49,21 @@ img
 {
     width: 100%;
 }
+.text-link
+{
+    font-family: $font-family-cbs-bold;
+    font-size: 1.1em;
+
+    text-decoration: underline;
+    text-transform: none;
+}
+.inline-span
+{
+    font-family: $font-family-cbs-bold;
+    font-size: 1.3em;
+
+    color: $brand-primary;
+}
 .lead
 {
     font-family: $font-family-cbs-bold ;
@@ -55,6 +71,19 @@ img
 .pre
 {
     white-space: pre-line;
+}
+.square-title
+{
+    &.large
+    {
+        width: 250px;
+        padding-bottom: 35px;
+    }
+    &.small
+    {
+        width: 90px;
+        padding-bottom: 15px;
+    }
 }
 //utilities
 .blockquote
@@ -173,6 +202,19 @@ img
         background-color: $brand-primary!important;
     }
 }
+.overlay
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .6;
+    background-color: #313c5d;
+}
 
 //Navs
 nav
@@ -184,7 +226,11 @@ nav
         height: $navbar-height;
 
         background-color: $brand-primary;
-
+        &.navbar-toggleable-sm > .container
+        {
+            padding-right: $cp-default;
+            padding-left: $cp-default;
+        }
         &.sticky
         {
             background-color: $brand-primary;
@@ -211,13 +257,6 @@ nav
                     background-color: $transparent;
                 }
             }
-        }
-        .container
-        {
-            margin-right: inherit;
-            margin-left: inherit;
-            padding-right: 15px;
-            padding-left: 15px;
         }
     }
     &.secondary
@@ -389,13 +428,13 @@ nav
         left: 0;
 
         padding: 1.6em 1.3em;
-
-        background: rgba(49,60,93,.7);
-
         p
         {
             font-family: 'CBS-regular', 'Helvetica Neue', Arial, sans-serif;
             font-size: 1.8em;
+
+            position: absolute;
+            z-index: 2;
 
             color: $brand-secondary;
         }
@@ -508,10 +547,7 @@ nav
     font-size: .7rem;
 
     background-color: $brand-primary;
-    .container
-    {
-        height: 100%;
-    }
+
     .blockquote
     {
         font-size: 2em;
@@ -819,8 +855,8 @@ nav
     }
 }
 
-//about programs
-.about-programs
+//about programmes
+.about-programmes
 {
     font-size: .7rem;
 
@@ -944,236 +980,142 @@ nav
     }
     .text
     {
-        height: calc(100vh - 133px);
-        padding: 0 20px;
+        height: auto;
+        padding: 20px;
+
+        color: $brand-primary;
+
         p
         {
-            font-size: 1.6em;
+            font-size: 2em;
+            font-style: italic;
 
-            color: $brand-secondary;
+            color: $brand-primary;
         }
     }
 }
 
-//Proof Program
+//proof program
 .proof-program
 {
-    .square
+    font-size: .7rem;
+    .top
     {
-        top: -25%;
-        right: -40%;
+        padding-top: 35px;
+        padding-bottom: 35px;
 
-        .side-b,
-        .side-lt,
-        .side-lb,
-        .side-t,
-        .side-r
+        background-color: $brand-primary;
+        p,
+        a
         {
-            position: absolute;
-
-            width: 0;
-            height: 0;
-
-            background: transparent;
-            background-color: $square-color-orange;
+            color: $brand-secondary;
         }
-
-        .side-lt
+        .square-title
         {
-            bottom: calc( ( #{$square-dimension} - 100px )  );
-            left: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 100px;;
+            #square
+            {
+                fill: $brand-secondary;
+            }
         }
-
-        .side-lb
+        .description
         {
-            bottom: 0;
-            left: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 50px;
+            font-size: 1.8em;
         }
-
-        .side-t
+    }
+    .bottom
+    {
+        .proofs
         {
-            top: 0;
-            left: 0;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            .arrow
+            {
+                display: none;
+            }
+            .emphty
+            {
+                display: none;
+            }
+            .item
+            {
+                font-size: 1.4em;
 
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
+                padding: 8px 15px;
+                .title
+                {
+                    h5
+                    {
+                        position: relative;
+                        right: 1.1em;
+                    }
+
+                    span
+                    {
+                        position: relative;
+
+                        display: block;
+                    }
+                    .svg-container
+                    {
+                        position: relative;
+                        right: 0;
+
+                        width: 5.5em;
+                    }
+                }
+            }
         }
-
-
-        .side-r
+        .get-started
         {
-            top: 0;
-            right: 0;
+            font-size: 1.5em;
 
-            width: $square-border;
-            min-height: 0;
-            max-height: $square-dimension;
+            padding: 1.8em 2em 0 2em;
+
+            color: $brand-secondary;
+            background-color: $brand-primary;
+
+            h4
+            {
+                color: $brand-secondary;
+            }
         }
-
-        .side-b
+        .button
         {
-            right: 0;
-            bottom: 0;
+            padding: .5em 0 2.2em 0;
 
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
+            background-color: $brand-primary;
+
+            .btn
+            {
+                color: $brand-primary;
+                border-color: $brand-secondary;
+                background-color: $brand-secondary;
+            }
         }
     }
 }
 
-//Accelerator Program
+//accelerator program
 .accelerator-program
 {
-    .square
+    font-size: .7rem;
+    .item
     {
-        &.left
+        padding-bottom: 40px;
+        .logo
         {
-            top: 34%;
-            left: -35%;
-
-            .side-b,
-            .side-l,
-            .side-t,
-            .side-rt,
-            .side-rb
+            padding: 15px 0;
+            .svg-container
             {
-                position: absolute;
-
-                width: 0;
-                height: 0;
-
-                background: transparent;
-                background-color: $square-color-green;
-            }
-
-            .side-l
-            {
-                bottom: 0;
-                left: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: $square-dimension;
-            }
-
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
-            }
-
-            .side-rt
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 40px;
-            }
-
-            .side-rb
-            {
-                top: calc( ( #{$square-dimension} - 140px )  );
-                right: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 140px;;
-            }
-
-            .side-b
-            {
-                right: 0;
-                bottom: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
+                width: 65%;
             }
         }
-        &.right
+        .info
         {
-            top: 50%;
-            right: -40%;
-
-            .side-b,
-            .side-lb,
-            .side-lt,
-            .side-t,
-            .side-r
+            font-size: 1.8em;
+            h4
             {
-                position: absolute;
-
-                width: 0;
-                height: 0;
-
-                background: transparent;
-                background-color: $brand-primary;
-            }
-
-            .side-lb
-            {
-                bottom: 0;
-                left: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 140px;
-            }
-
-            .side-lt
-            {
-                bottom: calc( ( #{$square-dimension} - 40px )  );
-                left: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: 40px;;
-            }
-
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
-            }
-
-            .side-r
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-border;
-                min-height: 0;
-                max-height: $square-dimension;
-            }
-
-            .side-b
-            {
-                right: 0;
-                bottom: 0;
-
-                min-width: 0;
-                max-width: $square-dimension;
-                height: $square-border;
+                margin-bottom: 15px;
             }
         }
     }
@@ -1182,64 +1124,34 @@ nav
 //Match up
 .match-up
 {
-    .square
+    font-size: .7rem;
+    .container
     {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+
+        background-color: $brand-primary;
+    }
+    .info
+    {
+        font-size: .9em;
+
+        position: absolute;
+        z-index: 2;
         top: 0;
-        right: 70%;
+        left: 0;
 
-        .side-b,
-        .side-l,
-        .side-t,
-        .side-r
+        padding: 15px;
+        h4,
+        p,
+        a
         {
-            position: absolute;
+            position: relative;
 
-            width: 0;
-            height: 0;
+            width: 100%;
 
-            background: transparent;
-            background-color: $square-color-orange;
-        }
-
-        .side-l
-        {
-            bottom: 0;
-            left: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 150px;
-        }
-
-        .side-t
-        {
-            top: 0;
-            right: 0;
-
-            min-width: 0;
-            max-width: 150px;
-            height: $square-border;
-        }
-
-
-        .side-r
-        {
-            top: 0;
-            right: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: $square-dimension;
-        }
-
-        .side-b
-        {
-            right: 0;
-            bottom: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
+            color: $brand-secondary;
         }
     }
 }
@@ -1247,70 +1159,15 @@ nav
 //Inteernship With Ects
 .internship-with-ects
 {
-    .fp-tableCell
+    font-size: .7rem;
+
+    .container
     {
-        vertical-align: top;
+        height: 280px;
     }
-    .square
+    .info
     {
-        top: 0;
-        right: 70%;
-
-        .side-b,
-        .side-l,
-        .side-t,
-        .side-r
-        {
-            position: absolute;
-
-            width: 0;
-            height: 0;
-
-            background: transparent;
-            background-color: $square-color-orange;
-        }
-
-        .side-l
-        {
-            bottom: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: $square-dimension;
-
-            righ: 0;
-        }
-
-        .side-t
-        {
-            top: 0;
-            left: 0;
-
-            min-width: 0;
-            max-width: 150px;
-            height: $square-border;
-        }
-
-
-        .side-r
-        {
-            top: calc( ( #{$square-dimension} - 150px )  );
-            right: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 150px;
-        }
-
-        .side-b
-        {
-            right: 0;
-            bottom: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
-        }
+        font-size: .9em;
     }
 }
 
