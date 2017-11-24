@@ -8,7 +8,14 @@
     }
     .square-title
     {
-        width: 290px;
+        &.large
+        {
+            width: 270px;
+        }
+        &.small
+        {
+            width: 220px;
+        }
     }
     nav
     {
@@ -120,29 +127,49 @@
     .proof-program
     {
         font-size: .9rem;
-
-        .description
+        .top
         {
-            padding-right: calc( ( #{$cp-md} + 15px )  );
-            padding-left: calc( ( #{$cp-md} + 15px )  );
-        }
+            padding: 15px 0;
 
-        .proofs
-        {
-            padding-right: calc( ( #{$cp-md} + 15px )  );
-            padding-left: calc( ( #{$cp-md} + 15px )  );
-
-            .item
+            background-color: $brand-secondary;
+            p,
+            a
             {
-                font-size: 1.05em;
-
-                padding: 8px 25px;
-                .title
+                color: $brand-primary;
+            }
+            .square-title
+            {
+                #square
                 {
-                    h5
+                    fill: $brand-primary;
+                }
+            }
+
+            .description
+            {
+                padding-right: calc( ( #{$cp-md} + 15px )  );
+                padding-left: calc( ( #{$cp-md} + 15px )  );
+            }
+        }
+        .bottom
+        {
+            .proofs
+            {
+                padding-right: calc( ( #{$cp-md} + 15px )  );
+                padding-left: calc( ( #{$cp-md} + 15px )  );
+
+                .item
+                {
+                    font-size: 1.05em;
+
+                    padding: 8px 25px;
+                    .title
                     {
-                        position: relative;
-                        right: 1.1em;
+                        h5
+                        {
+                            position: relative;
+                            right: 1.1em;
+                        }
                     }
                 }
             }
@@ -166,6 +193,54 @@
             {
                 font-size: 1.1em;
             }
+        }
+    }
+    //match up
+    .match-up
+    {
+        font-size: .9rem;
+
+        .media
+        {
+                    clip-path: polygon(
+            40% 0,
+            100% 0,
+            100% 100%,
+            3% 100%
+            );
+            -webkit-clip-path: polygon(
+            40% 0,
+            100% 0,
+            100% 100%,
+            3% 100%
+            );
+                -ms-clip-path: polygon(
+            40% 0,
+            100% 0,
+            100% 100%,
+            3% 100%
+            );
+        }
+        .info
+        {
+            font-size: 1.3em;
+
+            padding-right: $cp-md;
+            padding-left: $cp-md;
+        }
+    }
+    //Inteernship With Ects
+    .internship-with-ects
+    {
+        font-size: .9rem;
+
+        .container
+        {
+            height: 450px;
+        }
+        .info
+        {
+            font-size: 1.3em;
         }
     }
     //footer

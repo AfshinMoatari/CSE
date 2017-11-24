@@ -441,65 +441,71 @@
                 height: $square-border;
             }
         }
-        .description
-        {
-            font-size: 1.4em;
-
-            padding-right: 15px;
-            padding-left: 15px;
-        }
         .container
         {
             padding-right: $cp-lg;
             padding-left: $cp-lg;
         }
-        .proofs
+        .top
         {
-            padding-right: 15px;
-            padding-left: 15px;
-            .item
+            .description
             {
-                padding: 3px 100px 3px 15px;
-                .title
+                font-size: 1.4em;
+
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+        .bottom
+        {
+            .proofs
+            {
+                padding-right: 15px;
+                padding-left: 15px;
+                .item
                 {
-                    font-size: .8em;
-
-                    position: relative;
-                    right: 50px;
-
-                    span
+                    padding: 3px 100px 3px 15px;
+                    .title
                     {
-                        left: -20px;
+                        font-size: .8em;
 
-                        display: inline-block;
+                        position: relative;
+                        right: 50px;
+
+                        span
+                        {
+                            left: -20px;
+
+                            display: inline-block;
+                        }
                     }
                 }
             }
-        }
-        .get-started
-        {
-            font-size: 1.1em;
-
-            padding: 3em 0 0 7em;
-
-            color: inherit;
-            background-color: $brand-secondary;
-            h4
+            .get-started
             {
-                color: $brand-primary;
+                font-size: 1.1em;
+
+                padding: 3em 0 0 7em;
+
+                color: inherit;
+                background-color: $brand-secondary;
+                h4
+                {
+                    color: $brand-primary;
+                }
             }
-        }
-        .button
-        {
-            padding: 2.2em 0;
-
-            background-color: inherit;
-
-            .btn
+            .button
             {
-                color: $brand-secondary;
-                border-color: $brand-primary;
-                background-color: $brand-primary;
+                padding: 2.2em 0;
+
+                background-color: inherit;
+
+                .btn
+                {
+                    color: $brand-secondary;
+                    border-color: $brand-primary;
+                    background-color: $brand-primary;
+                }
             }
         }
     }
@@ -657,6 +663,179 @@
         .item:nth-child(2)
         {
             margin-top: 100px;
+        }
+    }
+    //match up
+    .match-up
+    {
+        .container
+        {
+            padding-right: 0;
+            padding-left: 0;
+
+            background-color: transparent;
+        }
+        .media
+        {
+            padding-top: 140px;
+
+                    clip-path: none;
+            -webkit-clip-path: none;
+                -ms-clip-path: none;
+        }
+        .info
+        {
+            padding-right: 15px;
+            h4,
+            p,
+            a
+            {
+                position: relative;
+
+                width: 100%;
+
+                color: $brand-primary;
+            }
+            p
+            {
+                color: inherit;
+            }
+        }
+        .square
+        {
+            top: 20%;
+            right: 71%;
+
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-purple;
+            }
+
+            .side-l
+            {
+                top: calc( ( #{$square-dimension} - 180px )  );
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 180px;;
+            }
+
+            .side-t
+            {
+                top: 0;
+                right: 0;
+
+                min-width: 0;
+                max-width: 180px;
+                height: $square-border;;
+            }
+
+
+            .side-r
+            {
+                right: 0;
+                bottom: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-b
+            {
+                bottom: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+    }
+    //inteernship with ects
+    .internship-with-ects
+    {
+        background-color: inherit;
+        .container
+        {
+            height: 750px;
+
+            background-color: inherit;
+
+                    clip-path: none;
+            -webkit-clip-path: none;
+                -ms-clip-path: none;
+        }
+        .square
+        {
+            top: 18%;
+            right: 67%;
+
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-orange;
+            }
+
+            .side-l
+            {
+                bottom: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+
+                righ: 0;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: 150px;
+                height: $square-border;
+            }
+
+
+            .side-r
+            {
+                top: calc( ( #{$square-dimension} - 150px )  );
+                right: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 150px;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
         }
     }
     //footer

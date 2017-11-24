@@ -7,7 +7,8 @@
 $blue: #496093;
 $red: #cd4847;
 $green: #5bad6f;
-$orange: #e1948d;
+$purple: #f8ada8;
+$orange: #f79566;
 $white: #fff;
 $black: #000;
 $transparent: transparent;
@@ -19,6 +20,7 @@ $link-color: $blue;
 $square-color-green: $green;
 $square-color-orange: $orange;
 $square-color-red: $red;
+$square-color-purple: $purple;
 $body-bg: $brand-secondary;
 
 //fonts
@@ -110,6 +112,10 @@ $spacers: (
   6: (
     x: ($spacer-x * 5),
     y: ($spacer-y * 5)
+  ),
+  7: (
+    x: ($spacer-x * 6),
+    y: ($spacer-y * 6)
   )
 );
 

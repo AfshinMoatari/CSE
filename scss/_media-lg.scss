@@ -8,7 +8,14 @@
     }
     .square-title
     {
-        width: 320px;
+        &.large
+        {
+            width: 260px;
+        }
+        &.small
+        {
+            width: 190px;
+        }
     }
     //nav
     nav
@@ -133,19 +140,24 @@
     .proof-program
     {
         font-size: 1rem;
-        .description
+        .top
         {
-            padding-right: calc( ( #{$cp-lg} + 15px )  );
-            padding-left: calc( ( #{$cp-lg} + 15px )  );
-        }
-
-        .proofs
-        {
-            padding-right: calc( ( #{$cp-lg} + 15px )  );
-            padding-left: calc( ( #{$cp-lg} + 15px )  );
-            .item
+            .description
             {
-                font-size: 1.13em;
+                padding-right: calc( ( #{$cp-lg} + 15px )  );
+                padding-left: calc( ( #{$cp-lg} + 15px )  );
+            }
+        }
+        .bottom
+        {
+            .proofs
+            {
+                padding-right: calc( ( #{$cp-lg} + 15px )  );
+                padding-left: calc( ( #{$cp-lg} + 15px )  );
+                .item
+                {
+                    font-size: 1.13em;
+                }
             }
         }
     }
@@ -167,6 +179,65 @@
             {
                 font-size: 1em;
             }
+        }
+    }
+    //match up
+    .match-up
+    {
+        font-size: 1rem;
+        .info
+        {
+            font-size: 1.1em;
+
+            position: relative;
+
+            padding-right: $cp-lg;
+            padding-left: $cp-lg;
+            h4,
+            p,
+            a
+            {
+                position: relative;
+
+                width: calc(100vw - 300px);
+            }
+        }
+    }
+    //Inteernship With Ects
+    .internship-with-ects
+    {
+        font-size: 1rem;
+
+        background-color: $brand-primary;
+
+        .container
+        {
+            height: 450px;
+
+            background-color: $brand-secondary;
+
+                    clip-path: polygon(
+            35.3% 0,
+            100% 0,
+            100% 100%,
+            7.5% 100%
+            );
+            -webkit-clip-path: polygon(
+            35.3% 0,
+            100% 0,
+            100% 100%,
+            7.5% 100%
+            );
+                -ms-clip-path: polygon(
+            35.3% 0,
+            100% 0,
+            100% 100%,
+            7.5% 100%
+            );
+        }
+        .info
+        {
+            font-size: 1.1em;
         }
     }
     //footer

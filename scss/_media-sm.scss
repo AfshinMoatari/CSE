@@ -12,7 +12,16 @@
     }
     .square-title
     {
-        width: 270px;
+        &.large
+        {
+            width: 270px;
+            margin-right: calc( ( #{$cp-sm} + 15px )  );
+            margin-left: calc( ( #{$cp-sm} + 15px )  );
+        }
+        &.small
+        {
+            width: 150px;
+        }
     }
     nav
     {
@@ -128,56 +137,62 @@
             padding-right: 0;
             padding-left: 0;
         }
-        .description
+        .top
         {
-            font-size: 1.8em;
-
-            padding-right: calc( ( #{$cp-sm} + 15px )  );
-            padding-left: calc( ( #{$cp-sm} + 15px )  );
-        }
-        .proofs
-        {
-            padding-right: calc( ( #{$cp-sm} + 15px )  );
-            padding-left: calc( ( #{$cp-sm} + 15px )  );
-            .item
+            .description
             {
                 font-size: 1.8em;
 
-                padding: 8px 15px;
-                .title
+                padding-right: calc( ( #{$cp-sm} + 15px )  );
+                padding-left: calc( ( #{$cp-sm} + 15px )  );
+            }
+        }
+        .bottom
+        {
+            .proofs
+            {
+                padding-right: calc( ( #{$cp-sm} + 15px )  );
+                padding-left: calc( ( #{$cp-sm} + 15px )  );
+                .item
                 {
-                    h5
+                    font-size: 1.8em;
+
+                    padding: 8px 15px;
+                    .title
                     {
-                        position: relative;
-                        right: 1.1em;
-                    }
+                        h5
+                        {
+                            position: relative;
+                            right: 1.1em;
+                        }
 
-                    span
-                    {
-                        position: relative;
-                        right: 0;
+                        span
+                        {
+                            position: relative;
+                            right: 0;
 
-                        display: block;
+                            display: block;
 
-                        padding-left: 0;
-                    }
-                    .svg-container
-                    {
-                        position: relative;
-                        right: 0;
+                            padding-left: 0;
+                        }
+                        .svg-container
+                        {
+                            position: relative;
+                            right: 0;
 
-                        width: 5.5em;
+                            width: 5.5em;
+                        }
                     }
                 }
             }
-        }
-        .get-started
-        {
-            font-size: 2em;
-        }
-        .button
-        {
-            padding: .5em 0 2.2em 0;
+            .get-started
+            {
+                font-size: 2em;
+            }
+            .button
+            {
+                padding: .5em 0 2.2em 0;
+            }
         }
     }
     //accelerator program
@@ -198,6 +213,51 @@
             {
                 font-size: 1.6em;
             }
+        }
+    }
+    //Match up
+    .match-up
+    {
+        font-size: .8rem;
+        .media
+        {
+                    clip-path: polygon(
+            50% 0,
+            100% 0,
+            100% 100%,
+            20% 100%
+            );
+            -webkit-clip-path: polygon(60% 0,
+            50% 0,
+            100% 0,
+            100% 100%,
+            20% 100%);
+                -ms-clip-path: polygon(60% 0,
+            50% 0,
+            100% 0,
+            100% 100%,
+            20% 100%);
+        }
+        .info
+        {
+            font-size: 1.1em;
+
+            padding-right: $cp-sm;
+            padding-left: $cp-sm;
+        }
+    }
+    //Inteernship With Ects
+    .internship-with-ects
+    {
+        font-size: .8rem;
+
+        .container
+        {
+            height: 350px;
+        }
+        .info
+        {
+            font-size: 1.1em;
         }
     }
     //footer

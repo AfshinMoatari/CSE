@@ -74,7 +74,16 @@ img
 }
 .square-title
 {
-    width: 250px;
+    &.large
+    {
+        width: 250px;
+        padding-bottom: 35px;
+    }
+    &.small
+    {
+        width: 90px;
+        padding-bottom: 15px;
+    }
 }
 //utilities
 .blockquote
@@ -192,6 +201,19 @@ img
         border-color: $brand-primary!important;
         background-color: $brand-primary!important;
     }
+}
+.overlay
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .6;
+    background-color: #313c5d;
 }
 
 //Navs
@@ -406,13 +428,13 @@ nav
         left: 0;
 
         padding: 1.6em 1.3em;
-
-        background: rgba(49,60,93,.7);
-
         p
         {
             font-family: 'CBS-regular', 'Helvetica Neue', Arial, sans-serif;
             font-size: 1.8em;
+
+            position: absolute;
+            z-index: 2;
 
             color: $brand-secondary;
         }
@@ -977,74 +999,98 @@ nav
 .proof-program
 {
     font-size: .7rem;
-    .description
+    .top
     {
-        font-size: 1.8em;
-    }
-    .proofs
-    {
-        .arrow
-        {
-            display: none;
-        }
-        .emphty
-        {
-            display: none;
-        }
-        .item
-        {
-            font-size: 1.4em;
+        padding-top: 35px;
+        padding-bottom: 35px;
 
-            padding: 8px 15px;
-            .title
-            {
-                h5
-                {
-                    position: relative;
-                    right: 1.1em;
-                }
-
-                span
-                {
-                    position: relative;
-
-                    display: block;
-                }
-                .svg-container
-                {
-                    position: relative;
-                    right: 0;
-
-                    width: 5.5em;
-                }
-            }
-        }
-    }
-    .get-started
-    {
-        font-size: 1.5em;
-
-        padding: 1.8em 2em 0 2em;
-
-        color: $brand-secondary;
         background-color: $brand-primary;
-
-        h4
+        p,
+        a
         {
             color: $brand-secondary;
         }
-    }
-    .button
-    {
-        padding: .5em 0 2.2em 0;
-
-        background-color: $brand-primary;
-
-        .btn
+        .square-title
         {
-            color: $brand-primary;
-            border-color: $brand-secondary;
-            background-color: $brand-secondary;
+            #square
+            {
+                fill: $brand-secondary;
+            }
+        }
+        .description
+        {
+            font-size: 1.8em;
+        }
+    }
+    .bottom
+    {
+        .proofs
+        {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            .arrow
+            {
+                display: none;
+            }
+            .emphty
+            {
+                display: none;
+            }
+            .item
+            {
+                font-size: 1.4em;
+
+                padding: 8px 15px;
+                .title
+                {
+                    h5
+                    {
+                        position: relative;
+                        right: 1.1em;
+                    }
+
+                    span
+                    {
+                        position: relative;
+
+                        display: block;
+                    }
+                    .svg-container
+                    {
+                        position: relative;
+                        right: 0;
+
+                        width: 5.5em;
+                    }
+                }
+            }
+        }
+        .get-started
+        {
+            font-size: 1.5em;
+
+            padding: 1.8em 2em 0 2em;
+
+            color: $brand-secondary;
+            background-color: $brand-primary;
+
+            h4
+            {
+                color: $brand-secondary;
+            }
+        }
+        .button
+        {
+            padding: .5em 0 2.2em 0;
+
+            background-color: $brand-primary;
+
+            .btn
+            {
+                color: $brand-primary;
+                border-color: $brand-secondary;
+                background-color: $brand-secondary;
+            }
         }
     }
 }
@@ -1078,64 +1124,34 @@ nav
 //Match up
 .match-up
 {
-    .square
+    font-size: .7rem;
+    .container
     {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+
+        background-color: $brand-primary;
+    }
+    .info
+    {
+        font-size: .9em;
+
+        position: absolute;
+        z-index: 2;
         top: 0;
-        right: 70%;
+        left: 0;
 
-        .side-b,
-        .side-l,
-        .side-t,
-        .side-r
+        padding: 15px;
+        h4,
+        p,
+        a
         {
-            position: absolute;
+            position: relative;
 
-            width: 0;
-            height: 0;
+            width: 100%;
 
-            background: transparent;
-            background-color: $square-color-orange;
-        }
-
-        .side-l
-        {
-            bottom: 0;
-            left: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 150px;
-        }
-
-        .side-t
-        {
-            top: 0;
-            right: 0;
-
-            min-width: 0;
-            max-width: 150px;
-            height: $square-border;
-        }
-
-
-        .side-r
-        {
-            top: 0;
-            right: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: $square-dimension;
-        }
-
-        .side-b
-        {
-            right: 0;
-            bottom: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
+            color: $brand-secondary;
         }
     }
 }
@@ -1143,70 +1159,15 @@ nav
 //Inteernship With Ects
 .internship-with-ects
 {
-    .fp-tableCell
+    font-size: .7rem;
+
+    .container
     {
-        vertical-align: top;
+        height: 280px;
     }
-    .square
+    .info
     {
-        top: 0;
-        right: 70%;
-
-        .side-b,
-        .side-l,
-        .side-t,
-        .side-r
-        {
-            position: absolute;
-
-            width: 0;
-            height: 0;
-
-            background: transparent;
-            background-color: $square-color-orange;
-        }
-
-        .side-l
-        {
-            bottom: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: $square-dimension;
-
-            righ: 0;
-        }
-
-        .side-t
-        {
-            top: 0;
-            left: 0;
-
-            min-width: 0;
-            max-width: 150px;
-            height: $square-border;
-        }
-
-
-        .side-r
-        {
-            top: calc( ( #{$square-dimension} - 150px )  );
-            right: 0;
-
-            width: $square-border;
-            min-height: 0;
-            max-height: 150px;
-        }
-
-        .side-b
-        {
-            right: 0;
-            bottom: 0;
-
-            min-width: 0;
-            max-width: $square-dimension;
-            height: $square-border;
-        }
+        font-size: .9em;
     }
 }
 

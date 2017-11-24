@@ -1,5 +1,13 @@
 @media all and (max-width:353px)
 {
+    .square-title
+    {
+        padding-bottom: 15px;
+        &.small
+        {
+            width: 80px;
+        }
+    }
     //Navs
     nav
     {
@@ -100,13 +108,23 @@
             }
         }
     }
-    //Proof Program
+    //proof program
     .proof-program
     {
         font-size: .6rem;
     }
     //accelerator program
     .accelerator-program
+    {
+        font-size: .6rem;
+    }
+    //Match up
+    .match-up
+    {
+        font-size: .6rem;
+    }
+    //Inteernship With Ects
+    .internship-with-ects
     {
         font-size: .6rem;
     }
