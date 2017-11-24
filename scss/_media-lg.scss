@@ -119,8 +119,8 @@
             padding-left: 10px;
         }
     }
-    //about programs
-    .about-programs
+    //about programmes
+    .about-programmes
     {
         font-size: 1rem;
         .graphic
@@ -208,33 +208,6 @@
     {
         font-size: 1rem;
 
-        background-color: $brand-primary;
-
-        .container
-        {
-            height: 450px;
-
-            background-color: $brand-secondary;
-
-                    clip-path: polygon(
-            35.3% 0,
-            100% 0,
-            100% 100%,
-            7.5% 100%
-            );
-            -webkit-clip-path: polygon(
-            35.3% 0,
-            100% 0,
-            100% 100%,
-            7.5% 100%
-            );
-                -ms-clip-path: polygon(
-            35.3% 0,
-            100% 0,
-            100% 100%,
-            7.5% 100%
-            );
-        }
         .info
         {
             font-size: 1.1em;

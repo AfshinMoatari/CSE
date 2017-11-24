@@ -6562,7 +6562,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   padding-left: 15px; }
 
 #main .fullpage,
-#programs .fullpage {
+#programmes .fullpage {
   position: relative;
   overflow: hidden; }
 
@@ -6691,13 +6691,10 @@ img {
 
 nav.main {
   z-index: 3;
-  height: 100px;
-  background-color: #496093; }
+  height: 100px; }
   nav.main.navbar-toggleable-sm > .container {
     padding-right: 15px;
     padding-left: 15px; }
-  nav.main.sticky {
-    background-color: #496093; }
   nav.main a {
     font-size: 1.25rem; }
   nav.main .nav-link {
@@ -6762,17 +6759,6 @@ nav.secondary {
     -o-transform: scale(1);
     transform: scale(1);
     opacity: 1; }
-  nav.secondary.sticky .checkbox p {
-    font-size: .62em;
-    padding-left: 2em; }
-    nav.secondary.sticky .checkbox p::after {
-      top: 0;
-      left: 0;
-      width: 1.3em;
-      height: 1.3em; }
-    nav.secondary.sticky .checkbox p::before {
-      width: 1.3em;
-      height: 1.3em; }
 
 nav.fixed-top {
   position: fixed; }
@@ -7049,23 +7035,23 @@ nav.fixed-top {
     background: transparent;
     background-color: #496093; }
 
-.about-programs {
+.about-programmes {
   font-size: .7rem;
   margin-top: 133px; }
-  .about-programs .graphic {
+  .about-programmes .graphic {
     height: calc(100vh - 133px); }
-    .about-programs .graphic #cse-proof-plan {
+    .about-programmes .graphic #cse-proof-plan {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-      .about-programs .graphic #cse-proof-plan .text {
+      .about-programmes .graphic #cse-proof-plan .text {
         font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif; }
-      .about-programs .graphic #cse-proof-plan .line {
+      .about-programmes .graphic #cse-proof-plan .line {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000; }
-        .about-programs .graphic #cse-proof-plan .line.active {
+        .about-programmes .graphic #cse-proof-plan .line.active {
           -webkit-animation: dash linear alternate forwards;
           -moz-animation: dash linear alternate forwards;
           -o-animation: dash linear alternate forwards;
@@ -7082,14 +7068,14 @@ nav.fixed-top {
     stroke-dashoffset: 1000; }
   to {
     stroke-dashoffset: 0; } }
-      .about-programs .graphic #cse-proof-plan .cloud.c1 {
+      .about-programmes .graphic #cse-proof-plan .cloud.c1 {
         z-index: 100;
         top: 80px;
         -webkit-animation: move 380s linear infinite;
         -moz-animation: move 380s linear infinite;
         -o-animation: move 380s linear infinite;
         animation: move 380s linear infinite; }
-      .about-programs .graphic #cse-proof-plan .cloud.c2 {
+      .about-programmes .graphic #cse-proof-plan .cloud.c2 {
         z-index: 200;
         top: 240px;
         -webkit-animation: move 140s linear infinite backwards;
@@ -7102,9 +7088,9 @@ nav.fixed-top {
     -webkit-transform: translateX(0); }
   to {
     -webkit-transform: translateX(1150px); } }
-      .about-programs .graphic #cse-proof-plan .bubble {
+      .about-programmes .graphic #cse-proof-plan .bubble {
         opacity: 0; }
-        .about-programs .graphic #cse-proof-plan .bubble.active {
+        .about-programmes .graphic #cse-proof-plan .bubble.active {
           -webkit-animation: bubble-light ease forwards;
           -moz-animation: bubble-light ease forwards;
           -o-animation: bubble-light ease forwards;
@@ -7119,11 +7105,11 @@ nav.fixed-top {
     fill: #f26c65; }
   100% {
     fill: #595e7c; } }
-  .about-programs .text {
+  .about-programmes .text {
     height: auto;
     padding: 20px;
     color: #496093; }
-    .about-programs .text p {
+    .about-programmes .text p {
       font-size: 2em;
       font-style: italic;
       color: #496093; }
@@ -7212,10 +7198,9 @@ nav.fixed-top {
 
 .internship-with-ects {
   font-size: .7rem; }
-  .internship-with-ects .container {
-    height: 280px; }
   .internship-with-ects .info {
-    font-size: .9em; }
+    font-size: .9em;
+    padding: 25px 0; }
 
 .job-openings .square {
   top: 0;
@@ -7424,16 +7409,6 @@ nav.fixed-top {
       left: 0;
       width: 1.8em;
       height: 1.8em; }
-    nav.secondary.sticky .checkbox p {
-      font-size: .53em; }
-      nav.secondary.sticky .checkbox p::after {
-        top: 0;
-        left: 0;
-        width: 1.8em;
-        height: 1.8em; }
-      nav.secondary.sticky .checkbox p::before {
-        width: 1.8em;
-        height: 1.8em; }
   .status {
     font-size: .6rem; }
   .stats {
@@ -7446,7 +7421,7 @@ nav.fixed-top {
         font-size: 1.6em !important; }
   .quotations .blockquote {
     padding: .7em 0; }
-  .about-programs .text p {
+  .about-programmes .text p {
     font-size: 1.4em; }
   .proof-program {
     font-size: .6rem; }
@@ -7519,11 +7494,11 @@ nav.fixed-top {
     .partners .partner {
       padding-right: 2%;
       padding-left: 2%; }
-  .about-programs {
+  .about-programmes {
     font-size: .8rem; }
-    .about-programs .text {
+    .about-programmes .text {
       padding: 40px; }
-      .about-programs .text p {
+      .about-programmes .text p {
         font-size: 2em; }
   .proof-program {
     font-size: .8rem; }
@@ -7576,8 +7551,6 @@ nav.fixed-top {
       padding-left: 35px; }
   .internship-with-ects {
     font-size: .8rem; }
-    .internship-with-ects .container {
-      height: 350px; }
     .internship-with-ects .info {
       font-size: 1.1em; }
   .footer {
@@ -7645,16 +7618,16 @@ nav.fixed-top {
     .partners .partner {
       padding-right: 8px;
       padding-left: 8px; }
-  .about-programs {
+  .about-programmes {
     font-size: .9rem;
     margin-top: 133px; }
-    .about-programs .graphic {
+    .about-programmes .graphic {
       height: calc(60vh - 133px); }
-    .about-programs .text {
+    .about-programmes .text {
       height: 40vh;
       padding: 0 60px;
       background-color: #496093; }
-      .about-programs .text p {
+      .about-programmes .text p {
         font-size: 1.3em;
         font-style: normal;
         color: #fff; }
@@ -7700,8 +7673,6 @@ nav.fixed-top {
       padding-left: 55px; }
   .internship-with-ects {
     font-size: .9rem; }
-    .internship-with-ects .container {
-      height: 450px; }
     .internship-with-ects .info {
       font-size: 1.3em; }
   .footer {
@@ -7764,13 +7735,13 @@ nav.fixed-top {
     .partners .partner {
       padding-right: 10px;
       padding-left: 10px; }
-  .about-programs {
+  .about-programmes {
     font-size: 1rem; }
-    .about-programs .graphic {
+    .about-programmes .graphic {
       height: calc(100vh - 133px); }
-    .about-programs .text {
+    .about-programmes .text {
       height: calc(100vh - 133px); }
-      .about-programs .text p {
+      .about-programmes .text p {
         font-size: 1.2em; }
   .proof-program {
     font-size: 1rem; }
@@ -7803,14 +7774,7 @@ nav.fixed-top {
         position: relative;
         width: calc(100vw - 300px); }
   .internship-with-ects {
-    font-size: 1rem;
-    background-color: #496093; }
-    .internship-with-ects .container {
-      height: 450px;
-      background-color: #fff;
-      clip-path: polygon(35.3% 0, 100% 0, 100% 100%, 7.5% 100%);
-      -webkit-clip-path: polygon(35.3% 0, 100% 0, 100% 100%, 7.5% 100%);
-      -ms-clip-path: polygon(35.3% 0, 100% 0, 100% 100%, 7.5% 100%); }
+    font-size: 1rem; }
     .internship-with-ects .info {
       font-size: 1.1em; }
   .footer {
@@ -8028,9 +7992,9 @@ nav.fixed-top {
       min-width: 0;
       max-width: 20.938em;
       height: 0.625em; }
-  .about-programs {
+  .about-programmes {
     font-size: 1.2rem; }
-    .about-programs .text p {
+    .about-programmes .text p {
       font-size: 1.1em; }
   .proof-program .square {
     top: 0;
