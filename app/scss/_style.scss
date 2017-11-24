@@ -225,15 +225,10 @@ nav
 
         height: $navbar-height;
 
-        background-color: $brand-primary;
         &.navbar-toggleable-sm > .container
         {
             padding-right: $cp-default;
             padding-left: $cp-default;
-        }
-        &.sticky
-        {
-            background-color: $brand-primary;
         }
         a
         {
@@ -339,31 +334,6 @@ nav
                         transform: scale(1);
 
                 opacity: 1;
-            }
-        }
-        &.sticky
-        {
-            .checkbox
-            {
-                p
-                {
-                    font-size: .62em;
-
-                    padding-left: 2em;
-                    &::after
-                    {
-                        top: 0;
-                        left: 0;
-
-                        width: 1.3em;
-                        height: 1.3em;
-                    }
-                    &::before
-                    {
-                        width: 1.3em;
-                        height: 1.3em;
-                    }
-                }
             }
         }
     }
@@ -1161,13 +1131,11 @@ nav
 {
     font-size: .7rem;
 
-    .container
-    {
-        height: 280px;
-    }
     .info
     {
         font-size: .9em;
+
+        padding: 25px 0;
     }
 }
 

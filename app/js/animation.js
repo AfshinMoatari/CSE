@@ -6,14 +6,11 @@ $(function() {
 
     // build a tween
     var tween = new TimelineMax();
-    tween.set($(this), {
-      css: {
-        className: '+=sticky'
-      }
-    }, 0).set($(this).find(".nav li"), {
-      scale: .70,
+    tween.to($(this).find(".nav li"), .3, {
+      scale: .7
     }, 0).to($(this), .3, {
-      height: 60
+      height: 60,
+      backgroundColor: '#496093'
     }, 0).to($(this).find(".nav li"), .3, {
       css: {
         className: '-=align-self-end mx-2'
@@ -36,7 +33,8 @@ $(function() {
 
     // build a scene
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".stick"
+        duration: 600,
+        triggerHook: "onEnter"
       })
       .setTween(tween)
       .addTo(controller);
@@ -61,17 +59,14 @@ $(function() {
 
     // build a tween
     var tween = new TimelineMax();
-    tween.set($(this), {
-      css: {
-        className: '+=sticky'
-      }
-    }, 0).to($(this), .4, {
+    tween.to($(this), .3, {
       top: 60
     }, 0);
 
     // build a scene
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".stick"
+        duration: 600,
+        triggerHook: "onEnter"
       })
       .setTween(tween)
       .addTo(controller);
@@ -410,24 +405,32 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
-  $('.smooth-scroll').each(function() {
+  $('.smooth-scroll > *').each(function() {
+    var toggler = $(this);
+    var menuanchor = toggler.data("menuanchor");
+    var trigger = $("[data-anchor=" + menuanchor + "]");
+
+    new ScrollMagic.Scene({
+        triggerElement: trigger.get(0),
+        duration: 600
+      })
+      .on('enter', function() {
+        $('.smooth-scroll > *').removeClass("active");
+        $(toggler).addClass("active");
+      }).addTo(controller);
+
     $(this).click(function() {
-      $('.smooth-scroll').removeClass("active");
-      $(this).addClass("active");
-      var menuanchor = $(this).data("menuanchor");
-      var anchor = $("[data-anchor=" + menuanchor + "]");
-      if (menuanchor === 'top') {
+      if (menuanchor === 'first') {
         $('html,body').animate({
             scrollTop: 0
           },
           'slow');
       } else {
         $('html,body').animate({
-            scrollTop: anchor.offset().top
+            scrollTop: trigger.offset().top
           },
           'slow');
       }
-
     });
   });
 

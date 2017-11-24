@@ -9,12 +9,10 @@
   <link rel="stylesheet" href="./css/app.css">
   <!-- LIBRARIES -->
   <script src="./js/jquery.min.js"></script>
-  <script src="./js/TweenMax.min.js"></script>
   <script src="./js/EasePack.min.js"></script>
+  <script src="./js/TweenMax.min.js"></script>
   <script src="./js/ScrollMagic.min.js"></script>
-  <script src="./js/debug.addIndicators.min.js"></script>
   <script src="./js/animation.gsap.min.js"></script>
-  <script src="./js/jquery.fullpage.min.js"></script>
   <script src="./js/modernizr.js"></script>
   <!-- SCRIPTS -->
   <script src="./js/animation.js"></script>
@@ -24,7 +22,7 @@
 
 <body id="programmes">
   <!-- NAVBAR -->
-  <nav class="main navbar navbar-toggleable-sm animate px-0 fixed-top opacity" duration-opacity="5" delay="0" style="opacity:0">
+  <nav class="main navbar navbar-toggleable-sm bg-primary px-0 fixed-top">
     <div class="container container-100 d-flex">
       <div class="navbar-toggler navbar-toggler-right border-0 p-0 align-self-center" title="Menu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" href="#" data-toggle="collapse" data-target="#overlay-nav">
         <div class="bar1"></div>
@@ -87,7 +85,7 @@
         <li class="nav-item d-flex justify-content-center my-2">
           <a class="nav-link" href="#">blog</a>
         </li>
-        <li class="nav-item apply  d-flex justify-content-center my-2">
+        <li class="nav-item apply d-flex justify-content-center my-2">
           <button class="nav-link btn btn-primary dark" href="#" data-toggle="collapse" data-target="#menu">
           apply now
           <span></span>
@@ -98,28 +96,28 @@
   </nav>
   <!-- NAV SECONDARY -->
   <nav class="fixed-top secondary">
-    <ul class="nav container d-flex justify-content-center justify-content-xl-start">
-      <li class="nav-item checkbox smooth-scroll active" data-menuanchor="top">
+    <ul class="nav container d-flex justify-content-center justify-content-xl-start smooth-scroll">
+      <li class="nav-item checkbox active" data-menuanchor="first">
         <a class="nav-link" href="#first">
           <p>About programmes</p>
         </a>
       </li>
-      <li class="nav-item checkbox smooth-scroll" data-menuanchor="second">
+      <li class="nav-item checkbox" data-menuanchor="second">
         <a class="nav-link" href="#second">
           <p>Proof Program</p>
         </a>
       </li>
-      <li class="nav-item checkbox smooth-scroll" data-menuanchor="third">
+      <li class="nav-item checkbox" data-menuanchor="third">
         <a class="nav-link" href="#third">
           <p>Accelerators</p>
         </a>
       </li>
-      <li class="nav-item checkbox smooth-scroll" data-menuanchor="fourth">
+      <li class="nav-item checkbox" data-menuanchor="fourth">
         <a class="nav-link" href="#fourth">
           <p>Match up</p>
         </a>
       </li>
-      <li class="nav-item checkbox smooth-scroll" data-menuanchor="fifth">
+      <li class="nav-item checkbox" data-menuanchor="fifth">
         <a class="nav-link" href="#fifth">
           <p>Internship with ECTS</p>
         </a>
@@ -260,8 +258,8 @@
       </div>
     </div>
     <!-- PROOF PROGRAM SECTION-->
-    <div class="section proof-program py-7 stick animate" data-anchor="second">
-      <div class="container container-100 top">
+    <div class="section proof-program py-7 animate" data-anchor="second">
+      <div class="container container-100 first">
         <div class="square-title large mx-md-auto">
           <div class="svg-container w-100">
           <?xml version="1.0" encoding="UTF-8"?>
@@ -785,7 +783,7 @@
           </div>
         </div>
         <div class="row no-gutters align-self-center">
-          <div class="col-12 col-lg-8 col-xl-6 col-xl-6 offset-lg-4 offset-xl-0 info">
+          <div class="col-12 col-lg-10 col-xl-6  info">
             <div class="square-title small hidden-xl-up">
               <div class="svg-container w-100">
                 <?xml version="1.0" encoding="UTF-8"?>

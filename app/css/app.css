@@ -6691,13 +6691,10 @@ img {
 
 nav.main {
   z-index: 3;
-  height: 100px;
-  background-color: #496093; }
+  height: 100px; }
   nav.main.navbar-toggleable-sm > .container {
     padding-right: 15px;
     padding-left: 15px; }
-  nav.main.sticky {
-    background-color: #496093; }
   nav.main a {
     font-size: 1.25rem; }
   nav.main .nav-link {
@@ -6762,17 +6759,6 @@ nav.secondary {
     -o-transform: scale(1);
     transform: scale(1);
     opacity: 1; }
-  nav.secondary.sticky .checkbox p {
-    font-size: .62em;
-    padding-left: 2em; }
-    nav.secondary.sticky .checkbox p::after {
-      top: 0;
-      left: 0;
-      width: 1.3em;
-      height: 1.3em; }
-    nav.secondary.sticky .checkbox p::before {
-      width: 1.3em;
-      height: 1.3em; }
 
 nav.fixed-top {
   position: fixed; }
@@ -7212,10 +7198,9 @@ nav.fixed-top {
 
 .internship-with-ects {
   font-size: .7rem; }
-  .internship-with-ects .container {
-    height: 280px; }
   .internship-with-ects .info {
-    font-size: .9em; }
+    font-size: .9em;
+    padding: 25px 0; }
 
 .job-openings .square {
   top: 0;
@@ -7424,16 +7409,6 @@ nav.fixed-top {
       left: 0;
       width: 1.8em;
       height: 1.8em; }
-    nav.secondary.sticky .checkbox p {
-      font-size: .53em; }
-      nav.secondary.sticky .checkbox p::after {
-        top: 0;
-        left: 0;
-        width: 1.8em;
-        height: 1.8em; }
-      nav.secondary.sticky .checkbox p::before {
-        width: 1.8em;
-        height: 1.8em; }
   .status {
     font-size: .6rem; }
   .stats {
@@ -7576,8 +7551,6 @@ nav.fixed-top {
       padding-left: 35px; }
   .internship-with-ects {
     font-size: .8rem; }
-    .internship-with-ects .container {
-      height: 350px; }
     .internship-with-ects .info {
       font-size: 1.1em; }
   .footer {
@@ -7700,8 +7673,6 @@ nav.fixed-top {
       padding-left: 55px; }
   .internship-with-ects {
     font-size: .9rem; }
-    .internship-with-ects .container {
-      height: 450px; }
     .internship-with-ects .info {
       font-size: 1.3em; }
   .footer {
@@ -7803,14 +7774,7 @@ nav.fixed-top {
         position: relative;
         width: calc(100vw - 300px); }
   .internship-with-ects {
-    font-size: 1rem;
-    background-color: #496093; }
-    .internship-with-ects .container {
-      height: 450px;
-      background-color: #fff;
-      clip-path: polygon(35.3% 0, 100% 0, 100% 100%, 7.5% 100%);
-      -webkit-clip-path: polygon(35.3% 0, 100% 0, 100% 100%, 7.5% 100%);
-      -ms-clip-path: polygon(35.3% 0, 100% 0, 100% 100%, 7.5% 100%); }
+    font-size: 1rem; }
     .internship-with-ects .info {
       font-size: 1.1em; }
   .footer {
