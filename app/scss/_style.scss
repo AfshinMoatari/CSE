@@ -221,7 +221,7 @@ nav
 {
     &.main
     {
-        z-index: 3;
+        z-index: 4;
 
         height: $navbar-height;
 
@@ -258,6 +258,7 @@ nav
     {
         font-size: .7rem;
 
+        z-index: 2;
         top: 100px;
 
         background-color: $brand-secondary;
