@@ -6808,8 +6808,13 @@ nav.fixed-top {
       .status .stats .stat h2 {
         font-size: 5.5em;
         font-weight: bold; }
+        .status .stats .stat h2.sign::after {
+          position: absolute;
+          content: '+'; }
       .status .stats .stat p {
         font-size: 1.6em;
+        font-weight: bold;
+        line-height: 90%;
         color: #496093; }
   .status .square {
     top: 42%; }

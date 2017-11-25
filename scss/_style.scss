@@ -420,12 +420,20 @@ nav
             {
                 font-size: 5.5em;
                 font-weight: bold;
+                &.sign::after
+                {
+                    position: absolute;
+
+                    content: '+';
+                }
             }
             p
             {
                 font-size: 1.6em;
+                font-weight: bold;
+                line-height: 90%;
 
-                color: $brand-primary;;
+                color: $brand-primary;
             }
         }
     }
