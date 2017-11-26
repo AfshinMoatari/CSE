@@ -133,13 +133,12 @@
     //quotations
     .quotations
     {
-        font-size: .8rem;
         .square
         {
             &.left
             {
-                top: 40%;
-                left: -5%;
+                top: 45%;
+                left: -13%;
 
                 .side-b,
                 .side-l,
@@ -174,8 +173,6 @@
                     max-width: $square-dimension;
                     height: $square-border;
                 }
-
-
                 .side-rt
                 {
                     top: 0;
@@ -185,7 +182,6 @@
                     min-height: 0;
                     max-height: 3em;
                 }
-
                 .side-rb
                 {
                     top: calc( ( #{$square-dimension} - 8.5em )  );
@@ -208,8 +204,8 @@
             }
             &.right
             {
-                top: -30%;
-                right: -5%;
+                top: -28%;
+                right: -13%;
 
                 .side-b,
                 .side-lb,
@@ -223,7 +219,7 @@
                     height: 0;
 
                     background: transparent;
-                    background-color: $square-color-orange;
+                    background-color: $square-color-pink;
                 }
 
                 .side-lb
@@ -243,7 +239,7 @@
 
                     width: $square-border;
                     min-height: 0;
-                    max-height: 8.5em;;
+                    max-height: 8.5em;
                 }
 
                 .side-t
@@ -255,7 +251,6 @@
                     max-width: $square-dimension;
                     height: $square-border;
                 }
-
 
                 .side-r
                 {
@@ -284,7 +279,7 @@
     {
         .square
         {
-            top: -25%;
+            top: -10%;
             right: -5%;
 
             .side-b,
@@ -299,7 +294,7 @@
                 height: 0;
 
                 background: transparent;
-                background-color: $brand-primary;
+                background-color: $square-color-purple;
             }
 
             .side-lt
@@ -717,7 +712,7 @@
                 height: 0;
 
                 background: transparent;
-                background-color: $square-color-purple;
+                background-color: $square-color-pink;
             }
 
             .side-l
@@ -862,10 +857,32 @@
                 .instagram
                 {
                     stroke: $brand-primary;
+                    .shape,
+                    .rectangle
+                    {
+                        -webkit-transition: all 1s;
+                           -moz-transition: all 1s;
+                             -o-transition: all 1s;
+                                transition: all 1s;
+
+                        fill: $brand-secondary;
+                    }
                 }
-                .rectangle
+            }
+            .item:hover
+            {
+                .facebook,
+                .twitter,
+                .instagram
                 {
-                    color: $brand-primary;
+                    .rectangle
+                    {
+                        fill: $brand-primary;
+                        &.inner
+                        {
+                            fill: $brand-primary;
+                        }
+                    }
                 }
             }
         }

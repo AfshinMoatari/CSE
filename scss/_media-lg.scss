@@ -94,19 +94,21 @@
     .programmes
     {
         font-size: 1rem;
-
-        .partner
-        {
-            padding-right: 10px;
-            padding-left: 10px;
-        }
     }
     //quotations
     .quotations
     {
-        font-size: .8rem;
+        font-size: 1rem;
 
         background-color: transparent;
+        .blockquote
+        {
+            font-size: 1.875em;
+            .blockquote-footer
+            {
+                font-size: .833em;
+            }
+        }
     }
     //partners
     .partners
@@ -225,18 +227,7 @@
         }
         li
         {
-            font-size: 1.2em;
-        }
-        .social
-        {
-            .item
-            {
-                svg
-                {
-                    width: 60px;
-                    height: 60px;
-                }
-            }
+            font-size: 1.250em;
         }
     }
 }
