@@ -85,6 +85,13 @@ img
         padding-bottom: 15px;
     }
 }
+.showcase-logo
+{
+    svg
+    {
+        width: 110%;
+    }
+}
 //utilities
 .blockquote
 {
@@ -110,11 +117,12 @@ img
     {
         &::after
         {
-            font-size: 2.5em;
+            font-size: 1em;
             line-height: .1em;
 
+            margin-left: .1em;
+
             content: close-quote;
-            vertical-align: -.35em;
         }
     }
     footer
@@ -237,6 +245,11 @@ nav
         .nav-link
         {
             color: $brand-secondary;
+            &.active
+            {
+                // font-weight: bold;
+                font-family: $font-family-cbs-bold;
+            }
         }
         .apply
         {
@@ -420,12 +433,20 @@ nav
             {
                 font-size: 5.5em;
                 font-weight: bold;
+                &.sign::after
+                {
+                    position: absolute;
+
+                    content: '+';
+                }
             }
             p
             {
                 font-size: 1.6em;
+                font-weight: bold;
+                line-height: 90%;
 
-                color: $brand-primary;;
+                color: $brand-primary;
             }
         }
     }
@@ -505,12 +526,6 @@ nav
 .programmes
 {
     font-size: .7rem;
-
-    .partner
-    {
-        padding-right: 1%;
-        padding-left: 1%;
-    }
 }
 //quotations
 .quotations
@@ -575,71 +590,46 @@ nav
     }
     .social
     {
-        padding: 16px 0;
-
+        height: 6.5em;
+        padding-bottom: 10px;
         .item
         {
-            padding: 0 5px;
-
             cursor: pointer;
             svg
             {
-                width: 50px;
-                height: 50px;
-            }
-            &.in
-            {
-                .rectangle
-                {
-                    animation: .8s draw ease-in-out forwards;
-                }
-            }
-            &.out
-            {
-                .rectangle
-                {
-                    animation: .7s drawBack ease-in-out forwards;
-                }
+                width: 45px;
+                height: 45px;
             }
             .facebook,
             .twitter,
             .instagram
             {
                 stroke: $brand-secondary;
-            }
-            .rectangle
-            {
-                color: $brand-secondary;
+                .shape,
+                .rectangle
+                {
+                    -webkit-transition: all 1s;
+                       -moz-transition: all 1s;
+                         -o-transition: all 1s;
+                            transition: all 1s;
 
-                fill: transparent;
-                stroke-dasharray: 140 540;
-                stroke-dashoffset: -474;
-                stroke-width: 2px;
-            }
-            @keyframes draw
-            {
-                0%
-                {
-                    stroke-dasharray: 140 540;
-                    stroke-dashoffset: -474;
-                }
-                100%
-                {
-                    stroke-dasharray: 760;
-                    stroke-dashoffset: 0;
+                    fill: $brand-primary;
                 }
             }
-            @keyframes drawBack
+        }
+        .item:hover
+        {
+            .facebook,
+            .twitter,
+            .instagram
             {
-                0%
+                .rectangle
                 {
-                    stroke-dasharray: 760;
-                    stroke-dashoffset: 0;
-                }
-                100%
-                {
-                    stroke-dasharray: 140 540;
-                    stroke-dashoffset: -474;
+                    fill: $brand-secondary;
+                    &.inner
+                    {
+                        fill: $brand-secondary;
+                    }
                 }
             }
         }

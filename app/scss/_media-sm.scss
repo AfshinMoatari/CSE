@@ -81,12 +81,6 @@
     .programmes
     {
         font-size: .8rem;
-
-        .partner
-        {
-            padding-right: 2%;
-            padding-left: 2%;
-        }
     }
     //quotations
     .quotations
@@ -262,7 +256,6 @@
         font-size: .8rem;
 
         height: 4em;
-
         .row
         {
             flex-direction: row;
@@ -280,6 +273,7 @@
         }
         .social
         {
+            height: auto;
             padding: 0;
 
             .items
@@ -288,11 +282,10 @@
             }
             .item
             {
-                padding: 0;
                 svg
                 {
-                    width: 40px;
-                    height: 40px;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }

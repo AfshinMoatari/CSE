@@ -6611,6 +6611,9 @@ img {
   width: 90px;
   padding-bottom: 15px; }
 
+.showcase-logo svg {
+  width: 110%; }
+
 .blockquote {
   font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif;
   quotes: '“' '”' '‘' '’';
@@ -6622,10 +6625,10 @@ img {
     margin-right: .1em;
     content: open-quote; }
   .blockquote .after::after {
-    font-size: 2.5em;
+    font-size: 1em;
     line-height: .1em;
-    content: close-quote;
-    vertical-align: -.35em; }
+    margin-left: .1em;
+    content: close-quote; }
   .blockquote footer {
     font-family: "CBS-regular", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.563rem; }
@@ -6699,6 +6702,8 @@ nav.main {
     font-size: 1.25rem; }
   nav.main .nav-link {
     color: #fff; }
+    nav.main .nav-link.active {
+      font-family: "CBS-bold", "Helvetica Neue", Arial, sans-serif; }
   nav.main .apply .btn-primary {
     font-size: 1.25rem;
     color: #496093;
@@ -6808,8 +6813,13 @@ nav.fixed-top {
       .status .stats .stat h2 {
         font-size: 5.5em;
         font-weight: bold; }
+        .status .stats .stat h2.sign::after {
+          position: absolute;
+          content: '+'; }
       .status .stats .stat p {
         font-size: 1.6em;
+        font-weight: bold;
+        line-height: 90%;
         color: #496093; }
   .status .square {
     top: 42%; }
@@ -6855,9 +6865,6 @@ nav.fixed-top {
 
 .programmes {
   font-size: .7rem; }
-  .programmes .partner {
-    padding-right: 1%;
-    padding-left: 1%; }
 
 .quotations {
   font-size: .7rem;
@@ -6892,43 +6899,36 @@ nav.fixed-top {
     line-height: 170%;
     color: #fff; }
   .footer .social {
-    padding: 16px 0; }
+    height: 6.5em;
+    padding-bottom: 10px; }
     .footer .social .item {
-      padding: 0 5px;
       cursor: pointer; }
       .footer .social .item svg {
-        width: 50px;
-        height: 50px; }
-      .footer .social .item.in .rectangle {
-        animation: .8s draw ease-in-out forwards; }
-      .footer .social .item.out .rectangle {
-        animation: .7s drawBack ease-in-out forwards; }
+        width: 45px;
+        height: 45px; }
       .footer .social .item .facebook,
       .footer .social .item .twitter,
       .footer .social .item .instagram {
         stroke: #fff; }
-      .footer .social .item .rectangle {
-        color: #fff;
-        fill: transparent;
-        stroke-dasharray: 140 540;
-        stroke-dashoffset: -474;
-        stroke-width: 2px; }
-
-@keyframes draw {
-  0% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474; }
-  100% {
-    stroke-dasharray: 760;
-    stroke-dashoffset: 0; } }
-
-@keyframes drawBack {
-  0% {
-    stroke-dasharray: 760;
-    stroke-dashoffset: 0; }
-  100% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474; } }
+        .footer .social .item .facebook .shape,
+        .footer .social .item .facebook .rectangle,
+        .footer .social .item .twitter .shape,
+        .footer .social .item .twitter .rectangle,
+        .footer .social .item .instagram .shape,
+        .footer .social .item .instagram .rectangle {
+          -webkit-transition: all 1s;
+          -moz-transition: all 1s;
+          -o-transition: all 1s;
+          transition: all 1s;
+          fill: #496093; }
+    .footer .social .item:hover .facebook .rectangle,
+    .footer .social .item:hover .twitter .rectangle,
+    .footer .social .item:hover .instagram .rectangle {
+      fill: #fff; }
+      .footer .social .item:hover .facebook .rectangle.inner,
+      .footer .social .item:hover .twitter .rectangle.inner,
+      .footer .social .item:hover .instagram .rectangle.inner {
+        fill: #fff; }
     .footer .social .items {
       margin: 0 auto; }
   .footer .logo path {
@@ -7433,16 +7433,11 @@ nav.fixed-top {
   .internship-with-ects {
     font-size: .6rem; }
   .footer {
-    height: 7em; }
+    height: 9em; }
     .footer li {
-      font-size: .7em; }
+      font-size: .9em; }
     .footer .social {
-      padding: 10px 0; }
-      .footer .social .item {
-        padding: 0 3px; }
-        .footer .social .item svg {
-          width: 40px;
-          height: 40px; } }
+      padding: 10px 0; } }
 
 @media all and (min-width: 576px) {
   .container {
@@ -7481,9 +7476,6 @@ nav.fixed-top {
           font-size: 1.4em; }
   .programmes {
     font-size: .8rem; }
-    .programmes .partner {
-      padding-right: 2%;
-      padding-left: 2%; }
   .quotations {
     font-size: .8rem; }
     .quotations .blockquote {
@@ -7567,14 +7559,13 @@ nav.fixed-top {
     .footer li {
       font-size: 1.1em; }
     .footer .social {
+      height: auto;
       padding: 0; }
       .footer .social .items {
         margin: inherit; }
-      .footer .social .item {
-        padding: 0; }
-        .footer .social .item svg {
-          width: 40px;
-          height: 40px; } }
+      .footer .social .item svg {
+        width: 100%;
+        height: 100%; } }
 
 @media all and (min-width: 768px) {
   .container {
@@ -7609,9 +7600,6 @@ nav.fixed-top {
           font-size: 1.4em; }
   .programmes {
     font-size: .9rem; }
-    .programmes .partner {
-      padding-right: 8px;
-      padding-left: 8px; }
   .quotations {
     font-size: .9rem; }
   .partners {
@@ -7680,10 +7668,7 @@ nav.fixed-top {
     font-size: .9rem;
     height: 5em; }
     .footer li {
-      font-size: 1.1em; }
-    .footer .social .item svg {
-      width: 50px;
-      height: 50px; } }
+      font-size: 1.15em; } }
 
 @media all and (min-width: 992px) {
   .container {
@@ -7725,12 +7710,13 @@ nav.fixed-top {
         font-size: 1.4em; }
   .programmes {
     font-size: 1rem; }
-    .programmes .partner {
-      padding-right: 10px;
-      padding-left: 10px; }
   .quotations {
-    font-size: .8rem;
+    font-size: 1rem;
     background-color: transparent; }
+    .quotations .blockquote {
+      font-size: 1.875em; }
+      .quotations .blockquote .blockquote-footer {
+        font-size: .833em; }
   .partners {
     font-size: 1rem; }
     .partners .partner {
@@ -7784,10 +7770,7 @@ nav.fixed-top {
     .footer ol {
       margin: 0 auto; }
     .footer li {
-      font-size: 1.2em; }
-    .footer .social .item svg {
-      width: 60px;
-      height: 60px; } }
+      font-size: 1.250em; } }
 
 @media all and (min-width: 1200px) {
   .container {
@@ -7862,96 +7845,94 @@ nav.fixed-top {
       min-width: 0;
       max-width: 9.000em;
       height: 0.625em; }
-  .quotations {
-    font-size: .8rem; }
-    .quotations .square.left {
-      top: 40%;
-      left: -5%; }
-      .quotations .square.left .side-b,
-      .quotations .square.left .side-l,
-      .quotations .square.left .side-t,
-      .quotations .square.left .side-rt,
-      .quotations .square.left .side-rb {
-        position: absolute;
-        width: 0;
-        height: 0;
-        background: transparent;
-        background-color: #5bad6f; }
-      .quotations .square.left .side-l {
-        bottom: 0;
-        left: 0;
-        width: 0.625em;
-        min-height: 0;
-        max-height: 20.938em; }
-      .quotations .square.left .side-t {
-        top: 0;
-        left: 0;
-        min-width: 0;
-        max-width: 20.938em;
-        height: 0.625em; }
-      .quotations .square.left .side-rt {
-        top: 0;
-        right: 0;
-        width: 0.625em;
-        min-height: 0;
-        max-height: 3em; }
-      .quotations .square.left .side-rb {
-        top: calc( ( 20.938em - 8.5em ));
-        right: 0;
-        width: 0.625em;
-        min-height: 0;
-        max-height: 8.5em; }
-      .quotations .square.left .side-b {
-        right: 0;
-        bottom: 0;
-        min-width: 0;
-        max-width: 20.938em;
-        height: 0.625em; }
-    .quotations .square.right {
-      top: -30%;
-      right: -5%; }
-      .quotations .square.right .side-b,
-      .quotations .square.right .side-lb,
-      .quotations .square.right .side-lt,
-      .quotations .square.right .side-t,
-      .quotations .square.right .side-r {
-        position: absolute;
-        width: 0;
-        height: 0;
-        background: transparent;
-        background-color: #f79566; }
-      .quotations .square.right .side-lb {
-        bottom: 0;
-        left: 0;
-        width: 0.625em;
-        min-height: 0;
-        max-height: 3em; }
-      .quotations .square.right .side-lt {
-        bottom: calc( ( 20.938em - 8.5em ));
-        left: 0;
-        width: 0.625em;
-        min-height: 0;
-        max-height: 8.5em; }
-      .quotations .square.right .side-t {
-        top: 0;
-        left: 0;
-        min-width: 0;
-        max-width: 20.938em;
-        height: 0.625em; }
-      .quotations .square.right .side-r {
-        top: 0;
-        right: 0;
-        width: 0.625em;
-        min-height: 0;
-        max-height: 20.938em; }
-      .quotations .square.right .side-b {
-        right: 0;
-        bottom: 0;
-        min-width: 0;
-        max-width: 20.938em;
-        height: 0.625em; }
+  .quotations .square.left {
+    top: 45%;
+    left: -13%; }
+    .quotations .square.left .side-b,
+    .quotations .square.left .side-l,
+    .quotations .square.left .side-t,
+    .quotations .square.left .side-rt,
+    .quotations .square.left .side-rb {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: transparent;
+      background-color: #5bad6f; }
+    .quotations .square.left .side-l {
+      bottom: 0;
+      left: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 20.938em; }
+    .quotations .square.left .side-t {
+      top: 0;
+      left: 0;
+      min-width: 0;
+      max-width: 20.938em;
+      height: 0.625em; }
+    .quotations .square.left .side-rt {
+      top: 0;
+      right: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 3em; }
+    .quotations .square.left .side-rb {
+      top: calc( ( 20.938em - 8.5em ));
+      right: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 8.5em; }
+    .quotations .square.left .side-b {
+      right: 0;
+      bottom: 0;
+      min-width: 0;
+      max-width: 20.938em;
+      height: 0.625em; }
+  .quotations .square.right {
+    top: -28%;
+    right: -13%; }
+    .quotations .square.right .side-b,
+    .quotations .square.right .side-lb,
+    .quotations .square.right .side-lt,
+    .quotations .square.right .side-t,
+    .quotations .square.right .side-r {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: transparent;
+      background-color: #f8ada8; }
+    .quotations .square.right .side-lb {
+      bottom: 0;
+      left: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 3em; }
+    .quotations .square.right .side-lt {
+      bottom: calc( ( 20.938em - 8.5em ));
+      left: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 8.5em; }
+    .quotations .square.right .side-t {
+      top: 0;
+      left: 0;
+      min-width: 0;
+      max-width: 20.938em;
+      height: 0.625em; }
+    .quotations .square.right .side-r {
+      top: 0;
+      right: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 20.938em; }
+    .quotations .square.right .side-b {
+      right: 0;
+      bottom: 0;
+      min-width: 0;
+      max-width: 20.938em;
+      height: 0.625em; }
   .partners .square {
-    top: -25%;
+    top: -10%;
     right: -5%; }
     .partners .square .side-b,
     .partners .square .side-lt,
@@ -7962,7 +7943,7 @@ nav.fixed-top {
       width: 0;
       height: 0;
       background: transparent;
-      background-color: #496093; }
+      background-color: #8f8ac2; }
     .partners .square .side-lt {
       bottom: calc( ( 20.938em - 110px ));
       left: 0;
@@ -8274,8 +8255,25 @@ nav.fixed-top {
     .footer .social .item .twitter,
     .footer .social .item .instagram {
       stroke: #496093; }
-    .footer .social .item .rectangle {
-      color: #496093; }
+      .footer .social .item .facebook .shape,
+      .footer .social .item .facebook .rectangle,
+      .footer .social .item .twitter .shape,
+      .footer .social .item .twitter .rectangle,
+      .footer .social .item .instagram .shape,
+      .footer .social .item .instagram .rectangle {
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+        fill: #fff; }
+    .footer .social .item:hover .facebook .rectangle,
+    .footer .social .item:hover .twitter .rectangle,
+    .footer .social .item:hover .instagram .rectangle {
+      fill: #496093; }
+      .footer .social .item:hover .facebook .rectangle.inner,
+      .footer .social .item:hover .twitter .rectangle.inner,
+      .footer .social .item:hover .instagram .rectangle.inner {
+        fill: #496093; }
     .footer .logo path {
       fill: #496093; }
     .footer .logo polygon {
