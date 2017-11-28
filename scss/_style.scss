@@ -110,32 +110,48 @@ p
 {
     font-family: $font-family-cbs-bold;
 
-    quotes: '“' '”' '‘' '’';
-
     color: $brand-secondary;
     border: none;
     .before
     {
         &::before
         {
+            content: '\201C';
+        }
+        &.small
+        {
             font-size: 1em;
             line-height: .2em;
 
             margin-right: .1em;
+        }
+        &.large
+        {
+            font-size: 2em;
+            line-height: .2em;
 
-            content: open-quote;
+            margin-right: .1em;
         }
     }
     .after
     {
         &::after
         {
+            content: '\201D';
+        }
+        &.small
+        {
             font-size: 1em;
             line-height: .1em;
 
             margin-left: .1em;
+        }
+        &.large
+        {
+            font-size: 2em;
+            line-height: .1em;
 
-            content: close-quote;
+            margin-left: .1em;
         }
     }
     footer
@@ -1516,11 +1532,6 @@ nav
             }
         }
     }
-}
-
-//the team
-.the-team
-{
     .info
     {
         .title
@@ -1550,6 +1561,11 @@ nav
             height: 262px;
         }
     }
+}
+
+//the team
+.the-team
+{
     .ceo
     {
         .info
@@ -1683,90 +1699,23 @@ nav
 //Testimonials
 .testimonials
 {
-    .fp-tableCell
+    .blockquote
     {
-        vertical-align: top;
-    }
-    .square-portrait
-    {
-        &.right
+        font-family: $font-family-cbs-regular;
+        font-size: 1.250em;
+        line-height: 1.4;
+
+        color: inherit;
+        span
         {
-            top: -11%;
-            right: -3%;
-            .side-l
+            &::after,
+            &::before
             {
-                top: 0;
-                left: 0;
+                font-size: 6em;
 
-                width: $square-portrait-border;
-                height: 40px;
-            }
+                vertical-align: -.4em;
 
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                width: $square-portrait-dimension;
-                height: $square-portrait-border;
-            }
-
-            .side-r
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-portrait-border;
-                height: $square-portrait-dimension;
-            }
-
-            .side-b
-            {
-                right: 0;
-                bottom: 0;
-
-                width: 40px;
-                height: $square-portrait-border;
-            }
-        }
-        &.left
-        {
-            top: -11%;
-            left: -3%;
-            .side-l
-            {
-                bottom: 0;
-                left: 0;
-
-                width: $square-portrait-border;
-                height: $square-portrait-dimension;
-            }
-
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                width: $square-portrait-dimension;
-                height: $square-portrait-border;
-            }
-
-            .side-r
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-portrait-border;
-                height: 40px;
-            }
-
-            .side-b
-            {
-                bottom: 0;
-                left: 0;
-
-                width: 40px;
-                height: $square-portrait-border;
+                color: $brand-primary;
             }
         }
     }
