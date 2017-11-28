@@ -11,22 +11,18 @@
     padding-left: $cp-default;
 }
 
-#main,
-#programmes
+//fullpageJS horizontal scroll
+.fullpage
 {
-    .fullpage
-    {
-        position: relative;
+    position: relative;
 
-        overflow: hidden;
-    }
+    overflow: hidden;
 }
 
 //typography
 h1,
 h2,
 h3,
-h5,
 h6,
 a,
 button
@@ -48,6 +44,12 @@ h5
 img
 {
     width: 100%;
+    height: 100%;
+}
+p
+{
+    font-size: 1.250rem;
+    line-height: 120%;
 }
 .text-link
 {
@@ -72,6 +74,10 @@ img
 {
     white-space: pre-line;
 }
+.bold
+{
+    font-family: $font-family-cbs-bold;
+}
 .square-title
 {
     &.large
@@ -90,6 +96,13 @@ img
     svg
     {
         width: 110%;
+    }
+}
+.list-inline
+{
+    .text
+    {
+        font-size: 1.250em;
     }
 }
 //utilities
@@ -223,7 +236,26 @@ img
     opacity: .6;
     background-color: #313c5d;
 }
-
+.img-fit
+{
+    object-fit: cover;
+    &.center
+    {
+        object-position: center;
+    }
+    &.top
+    {
+        object-position: top;
+    }
+    &.left
+    {
+        object-position: left;
+    }
+    &.right
+    {
+        object-position: right;
+    }
+}
 //Navs
 nav
 {
@@ -817,12 +849,12 @@ nav
 }
 
 //about programmes
-.about-programmes
+.about-page
 {
     font-size: .7rem;
 
     margin-top: 133px;
-    .graphic
+    .media
     {
         height: calc(100vh - 133px);
         //CSE Proof Plan
@@ -1133,9 +1165,10 @@ nav
 //Job Openings
 .job-openings
 {
+    height: 500px;
     .square
     {
-        top: 0;
+        top: -30%;
         right: 70%;
 
         .side-b,
@@ -1169,14 +1202,14 @@ nav
             left: 0;
 
             min-width: 0;
-            max-width: 150px;
+            max-width: $square-dimension;
             height: $square-border;
         }
 
 
         .side-r
         {
-            top: calc( ( #{$square-dimension} - 150px )  );
+            top: 0;
             right: 0;
 
             width: $square-border;
@@ -1186,12 +1219,41 @@ nav
 
         .side-b
         {
-            right: 0;
+            right: calc( ( #{$square-dimension} - 150px )  );
             bottom: 0;
 
             min-width: 0;
-            max-width: $square-dimension;
+            max-width: 150px;
             height: $square-border;
+        }
+    }
+    .list-inline
+    {
+        .text
+        {
+            font-family: $font-family-cbs-bold;
+        }
+
+        &::before
+        {
+            content: '\2012 \00A0';
+        }
+    }
+}
+
+//Find us Here
+.find-us-here
+{
+    height: 500px;
+    .social
+    {
+        .item
+        {
+            svg
+            {
+                width: 35px;
+                height: 35px;
+            }
         }
     }
 }
@@ -1199,16 +1261,13 @@ nav
 //Resources & Research
 .resources-research
 {
-    .fp-tableCell
-    {
-        vertical-align: top;
-    }
     .square
     {
+        z-index: -1;
         &.left
         {
-            top: -80%;
-            left: -35%;
+            top: -25%;
+            left: -25%;
 
             .side-b,
             .side-l,
@@ -1222,7 +1281,7 @@ nav
                 height: 0;
 
                 background: transparent;
-                background-color: $square-color-green;
+                background-color: $brand-primary;
             }
 
             .side-l
@@ -1252,17 +1311,17 @@ nav
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 40px;
+                max-height: 50px;
             }
 
             .side-rb
             {
-                top: calc( ( #{$square-dimension} - 140px )  );
+                top: calc( ( #{$square-dimension} - 75px )  );
                 right: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 140px;;
+                max-height: 75px;;
             }
 
             .side-b
@@ -1277,8 +1336,8 @@ nav
         }
         &.right
         {
-            top: -15%;
-            right: -40%;
+            top: -25%;
+            right: -25%;
 
             .side-b,
             .side-lb,
@@ -1302,17 +1361,17 @@ nav
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 140px;
+                max-height: 50px;
             }
 
             .side-lt
             {
-                bottom: calc( ( #{$square-dimension} - 40px )  );
+                bottom: calc( ( #{$square-dimension} - 50px )  );
                 left: 0;
 
                 width: $square-border;
                 min-height: 0;
-                max-height: 40px;;
+                max-height: 50px;;
             }
 
             .side-t
@@ -1348,6 +1407,12 @@ nav
     }
 }
 
+//Press
+.press
+{
+    height: 500px;
+}
+
 //Portfolio
 .portfolio
 {
@@ -1360,6 +1425,257 @@ nav
         img
         {
             width: 70%;
+        }
+    }
+}
+
+//profile
+.profile
+{
+    .square-portrait
+    {
+        z-index: -1;
+        &.right
+        {
+            top: -11%;
+            right: -5%;
+            .side-l
+            {
+                top: 0;
+                left: 0;
+
+                width: $square-portrait-border;
+                height: 40px;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                width: $square-portrait-dimension;
+                height: $square-portrait-border;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-portrait-border;
+                height: $square-portrait-dimension;
+            }
+
+            .side-b
+            {
+                right: 0;
+                bottom: 0;
+
+                width: 40px;
+                height: $square-portrait-border;
+            }
+        }
+        &.left
+        {
+            top: -11%;
+            left: -5%;
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-portrait-border;
+                height: $square-portrait-dimension;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                width: $square-portrait-dimension;
+                height: $square-portrait-border;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-portrait-border;
+                height: 40px;
+            }
+
+            .side-b
+            {
+                bottom: 0;
+                left: 0;
+
+                width: 40px;
+                height: $square-portrait-border;
+            }
+        }
+    }
+}
+
+//the team
+.the-team
+{
+    .info
+    {
+        .title
+        {
+            span
+            {
+                font-family: $font-family-cbs-bold;
+                font-size: 1.250em;
+            }
+            p
+            {
+                font-size: 1.250em;
+                line-height: 110%;
+            }
+        }
+        .contact
+        {
+            font-size: 1.250em;
+            line-height: 120%;
+        }
+    }
+    .portrait
+    {
+        .img-container
+        {
+            width: 196px;
+            height: 262px;
+        }
+    }
+    .ceo
+    {
+        .info
+        {
+            .title
+            {
+                h4
+                {
+                    color: $brand-primary;
+                }
+            }
+        }
+        .profile
+        {
+            .portrait
+            {
+                .square-portrait
+                {
+                    .side-b,
+                    .side-t,
+                    .side-l,
+                    .side-r
+                    {
+                        background-color: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+    .proof-and-ideation
+    {
+        h5
+        {
+            color: $brand-tertiary;
+        }
+        .info
+        {
+            .title
+            {
+                h4
+                {
+                    color: $brand-tertiary;
+                }
+            }
+        }
+        .profile
+        {
+            .portrait
+            {
+                .square-portrait
+                {
+                    .side-b,
+                    .side-t,
+                    .side-l,
+                    .side-r
+                    {
+                        background-color: $brand-tertiary;
+                    }
+                }
+            }
+        }
+    }
+    .international-growth
+    {
+        h5
+        {
+            color: $brand-quaternary;
+        }
+        .info
+        {
+            .title
+            {
+                h4
+                {
+                    color: $brand-quaternary;
+                }
+            }
+        }
+        .profile
+        {
+            .portrait
+            {
+                .square-portrait
+                {
+                    .side-b,
+                    .side-t,
+                    .side-l,
+                    .side-r
+                    {
+                        background-color: $brand-quaternary;
+                    }
+                }
+            }
+        }
+    }
+    .communication-and-bussiness-relations
+    {
+        h5
+        {
+            color: $brand-quinary;
+        }
+        .info
+        {
+            .title
+            {
+                h4
+                {
+                    color: $brand-quinary;
+                }
+            }
+        }
+        .profile
+        {
+            .portrait
+            {
+                .square-portrait
+                {
+                    .side-b,
+                    .side-t,
+                    .side-l,
+                    .side-r
+                    {
+                        background-color: $brand-quinary;
+                    }
+                }
+            }
         }
     }
 }
