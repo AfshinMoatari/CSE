@@ -24,8 +24,7 @@ h1,
 h2,
 h3,
 h6,
-a,
-button
+a
 {
     text-transform: uppercase;
 }
@@ -108,52 +107,90 @@ p
 //utilities
 .blockquote
 {
-    font-family: $font-family-cbs-bold;
+    font-size: 1rem;
 
-    color: $brand-secondary;
     border: none;
-    .before
+    .small
     {
-        &::before
-        {
-            content: '\201C';
-        }
-        &.small
-        {
-            font-size: 1em;
-            line-height: .2em;
+        font-family: $font-family-cbs-bold;
+        font-size: 1em;
 
-            margin-right: .1em;
-        }
-        &.large
-        {
-            font-size: 2em;
-            line-height: .2em;
+        color: $brand-secondary;
 
-            margin-right: .1em;
+        &.before
+        {
+            &::before
+            {
+                font-size: 1em;
+                line-height: .2em;
+
+                margin-right: .1em;
+
+                content: '\201C';
+
+                color: inherit;
+            }
+        }
+        &.after
+        {
+            &::after
+            {
+                font-size: 1em;
+                line-height: .1em;
+
+                content: '\201D';
+            }
         }
     }
-    .after
+    .large
     {
-        &::after
-        {
-            content: '\201D';
-        }
-        &.small
-        {
-            font-size: 1em;
-            line-height: .1em;
+        font-family: $font-family-cbs-regular;
+        font-size: 1.250em;
+        line-height: 1.4;
 
-            margin-left: .1em;
-        }
-        &.large
+        color: inherit;
+        &.before
         {
-            font-size: 2em;
-            line-height: .1em;
+            &::before
+            {
+                font-size: 4em;
+                line-height: 0;
 
-            margin-left: .1em;
+                position: relative;
+                top: 30px;
+                right: 2px;
+
+                display: inline;
+
+                height: 0;
+
+                content: '\201C';
+
+                color: $brand-primary;
+            }
+        }
+        &.after
+        {
+            &::after
+            {
+                font-size: 4em;
+                line-height: 0;
+
+                position: relative;
+                top: 30px;
+                left: 2px;
+
+                display: inline;
+
+                height: 0;
+
+                content: '\201D';
+
+                color: $brand-primary;
+            }
         }
     }
+
     footer
     {
         font-family: $font-family-cbs-regular;
@@ -168,13 +205,15 @@ p
 .btn-primary
 {
     font-family: $buttons-font-family;
-    font-size: $font-size-lg;
+    font-size: 1.563em;
 
     position: relative;
 
     display: inline-block;
 
     cursor: pointer;
+    vertical-align: text-bottom;
+    text-transform: uppercase;
 
     border-width: 2px;
     & span
@@ -195,6 +234,7 @@ p
     &.dark
     {
         color: $brand-secondary;
+        border-width: $border-width;
         background-color: $brand-primary;
         & span
         {
@@ -205,6 +245,7 @@ p
     &.light
     {
         color: $brand-primary ;
+        border-width: $border-width;
         border-color: $brand-primary;
         background-color: $brand-secondary;
         & span
@@ -214,11 +255,10 @@ p
         }
     }
 }
-
 .btn-secondary
 {
     font-family: $buttons-font-family;
-    font-size: $font-size-lg;
+    font-size: 1.250em;
 
     position: relative;
 
@@ -229,7 +269,7 @@ p
     cursor: pointer;
 
     color: $brand-primary;
-    border-width: 2px;
+    border-width: $border-width;
     border-color: $brand-primary;
     background-color: $brand-secondary;
     &.active
@@ -1432,15 +1472,27 @@ nav
 //Portfolio
 .portfolio
 {
-    .fp-tableCell
-    {
-        vertical-align: top;
-    }
     .item
     {
         img
         {
-            width: 70%;
+            width: 80%;
+        }
+    }
+    .switcher
+    {
+        .btn
+        {
+            width: 175px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .switcher-content
+        {
+            .btn
+            {
+                // font-size: 1.2em;
+            }
         }
     }
 }
@@ -1453,8 +1505,8 @@ nav
         z-index: -1;
         &.right
         {
-            top: -11%;
-            right: -5%;
+            top: -30px;
+            right: -30px;
             .side-l
             {
                 top: 0;
@@ -1493,8 +1545,8 @@ nav
         }
         &.left
         {
-            top: -11%;
-            left: -5%;
+            top: -30px;
+            left: -30px;
             .side-l
             {
                 bottom: 0;
@@ -1557,6 +1609,8 @@ nav
     {
         .img-container
         {
+            position: relative;
+
             width: 196px;
             height: 262px;
         }
@@ -1699,24 +1753,17 @@ nav
 //Testimonials
 .testimonials
 {
-    .blockquote
+    .item:nth-child(1)
     {
-        font-family: $font-family-cbs-regular;
-        font-size: 1.250em;
-        line-height: 1.4;
-
-        color: inherit;
-        span
-        {
-            &::after,
-            &::before
-            {
-                font-size: 6em;
-
-                vertical-align: -.4em;
-
-                color: $brand-primary;
-            }
-        }
+        top: 80px;
     }
+    .item:nth-child(2)
+    {
+        bottom: 80px;
+    }
+}
+//Video archive
+.video-archive
+{
+    height: 600px;
 }
