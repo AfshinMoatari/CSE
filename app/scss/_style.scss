@@ -10,7 +10,49 @@
     padding-right: $cp-default;
     padding-left: $cp-default;
 }
+//SECTIONS
+//section-media
+.s-media
+{
+    font-size: .7rem;
+    .container
+    {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
 
+        background-color: $brand-primary;
+    }
+    .info
+    {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        &.text-left
+        {
+            padding: 15px;
+        }
+        h4,
+        p,
+        a
+        {
+            position: relative;
+
+            width: 100%;
+
+            color: $brand-secondary;
+        }
+    }
+}
+.s-single
+{
+    height: 600px;
+}
+.s-media
+{
+    height: 800px;
+}
 //fullpageJS horizontal scroll
 .fullpage
 {
@@ -24,8 +66,7 @@ h1,
 h2,
 h3,
 h6,
-a,
-button
+a
 {
     text-transform: uppercase;
 }
@@ -49,12 +90,17 @@ img
 p
 {
     font-size: 1.250rem;
-    line-height: 120%;
+    line-height: 115%;
+}
+
+h4
+{
+    margin-bottom: .7em;
 }
 .text-link
 {
     font-family: $font-family-cbs-bold;
-    font-size: 1.1em;
+    font-size: 1.250em;
 
     text-decoration: underline;
     text-transform: none;
@@ -108,36 +154,90 @@ p
 //utilities
 .blockquote
 {
-    font-family: $font-family-cbs-bold;
+    font-size: 1rem;
 
-    quotes: '“' '”' '‘' '’';
-
-    color: $brand-secondary;
     border: none;
-    .before
+    .small
     {
-        &::before
+        font-family: $font-family-cbs-bold;
+        font-size: 1em;
+
+        color: $brand-secondary;
+
+        &.before
         {
-            font-size: 1em;
-            line-height: .2em;
+            &::before
+            {
+                font-size: 1em;
+                line-height: .2em;
 
-            margin-right: .1em;
+                margin-right: .1em;
 
-            content: open-quote;
+                content: '\201C';
+
+                color: inherit;
+            }
+        }
+        &.after
+        {
+            &::after
+            {
+                font-size: 1em;
+                line-height: .1em;
+
+                content: '\201D';
+            }
         }
     }
-    .after
+    .large
     {
-        &::after
+        font-family: $font-family-cbs-regular;
+        font-size: 1.250em;
+        line-height: 1.4;
+
+        color: inherit;
+        &.before
         {
-            font-size: 1em;
-            line-height: .1em;
+            &::before
+            {
+                font-size: 4em;
+                line-height: 0;
 
-            margin-left: .1em;
+                position: relative;
+                top: 30px;
+                right: 2px;
 
-            content: close-quote;
+                display: inline;
+
+                height: 0;
+
+                content: '\201C';
+
+                color: $brand-primary;
+            }
+        }
+        &.after
+        {
+            &::after
+            {
+                font-size: 4em;
+                line-height: 0;
+
+                position: relative;
+                top: 30px;
+                left: 2px;
+
+                display: inline;
+
+                height: 0;
+
+                content: '\201D';
+
+                color: $brand-primary;
+            }
         }
     }
+
     footer
     {
         font-family: $font-family-cbs-regular;
@@ -152,13 +252,15 @@ p
 .btn-primary
 {
     font-family: $buttons-font-family;
-    font-size: $font-size-lg;
+    font-size: 1.563em;
 
     position: relative;
 
     display: inline-block;
 
     cursor: pointer;
+    vertical-align: text-bottom;
+    text-transform: uppercase;
 
     border-width: 2px;
     & span
@@ -179,6 +281,7 @@ p
     &.dark
     {
         color: $brand-secondary;
+        border-width: $border-width;
         background-color: $brand-primary;
         & span
         {
@@ -189,6 +292,7 @@ p
     &.light
     {
         color: $brand-primary ;
+        border-width: $border-width;
         border-color: $brand-primary;
         background-color: $brand-secondary;
         & span
@@ -198,11 +302,10 @@ p
         }
     }
 }
-
 .btn-secondary
 {
     font-family: $buttons-font-family;
-    font-size: $font-size-lg;
+    font-size: 1.250em;
 
     position: relative;
 
@@ -213,7 +316,7 @@ p
     cursor: pointer;
 
     color: $brand-primary;
-    border-width: 2px;
+    border-width: $border-width;
     border-color: $brand-primary;
     background-color: $brand-secondary;
     &.active
@@ -1114,41 +1217,6 @@ nav
     }
 }
 
-//Match up
-.match-up
-{
-    font-size: .7rem;
-    .container
-    {
-        width: 100%;
-        padding-right: 0;
-        padding-left: 0;
-
-        background-color: $brand-primary;
-    }
-    .info
-    {
-        font-size: .9em;
-
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-
-        padding: 15px;
-        h4,
-        p,
-        a
-        {
-            position: relative;
-
-            width: 100%;
-
-            color: $brand-secondary;
-        }
-    }
-}
-
 //Inteernship With Ects
 .internship-with-ects
 {
@@ -1162,6 +1230,156 @@ nav
     }
 }
 
+//Open Wednesday
+.open-wednesday
+{
+    .square
+    {
+        top: -34%;
+        right: 67%;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-rb,
+        .side-rt
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-orange;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+
+            righ: 0;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+        .side-rt
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+
+        .side-rb
+        {
+            top: calc( ( #{$square-dimension} - 50px )  );
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
+//Open Wednesday
+.startup-friday
+{
+    .square
+    {
+        top: -34%;
+        right: 67%;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-rb,
+        .side-rt
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-green;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+
+            righ: 0;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+        .side-rt
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+
+        .side-rb
+        {
+            top: calc( ( #{$square-dimension} - 50px )  );
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
 //Job Openings
 .job-openings
 {
@@ -1416,15 +1634,27 @@ nav
 //Portfolio
 .portfolio
 {
-    .fp-tableCell
-    {
-        vertical-align: top;
-    }
     .item
     {
         img
         {
-            width: 70%;
+            width: 80%;
+        }
+    }
+    .switcher
+    {
+        .btn
+        {
+            width: 175px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .switcher-content
+        {
+            .btn
+            {
+                // font-size: 1.2em;
+            }
         }
     }
 }
@@ -1437,8 +1667,8 @@ nav
         z-index: -1;
         &.right
         {
-            top: -11%;
-            right: -5%;
+            top: -30px;
+            right: -30px;
             .side-l
             {
                 top: 0;
@@ -1477,8 +1707,8 @@ nav
         }
         &.left
         {
-            top: -11%;
-            left: -5%;
+            top: -30px;
+            left: -30px;
             .side-l
             {
                 bottom: 0;
@@ -1516,11 +1746,6 @@ nav
             }
         }
     }
-}
-
-//the team
-.the-team
-{
     .info
     {
         .title
@@ -1546,10 +1771,17 @@ nav
     {
         .img-container
         {
+            position: relative;
+
             width: 196px;
             height: 262px;
         }
     }
+}
+
+//the team
+.the-team
+{
     .ceo
     {
         .info
@@ -1683,91 +1915,17 @@ nav
 //Testimonials
 .testimonials
 {
-    .fp-tableCell
+    .item:nth-child(1)
     {
-        vertical-align: top;
+        top: 80px;
     }
-    .square-portrait
+    .item:nth-child(2)
     {
-        &.right
-        {
-            top: -11%;
-            right: -3%;
-            .side-l
-            {
-                top: 0;
-                left: 0;
-
-                width: $square-portrait-border;
-                height: 40px;
-            }
-
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                width: $square-portrait-dimension;
-                height: $square-portrait-border;
-            }
-
-            .side-r
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-portrait-border;
-                height: $square-portrait-dimension;
-            }
-
-            .side-b
-            {
-                right: 0;
-                bottom: 0;
-
-                width: 40px;
-                height: $square-portrait-border;
-            }
-        }
-        &.left
-        {
-            top: -11%;
-            left: -3%;
-            .side-l
-            {
-                bottom: 0;
-                left: 0;
-
-                width: $square-portrait-border;
-                height: $square-portrait-dimension;
-            }
-
-            .side-t
-            {
-                top: 0;
-                left: 0;
-
-                width: $square-portrait-dimension;
-                height: $square-portrait-border;
-            }
-
-            .side-r
-            {
-                top: 0;
-                right: 0;
-
-                width: $square-portrait-border;
-                height: 40px;
-            }
-
-            .side-b
-            {
-                bottom: 0;
-                left: 0;
-
-                width: 40px;
-                height: $square-portrait-border;
-            }
-        }
+        bottom: 80px;
     }
+}
+//Video archive
+.video-archive
+{
+    height: 600px;
 }

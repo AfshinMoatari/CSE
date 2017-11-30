@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="./css/app.css">
   <!-- LIBRARIES -->
   <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery.fullpage.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/EasePack.min.js"></script>
   <script src="./js/TweenMax.min.js"></script>
@@ -38,7 +39,7 @@
 
 </head>
 
-<body id="startups">
+<body id="events">
   <!-- NAVBAR -->
   <nav class="main navbar navbar-toggleable-sm bg-primary px-0 fixed-top">
     <div class="container container-100 d-flex">
@@ -60,16 +61,13 @@
             <a class="nav-link pb-0" href="programmes.html">programmes</a>
           </li>
           <li class="nav-item align-self-end mx-2">
-            <a class="nav-link pb-0 active" href="startups.html">startups</a>
+            <a class="nav-link pb-0" href="startups.html">startups</a>
           </li>
           <li class="nav-item align-self-end mx-2">
-            <a class="nav-link pb-0" href="events.html">events</a>
+            <a class="nav-link pb-0 active" href="events.html">events</a>
           </li>
           <li class="nav-item align-self-end mx-2">
             <a class="nav-link pb-0" href="#">collabrations</a>
-          </li>
-          <li class="nav-item align-self-end mx-2">
-            <a class="nav-link pb-0" href="#">blog</a>
           </li>
           <li class="nav-item align-self-end mx-2 apply">
             <button class="nav-link btn btn-primary dark" href="#" data-toggle="collapse" data-target="#overlay-nav">
@@ -117,268 +115,183 @@
     <ul class="nav container d-flex justify-content-center justify-content-xl-start smooth-scroll">
       <li class="nav-item checkbox active" data-menuanchor="first">
         <a class="nav-link" href="#first">
-          <p>About startups</p>
+          <p>About events</p>
         </a>
       </li>
       <li class="nav-item checkbox" data-menuanchor="second">
         <a class="nav-link" href="#second">
-          <p>Portfolio</p>
+          <p>Open Wednesday</p>
         </a>
       </li>
       <li class="nav-item checkbox" data-menuanchor="third">
         <a class="nav-link" href="#third">
-          <p>Testimonials</p>
+          <p>CBS Entrepreneurial Day</p>
         </a>
       </li>
       <li class="nav-item checkbox" data-menuanchor="fourth">
         <a class="nav-link" href="#fourth">
-          <p>Video archive</p>
+          <p>Startup Stories</p>
         </a>
       </li>
     </ul>
   </nav>
   <div class="fullpage">
     <!-- HERO SECTION -->
-    <div class="section row no-gutters about-page mb-7 animate" data-anchor="first">
+    <div class="section row no-gutters mb-7 about-page animate" data-anchor="first">
       <div class="col-12 col-lg-6 d-flex flex-column align-items-end media">
         <div class="img-container w-100 h-100">
-          <img src="./assets/image/startups-hero.png" class="img-fit left" alt="about">
+          <img src="./assets/image/events-hero.png" class="img-fit left" alt="about">
         </div>
       </div>
       <div class="col-12 col-lg-6 d-flex align-items-center text">
-        <p class="m-0 pre">At Copenhagen School of Entrepreneurship you will find entrepreneurs and startups from a variety of different universities, countries and professional backgrounds. Copenhagen School of Entrepreneurship does not have any requirements with regards
-          to university or studyline. This is also one of our key objectives and we constantly try to emphasize and further develop an entrepreneurial culture where companies can utilize this diverse environment when turning ideas into successful businesses.
-          Being in an environment which is portrayed with people from all over the world and interacting with them can be both a source of inspiration and a helping hand!</p>
+        <p class="m-0 pre">At CSE we hope to bring inspiring events to our partners, students and other stakeholders. Get inspired and join us (or have a look) at our many events!
       </div>
     </div>
-    <!-- PORTFOLIO -->
-    <div class="section animate portfolio" data-anchor="second">
-      <div class="container">
-        <div class="switcher mt-5">
-          <div class="switcher-header">
-            <ul class="row justify-content-md-center nav nav-tabs switcher-header-tabs" id="outerTab" role="tablist">
-              <li class="col-1 mx-6 nav-item active">
-                <button class="nav-link btn btn-primary dark" data-toggle="tab" href="#current-startups" aria-controls="current-startups" role="tab" aria-expanded="true" duration-btn=".1">current startups
-                <span></span></button>
-              </li>
-              <li class="col-1 mx-6 nav-item">
-                <button class="nav-link btn btn-primary light" data-toggle="tab" href="#alumni" aria-controls="alumni" role="tab" aria-expanded="true" duration-btn=".1">alumni
-                <span></span></button>
-              </li>
-            </ul>
-          </div>
-          <div class="switcher-content tab-content my-5">
-            <div class="tab-pane active" id="current-startups" role="tabpanel">
-              <div class="switch">
-                <div class="switcher-header">
-                  <ul class="row nav nav-tabs switcher-header-tabs" id="innerTab" role="tablist">
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link active" data-toggle="tab" href="#all" aria-controls="all" role="tab" aria-expanded="true" duration-btn=".1">All</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#bio-enterprise" aria-controls="bio-enterprise" role="tab" duration-btn=".1">BIO Enterprise</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#education-platform" aria-controls="education-platform" role="tab" duration-btn=".1">Education platform</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#event-services" aria-controls="event-services" role="tab" duration-btn=".1">Event & Services</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#fsashion-jewelry" aria-controls="fsashion-jewelry" role="tab" duration-btn=".1">Fashion & Jewelry</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#food-beverage" aria-controls="food-beverage" role="tab" duration-btn=".1">Food & Beverage</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#games-entertainment" aria-controls="games-entertainment" role="tab" duration-btn=".1">Games & Entertainment</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#hardware" aria-controls="hardware" role="tab" duration-btn=".1">Hardware</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#match-making-platf" aria-controls="match-making-platf" role="tab" duration-btn=".1">Match-making Platf.</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#product-design" aria-controls="product-design" role="tab" duration-btn=".1">Product Design</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#fashion-jewelry" aria-controls="fashion-jewelry" role="tab" duration-btn=".1">Fashion & Jewelry</button>
-                    </li>
-                    <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#food" aria-controls="food" role="tab" duration-btn=".1">Food</button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="switcher-body tab-content my-5">
-                  <div class="tab-pane active" id="all" role="tabpanel">
-                    <div class="row d-flex justify-content-between align-items-center">
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/yes.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/uru.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/billetfix.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/rithos.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/yes.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/uru.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/billetfix.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/uru.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/yes.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/uru.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/rithos.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/billetfix.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/yes.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/uru.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/yes.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/yes.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/rithos.png" alt="yes">
-                      </div>
-                      <div class="col-2 my-4 item">
-                        <img src="./assets/image/uru.png" alt="yes">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane" id="bio-enterprise" role="tabpanel">
-                    Content for Nested Bio Enterprise
-                  </div>
-                  <div class="tab-pane" id="education-platform" role="tabpanel">
-                    Content for Nested Education platform
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" id="alumni" role="tabpanel">
-              <div class="switcher-header">
-                <ul class="nav nav-tabs switcher-header-tabs" id="innerTab" role="tablist">
-                  <li class="m-1 nav-item">
-                    <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#alumni-item-1" aria-controls="alumni-item-1" role="tab" aria-expanded="true" duration-btn=".1">alumni-item-1</button>
-                  </li>
-                  <li class="m-1 nav-item">
-                    <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#alumni-item-2" aria-controls="alumni-item-2" role="tab" aria-expanded="true" duration-btn=".1">alumni-item-2</button>
-                  </li>
-                </ul>
-              </div>
-              <div class="switcher-body tab-content">
-                <div class="tab-pane active" id="alumni-item-1" role="tabpanel">
-                  Content for Nested alumni-item-1
-                </div>
-                <div class="tab-pane" id="alumni-item-2" role="tabpanel">
-                  Content for Nested alumni-item-2
-                </div>
-              </div>
+    <!-- Open Wednesday-->
+    <div class="section mb-7 s-single open-wednesday" data-anchor="second">
+      <div class="container container-100">
+        <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">Open Wednesday</h1>
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-10 col-xl-6 info">
+            <h4 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Drop by any Wednesday between 14-16h.</h4>
+            <p class="pre opacity" duration-opacity="2.2" delay=".8">Open Wednesday is the "open house" event at CSE. At Open Wednesday, you can drop by and talk to our great CSE Staff about your idea - get feedback and plan your next steps on the road to turning your idea into a business.
+
+              The CSE Open Wednesday takes place every Wednesday from 14:00-16:00. There is no need to book an appointment - just show up, and we will have an informal talk with you. The address is Porcelænshaven 26b, 2nd floor, 2000 Frederiksberg – See you there!</p>
+            <div class="square d-block hidden-lg-down" duration-square=".8" delay="0">
+              <span class="side-rb"></span>
+              <span class="side-b"></span>
+              <span class="side-l"></span>
+              <span class="side-t"></span>
+              <span class="side-rt"></span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- TESTIMONIALS -->
-    <div class="section testimonials py-7 animate" data-anchor="third">
-      <div class="container container-100 align-self-center">
-          <h1 class="fade-in text-center" duration-fade=".6" delay="0">Testimonials</h1>
-          <div class="row justify-content-around px-xl-4">
-            <div class="col-10 mr-auto item">
-              <div class="profile">
-                <div class="media portrait">
-                  <div class="align-self-end mr-2 d-inline-block position-relative image">
-                    <div class="img-container">
-                      <img src="./assets/image/staff/kelvina-wairimu.png" alt="">
-                      <div class="square-portrait d-block left" duration-square=".8" delay="0">
-                      <span class="side-b"></span>
-                      <span class="side-l"></span>
-                      <span class="side-t"></span>
-                      <span class="side-r"></span>
-                    </div>
-                    </div>
-                  </div>
-                  <blockquote class="blockquote before media-body align-self-end mb-0 py-0" duration-fade=".6" delay=".4">
-                      <span class="pre mb-0 after large">We had begun to see ourselves with more than just an idea, we had a business now!
-                       We felt it was a serious programme. We felt we needed more hardcore business counselling</span>
-                  </blockquote>
-                </div>
-                <div class="py-3 position float-left info">
-                  <div class="title">
-                    <h4>Christian S. J. Jensen & Sarah-Josephine Hjort</h4>
-                    <span>Co-founders of CanopyLAB</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-10 ml-auto item">
-              <div class="profile">
-                <div class="media portrait">
-                  <blockquote class="blockquote after media-body align-self-end mb-0 py-0 text-right" duration-fade=".6" delay=".4">
-                      <span class="pre mb-0 before large">I feel that as an entrepreneur you really gain a lot from interacting with the other entrepreneurs,
-                      that you would not have achieved being surrounded by mentors and advisors alone</span>
-                  </blockquote>
-                  <div class="align-self-end ml-2 d-inline-block position-relative image">
-                    <div class="img-container">
-                      <div class="square-portrait d-block right" duration-square=".8" delay="0">
-                      <span class="side-b"></span>
-                      <span class="side-l"></span>
-                      <span class="side-t"></span>
-                      <span class="side-r"></span>
-                    </div>
-                      <img src="./assets/image/staff/kelvina-wairimu.png" alt="">
-                    </div>
-                  </div>
-                </div>
-                <div class="py-3 position float-right info">
-                  <div class="title">
-                    <h4>Anne Sophie Vinther Hansen</h4>
-                    <span>Founder of Cumulus Bio</span>
-                  </div>
+    <!-- Entrepreneurial Day-->
+    <div class="section mb-xl-7 s-media entrepreneurial-day media-right animate" data-anchor="third">
+      <div class="container container-100">
+        <div class="square-title large mx-auto hidden-lg-down">
+          <div class="svg-container">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="140%" height="100%" viewBox="0 0 408 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="entrepreneurship-day" transform="translate(-1.000000, -1.000000)">
+                        <g id="text" transform="translate(126.000000, 0.000000)" fill="#5C5D7D">
+                            <path d="M10.0917,7.8532 C10.0917,7.2662 9.9207,6.8582 9.5777,6.6292 C9.2357,6.4012 8.7377,6.2862 8.0847,6.2862 C7.4647,6.2862 6.9747,6.4012 6.6157,6.6292 C6.2567,6.8582 6.0777,7.2662 6.0777,7.8532 L6.0777,29.1962 C6.0777,29.7832 6.2567,30.1922 6.6157,30.4202 C6.9747,30.6492 7.4647,30.7622 8.0847,30.7622 C8.7377,30.7622 9.2357,30.6492 9.5777,30.4202 C9.9207,30.1922 10.0917,29.7832 10.0917,29.1962 L10.0917,22.0002 L16.1127,22.0002 L16.1127,30.2732 C16.1127,31.1872 15.9977,32.0032 15.7707,32.7212 C15.5417,33.4392 15.1337,34.0432 14.5467,34.5322 C13.9587,35.0212 13.1437,35.3972 12.0987,35.6582 C11.0537,35.9182 9.7157,36.0492 8.0847,36.0492 C6.4517,36.0492 5.1227,35.9182 4.0957,35.6582 C3.0677,35.3972 2.2597,35.0212 1.6717,34.5322 C1.0847,34.0432 0.6767,33.4392 0.4477,32.7212 C0.2197,32.0032 0.1057,31.1872 0.1057,30.2732 L0.1057,6.7762 C0.1057,5.8632 0.2197,5.0472 0.4477,4.3292 C0.6767,3.6112 1.0847,3.0072 1.6717,2.5172 C2.2597,2.0282 3.0677,1.6532 4.0957,1.3912 C5.1227,1.1312 6.4517,0.9992 8.0847,0.9992 C9.7157,0.9992 11.0537,1.1312 12.0987,1.3912 C13.1437,1.6532 13.9587,2.0282 14.5467,2.5172 C15.1337,3.0072 15.5417,3.6112 15.7707,4.3292 C15.9977,5.0472 16.1127,5.8632 16.1127,6.7762 L16.1127,14.7072 L10.0917,14.7072 L10.0917,7.8532 Z" id="Fill-1"></path>
+                            <path d="M28.5956,30.3712 C28.9536,30.3712 29.2716,30.2812 29.5496,30.1012 C29.8266,29.9232 29.9656,29.6042 29.9656,29.1482 L29.9656,21.5102 C29.9656,21.1522 29.8346,20.8982 29.5746,20.7522 C29.3126,20.6052 29.0516,20.5312 28.7906,20.5312 L25.8536,20.5312 L25.8536,30.3712 L28.5956,30.3712 Z M28.7906,15.2452 C29.0516,15.2452 29.2876,15.1472 29.5006,14.9512 C29.7126,14.7562 29.8196,14.4292 29.8196,13.9722 L29.8196,7.9022 C29.8196,7.4452 29.6796,7.1272 29.4036,6.9472 C29.1246,6.7692 28.8396,6.6782 28.5466,6.6782 L25.8536,6.6782 L25.8536,15.2452 L28.7906,15.2452 Z M19.8326,1.3912 L29.9166,1.3912 C30.7976,1.3912 31.6056,1.4822 32.3396,1.6612 C33.0746,1.8402 33.6936,2.1342 34.1996,2.5422 C34.7056,2.9502 35.1056,3.5052 35.3996,4.2062 C35.6936,4.9082 35.8396,5.7972 35.8396,6.8742 L35.8396,14.4132 C35.8396,15.3592 35.5946,16.0692 35.1056,16.5422 C34.6166,17.0162 34.1586,17.3502 33.7346,17.5462 L33.7346,17.8882 C34.1926,18.0522 34.6816,18.3532 35.2036,18.7942 C35.7256,19.2352 35.9876,19.8952 35.9876,20.7762 L35.9876,30.1262 C35.9876,31.1712 35.8396,32.0522 35.5456,32.7702 C35.2526,33.4872 34.8436,34.0592 34.3226,34.4832 C33.8006,34.9072 33.1636,35.2102 32.4126,35.3892 C31.6616,35.5682 30.8296,35.6582 29.9166,35.6582 L19.8326,35.6582 L19.8326,1.3912 Z" id="Fill-4"></path>
+                            <path d="M49.497,7.4616 C49.497,6.6786 48.828,6.2866 47.49,6.2866 C46.087,6.2866 45.385,6.6786 45.385,7.4616 L45.385,10.6436 C45.385,11.1986 45.442,11.6226 45.557,11.9166 C45.671,12.2106 45.826,12.4546 46.021,12.6506 L53.462,19.4546 C54.114,20.0096 54.638,20.6466 55.028,21.3636 C55.421,22.0826 55.616,23.0936 55.616,24.3986 L55.616,30.0286 C55.616,32.1826 54.972,33.7246 53.683,34.6546 C52.393,35.5846 50.329,36.0496 47.49,36.0496 C46.021,36.0496 44.757,35.9516 43.696,35.7556 C42.636,35.5596 41.778,35.2256 41.126,34.7526 C40.474,34.2796 39.992,33.6596 39.682,32.8916 C39.371,32.1256 39.217,31.1706 39.217,30.0286 L39.217,22.3426 L45.189,22.3426 L45.189,29.3436 C45.189,29.8656 45.393,30.2326 45.802,30.4446 C46.209,30.6576 46.771,30.7626 47.49,30.7626 C48.109,30.7626 48.616,30.6576 49.007,30.4446 C49.399,30.2326 49.595,29.8656 49.595,29.3436 L49.595,24.9866 C49.595,24.5306 49.546,24.1626 49.448,23.8846 C49.351,23.6086 49.171,23.3546 48.909,23.1266 L41.959,17.1056 C41.143,16.3876 40.506,15.6046 40.05,14.7556 C39.592,13.9076 39.364,12.7166 39.364,11.1816 L39.364,7.0216 C39.364,4.8346 40.001,3.2846 41.273,2.3706 C42.546,1.4576 44.618,0.9996 47.49,0.9996 C50.492,0.9996 52.581,1.4646 53.756,2.3946 C54.931,3.3256 55.518,4.8016 55.518,6.8256 L55.518,13.1896 L49.497,13.1896 L49.497,7.4616 Z" id="Fill-6"></path>
+                            <polygon id="Fill-9" points="0.1054 44.8275 14.0074 44.8275 14.0074 50.1145 6.1264 50.1145 6.1264 58.6815 13.7634 58.6815 13.7634 63.9685 6.1264 63.9685 6.1264 73.8065 14.0074 73.8065 14.0074 79.0945 0.1054 79.0945"></polygon>
+                            <polygon id="Fill-11" points="27.1757 44.8275 32.1197 71.8495 32.6577 71.8495 32.6577 44.8275 38.2387 44.8275 38.2387 79.0945 28.7907 79.0945 23.5047 51.1425 22.8197 51.1425 22.8197 79.0945 17.2377 79.0945 17.2377 44.8275"></polygon>
+                            <polygon id="Fill-13" points="45.2382 50.1144 40.2462 50.1144 40.2462 44.8274 56.3012 44.8274 56.3012 50.1144 51.2592 50.1144 51.2592 79.0944 45.2382 79.0944"></polygon>
+                            <path d="M67.7558,59.5627 C68.4418,59.5627 68.7838,59.1387 68.7838,58.2897 L68.7838,51.3387 C68.7838,50.8817 68.6868,50.5637 68.4898,50.3837 C68.2938,50.2057 67.9678,50.1147 67.5118,50.1147 L64.3298,50.1147 L64.3298,59.5627 L67.7558,59.5627 Z M58.3088,44.8277 L68.3928,44.8277 C69.2738,44.8277 70.1058,44.9177 70.8898,45.0977 C71.6718,45.2767 72.3498,45.5707 72.9208,45.9777 C73.4908,46.3867 73.9478,46.9417 74.2908,47.6427 C74.6338,48.3447 74.8058,49.2337 74.8058,50.3107 L74.8058,58.7297 C74.8058,59.5137 74.6908,60.2077 74.4628,60.8107 C74.2348,61.4147 73.9558,61.9367 73.6298,62.3767 C73.3048,62.8177 72.9528,63.1767 72.5778,63.4537 C72.2028,63.7317 71.8838,63.9197 71.6228,64.0167 L75.2948,79.0947 L69.2738,79.0947 L66.0918,64.8487 L64.3298,64.8487 L64.3298,79.0947 L58.3088,79.0947 L58.3088,44.8277 Z" id="Fill-15"></path>
+                            <polygon id="Fill-17" points="79.0146 44.8275 92.9166 44.8275 92.9166 50.1145 85.0356 50.1145 85.0356 58.6815 92.6716 58.6815 92.6716 63.9685 85.0356 63.9685 85.0356 73.8065 92.9166 73.8065 92.9166 79.0945 79.0146 79.0945"></polygon>
+                            <path d="M105.5946,59.5627 C106.2806,59.5627 106.6226,59.1387 106.6226,58.2897 L106.6226,51.3387 C106.6226,50.8817 106.5006,50.5637 106.2556,50.3837 C106.0106,50.2057 105.7086,50.1147 105.3506,50.1147 L102.1676,50.1147 L102.1676,59.5627 L105.5946,59.5627 Z M96.1476,44.8277 L106.2316,44.8277 C107.1126,44.8277 107.9446,44.9177 108.7276,45.0977 C109.5106,45.2767 110.1876,45.5707 110.7596,45.9777 C111.3296,46.3867 111.7866,46.9417 112.1296,47.6427 C112.4726,48.3447 112.6436,49.2337 112.6436,50.3107 L112.6436,58.7297 C112.6436,60.5907 112.1466,62.0837 111.1506,63.2087 C110.1556,64.3347 108.6306,64.8977 106.5736,64.8977 L102.1676,64.8977 L102.1676,79.0947 L96.1476,79.0947 L96.1476,44.8277 Z" id="Fill-19"></path>
+                            <path d="M124.8329,59.5627 C125.5189,59.5627 125.8609,59.1387 125.8609,58.2897 L125.8609,51.3387 C125.8609,50.8817 125.7639,50.5637 125.5669,50.3837 C125.3719,50.2057 125.0449,50.1147 124.5879,50.1147 L121.4059,50.1147 L121.4059,59.5627 L124.8329,59.5627 Z M115.3859,44.8277 L125.4699,44.8277 C126.3509,44.8277 127.1829,44.9177 127.9659,45.0977 C128.7489,45.2767 129.4259,45.5707 129.9969,45.9777 C130.5679,46.3867 131.0249,46.9417 131.3679,47.6427 C131.7109,48.3447 131.8819,49.2337 131.8819,50.3107 L131.8819,58.7297 C131.8819,59.5137 131.7679,60.2077 131.5389,60.8107 C131.3109,61.4147 131.0329,61.9367 130.7079,62.3767 C130.3809,62.8177 130.0289,63.1767 129.6549,63.4537 C129.2789,63.7317 128.9609,63.9197 128.6999,64.0167 L132.3719,79.0947 L126.3509,79.0947 L123.1679,64.8487 L121.4059,64.8487 L121.4059,79.0947 L115.3859,79.0947 L115.3859,44.8277 Z" id="Fill-21"></path>
+                            <polygon id="Fill-23" points="136.0917 44.8275 149.9937 44.8275 149.9937 50.1145 142.1127 50.1145 142.1127 58.6815 149.7487 58.6815 149.7487 63.9685 142.1127 63.9685 142.1127 73.8065 149.9937 73.8065 149.9937 79.0945 136.0917 79.0945"></polygon>
+                            <polygon id="Fill-25" points="163.162 44.8275 168.106 71.8495 168.644 71.8495 168.644 44.8275 174.225 44.8275 174.225 79.0945 164.777 79.0945 159.49 51.1425 158.806 51.1425 158.806 79.0945 153.225 79.0945 153.225 44.8275"></polygon>
+                            <polygon id="Fill-27" points="178.4335 44.8275 192.3365 44.8275 192.3365 50.1145 184.4545 50.1145 184.4545 58.6815 192.0915 58.6815 192.0915 63.9685 184.4545 63.9685 184.4545 73.8065 192.3365 73.8065 192.3365 79.0945 178.4335 79.0945"></polygon>
+                            <path d="M195.5663,44.8275 L201.5873,44.8275 L201.5873,72.1915 C201.5873,72.9435 201.7433,73.4645 202.0533,73.7585 C202.3633,74.0515 202.9743,74.1995 203.8883,74.1995 C204.7693,74.1995 205.3563,74.0515 205.6503,73.7585 C205.9453,73.4645 206.0923,72.9435 206.0923,72.1915 L206.0923,44.8275 L212.1613,44.8275 L212.1613,72.7295 C212.1613,73.8065 212.0463,74.7615 211.8193,75.5945 C211.5903,76.4255 211.1663,77.1355 210.5463,77.7235 C209.9253,78.3115 209.0773,78.7515 208.0003,79.0455 C206.9233,79.3395 205.5533,79.4855 203.8883,79.4855 C202.1913,79.4855 200.8053,79.3395 199.7273,79.0455 C198.6503,78.7515 197.8023,78.3115 197.1823,77.7235 C196.5623,77.1355 196.1373,76.4255 195.9093,75.5945 C195.6813,74.7615 195.5663,73.8065 195.5663,72.7295 L195.5663,44.8275 Z" id="Fill-29"></path>
+                            <path d="M225.8183,59.5627 C226.5043,59.5627 226.8473,59.1387 226.8473,58.2897 L226.8473,51.3387 C226.8473,50.8817 226.7493,50.5637 226.5533,50.3837 C226.3573,50.2057 226.0313,50.1147 225.5743,50.1147 L222.3923,50.1147 L222.3923,59.5627 L225.8183,59.5627 Z M216.3713,44.8277 L226.4553,44.8277 C227.3363,44.8277 228.1683,44.9177 228.9523,45.0977 C229.7363,45.2767 230.4123,45.5707 230.9833,45.9777 C231.5533,46.3867 232.0113,46.9417 232.3533,47.6427 C232.6973,48.3447 232.8683,49.2337 232.8683,50.3107 L232.8683,58.7297 C232.8683,59.5137 232.7543,60.2077 232.5263,60.8107 C232.2973,61.4147 232.0193,61.9367 231.6943,62.3767 C231.3673,62.8177 231.0153,63.1767 230.6403,63.4537 C230.2653,63.7317 229.9473,63.9197 229.6863,64.0167 L233.3583,79.0947 L227.3363,79.0947 L224.1543,64.8487 L222.3923,64.8487 L222.3923,79.0947 L216.3713,79.0947 L216.3713,44.8277 Z" id="Fill-31"></path>
+                            <polygon id="Fill-33" points="237.078 60.7372 237.078 44.8272 243.099 44.8272 243.099 60.6392 243.099 79.0942 237.078 79.0942"></polygon>
+                            <path d="M256.2655,50.7509 L255.2865,50.7509 L253.5245,64.7019 L257.8815,64.7019 L256.2655,50.7509 Z M258.6155,69.9889 L252.8395,69.9889 L251.6155,79.0949 L245.5945,79.0949 L250.2925,44.8279 L261.1125,44.8279 L265.9105,79.0949 L259.8395,79.0949 L258.6155,69.9889 Z" id="Fill-35"></path>
+                            <path d="M233.5204,117.2441 C233.9124,117.2441 234.1724,117.1621 234.3034,116.9991 C234.4324,116.8361 234.4994,116.5751 234.4994,116.2161 L234.4994,94.5301 C234.4994,94.1711 234.4324,93.9181 234.3034,93.7711 C234.1724,93.6241 233.9124,93.5511 233.5204,93.5511 L229.9964,93.5511 L229.9964,117.2441 L233.5204,117.2441 Z M223.9734,88.2641 L234.5464,88.2641 C235.8524,88.2641 236.8964,88.4201 237.6804,88.7291 C238.4644,89.0391 239.0674,89.4721 239.4924,90.0261 C239.9164,90.5821 240.1934,91.2581 240.3244,92.0581 C240.4554,92.8581 240.5194,93.7631 240.5194,94.7741 L240.5194,116.0201 C240.5194,116.9991 240.4554,117.8891 240.3244,118.6871 C240.1934,119.4871 239.9164,120.1731 239.4924,120.7441 C239.0674,121.3151 238.4644,121.7551 237.6804,122.0661 C236.8964,122.3761 235.8524,122.5301 234.5464,122.5301 L223.9734,122.5301 L223.9734,88.2641 Z" id="Fill-40"></path>
+                            <path d="M253.6864,94.1877 L252.7074,94.1877 L250.9464,108.1387 L255.3024,108.1387 L253.6864,94.1877 Z M256.0364,113.4257 L250.2604,113.4257 L249.0374,122.5307 L243.0164,122.5307 L247.7144,88.2647 L258.5334,88.2647 L263.3314,122.5307 L257.2604,122.5307 L256.0364,113.4257 Z" id="Fill-42"></path>
+                            <polygon id="Fill-37" points="268.4052 44.8275 274.4272 44.8275 274.4272 73.8065 282.5522 73.8065 282.5522 79.0945 268.4052 79.0945"></polygon>
+                            <polygon id="Fill-44" points="270.2323 109.4599 263.8683 88.2639 269.9873 88.2639 272.8763 100.8939 273.4623 100.8939 276.3993 88.2639 282.5193 88.2639 276.2533 109.5589 276.2533 122.5309 270.2323 122.5309"></polygon>
+                        </g>
+                        <g id="shape">
+                            <polygon id="Fill-49" fill="#F5ACA8" points="49.4403 50.1349 49.4403 68.8829 22.3553 68.8829 22.3553 79.7069 1.0003 88.6109 1.0003 50.1349 22.3553 19.7529 22.3553 50.1349"></polygon>
+                            <polygon id="Fill-46" fill="#EC6561" points="35.5253 0.9997 22.3553 19.7527 1.0003 50.1347 1.0003 0.9997"></polygon>
+                            <polygon id="Fill-51" fill="#A7D4BB" points="50.3095 0.9997 50.3095 19.7527 22.3555 19.7527 35.5255 0.9997"></polygon>
+                            <polygon id="Fill-54" fill="#5C5D7D" points="50.3095 103.779 50.3095 122.532 0.9995 122.532 0.9995 88.611 22.3555 79.707 22.3555 103.779"></polygon>
+                            <path d="M104.9413,14.4574 C104.4793,11.6224 103.4913,9.2214 101.9913,7.2504 C100.4873,5.2844 98.3463,3.7524 95.5663,2.6504 C92.7913,1.5524 89.0873,0.9994 84.4553,0.9994 L56.3273,0.9994 L56.3273,19.7484 L80.8143,19.7484 C82.2003,19.7484 83.1293,20.0134 83.5893,20.5304 C84.0473,21.0514 84.2853,21.9474 84.2853,23.2234 L84.2853,53.7794 L105.6353,44.8764 L105.6353,24.0924 C105.6353,20.5074 105.4073,17.2924 104.9413,14.4574" id="Fill-57" fill="#A7D4BB"></path>
+                            <path d="M105.6357,44.8761 L105.6357,99.4431 C105.6357,102.9141 105.4067,106.0701 104.9417,108.9051 C104.4797,111.7401 103.4907,114.1731 101.9907,116.1941 C100.4877,118.2241 98.3467,119.7841 95.5667,120.8811 C92.7907,121.9831 89.0867,122.5321 84.4547,122.5321 L56.3267,122.5321 L56.3267,103.7791 L80.8147,103.7791 C82.1997,103.7791 83.1287,103.4951 83.5897,102.9141 C84.0477,102.3341 84.2847,101.4101 84.2847,100.1381 L84.2847,53.7791 L105.6357,44.8761 Z" id="Fill-60" fill="#5C5D7D"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </div>
+        </div>
+        <div class="row no-gutters d-flex">
+            <div class="col-12 col-lg-4 col-xl-6 align-self-lg-center align-self-xl-start info text-left">
+              <div class="square-title small hidden-xl-up">
+                <div class="svg-container w-100">
+
                 </div>
               </div>
+                <h4 class="opacity" duration-opacity="2.2" delay=".12">Explore the future of student entrepreneurship in the north!</h4>
+                <p class="pre opacity" duration-opacity="2.2" delay=".8">Since 2015, CBS Entrepreneurial Day has brought together more than 5,500 entrepreneurial minds to share knowledge, network, get inspired, and to showcase the student startup community in Denmark.
+                  Our approach is simple and clear: Entrepreneurial knowledge should be free and available for everyone. This means that the event is free to participate in, and open to anyone interested in entrepreneurship.
+                   CBS Entrepreneurial Day is the largest student entrepreneurship event in Denmark, and will in September 2017 gather 4,500 students, entrepreneurs, researchers, business professionals, investors, speakers, and likeminded; to explore and share the latest research and trends within student entrepreneurship. </p>
+                <a href="#" class="text-link">Read more</a>
             </div>
-            <div class="col-12 d-flex justify-content-center button">
-              <button type="button" class="d-block btn btn-primary dark">
-                See success stories
-                <span class="hidden-lg-down"></span>
+            <div class="col-12 col-lg-8 col-xl-6 pt-xl-8 media">
+              <div class="embed-responsive embed-responsive-16by9">
+                <div class="overlay hidden-xl-up"></div>
+                <video autoplay loop class="embed-responsive-item">
+                      <source src="./assets/video/match-up.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="square d-block hidden-lg-down" duration-square=".8" delay="0">
+                <span class="side-l"></span>
+                <span class="side-b"></span>
+                <span class="side-r"></span>
+                <span class="side-t"></span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- STARTUP STORIES-->
+    <div class="section mb-xl-7 s-media startup-stories animate" data-anchor="fourth">
+      <div class="container container-100">
+        <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">STARTUP STORIES</h1>
+        <div class="row no-gutters d-flex">
+          <div class="col-12 col-lg-8 col-xl-6 media">
+            <div class="embed-responsive embed-responsive-16by9">
+              <div class="overlay hidden-xl-up"></div>
+              <video autoplay loop class="embed-responsive-item">
+                    <source src="./assets/video/match-up.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-6 align-self-lg-center align-self-xl-start info pt-xl-8 text-right">
+              <h4 class="mt-5 opacity" duration-opacity="2.2" delay=".12">Listen to inspirational startup stories at Café Nexus!</h4>
+              <p class="pre opacity" duration-opacity="2.2" delay=".8">Once every semester you will get the chance to listen to start-ups tell their inspirational story about entrepreneurial topics and their rollercoaster journey from turning their idea into a business. The topic will differ each time and you will have an amazing opportunity to be inspired and perhaps even get some feedback for your own ideas! The event will be held in the amazing surroundings of Café Nexus at Solbjerg Plads. For more information and the specific dates please stay up to date with the CSE event calendar!</p>
+              <a href="#" class="text-link">Event calendar</a>
+              <div class="square d-block hidden-lg-down" duration-square=".8" delay="0">
+                <span class="side-r"></span>
+                <span class="side-t"></span>
+                <span class="side-l"></span>
+                <span class="side-b"></span>
+              </div>
+              <button type="button" class="d-block ml-auto btn btn-primary dark mt-3" duration-btn=".1">Watch the stories
+                <span></span>
               </button>
             </div>
           </div>
+
       </div>
     </div>
-    <!-- VIDEO ARCHIVE -->
-    <div class="section video-archive py-7 animate" data-anchor="fourth">
-        <div class="container">
-          <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">VIDEO ARCHIVE</h1>
-          <button type="button" class="d-block mx-auto btn btn-primary dark mt-5" duration-btn=".1">
-           VIDEO ARCHIVE
-           <span></span>
-         </button>
+    <!-- Startup Friday-->
+    <div class="section mb-7 s-single startup-friday" data-anchor="fifth">
+      <div class="container container-100">
+        <h1 class="mb-5 fade-in text-center" duration-fade=".6" delay="0">STARTUP FRIDAY</h1>
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-10 col-xl-6 info">
+            <h4 class="opacity" duration-opacity="2.2" delay=".12" class="mb-0">Join our Startup Friday!</h4>
+            <p class="pre opacity" duration-opacity="2.2" delay=".8">Lorem ipsum dolor sit amet, consectetuer adi piscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+            <div class="square d-block hidden-lg-down" duration-square=".8" delay="0">
+              <span class="side-rb"></span>
+              <span class="side-b"></span>
+              <span class="side-l"></span>
+              <span class="side-t"></span>
+              <span class="side-rt"></span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
   <!-- FOOTER SECTION -->

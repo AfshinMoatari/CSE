@@ -48,7 +48,7 @@ $headings-color: $brand-primary;
 
 $font-size-h1: 2.9em;
 $font-size-h3: 2.5em;
-$font-size-h4: 1.55em;
+$font-size-h4: 1.563em;
 $font-size-h5: 2.25em;
 
 // $display1-size: 6.063em;
@@ -120,6 +120,11 @@ $spacers: (
   7: (
     x: ($spacer-x * 6),
     y: ($spacer-y * 6)
+  )
+  ,
+  8: (
+    x: ($spacer-x * 10),
+    y: ($spacer-y * 10)
   )
 );
 

@@ -183,18 +183,20 @@
             }
         }
     }
-    //match up
-    .match-up
+    //section-media
+    .s-media
     {
         font-size: 1rem;
         .info
         {
-            font-size: 1.1em;
-
             position: relative;
+            &.text-left,
+            &.text-right
+            {
+                padding-right: $cp-lg;
+                padding-left: $cp-lg;
+            }
 
-            padding-right: $cp-lg;
-            padding-left: $cp-lg;
             h4,
             p,
             a
