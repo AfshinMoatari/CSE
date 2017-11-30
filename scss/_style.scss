@@ -10,7 +10,49 @@
     padding-right: $cp-default;
     padding-left: $cp-default;
 }
+//SECTIONS
+//section-media
+.s-media
+{
+    font-size: .7rem;
+    .container
+    {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
 
+        background-color: $brand-primary;
+    }
+    .info
+    {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        &.text-left
+        {
+            padding: 15px;
+        }
+        h4,
+        p,
+        a
+        {
+            position: relative;
+
+            width: 100%;
+
+            color: $brand-secondary;
+        }
+    }
+}
+.s-single
+{
+    height: 600px;
+}
+.s-media
+{
+    height: 800px;
+}
 //fullpageJS horizontal scroll
 .fullpage
 {
@@ -48,12 +90,17 @@ img
 p
 {
     font-size: 1.250rem;
-    line-height: 120%;
+    line-height: 115%;
+}
+
+h4
+{
+    margin-bottom: .7em;
 }
 .text-link
 {
     font-family: $font-family-cbs-bold;
-    font-size: 1.1em;
+    font-size: 1.250em;
 
     text-decoration: underline;
     text-transform: none;
@@ -1170,41 +1217,6 @@ nav
     }
 }
 
-//Match up
-.match-up
-{
-    font-size: .7rem;
-    .container
-    {
-        width: 100%;
-        padding-right: 0;
-        padding-left: 0;
-
-        background-color: $brand-primary;
-    }
-    .info
-    {
-        font-size: .9em;
-
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-
-        padding: 15px;
-        h4,
-        p,
-        a
-        {
-            position: relative;
-
-            width: 100%;
-
-            color: $brand-secondary;
-        }
-    }
-}
-
 //Inteernship With Ects
 .internship-with-ects
 {
@@ -1218,6 +1230,156 @@ nav
     }
 }
 
+//Open Wednesday
+.open-wednesday
+{
+    .square
+    {
+        top: -34%;
+        right: 67%;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-rb,
+        .side-rt
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-orange;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+
+            righ: 0;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+        .side-rt
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+
+        .side-rb
+        {
+            top: calc( ( #{$square-dimension} - 50px )  );
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
+//Open Wednesday
+.startup-friday
+{
+    .square
+    {
+        top: -34%;
+        right: 67%;
+
+        .side-b,
+        .side-l,
+        .side-t,
+        .side-rb,
+        .side-rt
+        {
+            position: absolute;
+
+            width: 0;
+            height: 0;
+
+            background: transparent;
+            background-color: $square-color-green;
+        }
+
+        .side-l
+        {
+            bottom: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: $square-dimension;
+
+            righ: 0;
+        }
+
+        .side-t
+        {
+            top: 0;
+            left: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+        .side-rt
+        {
+            top: 0;
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+
+        .side-rb
+        {
+            top: calc( ( #{$square-dimension} - 50px )  );
+            right: 0;
+
+            width: $square-border;
+            min-height: 0;
+            max-height: 50px;
+        }
+
+        .side-b
+        {
+            right: 0;
+            bottom: 0;
+
+            min-width: 0;
+            max-width: $square-dimension;
+            height: $square-border;
+        }
+    }
+}
 //Job Openings
 .job-openings
 {

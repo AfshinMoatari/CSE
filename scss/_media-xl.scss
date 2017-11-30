@@ -26,6 +26,51 @@
             }
         }
     }
+    //SECTIONS
+    //section-media
+    .s-media
+    {
+        .container
+        {
+            padding-right: 0;
+            padding-left: 0;
+
+            background-color: transparent;
+        }
+        .media
+        {
+                    clip-path: none;
+            -webkit-clip-path: none;
+                -ms-clip-path: none;
+        }
+        .info
+        {
+            &.text-left
+            {
+                padding-right: 15px;
+            }
+            &.text-right
+            {
+                padding-left: 15px;
+            }
+
+            h4,
+            p,
+            a
+            {
+                position: relative;
+
+                width: 100%;
+
+                color: $brand-primary;
+            }
+            p
+            {
+                color: inherit;
+            }
+        }
+    }
+
     //status
     .status
     {
@@ -663,39 +708,6 @@
     //match up
     .match-up
     {
-        .container
-        {
-            padding-right: 0;
-            padding-left: 0;
-
-            background-color: transparent;
-        }
-        .media
-        {
-            padding-top: 140px;
-
-                    clip-path: none;
-            -webkit-clip-path: none;
-                -ms-clip-path: none;
-        }
-        .info
-        {
-            padding-right: 15px;
-            h4,
-            p,
-            a
-            {
-                position: relative;
-
-                width: 100%;
-
-                color: $brand-primary;
-            }
-            p
-            {
-                color: inherit;
-            }
-        }
         .square
         {
             top: 20%;
@@ -753,6 +765,133 @@
 
                 min-width: 0;
                 max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+    }
+    //entrepreneurial day
+    .entrepreneurial-day
+    {
+        .square
+        {
+            top: 23%;
+            right: 73.5%;
+
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $square-color-pink;
+            }
+
+            .side-l
+            {
+                top: calc( ( #{$square-dimension} - 130px )  );
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 130px;;
+            }
+
+            .side-t
+            {
+                top: 0;
+                right: 0;
+
+                min-width: 0;
+                max-width: 165px;
+                height: $square-border;;
+            }
+
+            .side-r
+            {
+                right: 0;
+                bottom: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-b
+            {
+                bottom: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+        }
+    }
+    //startup-stories
+    .startup-stories
+    {
+        .square
+        {
+            top: 10%;
+            right: 70.5%;
+
+            .side-b,
+            .side-l,
+            .side-t,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $brand-primary;
+            }
+
+            .side-l
+            {
+                top: 0;
+                left: 0;
+
+                width: $square-border;
+                min-height: 0;
+                max-height: $square-dimension;
+            }
+
+            .side-t
+            {
+                top: 0;
+                right: 0;
+
+                min-width: 0;
+                max-width: $square-dimension;
+                height: $square-border;
+            }
+
+
+            .side-r
+            {
+                right: 0;
+                bottom: calc( ( #{$square-dimension} - 130px )  );
+
+                width: $square-border;
+                min-height: 0;
+                max-height: 130px;
+            }
+
+            .side-b
+            {
+                bottom: 0;
+                left: 0;
+
+                min-width: 0;
+                max-width: 165px;
                 height: $square-border;
             }
         }

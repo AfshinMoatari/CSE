@@ -209,8 +209,8 @@
             }
         }
     }
-    //Match up
-    .match-up
+    //section-media
+    .s-media
     {
         font-size: .8rem;
         .media
@@ -234,10 +234,12 @@
         }
         .info
         {
-            font-size: 1.1em;
-
-            padding-right: $cp-sm;
-            padding-left: $cp-sm;
+            &.text-left,
+            &.text-right
+            {
+                padding-right: $cp-sm;
+                padding-left: $cp-sm;
+            }
         }
     }
     //Inteernship With Ects
