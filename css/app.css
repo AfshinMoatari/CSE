@@ -7435,94 +7435,6 @@ nav.fixed-top {
     font-size: .9em;
     padding: 25px 0; }
 
-.open-wednesday .square {
-  top: -34%;
-  right: 67%; }
-  .open-wednesday .square .side-b,
-  .open-wednesday .square .side-l,
-  .open-wednesday .square .side-t,
-  .open-wednesday .square .side-rb,
-  .open-wednesday .square .side-rt {
-    position: absolute;
-    width: 0;
-    height: 0;
-    background: transparent;
-    background-color: #f79566; }
-  .open-wednesday .square .side-l {
-    bottom: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 21.938em;
-    righ: 0; }
-  .open-wednesday .square .side-t {
-    top: 0;
-    left: 0;
-    min-width: 0;
-    max-width: 21.938em;
-    height: 0.625em; }
-  .open-wednesday .square .side-rt {
-    top: 0;
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 50px; }
-  .open-wednesday .square .side-rb {
-    top: calc( ( 21.938em - 50px ));
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 50px; }
-  .open-wednesday .square .side-b {
-    right: 0;
-    bottom: 0;
-    min-width: 0;
-    max-width: 21.938em;
-    height: 0.625em; }
-
-.startup-friday .square {
-  top: -34%;
-  right: 67%; }
-  .startup-friday .square .side-b,
-  .startup-friday .square .side-l,
-  .startup-friday .square .side-t,
-  .startup-friday .square .side-rb,
-  .startup-friday .square .side-rt {
-    position: absolute;
-    width: 0;
-    height: 0;
-    background: transparent;
-    background-color: #5bad6f; }
-  .startup-friday .square .side-l {
-    bottom: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 21.938em;
-    righ: 0; }
-  .startup-friday .square .side-t {
-    top: 0;
-    left: 0;
-    min-width: 0;
-    max-width: 21.938em;
-    height: 0.625em; }
-  .startup-friday .square .side-rt {
-    top: 0;
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 50px; }
-  .startup-friday .square .side-rb {
-    top: calc( ( 21.938em - 50px ));
-    right: 0;
-    width: 0.625em;
-    min-height: 0;
-    max-height: 50px; }
-  .startup-friday .square .side-b {
-    right: 0;
-    bottom: 0;
-    min-width: 0;
-    max-width: 21.938em;
-    height: 0.625em; }
-
 .job-openings {
   height: 500px; }
   .job-openings .square {
@@ -8676,50 +8588,126 @@ nav.fixed-top {
       min-width: 0;
       max-width: 165px;
       height: 0.625em; }
-  .internship-with-ects {
+  .internship-with-ects,
+  .entrepreneurship-teaching-center {
     background-color: inherit; }
-    .internship-with-ects .container {
+    .internship-with-ects .container,
+    .entrepreneurship-teaching-center .container {
       height: 750px;
       background-color: inherit;
       clip-path: none;
       -webkit-clip-path: none;
       -ms-clip-path: none; }
-    .internship-with-ects .square {
+    .internship-with-ects .square,
+    .entrepreneurship-teaching-center .square {
       top: 18%;
       right: 67%; }
       .internship-with-ects .square .side-b,
       .internship-with-ects .square .side-l,
       .internship-with-ects .square .side-t,
-      .internship-with-ects .square .side-r {
+      .internship-with-ects .square .side-r,
+      .entrepreneurship-teaching-center .square .side-b,
+      .entrepreneurship-teaching-center .square .side-l,
+      .entrepreneurship-teaching-center .square .side-t,
+      .entrepreneurship-teaching-center .square .side-r {
         position: absolute;
         width: 0;
         height: 0;
         background: transparent;
         background-color: #f79566; }
-      .internship-with-ects .square .side-l {
+      .internship-with-ects .square .side-l,
+      .entrepreneurship-teaching-center .square .side-l {
         bottom: 0;
         width: 0.625em;
         min-height: 0;
         max-height: 21.938em;
         righ: 0; }
-      .internship-with-ects .square .side-t {
+      .internship-with-ects .square .side-t,
+      .entrepreneurship-teaching-center .square .side-t {
         top: 0;
         left: 0;
         min-width: 0;
         max-width: 150px;
         height: 0.625em; }
-      .internship-with-ects .square .side-r {
+      .internship-with-ects .square .side-r,
+      .entrepreneurship-teaching-center .square .side-r {
         top: calc( ( 21.938em - 150px ));
         right: 0;
         width: 0.625em;
         min-height: 0;
         max-height: 150px; }
-      .internship-with-ects .square .side-b {
+      .internship-with-ects .square .side-b,
+      .entrepreneurship-teaching-center .square .side-b {
         right: 0;
         bottom: 0;
         min-width: 0;
         max-width: 21.938em;
         height: 0.625em; }
+  .startup-friday .square,
+  .cbs-startup .square,
+  .open-wednesday .square {
+    top: -34%;
+    right: 67%; }
+    .startup-friday .square .side-b,
+    .startup-friday .square .side-l,
+    .startup-friday .square .side-t,
+    .startup-friday .square .side-rb,
+    .startup-friday .square .side-rt,
+    .cbs-startup .square .side-b,
+    .cbs-startup .square .side-l,
+    .cbs-startup .square .side-t,
+    .cbs-startup .square .side-rb,
+    .cbs-startup .square .side-rt,
+    .open-wednesday .square .side-b,
+    .open-wednesday .square .side-l,
+    .open-wednesday .square .side-t,
+    .open-wednesday .square .side-rb,
+    .open-wednesday .square .side-rt {
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: transparent;
+      background-color: #5bad6f; }
+    .startup-friday .square .side-l,
+    .cbs-startup .square .side-l,
+    .open-wednesday .square .side-l {
+      bottom: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 21.938em;
+      righ: 0; }
+    .startup-friday .square .side-t,
+    .cbs-startup .square .side-t,
+    .open-wednesday .square .side-t {
+      top: 0;
+      left: 0;
+      min-width: 0;
+      max-width: 21.938em;
+      height: 0.625em; }
+    .startup-friday .square .side-rt,
+    .cbs-startup .square .side-rt,
+    .open-wednesday .square .side-rt {
+      top: 0;
+      right: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 50px; }
+    .startup-friday .square .side-rb,
+    .cbs-startup .square .side-rb,
+    .open-wednesday .square .side-rb {
+      top: calc( ( 21.938em - 50px ));
+      right: 0;
+      width: 0.625em;
+      min-height: 0;
+      max-height: 50px; }
+    .startup-friday .square .side-b,
+    .cbs-startup .square .side-b,
+    .open-wednesday .square .side-b {
+      right: 0;
+      bottom: 0;
+      min-width: 0;
+      max-width: 21.938em;
+      height: 0.625em; }
   .footer {
     background-color: #fff; }
     .footer ol .breadcrumb-item::before {
