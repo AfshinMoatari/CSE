@@ -25,6 +25,7 @@
 </head>
 
 <body id="main">
+  <div class="se-pre-con"></div>
   <!-- NAVBAR -->
   <nav class="main navbar navbar-toggleable-sm animate px-0 fixed-top">
     <div class="container container-100 d-flex">
@@ -1408,6 +1409,11 @@
   </div>
   <!-- LIBRARIES -->
   <script src="./js/lib/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(window).on('load', function() {
+    $(".se-pre-con").fadeOut("slow");
+  })
+  </script>
   <script src="./js/lib/jquery.fullpage.min.js"></script>
   <script src="./js/lib/bootstrap.min.js"></script>
   <script src="./js/lib/EasePack.min.js"></script>
