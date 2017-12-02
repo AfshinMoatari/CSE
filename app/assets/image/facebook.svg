@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
-    <title>Slice</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="facebook" transform="translate(1.000000, 1.000000)" stroke="#4C62A7">
-            <rect id="Rectangle" stroke-width="2" x="0" y="0" width="36" height="36"></rect>
-            <path d="M19.9148532,13.0940089 L19.9148532,10.9242234 C19.9148532,9.88376479 20.5814671,9.63413462 21.0543642,9.63413462 L23.9354277,9.63413462 L23.9354277,5 L19.9566353,5 C15.548627,5 14.5591517,8.43690828 14.5591517,10.6536243 L14.5591517,13.0940089 L12,13.0940089 L12,16.3491864 L12,18.498003 L14.5819419,18.498003 L14.5819419,32 L19.7211363,32 L19.7211363,18.498003 L23.5280525,18.498003 L23.6989792,16.3731509 L24,13.0940089 L19.9148532,13.0940089 Z" id="Shape" stroke-width="1.2"></path>
-        </g>
-    </g>
-</svg>
+<svg width="38" height="38" xmlns="http://www.w3.org/2000/svg"><g stroke="#4C62A7" fill="none" fill-rule="evenodd"><path stroke-width="2" d="M1 1h36v36H1z"/><path d="M20.915 14.094v-2.17c0-1.04.666-1.29 1.14-1.29h2.88V6h-3.978c-4.408 0-5.398 3.437-5.398 5.654v2.44H13v5.404h2.582V33h5.14V19.498h3.806l.171-2.125.301-3.279h-4.085z" stroke-width="1.2"/></g></svg>

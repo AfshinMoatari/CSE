@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
-    <title>Slice</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="instagram" transform="translate(1.000000, 1.000000)" stroke="#4C62A7">
-            <rect id="Rectangle" stroke-width="2" x="0" y="0" width="36" height="36"></rect>
-            <g id="Group" transform="translate(6.000000, 6.000000)" stroke-width="1.2">
-                <path d="M6.1911,0.5997 C3.1081,0.5997 0.6001,3.1087 0.6001,6.1907 L0.6001,18.3027 C0.6001,21.3867 3.1081,23.8937 6.1911,23.8937 L18.3021,23.8937 C21.3841,23.8937 23.8941,21.3867 23.8941,18.3027 L23.8941,6.1907 C23.8941,3.1087 21.3841,0.5997 18.3021,0.5997 L6.1911,0.5997 Z" id="Stroke-1"></path>
-                <path d="M12.2461,6.6525 C9.1611,6.6525 6.6511,9.1645 6.6511,12.2465 C6.6511,15.3345 9.1611,17.8405 12.2461,17.8405 C15.3331,17.8405 17.8431,15.3345 17.8431,12.2465 C17.8431,9.1645 15.3331,6.6525 12.2461,6.6525 Z" id="Stroke-3"></path>
-                <path d="M20.6731,5.4298 C20.6731,6.2948 19.9701,6.9978 19.1041,6.9978 C18.2381,6.9978 17.5341,6.2948 17.5341,5.4298 C17.5341,4.5638 18.2381,3.8598 19.1041,3.8598 C19.9701,3.8598 20.6731,4.5638 20.6731,5.4298 Z" id="Stroke-5"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="38" height="38" xmlns="http://www.w3.org/2000/svg"><g stroke="#4C62A7" fill="none" fill-rule="evenodd"><path stroke-width="2" d="M1 1h36v36H1z"/><g stroke-width="1.2"><path d="M13.191 7.6a5.598 5.598 0 0 0-5.59 5.59v12.113a5.597 5.597 0 0 0 5.59 5.59h12.111a5.598 5.598 0 0 0 5.592-5.59V13.19a5.6 5.6 0 0 0-5.592-5.59h-12.11z"/><path d="M19.246 13.652a5.603 5.603 0 0 0-5.595 5.595 5.599 5.599 0 0 0 5.595 5.593 5.6 5.6 0 0 0 5.597-5.594 5.603 5.603 0 0 0-5.597-5.594zm8.427-1.222a1.57 1.57 0 1 1-3.139-.003 1.57 1.57 0 0 1 3.14.003z"/></g></g></svg>

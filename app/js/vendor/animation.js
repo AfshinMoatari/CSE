@@ -1,4 +1,12 @@
 $(function() {
+  if ($('body').is('#main')) {
+    //fullpageJS init
+    $('.fullpage').fullpage({
+      scrollBar: true,
+      verticalCentered: true,
+      paddingTop: '60px',
+    });
+  }
   // init controller
   var controller = new ScrollMagic.Controller();
   // animation classes
@@ -138,7 +146,7 @@ $(function() {
       opacity: 0,
     }, {
       opacity: 1,
-      ease: Power4.easeOut,
+      ease: Expo.easeOut,
       delay: delay
     });
 
@@ -177,22 +185,19 @@ $(function() {
       .addTo(controller);
   });
   $('.square').each(function() {
-
     var duration = $(this).attr('duration-square');
-
     var tween = new TimelineMax();
     $(this).children('span').each(function() {
-
       var maxWidth = $(this).css("max-width");
       var maxHeight = $(this).css("max-height");
-
       if (maxWidth !== 'none') {
         tween.fromTo($(this), duration, {
           autoAlpha: 0,
           width: $(this).css("min-width")
         }, {
           autoAlpha: 1,
-          width: maxWidth
+          width: maxWidth,
+          ease: Back.easeOut,
         })
       } else if (maxHeight !== 'none') {
         tween.fromTo($(this), duration, {
@@ -200,10 +205,10 @@ $(function() {
           height: $(this).css("min-height")
         }, {
           autoAlpha: 1,
-          height: maxHeight
+          height: maxHeight,
+          ease: Back.easeOut,
         })
       }
-
     });
 
     // build a scene
@@ -385,26 +390,6 @@ $(function() {
     // call a hover scene
     $(this).hover(over, out);
   });
-  $('.typewriter').each(function() {
-
-    var duration = $(this).attr('duration');
-    var mySplitText = new SplitText($(this), {
-      type: "words,chars"
-    });
-    var chars = mySplitText.chars;
-    // build a tween
-    var tween = TweenMax.staggerFrom(chars, duration, {
-      opacity: 0,
-      ease: Power1.easeIn
-    }, 0.08);
-
-    // build a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
-      })
-      .setTween(tween)
-      .addTo(controller);
-  });
   $('.smooth-scroll > *').each(function() {
     var toggler = $(this);
     var menuanchor = toggler.data("menuanchor");
@@ -433,5 +418,84 @@ $(function() {
       }
     });
   });
+  $('#cse-proof-plan').each(function() {
+    var lines = $(this).find('.line');
+    var bubbles = $(this).find('.bubble');
+    var texts = $(this).find('.text');
+    // build a tween
+    tween = new TimelineMax();
+    var tween = tween.to(lines[4], .1, {
+      css: {
+        className: '+=active',
+        animationDuration: '5s'
+      }
+    }, 0).to(bubbles[4], .1, {
+      css: {
+        opacity: 1,
+        className: '+=active',
+        animationDuration: '.5s'
+      }
+    }, 0.5).from(texts[4], 1, {
+      autoAlpha: 0,
+      x: '-=40'
+    }, 0.5).to(lines[3], .1, {
+      css: {
+        className: '+=active',
+        animationDuration: '3.5s'
+      }
+    }, 1).to(bubbles[3], .1, {
+      css: {
+        opacity: 1,
+        className: '+=active',
+        animationDuration: '.5s'
+      }
+    }, 2).from(texts[3], 1, {
+      autoAlpha: 0,
+      x: '+=40'
+    }, 2).to(lines[2], .1, {
+      css: {
+        className: '+=active',
+        animationDuration: '5s'
+      }
+    }, 2).to(bubbles[2], .1, {
+      css: {
+        opacity: 1,
+        className: '+=active',
+        animationDuration: '.5s'
+      }
+    }, 2.7).from(texts[2], 1, {
+      autoAlpha: 0,
+      x: '+=40'
+    }, 2.7).to(lines[1], .1, {
+      css: {
+        className: '+=active',
+        animationDuration: '5s'
+      }
+    }, 3).to(bubbles[1], .1, {
+      css: {
+        opacity: 1,
+        className: '+=active',
+        animationDuration: '.5s'
+      }
+    }, 3.7).from(texts[1], 1, {
+      autoAlpha: 0,
+      x: '+=40'
+    }, 3.7).to(lines[0], .1, {
+      css: {
+        className: '+=active',
+        animationDuration: '5s'
+      }
+    }, 3).to(bubbles[0], .1, {
+      css: {
+        opacity: 1,
+        className: '+=active',
+        animationDuration: '.5s'
+      }
+    }, 4.4).from(texts[0], 1, {
+      autoAlpha: 0,
+      x: '-=40'
+    }, 4.4);
+    tween.play()
 
+  });
 });
