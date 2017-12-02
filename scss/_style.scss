@@ -1,6 +1,7 @@
 //fonts
 @include font-face('CBS-regular', 'CBS_NEW_REGULAR', 'CBS-typografier');
 @include font-face('CBS-bold', 'CBS_NEW_BOLD', 'CBS-typografier');
+//preloader
 .no-js #loader
 {
     display: none;
