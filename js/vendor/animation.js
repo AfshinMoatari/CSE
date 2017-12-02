@@ -1,4 +1,12 @@
 $(function() {
+  if ($('body').is('#main')) {
+    //fullpageJS init
+    $('.fullpage').fullpage({
+      scrollBar: true,
+      verticalCentered: true,
+      paddingTop: '60px',
+    });
+  }
   // init controller
   var controller = new ScrollMagic.Controller();
   // animation classes
