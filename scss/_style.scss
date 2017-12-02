@@ -67,14 +67,7 @@
         }
     }
 }
-.s-single
-{
-    height: 600px;
-}
-.s-media
-{
-    height: 800px;
-}
+
 //fullpageJS horizontal scroll
 .fullpage
 {
@@ -138,10 +131,6 @@ h4
 {
     font-family: $font-family-cbs-bold ;
 }
-.pre
-{
-    white-space: pre-line;
-}
 .bold
 {
     font-family: $font-family-cbs-bold;
@@ -151,7 +140,6 @@ h4
     &.large
     {
         width: 250px;
-        padding-bottom: 35px;
     }
     &.small
     {
@@ -1505,6 +1493,15 @@ nav
 //Portfolio
 .portfolio
 {
+    &.mentors
+    {
+        height: 700px;
+    }
+    &.partners
+    {
+        height: 500px;
+    }
+
     .item
     {
         img
@@ -1519,13 +1516,6 @@ nav
             width: 175px;
             padding-right: 0;
             padding-left: 0;
-        }
-        .switcher-content
-        {
-            .btn
-            {
-                // font-size: 1.2em;
-            }
         }
     }
 }

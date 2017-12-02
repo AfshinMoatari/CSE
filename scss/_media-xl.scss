@@ -900,11 +900,11 @@
     .internship-with-ects,
     .entrepreneurship-teaching-center
     {
+        height: 800px;
+
         background-color: inherit;
         .container
         {
-            height: 750px;
-
             background-color: inherit;
 
                     clip-path: none;
@@ -978,6 +978,7 @@
     .cbs-startup,
     .open-wednesday
     {
+        height: 500px;
         .square
         {
             top: -34%;
@@ -1050,6 +1051,7 @@
             }
         }
     }
+
     //footer
     .footer
     {
