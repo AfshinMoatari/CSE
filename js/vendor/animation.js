@@ -586,25 +586,37 @@ $(function() {
     var ContentRight = $(this).find('.overlay-animation.right .overlay-container');
     var TransformRight = $(this).find('.overlay-animation.right .overlay-transform');
     var logo = $(this).find('.logo');
-    var duration = .5;
+    var duration = .6;
+    var delay = duration;
     var tween = new TimelineMax();
-
+    if ($(this).hasClass("wait")) {
+      var delay = 2.2;
+      tween.set(logo, {
+        scale: 1.4
+      }).to(logo, duration, {
+        scale: 1
+      }, 3.8).to(logo.find('#cse-hero'), duration, {
+        fill: '#fff'
+      }, 3.8).to(logo.find('span'), duration, {
+        backgroundColor: '#fff'
+      }, 3.8);
+    }
     tween.fromTo(TransformLeft, duration, {
         transformOrigin: "top left",
         scaleX: 0
       }, {
         transform0rigin: 'top right',
         scaleX: 1
-      }, duration)
+      }, delay)
       .fromTo(ContentLeft, 0, {
         opacity: 0
       }, {
         opacity: 1
-      }, duration * 2)
+      }, delay + duration)
       .to(TransformLeft, duration, {
         transformOrigin: 'top right',
         scaleX: 0
-      }, duration * 2)
+      }, delay + duration)
       .to(ContentLeft, .25, {
         left: '0'
       }, '-=.75')
@@ -614,16 +626,16 @@ $(function() {
       }, {
         transform0rigin: 'top left',
         scaleX: 1
-      }, duration)
+      }, delay)
       .fromTo(ContentRight, 0, {
         opacity: 0
       }, {
         opacity: 1
-      }, duration * 2)
+      }, delay + duration)
       .to(TransformRight, duration, {
         transformOrigin: 'top left',
         scaleX: 0
-      }, duration * 2)
+      }, delay + duration)
       .to(ContentRight, .25, {
         right: '0'
       }, '-=.75');
