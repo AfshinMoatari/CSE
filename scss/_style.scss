@@ -1309,11 +1309,10 @@ nav
         .text
         {
             font-family: $font-family-cbs-bold;
-        }
-
-        &::before
-        {
-            content: '\2012 \00A0';
+            &::before
+            {
+                content: '\2012 \00A0';
+            }
         }
     }
 }
@@ -1338,6 +1337,7 @@ nav
 //Resources & Research
 .resources-research
 {
+    height: 600px;
     .square
     {
         z-index: -1;
@@ -1482,12 +1482,6 @@ nav
             }
         }
     }
-}
-
-//Press
-.press
-{
-    height: 500px;
 }
 
 //Portfolio
