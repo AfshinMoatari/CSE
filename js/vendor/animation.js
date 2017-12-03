@@ -1,4 +1,7 @@
 $(function() {
+  $(window).on('beforeunload', function() {
+    $(this).scrollTop(0);
+  });
   if ($('body').is('#main')) {
     //fullpageJS init
     $('.fullpage').fullpage({
