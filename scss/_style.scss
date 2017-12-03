@@ -285,6 +285,8 @@ h4
 
         content: '';
         -webkit-transition: $transition-base;
+           -moz-transition: $transition-base;
+             -o-transition: $transition-base;
                 transition: $transition-base;
     }
 
@@ -965,6 +967,8 @@ nav
 {
     font-size: .7rem;
 
+    position: relative;
+
     margin-top: 133px;
     .media
     {
@@ -1096,6 +1100,120 @@ nav
             font-style: italic;
 
             color: $brand-primary;
+        }
+    }
+    .overlay-container
+    {
+        position: relative;
+
+        -webkit-transition: all .6s ease;
+           -moz-transition: all .6s ease;
+             -o-transition: all .6s ease;
+                transition: all .6s ease;
+
+        opacity: 0;
+        &.left
+        {
+            left: -60px;
+        }
+        &.right
+        {
+            right: -60px;
+        }
+    }
+    .overlay-transform
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+        // background-color: red;
+
+        background-color: $brand-primary;
+
+        backface-visibility: hidden;
+    }
+    .logo
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: $square-logo-dimension-sm;
+        height: $square-logo-dimension-sm;
+        margin-top: calc( -#{$square-logo-dimension-sm} /2);
+        margin-left: calc( -#{$square-logo-dimension-sm} /2);
+        .square
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+
+            width: $square-logo-dimension-sm;
+            height: $square-logo-dimension-sm;
+
+            background: $transparent;
+
+            .side-b,
+            .side-t,
+            .side-l,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $brand-secondary;
+            }
+
+            .side-b
+            {
+                right: calc( ( #{$square-logo-dimension-sm} - 33px )  );
+                bottom: 0;
+
+                min-width: 0;
+                max-width: 33px;
+                height: $square-logo-border-sm;
+            }
+
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-logo-border-sm;
+                min-height: 0;
+                max-height: $square-logo-dimension-sm;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                max-width: $square-logo-dimension-sm;
+                height: $square-logo-border-sm;
+
+                mix-width: 0;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-logo-border-sm;
+                min-height: 0;
+                max-height: 50px;
+            }
+        }
+        .cse
+        {
+            width: 55px;
         }
     }
 }

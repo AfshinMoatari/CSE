@@ -580,6 +580,62 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   })
+  $('.about-page').each(function() {
+    var ContentLeft = $(this).find('.overlay-animation.left .overlay-container');
+    var TransformLeft = $(this).find('.overlay-animation.left .overlay-transform');
+    var ContentRight = $(this).find('.overlay-animation.right .overlay-container');
+    var TransformRight = $(this).find('.overlay-animation.right .overlay-transform');
+    var logo = $(this).find('.logo');
+    var duration = .5;
+    var tween = new TimelineMax();
+
+    tween.fromTo(TransformLeft, duration, {
+        transformOrigin: "top left",
+        scaleX: 0
+      }, {
+        transform0rigin: 'top right',
+        scaleX: 1
+      }, duration)
+      .fromTo(ContentLeft, 0, {
+        opacity: 0
+      }, {
+        opacity: 1
+      }, duration * 2)
+      .to(TransformLeft, duration, {
+        transformOrigin: 'top right',
+        scaleX: 0
+      }, duration * 2)
+      .to(ContentLeft, .25, {
+        left: '0'
+      }, '-=.75')
+      .fromTo(TransformRight, duration, {
+        transformOrigin: "top right",
+        scaleX: 0
+      }, {
+        transform0rigin: 'top left',
+        scaleX: 1
+      }, duration)
+      .fromTo(ContentRight, 0, {
+        opacity: 0
+      }, {
+        opacity: 1
+      }, duration * 2)
+      .to(TransformRight, duration, {
+        transformOrigin: 'top left',
+        scaleX: 0
+      }, duration * 2)
+      .to(ContentRight, .25, {
+        right: '0'
+      }, '-=.75');
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this)[0],
+        triggerHook: .8
+      })
+      .setTween(tween)
+      .addTo(controller);
+  })
 
 
 });
