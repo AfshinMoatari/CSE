@@ -681,7 +681,7 @@ $(function() {
       backgroundColor: 'transparent',
     }, {
       backgroundColor: '#496093',
-      ease: Back.easeInOut
+      ease: Back.easeOut.config(1)
     });
 
     // build a scene
