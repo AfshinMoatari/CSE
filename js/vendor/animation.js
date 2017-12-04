@@ -103,60 +103,42 @@ $(function() {
       .addTo(controller);
   });
   $('.fade-in-left').each(function() {
-
-    var duration = $(this).attr('duration-fade');
-    var delay = $(this).attr('delay');
     // build a tween
-    var tween = TweenMax.from($(this), duration, {
-      autoAlpha: 0,
-      x: '-=180',
-      ease: Power4.easeIn,
-      delay: delay
-    });
-
+    var tween = TweenMax.staggerFromTo($(this), .5, {
+      x: -150,
+      autoAlpha: 0
+    }, {
+      x: 0,
+      autoAlpha: 1,
+      force3D: true,
+      ease: Quad.easeInOut
+    }, 0.1);
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: $(this).parents('.animate').first()[0],
-        triggerHook: .8
+        triggerHook: .8,
+        reverse: false
       })
       .setTween(tween)
       .addTo(controller);
   });
   $('.fade-in-right').each(function() {
-
-    var duration = $(this).attr('duration-fade');
-    var delay = $(this).attr('delay');
     // build a tween
-    var tween = TweenMax.from($(this), duration, {
-      autoAlpha: 0,
-      x: '+=180',
-      ease: Power4.easeIn,
-      delay: delay
-    });
-
-    // build a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
-      })
-      .setTween(tween)
-      .addTo(controller);
-  });
-  $('.opacity').each(function() {
-
-    var duration = $(this).attr('duration-opacity');
-    var delay = $(this).attr('delay');
-    // build a tween
-    var tween = TweenMax.fromTo($(this), duration, {
-      opacity: 0,
+    var tween = TweenMax.staggerFromTo($(this), .5, {
+      x: 150,
+      autoAlpha: 0
     }, {
-      opacity: 1,
-      ease: Expo.easeOut,
-      delay: delay
-    });
+      x: 0,
+      autoAlpha: 1,
+      force3D: true,
+      ease: Quad.easeInOut
+    }, 0.1);
 
     // build a scene
     var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
+        triggerElement: $(this).parents('.animate').first()[0],
+        triggerHook: .8,
+        reverse: false
       })
       .setTween(tween)
       .addTo(controller);
@@ -183,7 +165,8 @@ $(function() {
 
     // build a scene
     var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
+        triggerElement: $(this).parents('.animate').first()[0],
+        reverse: false
       })
       .setTween(tween)
       .addTo(controller);
@@ -218,7 +201,8 @@ $(function() {
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: $(this).parents('.animate').first()[0],
-        triggerHook: .8
+        triggerHook: .8,
+        reverse: false
       })
       .setTween(tween)
       .addTo(controller);
@@ -523,7 +507,8 @@ $(function() {
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: $(this).parents('.animate').first()[0],
-        triggerHook: .8
+        triggerHook: .8,
+        reverse: false
       })
       .setTween(tween)
       .addTo(controller);
@@ -543,7 +528,8 @@ $(function() {
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: $(this)[0],
-        triggerHook: .8
+        triggerHook: .8,
+        reverse: false
       })
       .setTween(tween)
       .addTo(controller);
@@ -552,30 +538,28 @@ $(function() {
     var items = $(this).find('li.text');
     var anchor = $(this).find('li.anchor');
     var tween = new TimelineMax();
-
     tween.set(items, {
       autoAlpha: 0,
-      x: -100
+      x: -150
     }).set(anchor, {
       autoAlpha: 0,
-    }).staggerTo(items, .8, {
+    }).staggerTo(items, .5, {
       autoAlpha: 1,
       x: 0,
       ease: Quad.easeInOut,
       delay: 0.1,
       force3D: true
-    }, 0.4).staggerTo(anchor, .4, {
+    }, 0.1).staggerTo(anchor, .5, {
       autoAlpha: 1,
       ease: Quad.easeInOut,
       delay: .2,
       force3D: true
-    }, 0.6);
-
-
+    }, 0.2);
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: $(this).parents('.animate').first()[0],
-        triggerHook: .8
+        triggerHook: .8,
+        reverse: false
       })
       .setTween(tween)
       .addTo(controller);
@@ -648,6 +632,266 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   })
+  $('.proof-program').find('.item').each(function() {
+    var svg = $(this).find('.svg-container');
+    var title = $(this).find('h5');
+    var info = $(this).find('p');
+    var date = $(this).find('span');
+    var anchor = $(this).find('a');
+    var tween = new TimelineMax();
+
+    tween.staggerFromTo(svg, 1, {
+      scale: 0,
+      rotation: 245
+    }, {
+      scale: 1,
+      opacity: 1,
+      rotation: 360,
+      force3D: true,
+      ease: Back.easeInOut
+    }, 0.1).staggerFromTo([title, info, date], .5, {
+      x: 150,
+      autoAlpha: 0
+    }, {
+      x: 0,
+      autoAlpha: 1,
+      force3D: true,
+      ease: Quad.easeInOut
+    }, 0.1).staggerFromTo(anchor, .5, {
+      autoAlpha: 0
+    }, {
+      autoAlpha: 1,
+      ease: Quad.easeInOut,
+      delay: .3,
+      force3D: true
+    });
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0],
+        triggerHook: .5,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('.hero').each(function() {
+
+    var tween = TweenMax.staggerFromTo($(this), 4, {
+      backgroundColor: 'transparent',
+    }, {
+      backgroundColor: '#496093',
+      ease: Back.easeInOut
+    });
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this)[0],
+        triggerHook: .8,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('.quotations').find('.blockquote').each(function() {
+    var body = $(this).find('span');
+    var footer = $(this).find('footer');
+    var tween = new TimelineMax();
+
+    if ($(this).hasClass("left")) {
+      tween.staggerFromTo([body, footer], .5, {
+        x: 150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1);
+
+    } else if ($(this).hasClass("right")) {
+      tween.staggerFromTo([body, footer], .5, {
+        x: -150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1);
+    }
 
 
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0],
+        triggerHook: .8,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('.resources-research ').find('.item').each(function() {
+    var title = $(this).find('h4');
+    var info = $(this).find('p');
+    var anchor = $(this).find('a');
+    var tween = new TimelineMax();
+
+    if ($(this).hasClass("left")) {
+      tween.staggerFromTo([title, info, anchor], .5, {
+        x: 150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1);
+
+    } else if ($(this).hasClass("right")) {
+      tween.staggerFromTo([title, info, anchor], .5, {
+        x: -150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1);
+    }
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0],
+        triggerHook: .8,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('.accelerator-program').find('.item').each(function() {
+    var title = $(this).find('h4');
+    var info = $(this).find('p');
+    var anchor = $(this).find('a');
+    var tween = new TimelineMax();
+
+    if ($(this).hasClass("left")) {
+      tween.staggerFromTo([title, info], .5, {
+        x: 150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1).staggerFromTo(anchor, .5, {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        ease: Quad.easeInOut,
+        delay: .3,
+        force3D: true
+      });
+
+    } else if ($(this).hasClass("right")) {
+      tween.staggerFromTo([title, info], .5, {
+        x: -150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1).staggerFromTo(anchor, .5, {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        ease: Quad.easeInOut,
+        delay: .3,
+        force3D: true
+      });
+    }
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0],
+        triggerHook: .8,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('.s-media, .s-single').find('.info').each(function() {
+    var title = $(this).find('h4');
+    var info = $(this).find('p');
+    var anchor = $(this).find('a');
+    var tween = new TimelineMax();
+
+    if ($(this).hasClass("left")) {
+      tween.staggerFromTo([title, info], .5, {
+        x: 150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1).staggerFromTo(anchor, .5, {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        ease: Quad.easeInOut,
+        delay: .3,
+        force3D: true
+      });
+
+    } else if ($(this).hasClass("right")) {
+      tween.staggerFromTo([title, info], .5, {
+        x: -150,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
+        force3D: true,
+        ease: Quad.easeInOut
+      }, 0.1).staggerFromTo(anchor, .5, {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        ease: Quad.easeInOut,
+        delay: .3,
+        force3D: true
+      });
+    }
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0],
+        triggerHook: .8,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
+  $('.block-fade-in-right').each(function() {
+    var title = $(this).find('h4');
+    var info = $(this).find('p');
+    var tween = new TimelineMax();
+    // build a tween
+    var tween = TweenMax.staggerFromTo([title, info], .5, {
+      x: 150,
+      autoAlpha: 0
+    }, {
+      x: 0,
+      autoAlpha: 1,
+      force3D: true,
+      ease: Quad.easeInOut
+    }, 0.1);
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this).parents('.animate').first()[0],
+        triggerHook: .8,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
+  });
 });
