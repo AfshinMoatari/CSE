@@ -676,14 +676,12 @@ $(function() {
       .addTo(controller);
   });
   $('.hero').each(function() {
-
     var tween = TweenMax.staggerFromTo($(this), 4, {
       backgroundColor: 'transparent',
     }, {
       backgroundColor: '#496093',
       ease: Back.easeOut.config(1)
     });
-
     // build a scene
     var scene = new ScrollMagic.Scene({
         triggerElement: $(this)[0],
