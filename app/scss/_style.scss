@@ -67,14 +67,7 @@
         }
     }
 }
-.s-single
-{
-    height: 600px;
-}
-.s-media
-{
-    height: 800px;
-}
+
 //fullpageJS horizontal scroll
 .fullpage
 {
@@ -138,10 +131,6 @@ h4
 {
     font-family: $font-family-cbs-bold ;
 }
-.pre
-{
-    white-space: pre-line;
-}
 .bold
 {
     font-family: $font-family-cbs-bold;
@@ -151,7 +140,6 @@ h4
     &.large
     {
         width: 250px;
-        padding-bottom: 35px;
     }
     &.small
     {
@@ -297,6 +285,8 @@ h4
 
         content: '';
         -webkit-transition: $transition-base;
+           -moz-transition: $transition-base;
+             -o-transition: $transition-base;
                 transition: $transition-base;
     }
 
@@ -699,6 +689,10 @@ nav
         {
             font-size: .7em;
         }
+        span
+        {
+            display: block;
+        }
     }
 }
 
@@ -977,6 +971,8 @@ nav
 {
     font-size: .7rem;
 
+    position: relative;
+
     margin-top: 133px;
     .media
     {
@@ -1108,6 +1104,131 @@ nav
             font-style: italic;
 
             color: $brand-primary;
+        }
+    }
+    .overlay-container
+    {
+        position: relative;
+
+        -webkit-transition: all .6s ease;
+           -moz-transition: all .6s ease;
+             -o-transition: all .6s ease;
+                transition: all .6s ease;
+
+        opacity: 0;
+        &.left
+        {
+            left: -80px;
+        }
+        &.right
+        {
+            right: -80px;
+        }
+    }
+    .overlay-transform
+    {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: $brand-primary;
+
+        backface-visibility: hidden;
+        &.left
+        {
+            left: -80px;
+        }
+        &.right
+        {
+            right: -80px;
+        }
+    }
+    .logo
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: $square-logo-dimension-sm;
+        height: $square-logo-dimension-sm;
+        margin-top: calc( -#{$square-logo-dimension-sm} /2);
+        margin-left: calc( -#{$square-logo-dimension-sm} /2);
+        .square
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+
+            width: $square-logo-dimension-sm;
+            height: $square-logo-dimension-sm;
+
+            background: $transparent;
+
+            .side-b,
+            .side-t,
+            .side-l,
+            .side-r
+            {
+                position: absolute;
+
+                width: 0;
+                height: 0;
+
+                background: transparent;
+                background-color: $brand-primary;
+            }
+
+            .side-b
+            {
+                right: calc( ( #{$square-logo-dimension-sm} - 33px )  );
+                bottom: 0;
+
+                min-width: 0;
+                max-width: 33px;
+                height: $square-logo-border-sm;
+            }
+
+            .side-l
+            {
+                bottom: 0;
+                left: 0;
+
+                width: $square-logo-border-sm;
+                min-height: 0;
+                max-height: $square-logo-dimension-sm;
+            }
+
+            .side-t
+            {
+                top: 0;
+                left: 0;
+
+                max-width: $square-logo-dimension-sm;
+                height: $square-logo-border-sm;
+
+                mix-width: 0;
+            }
+
+            .side-r
+            {
+                top: 0;
+                right: 0;
+
+                width: $square-logo-border-sm;
+                min-height: 0;
+                max-height: 50px;
+            }
+        }
+        .cse
+        {
+            width: 55px;
+            #cse-hero
+            {
+                fill: $brand-primary;
+            }
         }
     }
 }
@@ -1277,12 +1398,11 @@ nav
         .side-l
         {
             bottom: 0;
+            left: 0;
 
             width: $square-border;
             min-height: 0;
             max-height: $square-dimension;
-
-            righ: 0;
         }
 
         .side-t
@@ -1321,11 +1441,10 @@ nav
         .text
         {
             font-family: $font-family-cbs-bold;
-        }
-
-        &::before
-        {
-            content: '\2012 \00A0';
+            &::before
+            {
+                content: '\2012 \00A0';
+            }
         }
     }
 }
@@ -1350,6 +1469,7 @@ nav
 //Resources & Research
 .resources-research
 {
+    height: 600px;
     .square
     {
         z-index: -1;
@@ -1496,15 +1616,18 @@ nav
     }
 }
 
-//Press
-.press
-{
-    height: 500px;
-}
-
 //Portfolio
 .portfolio
 {
+    &.mentors
+    {
+        height: 700px;
+    }
+    &.partners
+    {
+        height: 500px;
+    }
+
     .item
     {
         img
@@ -1520,11 +1643,37 @@ nav
             padding-right: 0;
             padding-left: 0;
         }
-        .switcher-content
+        .tab-pane
         {
-            .btn
+            position: relative;
+        }
+        aside
+        {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 100vw;
+
+            width: 100vw;
+
+            border: 10px solid $brand-primary;
+            background-color: $brand-secondary;
+
+            .brand
             {
-                // font-size: 1.2em;
+                position: absolute;
+                top: -55px;
+
+                width: 190px;
+                height: 80px;
+
+                background-color: $brand-secondary;
+            }
+            .info
+            {
+                width: 500px;
             }
         }
     }

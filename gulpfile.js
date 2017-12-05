@@ -51,7 +51,14 @@ gulp.task('imgComp', function() {
 gulp.task('HTMLmini', function() {
   return gulp.src('app/html-dev/*.html')
     .pipe(htmlmin({
-      collapseWhitespace: true
+      collapseWhitespace: true,
+      removeComments: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+      minifyJS: true,
+      sortAttributes: true,
+      sortClassName: true,
+      useShortDoctype: true
     }))
     .pipe(gulp.dest('app'))
     .pipe(browserSync.stream());
@@ -62,6 +69,7 @@ gulp.task('js', function() {
   return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js', 'node_modules/gsap/src/minified/TweenMax.min.js',
       'node_modules/gsap/src/minified/easing/EasePack.min.js', 'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
       'node_modules/fullpage.js/dist/jquery.fullpage.min.js',
+      'node_modules/tether/dist/js/tether.min.js',
       'node_modules/modernizr/modernizr.js'
     ])
     .pipe(gulp.dest("app/js/lib"))

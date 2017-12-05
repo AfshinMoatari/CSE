@@ -401,6 +401,7 @@
 
         .text
         {
+            padding: 0 100px;
             p
             {
                 font-size: 1.1em;
@@ -900,11 +901,11 @@
     .internship-with-ects,
     .entrepreneurship-teaching-center
     {
+        height: 800px;
+
         background-color: inherit;
         .container
         {
-            height: 750px;
-
             background-color: inherit;
 
                     clip-path: none;
@@ -933,12 +934,11 @@
             .side-l
             {
                 bottom: 0;
+                left: 0;
 
                 width: $square-border;
                 min-height: 0;
                 max-height: $square-dimension;
-
-                righ: 0;
             }
 
             .side-t
@@ -978,6 +978,7 @@
     .cbs-startup,
     .open-wednesday
     {
+        height: 500px;
         .square
         {
             top: -34%;
@@ -1001,12 +1002,11 @@
             .side-l
             {
                 bottom: 0;
+                left: 0;
 
                 width: $square-border;
                 min-height: 0;
                 max-height: $square-dimension;
-
-                righ: 0;
             }
 
             .side-t
@@ -1050,6 +1050,7 @@
             }
         }
     }
+
     //footer
     .footer
     {
