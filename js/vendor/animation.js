@@ -882,6 +882,7 @@ $(function() {
         $(this).click(function(e) {
           e.preventDefault();
           var otherSidebars = $('.item-sidebar').not(currentSidebar);
+          otherSidebars.removeClass('open');
           var tween = new TimelineMax();
           tween.staggerFromTo(currentSidebar, .8, {
             left: '200vw'
@@ -892,7 +893,7 @@ $(function() {
           var tween1 = new TimelineMax();
           tween1.staggerTo(otherSidebars, .6, {
             left: '200%'
-          }, 0);
+          }, .1);
           currentSidebar.toggleClass('open');
           if (currentSidebar.hasClass('open')) {
             tween.play();
@@ -906,7 +907,6 @@ $(function() {
                 if ($("." + target) != currentSidebar) {
                   tween.reverse(.6);
                   currentSidebar.removeClass('open');
-                  otherSidebars.removeClass('open');
                 }
               }
             }
