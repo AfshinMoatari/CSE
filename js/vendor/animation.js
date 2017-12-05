@@ -893,8 +893,7 @@ $(function() {
           tween1.staggerTo(otherSidebars, .6, {
             left: '200%'
           }, 0);
-          currentSidebar.toggleClass('open');
-
+          currentSidebar.toggleClass('open'); -
           if (currentSidebar.hasClass('open')) {
             tween.play();
           } else {
@@ -913,16 +912,28 @@ $(function() {
             }
           });
         });
-
-
-
-
-
-
       });
-
     }
 
+    var items = $(this).find('.item').toArray();
+    var tween = TweenMax.set(items, {
+      autoAlpha: 0
+    });
+    var tween = TweenMax.staggerTo(items, .6, {
+      autoAlpha: 1,
+      ease: Quad.easeInOut,
+      delay: 0.1,
+      force3D: true
+    }, 0.2);
+
+    // build a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: $(this)[0],
+        triggerHook: .8,
+        reverse: false
+      })
+      .setTween(tween)
+      .addTo(controller);
   });
 
 });
