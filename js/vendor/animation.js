@@ -82,26 +82,6 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
-  $('.fade-in').each(function() {
-
-    var duration = $(this).attr('duration-fade');
-    var delay = $(this).attr('delay');
-    // build a tween
-    var tween = TweenMax.from($(this), duration, {
-      autoAlpha: 0,
-      scale: 1.3,
-      y: '+=30',
-      ease: Linear.easeNone,
-      delay: delay
-    });
-
-    // build a scene
-    var scene = new ScrollMagic.Scene({
-        triggerElement: $(this).parents('.animate').first()[0]
-      })
-      .setTween(tween)
-      .addTo(controller);
-  });
   $('.fade-in-left').each(function() {
     // build a tween
     var tween = TweenMax.staggerFromTo($(this), .5, {
@@ -892,4 +872,57 @@ $(function() {
       .setTween(tween)
       .addTo(controller);
   });
+  $('.portfolio').each(function() {
+    if ($(this).hasClass('side')) {
+      var sidebarButtons = $('.toggle-sidebar');
+      sidebarButtons.each(function() {
+        var currentAttr = $(this).attr('href');
+        var currentSidebar = $("[data-anchor=" + currentAttr + "]");
+
+        $(this).click(function(e) {
+          e.preventDefault();
+          var otherSidebars = $('.item-sidebar').not(currentSidebar);
+          var tween = new TimelineMax();
+          tween.staggerFromTo(currentSidebar, .8, {
+            left: '200vw'
+          }, {
+            left: '50%',
+            ease: Back.easeOut.config(1.4)
+          }, .1);
+          var tween1 = new TimelineMax();
+          tween1.staggerTo(otherSidebars, .6, {
+            left: '200%'
+          }, 0);
+          currentSidebar.toggleClass('open');
+
+          if (currentSidebar.hasClass('open')) {
+            tween.play();
+          } else {
+            tween.reverse(.6);
+          }
+          $(document).click(function(e) {
+            if (currentSidebar.hasClass('open')) {
+              var target = e.target.className;
+              if ($.trim(target) != '') {
+                if ($("." + target) != currentSidebar) {
+                  tween.reverse(.6);
+                  currentSidebar.removeClass('open');
+                  otherSidebars.removeClass('open');
+                }
+              }
+            }
+          });
+        });
+
+
+
+
+
+
+      });
+
+    }
+
+  });
+
 });
