@@ -1625,11 +1625,17 @@ nav
 {
     &.mentors
     {
-        height: 1100px;
+        .switcher-body
+        {
+            height: 950px;
+        }
     }
     &.startups
     {
-        height: 900px;
+        .switcher-body
+        {
+            height: 620px;
+        }
     }
     &.partners
     {
