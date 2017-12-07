@@ -879,8 +879,8 @@ $(function() {
         var currentAttr = $(this).attr('href');
         var currentSidebar = $("[data-anchor=" + currentAttr + "]");
 
-        $(this).click(function(e) {
-          e.preventDefault();
+        $(this).click(function(e0) {
+          e0.preventDefault();
           var otherSidebars = $('.item-sidebar').not(currentSidebar);
           otherSidebars.removeClass('open');
           var tween = new TimelineMax();
@@ -892,17 +892,18 @@ $(function() {
           }, .1);
           var tween1 = new TimelineMax();
           tween1.staggerTo(otherSidebars, .6, {
-            left: '200%'
+            left: '200%',
+            ease: Power0.easeNone
           }, .1);
           currentSidebar.toggleClass('open');
           if (currentSidebar.hasClass('open')) {
             tween.play();
           } else {
-            tween.reverse(.6);
+            tween1.play();
           }
-          $(document).click(function(e) {
+          $(document).click(function(e1) {
             if (currentSidebar.hasClass('open')) {
-              var target = e.target.className;
+              var target = e1.target.className;
               if ($.trim(target) != '') {
                 if ($("." + target) != currentSidebar) {
                   tween.reverse(.6);

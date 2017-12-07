@@ -1627,6 +1627,10 @@ nav
     {
         height: 1100px;
     }
+    &.startups
+    {
+        height: 900px;
+    }
     &.partners
     {
         height: 500px;
@@ -1672,6 +1676,13 @@ nav
             .info
             {
                 width: 500px;
+            }
+        }
+        .switcher-header-tabs
+        {
+            li
+            {
+                max-width: fit-content;
             }
         }
     }

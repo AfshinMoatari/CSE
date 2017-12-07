@@ -323,9 +323,12 @@
     {
         .square
         {
-            top: 28%;
+            top: 50%;
             right: -5%;
 
+            width: $square-dimension;
+            height: $square-dimension;
+            margin-top: calc( -#{$square-dimension} /2.6);
             .side-b,
             .side-lt,
             .side-lb,
@@ -333,9 +336,6 @@
             .side-r
             {
                 position: absolute;
-
-                width: 0;
-                height: 0;
 
                 background: transparent;
                 background-color: $square-color-purple;

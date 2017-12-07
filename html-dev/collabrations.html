@@ -154,10 +154,10 @@
                 <div class="switcher-header">
                   <ul class="row d-flex justify-content-center nav nav-tabs switcher-header-tabs" role="tablist">
                     <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#all" aria-controls="all" role="tab" aria-expanded="true" duration-btn=".1">All</button>
+                      <button class="nav-link btn btn-secondary nav-link active" data-toggle="tab" href="#all" aria-controls="all" role="tab" aria-expanded="true" duration-btn=".1">All</button>
                     </li>
                     <li class="col-auto m-1 nav-item">
-                      <button class="nav-link btn btn-secondary nav-link active" data-toggle="tab" href="#Financial" aria-controls="bio-enterprise" role="tab" duration-btn=".1">Financial</button>
+                      <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#Financial" aria-controls="bio-enterprise" role="tab" duration-btn=".1">Financial</button>
                     </li>
                     <li class="col-auto m-1 nav-item">
                       <button class="nav-link btn btn-secondary nav-link" data-toggle="tab" href="#Legal" aria-controls="education-platform" role="tab" duration-btn=".1">Legal</button>
@@ -174,10 +174,7 @@
                   </ul>
                 </div>
                 <div class="switcher-body tab-content py-6">
-                  <div class="tab-pane" id="all" role="tabpanel">
-                      Content for Nested Bio Enterprise
-                  </div>
-                  <div class="tab-pane active" id="Financial" role="tabpanel">
+                  <div class="tab-pane active" id="all" role="tabpanel">
                     <div class="row d-flex justify-content-between align-items-center">
                       <div class="col-3 my-4 item">
                         <div class="profile">
@@ -363,7 +360,20 @@
                           </div>
                         </div>
                       </div>
+                      <nav aria-label="Mentors Page">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link" href="1">1</a></li>
+                          <li class="page-item"><a class="page-link" href="2">2</a></li>
+                          <li class="page-item"><a class="page-link" href="3">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
                     </div>
+                  </div>
+                  <div class="tab-pane" id="Financial" role="tabpanel">
+                      Content for Financial
                   </div>
                   <div class="tab-pane" id="Legal" role="tabpanel">
                     Content for Nested Education platform
