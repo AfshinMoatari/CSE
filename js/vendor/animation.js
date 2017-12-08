@@ -10,6 +10,25 @@ $(function() {
       paddingTop: '60px',
     });
   }
+  if ($('body').is('#collabrations')) {
+    $('.mentors .tab-pane').each(function() {
+      var size_col = $(this).length;
+      console.log(size_col);
+      x = 8;
+      $(this).find('.item:lt(' + x + ')').show();
+    });
+    //jQuery Pagination init
+    $('.pagination').twbsPagination({
+      totalPages: 10,
+      visiblePages: 3,
+      prevClass: 'd-none',
+      firstClass: 'd-none',
+      lastClass: 'd-none',
+      onPageClick: function(event, page) {
+        $('#page-content').text('Page ' + page);
+      }
+    });
+  }
   // init controller
   var controller = new ScrollMagic.Controller();
   // animation classes

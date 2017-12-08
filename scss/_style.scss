@@ -24,6 +24,28 @@
 
     background: url(../assets/image/preloader.svg) center no-repeat $brand-primary;
 }
+.pagination
+{
+    .page-item
+    {
+        &.next
+        {
+            .page-link
+            {
+                margin: 0 14px;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+        .page-link
+        {
+            margin: 0 1.5px;
+            padding: 1px 7px;
+
+            border-color: $brand-primary;
+        }
+    }
+}
 //container
 .container
 {
@@ -1652,6 +1674,10 @@ nav
         .tab-pane
         {
             position: relative;
+            .item
+            {
+                // display: none;
+            }
         }
         aside
         {
