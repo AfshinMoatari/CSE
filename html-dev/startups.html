@@ -18,7 +18,7 @@
   <meta name="application-name" content="CSE - Copenhagen School of Entrepreneurship">
   <meta name="msapplication-TileColor" content="#496093">
   <meta name="msapplication-TileImage" content="./assets/image/favicons/mstile-144x144.png?v=jwLap3zLov">
-  <meta name="msapplication-config" content=" ./assets/image/favicons/browserconfig.xml" />
+  <meta name="msapplication-config" content=" ./assets/image/favicons/browserconfig.xml">
   <meta name="theme-color" content="#496093">
   <!-- STYLE -->
   <link rel="stylesheet" href="./css/app.css">
@@ -200,11 +200,11 @@
                 </div>
                 <div class="switcher-body tab-content py-6">
                   <div class="tab-pane h-100 active" id="all" role="tabpanel">
-                    <div class="row d-flex justify-content-between align-items-center">
+                    <div class="row d-flex justify-content-start align-items-center">
                       <div class="col-2 my-4 item">
-                        <a href="yes" class="toggle-sidebar"><img src="./assets/image/yes.png" alt="yes"></a>
+                        <a href="yes" class="toggle-sidebar right-slide"><img src="./assets/image/yes.png" alt="yes"></a>
                       </div>
-                      <aside class="d-flex p-5 item-sidebar" data-anchor="yes">
+                      <aside class="d-flex p-5 item-sidebar right-slide" data-anchor="yes">
                         <div class="brand">
                           <div class="svg-container">
                             <img src="./assets/image/yes.png" alt="yes">
@@ -216,9 +216,9 @@
                         </div>
                       </aside>
                       <div class="col-2 my-4 item">
-                        <a href="uru" class="toggle-sidebar"><img src="./assets/image/uru.png" alt="uru"></a>
+                        <a href="uru" class="toggle-sidebar right-slide"><img src="./assets/image/uru.png" alt="uru"></a>
                       </div>
-                      <aside class="d-flex p-5 item-sidebar" data-anchor="uru">
+                      <aside class="d-flex p-5 item-sidebar right-slide" data-anchor="uru">
                         <div class="brand">
                           <div class="svg-container">
                             <img src="./assets/image/uru.png" alt="uru">
@@ -230,9 +230,9 @@
                         </div>
                       </aside>
                       <div class="col-2 my-4 item">
-                          <a href="billetfix" class="toggle-sidebar"><img src="./assets/image/billetfix.png" alt="billetfix"></a>
+                          <a href="billetfix" class="toggle-sidebar right-slide"><img src="./assets/image/billetfix.png" alt="billetfix"></a>
                       </div>
-                      <aside class="d-flex p-5 item-sidebar" data-anchor="billetfix">
+                      <aside class="d-flex p-5 item-sidebar right-slide" data-anchor="billetfix">
                         <div class="brand">
                           <div class="svg-container">
                             <img src="./assets/image/billetfix.png" alt="billetfix">
@@ -244,9 +244,9 @@
                         </div>
                       </aside>
                       <div class="col-2 my-4 item">
-                        <a href="rithos" class="toggle-sidebar"><img src="./assets/image/rithos.png" alt="rithos"></a>
+                        <a href="rithos" class="toggle-sidebar left-slide"><img src="./assets/image/rithos.png" alt="rithos"></a>
                       </div>
-                      <aside class="d-flex p-5 item-sidebar" data-anchor="rithos">
+                      <aside class="d-flex p-5 item-sidebar left-slide" data-anchor="rithos">
                         <div class="brand">
                           <div class="svg-container">
                             <img src="./assets/image/rithos.png" alt="rithos">
@@ -257,12 +257,6 @@
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo tincidunt diam, a tristique risus consectetur non. Nam libero nulla, sollicitudin sit amet maximus nec, fringilla id eros. Sed mauris urna, porttitor ut ante a, interdum venenatis lectus. Nunc commodo sapien et feugiat fermentum. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisis.</p>
                         </div>
                       </aside>
-                      <div class="col-2 my-4 item">
-                        &nbsp;
-                      </div>
-                      <div class="col-2 my-4 item">
-                        &nbsp;
-                      </div>
                     </div>
                   </div>
                   <div class="tab-pane h-100" id="bio-enterprise" role="tabpanel">
@@ -465,6 +459,7 @@
     $(".se-pre-con").fadeOut("fast");
   })
   </script>
+  <script src="./js/lib/jquery.twbsPagination.min.js"></script>
   <script src="./js/lib/tether.min.js"></script>
   <script src="./js/lib/jquery.fullpage.min.js"></script>
   <script src="./js/lib/bootstrap.min.js"></script>

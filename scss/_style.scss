@@ -1650,6 +1650,23 @@ nav
         .switcher-body
         {
             height: 950px;
+            .portrait
+            {
+                img
+                {
+                    -webkit-transition: all .8s ease-in-out;
+
+                            filter: gray;
+                    -webkit-filter: grayscale(1);
+                    &:hover
+                    {
+                        -webkit-transform: scale(1.01);
+
+                                filter: none;
+                        -webkit-filter: grayscale(0);
+                    }
+                }
+            }
         }
     }
     &.startups
@@ -1676,25 +1693,16 @@ nav
             position: relative;
             .item
             {
-                // display: none;
+                display: none;
             }
         }
         aside
         {
             position: absolute;
             z-index: 1;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 100vw;
-
-            width: 100vw;
-
-            text-align: left;
 
             border: 10px solid $brand-primary;
             background-color: $brand-secondary;
-
             .brand
             {
                 position: absolute;
@@ -1708,6 +1716,48 @@ nav
             .info
             {
                 width: 500px;
+            }
+            &.left-slide
+            {
+                top: 0;
+                right: 100vw;
+                bottom: 0;
+                left: 0;
+
+                float: left;
+
+                width: 100vw;
+                margin-left: auto;
+
+                text-align: right;
+                .info
+                {
+                    margin-left: auto;
+                }
+                .brand
+                {
+                    right: 35px;
+                }
+            }
+            &.right-slide
+            {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 100vw;
+
+                width: 100vw;
+                margin-right: auto;
+
+                text-align: left;
+                .info
+                {
+                    margin-right: auto;
+                }
+                .brand
+                {
+                    left: 35px;
+                }
             }
         }
         .switcher-header-tabs
@@ -1809,6 +1859,7 @@ nav
     }
     .info
     {
+        height: 115px;
         .title
         {
             span
