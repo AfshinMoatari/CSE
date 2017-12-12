@@ -506,9 +506,10 @@ $(function() {
       scale: .5,
       autoAlpha: 0
     });
-    items.sort(function() {
-      return 0.5 - Math.random()
-    });
+    // for randmozing
+    // items.sort(function() {
+    //   return 0.5 - Math.random()
+    // });
     var tween = TweenMax.staggerTo(items, .4, {
       autoAlpha: 1,
       scale: 1,

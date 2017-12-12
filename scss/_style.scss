@@ -89,13 +89,20 @@
         }
     }
 }
+body
+{
+    display: flex;
+    flex-direction: column;
 
+    min-height: 100vh;
+}
 //fullpageJS horizontal scroll
 .fullpage
 {
     position: relative;
 
     overflow: hidden;
+    flex: 1;
 }
 
 //typography
@@ -137,7 +144,7 @@ h4
 .text-link
 {
     font-family: $font-family-cbs-bold;
-    font-size: 1.250em;
+    font-size: 1.250rem;
 
     text-decoration: underline;
     text-transform: none;
@@ -713,6 +720,8 @@ nav
         }
         span
         {
+            line-height: 1.2;
+
             display: block;
         }
     }
@@ -730,7 +739,8 @@ nav
     }
     .media-container
     {
-        height: 60px;
+        // height: 60px;
+        height: 100px;
     }
 }
 
@@ -1709,9 +1719,15 @@ nav
                 top: -55px;
 
                 width: 190px;
-                height: 80px;
+                height: 100px;
 
                 background-color: $brand-secondary;
+
+                img
+                {
+                    width: auto;
+                    height: auto;
+                }
             }
             .info
             {
