@@ -10,7 +10,40 @@ $(function() {
       paddingTop: '60px',
     });
   }
-  // init controller
+  if ($('body').is('#collabrations') || $('body').is('#startups')) {
+    $('.mentors .switcher-body .tab-pane, .startups .switcher-body .tab-pane').each(function() {
+      if ($('body').is('#startups')) {
+        x = 18;
+      } else {
+        x = 8;
+      }
+      var cols = $(this).find('.item');
+      var size_col = cols.length;
+      cols.slice(0, x).show();
+      var totalPages = Math.ceil(size_col / x);
+      if (totalPages > 1) {
+        //jQuery Pagination init
+        $('.pagination').twbsPagination({
+          totalPages: totalPages,
+          visiblePages: totalPages,
+          prevClass: 'd-none',
+          nextClass: 'd-none',
+          firstClass: 'd-none',
+          lastClass: 'd-none',
+          initiateStartPageClick: true,
+          onPageClick: function(event, page) {
+            current_page = page
+            y = x * current_page;
+            z = y - x;
+            cols.slice(0, z).hide();
+            cols.slice(y, size_col).hide();
+            cols.slice(z, y).show();
+          }
+        });
+      }
+    });
+  }
+  // init ScrollMagic controller
   var controller = new ScrollMagic.Controller();
   // animation classes
   $('nav.main').each(function() {
@@ -473,9 +506,10 @@ $(function() {
       scale: .5,
       autoAlpha: 0
     });
-    items.sort(function() {
-      return 0.5 - Math.random()
-    });
+    // for randmozing
+    // items.sort(function() {
+    //   return 0.5 - Math.random()
+    // });
     var tween = TweenMax.staggerTo(items, .4, {
       autoAlpha: 1,
       scale: 1,
@@ -874,14 +908,15 @@ $(function() {
   });
   $('.portfolio').each(function() {
     if ($(this).hasClass('side')) {
-      var sidebarButtons = $('.toggle-sidebar');
-      sidebarButtons.each(function() {
+      var rightSlideButtons = $('.toggle-sidebar').not('.left-slide');
+      var leftSlideButtons = $('.toggle-sidebar').not('.right-slide');
+      rightSlideButtons.each(function() {
         var currentAttr = $(this).attr('href');
         var currentSidebar = $("[data-anchor=" + currentAttr + "]");
-
-        $(this).click(function(e) {
-          e.preventDefault();
-          var otherSidebars = $('.item-sidebar').not(currentSidebar);
+        $(this).click(function(e0) {
+          e0.preventDefault();
+          var otherSidebars = $('.item-sidebar.right-slide').not(currentSidebar);
+          otherSidebars.removeClass('open');
           var tween = new TimelineMax();
           tween.staggerFromTo(currentSidebar, .8, {
             left: '200vw'
@@ -891,37 +926,92 @@ $(function() {
           }, .1);
           var tween1 = new TimelineMax();
           tween1.staggerTo(otherSidebars, .6, {
-            left: '200%'
-          }, 0);
+            left: '200%',
+            ease: Power0.easeNone
+          }, .1);
           currentSidebar.toggleClass('open');
-
           if (currentSidebar.hasClass('open')) {
             tween.play();
           } else {
-            tween.reverse(.6);
+            tween1.play();
           }
-          $(document).click(function(e) {
+          $(document).click(function(e1) {
             if (currentSidebar.hasClass('open')) {
-              var target = e.target.className;
+              var target = e1.target.className;
               if ($.trim(target) != '') {
                 if ($("." + target) != currentSidebar) {
                   tween.reverse(.6);
                   currentSidebar.removeClass('open');
-                  otherSidebars.removeClass('open');
                 }
               }
             }
           });
         });
-
-
-
-
-
-
       });
-
+      leftSlideButtons.each(function() {
+        var currentAttr = $(this).attr('href');
+        var currentSidebar = $("[data-anchor=" + currentAttr + "]");
+        $(this).click(function(e0) {
+          e0.preventDefault();
+          var otherSidebars = $('.item-sidebar.left-slide').not(currentSidebar);
+          otherSidebars.removeClass('open');
+          var tween = new TimelineMax();
+          tween.staggerFromTo(currentSidebar, .8, {
+            right: '100vw'
+          }, {
+            right: '50%',
+            ease: Back.easeOut.config(1.4)
+          }, .1);
+          var tween1 = new TimelineMax();
+          tween1.staggerTo(otherSidebars, .6, {
+            right: '100%',
+            ease: Power0.easeNone
+          }, .1);
+          currentSidebar.toggleClass('open');
+          if (currentSidebar.hasClass('open')) {
+            tween.play();
+          } else {
+            tween1.play();
+          }
+          $(document).click(function(e1) {
+            if (currentSidebar.hasClass('open')) {
+              var target = e1.target.className;
+              if ($.trim(target) != '') {
+                if ($("." + target) != currentSidebar) {
+                  tween.reverse(.6);
+                  currentSidebar.removeClass('open');
+                }
+              }
+            }
+          });
+        });
+      });
     }
+
+    var panel = $(this).find('.tab-pane');
+    panel.each(function() {
+      var items = $(this).find('.item').toArray();
+      var tween = TweenMax.set(items, {
+        autoAlpha: 0
+      });
+      var tween = TweenMax.staggerTo(items, .6, {
+        autoAlpha: 1,
+        ease: Quad.easeInOut,
+        delay: 0.1,
+        force3D: true
+      }, 0.2);
+
+      var scene = new ScrollMagic.Scene({
+          triggerElement: $(this)[0],
+          triggerHook: .8,
+          reverse: true
+        })
+        .setTween(tween)
+        .addTo(controller);
+    });
+
+
+
 
   });
 

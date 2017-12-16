@@ -24,6 +24,28 @@
 
     background: url(../assets/image/preloader.svg) center no-repeat $brand-primary;
 }
+.pagination
+{
+    .page-item
+    {
+        &.next
+        {
+            .page-link
+            {
+                margin: 0 14px;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+        .page-link
+        {
+            margin: 0 1.5px;
+            padding: 1px 7px;
+
+            border-color: $brand-primary;
+        }
+    }
+}
 //container
 .container
 {
@@ -67,13 +89,20 @@
         }
     }
 }
+body
+{
+    display: flex;
+    flex-direction: column;
 
+    min-height: 100vh;
+}
 //fullpageJS horizontal scroll
 .fullpage
 {
     position: relative;
 
     overflow: hidden;
+    flex: 1;
 }
 
 //typography
@@ -112,10 +141,14 @@ h4
 {
     margin-bottom: .7em;
 }
+b
+{
+    font-family: $font-family-cbs-bold;
+}
 .text-link
 {
     font-family: $font-family-cbs-bold;
-    font-size: 1.250em;
+    font-size: 1.250rem;
 
     text-decoration: underline;
     text-transform: none;
@@ -691,6 +724,8 @@ nav
         }
         span
         {
+            line-height: 1.2;
+
             display: block;
         }
     }
@@ -705,6 +740,11 @@ nav
     {
         padding-right: 1%;
         padding-left: 1%;
+    }
+    .media-container
+    {
+        // height: 60px;
+        height: 100px;
     }
 }
 
@@ -1332,7 +1372,90 @@ nav
         }
     }
 }
+//proof-program-sub
+.proof-programme-phases
+{
+    .proofs
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+        .item
+        {
+            font-size: 1em;
 
+            padding: 25px 15px 25px 67px;
+            .title
+            {
+                font-size: 1em;
+
+                position: relative;
+                right: 50px;
+                h5
+                {
+                    position: relative;
+                    right: 1em;
+                }
+
+                span
+                {
+                    position: relative;
+                    left: -20px;
+
+                    display: inline-block;
+                }
+                .svg-container
+                {
+                    position: relative;
+                    right: 0;
+
+                    width: 5.5em;
+                }
+            }
+            .list-group
+            {
+                font-size: 1.1em;
+
+                counter-reset: item;
+                li
+                {
+                    font-family: $font-family-cbs-bold;
+
+                    display: block;
+                    &::before
+                    {
+                        content: counter(item) ') ';
+                        counter-increment: item;
+
+                        color: $brand-primary;
+                    }
+                }
+                span
+                {
+                    margin-bottom: 15px;
+                    &::before
+                    {
+                        content: 'TASK: ';
+                    }
+                }
+                p
+                {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+//match-up-sub
+.match-up-sub
+{
+    .row
+    {
+        .col-6
+        {
+            height: 600px;
+        }
+    }
+}
 //accelerator program
 .accelerator-program
 {
@@ -1621,19 +1744,38 @@ nav
 {
     &.mentors
     {
-        height: 700px;
+        .switcher-body
+        {
+            height: 950px;
+            .portrait
+            {
+                img
+                {
+                    -webkit-transition: all .8s ease-in-out;
+
+                            filter: gray;
+                    -webkit-filter: grayscale(1);
+                    &:hover
+                    {
+                        -webkit-transform: scale(1.01);
+
+                                filter: none;
+                        -webkit-filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+    &.startups
+    {
+        .switcher-body
+        {
+            height: 620px;
+        }
     }
     &.partners
     {
         height: 500px;
-    }
-
-    .item
-    {
-        img
-        {
-            width: 80%;
-        }
     }
     .switcher
     {
@@ -1646,34 +1788,86 @@ nav
         .tab-pane
         {
             position: relative;
+            .item
+            {
+                display: none;
+            }
         }
         aside
         {
             position: absolute;
             z-index: 1;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 100vw;
-
-            width: 100vw;
 
             border: 10px solid $brand-primary;
             background-color: $brand-secondary;
-
             .brand
             {
                 position: absolute;
                 top: -55px;
 
                 width: 190px;
-                height: 80px;
+                height: 100px;
 
                 background-color: $brand-secondary;
+
+                img
+                {
+                    width: auto;
+                    height: auto;
+                }
             }
             .info
             {
                 width: 500px;
+            }
+            &.left-slide
+            {
+                top: 0;
+                right: 100vw;
+                bottom: 0;
+                left: 0;
+
+                float: left;
+
+                width: 100vw;
+                margin-left: auto;
+
+                text-align: right;
+                .info
+                {
+                    margin-left: auto;
+                }
+                .brand
+                {
+                    right: 35px;
+                }
+            }
+            &.right-slide
+            {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 100vw;
+
+                width: 100vw;
+                margin-right: auto;
+
+                text-align: left;
+                .info
+                {
+                    margin-right: auto;
+                }
+                .brand
+                {
+                    left: 35px;
+                }
+            }
+        }
+        .switcher-header-tabs
+        {
+            li
+            {
+                max-width: fit-content;
             }
         }
     }
@@ -1768,6 +1962,7 @@ nav
     }
     .info
     {
+        height: 115px;
         .title
         {
             span
